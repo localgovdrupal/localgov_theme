@@ -1,0 +1,43 @@
+
+
+//Button styles
+main .btn,
+.sidebar .btn {
+	font-family: $headings-font-family;
+	margin-top: ($spacer * 1);
+	margin-bottom: ($spacer * .5);
+}
+
+//Button icons
+main .btn .oi,
+.sidebar .btn .oi,
+.cookiealert .btn .oi {
+	font-size: 85%;
+	color: $yellow;
+}
+
+//Button hover
+.btn:hover {
+	color: $white;
+	background: $indigo;
+}
+
+//disabled button
+.btn.disabled,
+.btn:disabled {
+	opacity: .65;
+}
+
+//Upload file button
+.custom-file-label::after {
+	color: $white;
+	content: "Browse";
+	background-color: $purple;
+	line-height: 1.8;
+	font-weight: bold;
+}
+
+.custom-file-label {
+	font-size: 1.063rem; //17px
+	line-height: 1.8;
+}

@@ -1,0 +1,1509 @@
+
+
+
+<!-- Page master headlines (h1/p) -->
+<header class="page-headers key-under">
+    <p class="new-tag"><span>NEW</span> <a href="#/">Please give feedback</a></p>
+    <h1 role='heading' aria-level='1'>London Borough of Croydon Bootstrap 4 theme</h1>
+    <p role='heading'>Templates, design patterns and usage</p>
+</header>
+<!-- End page master headlines (h1/p) -->
+
+<!-- SECTION INTRO -->
+<section class="key-under" id="introduction">
+    <section>
+        <h2>Introduction</h2>
+        <h3>Why use Bootstrap 4?</h3>
+        <p><a href="https://getbootstrap.com/" target="_blank">Bootstrap 4<span
+                    class="oi oi-external-link purple" title="Link opens in a new window"></span></a> is a
+            open source <a href="https://www.w3schools.com/whatis/whatis_bootstrap.asp" target="_blank">HTML
+                and CSS framework<span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a>. By customising
+            Bootstrap's components we can create our own front end theme, documenting our markup practices
+            and
+            creating working web patterns along the way.</p>
+    </section>
+    <section>
+        <section>
+            <h3>Cross platform compatability</h3>
+            <p>All components in this theme have been configured using HTML5, Bootstrap CSS and pure
+                Javascript. They
+                do not require a <a href="https://www.w3schools.com/jquery/jquery_get_started.asp"
+                    target="_blank">JQuery Library<span class="oi oi-external-link purple"
+                        title="Link opens in a new window"></span></a> or any <a
+                    href="https://getbootstrap.com/docs/4.3/getting-started/introduction/#js"
+                    target="_blank">Bootstrap
+                    JQuery<span class="oi oi-external-link purple"
+                        title="Link opens in a new window"></span></a> to
+                function. </p>
+        </section>
+        <section>
+            <h4>Why pure CSS and 'vanilla' Javascript?</h4>
+            <p>Global theme components that usually require JQuery to function have had their Bootstrap
+                JQuery classes removed, and their functions replaced with a custom 'vanilla' Javascript
+                equivalent:</p>
+            <ul>
+                <li>Main navigation mobile menu toggle</li>
+                <li>Main navigation dropdown menu</li>
+                <li>Expandable content</li>
+                <li>Accordion menu</li>
+                <li>Cookie alert bar and cookie creation</li>
+            </ul>
+            <p>By using this 'vanilla' approach the global components will not be affected should
+                <mark>Bootstrap
+                    JQuery</mark>
+                ,
+                <mark>AngularJS</mark>
+                or other coding languages be integrated into the
+                theme.</p>
+        </section>
+    </section>
+</section>
+<!-- END SECTION INTRO -->
+
+<!-- SECTION FONTS -->
+<section class="key-under" id="fonts-fallbacks">
+    <section>
+        <h2>Fonts and Fallbacks</h2>
+        <p>The Croydon Council brand font
+            <mark><strong> Fiendstar Bold</strong></mark>
+            is used for display
+            headlines and a handful of other elements, creating a unique identity:</p>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Fiendstar Bold</h3>
+                <ul class="iconlist">
+                    <li><span class="oi oi-check success" title="Allowed"></span>Site logo</li>
+                    <li><span class="oi oi-check success" title="Allowed"></span>Headings (H1 - H6)</li>
+                    <li><span class="oi oi-check success" title="Allowed / required"></span>Headings (H1 -
+                        H6)</li>
+                    <li><span class="oi oi-check success" title="Allowed"></span>Main navigation links</li>
+                    <li><span class="oi oi-check success" title="Allowed"></span>Button text</li>
+                    <li><span class="oi oi-check success" title="Allowed"></span>Form labels</li>
+                </ul>
+                <p><small>Embedded using <a href="http://www.font-face.com/" target="_blank">@font-face<span
+                                class="oi oi-external-link purple"
+                                title="Link opens in a new window"></span></a> </small></p>
+            </div>
+            <div class="col-md-6">
+                <h3>Source Sans Pro</h3>
+                <ul class="iconlist">
+                    <li><span class="oi oi-check success" title="Allowed"></span>Copy</li>
+                    <li><span class="oi oi-check success" title="Allowed"></span>As a fallback for Fiendstar
+                    </li>
+                    <li><span class="oi oi-check success" title="Allowed"></span>Choose from weights: 400,
+                        600,
+                        700, 900</li>
+                    <li><span class="oi oi-x danger" title="Not allowed"></span>Headings and form labels
+                    </li>
+                    <li><span class="oi oi-x danger" title="Not allowed"></span>Button text</li>
+                </ul>
+                <p><small>Embedded using <a href="https://fonts.google.com/" target="_blank">Google Web
+                            Fonts<span class="oi oi-external-link purple"
+                                title="Link opens in a new window"></span></a> </small></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Defining fallbacks</h3>
+        <h4>Fiendstar Bold and fallbacks</h4>
+        <p class="text-monospace"><small>font-family: "Fiendstar W01 Bold", 'Source Sans Pro', Arial,
+                Helvetica,
+                sans-serif;<br>
+                font-weight: bold; /* For fallbacks only */</small></p>
+    </section>
+    <section>
+        <h4>Source Sans Pro and fallbacks</h4>
+        <p class="text-monospace"><small>font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;<br>
+                font-weight: 300; /* 400, 700, or 900* /</small></p>
+    </section>
+</section>
+<!-- END SECTION FONTS -->
+
+<!-- SECTION MASTER HEADLINES -->
+<section class="key-under" id="page-master-headlines">
+    <h2>Page master headlines</h2>
+    <p>The page title (required) and descriptive paragraph (optional) should be placed inside a
+        <mark>&lt;header&gt;</mark>
+        tag and use the
+        <mark>.key-under</mark>
+        class:</p>
+    <section>
+        <header class="page-headers key-under">
+            <h1>Page title
+                <mark>&lt;h1&gt;</mark>
+            </h1>
+            <p>Describe what the user can do or find on this page
+                <mark>&lt;p&gt;</mark>
+            </p>
+        </header>
+    </section>
+    <section>
+        <p><small>Use only once per page inside
+                <mark>&lt;main&gt;</mark>
+                >
+                <mark>&lt;header&gt;</mark>
+            </small></p>
+    </section>
+</section>
+<!-- END SECTION MASTER HEADLINES -->
+
+<!-- SECTION SECTIONS -->
+<section class="key-under" id="page-content-sections">
+    <section>
+        <h2>Page content sections</h2>
+        <p>Where pages require multiple sections, content should be grouped in
+            <mark><strong>&lt;section&gt;</strong></mark>
+            tags. Sections have custom styles applied in the
+            theme to
+            visually break up the layout, as well as carrying their HTML5 semantic meaning.</p>
+        <p>Each content section typically starts with a
+            <mark>&lt;h2&gt;</mark>
+            heading and can contain
+            nested
+            sections to group sub content:</p>
+    </section>
+    <section>
+        <section>
+            <h2>First level section heading
+                <mark>&lt;h2&gt;</mark>
+            </h2>
+            <p>Paragraph in the first level section</p>
+        </section>
+        <section>
+            <h3>Second level section heading
+                <mark>&lt;h3&gt;</mark>
+            </h3>
+            <p>Paragraph in the second level sub section</p>
+        </section>
+    </section>
+</section>
+<!-- END SECTION SECTIONS -->
+
+<!-- SECTION HEADING LEVELS -->
+<section class="key-under" id="headings">
+    <section>
+        <h2>Headings</h2>
+        <p>Sizing and usage for
+            <mark>&lt;h1&gt;</mark>
+            to
+            <mark>&lt;h6&gt;</mark>
+            heading tags:</p>
+    </section>
+    <section>
+        <h1>Page title
+            <mark>&lt;h1&gt;</mark>
+        </h1>
+        <p>Use only once per page in the
+            <mark>&lt;main&gt;</mark>
+            >
+            <mark>&lt;header&gt;</mark>
+        </p>
+    </section>
+    <section>
+        <h2>
+            Section heading
+            <mark>&lt;h2&gt;</mark>
+            </h3>
+            <p>Use for clearly defined sections inside
+                <mark>&lt;main&gt;</mark>
+                and for headings in the
+                <mark>sidebar</mark>
+            </p>
+    </section>
+    <section>
+        <h3>Sub section heading
+            <mark>&lt;h3&gt;</mark>
+        </h3>
+        <p>Use for sub sections of &lt;h2&gt;</p>
+    </section>
+    <section>
+        <h4>Sub section heading
+            <mark>&lt;h4&gt;</mark>
+        </h4>
+        <p>Use for sub sections of&lt;h3&gt;</p>
+    </section>
+    <section>
+        <h5>Sub section heading
+            <mark>&lt;h5&gt;</mark>
+        </h5>
+        <p>Use for sub sections of &lt;h4&gt;</p>
+    </section>
+    <section>
+        <h6>Sub section heading
+            <mark>&lt;h6&gt;</mark>
+        </h6>
+        <p>Use for sub sections of &lt;h5&gt;</p>
+    </section>
+</section>
+<!-- END SECTION HEADING LEVELS -->
+
+<!-- START SECTION SIDEBAR TEXT SIZING  -->
+
+<section id="sidebar-text-sizing" class="key-under">
+    <section>
+        <h2>Sidebar text sizing</h2>
+        <p>Headings, paragraphs and lists placed inside the
+            <mark><strong>.sidebar</strong></mark>
+            container have been themed to display at a reduced size compared to their equivalent inside the
+            main content area.</p>
+        <p>This excludes h1 which should only feature once in the <a href="#page-master-headlines">page
+                master headlines area</a>.</p>
+        <div class="row">
+            <div class="sidebar col-md-6">
+                <h2>Sidebar heading
+                    <mark><strong>&lt;h2&gt;</strong></mark>
+                </h2>
+                <h3>Sidebar heading
+                    <mark><strong>&lt;h3&gt;</strong></mark>
+                </h3>
+                <h4>Sidebar heading
+                    <mark><strong>&lt;h4&gt;</strong></mark>
+                </h4>
+                <h5>Sidebar heading
+                    <mark><strong>&lt;h5&gt;</strong></mark>
+                </h5>
+                <p>sidebar paragraph</p>
+                <h5>Sidebar list
+                    <mark><strong>&lt;h5&gt;</strong></mark>
+                </h5>
+                <ul>
+                    <li>Sidebar list item</li>
+                    <li>Sidebar list item</li>
+                    <li>Sidebar list item</li>
+                </ul>
+            </div>
+    </section>
+    <!-- End callout -->
+
+</section>
+<!-- END SECTION SIDEBAR TEXT SIZING -->
+
+<!-- SECTION LISTS -->
+<section class="key-under" id="list-types">
+    <section>
+        <h2>List types</h2>
+        <p>Use the standard HTML
+            <mark>&lt;ul&gt;</mark>
+            and
+            <mark>&lt;ol&gt;</mark>
+            tags to create lists.
+            Custom
+            icon lists require some additional styling acheived by adding the class
+            <mark>. iconlist</mark>
+            to your
+            <mark>ul</mark>
+            .</p>
+    </section>
+    <section>
+        <h3>Unordered lists</h3>
+        <ul>
+            <li>Bullet list item</li>
+            <li>Bullet list item</li>
+            <li>Bullet list item</li>
+    </section>
+    </ul>
+    <section>
+        <h3>Ordered lists</h3>
+        <ol>
+            <li>Numbered list item</li>
+            <li>Numbered list item</li>
+            <li>Numbered list item</li>
+        </ol>
+    </section>
+    <section>
+        <h3>Custom icon lists</h3>
+        <ul class="iconlist">
+            <li><span class="oi oi-check success" title="Allowed / required"></span> Checklist required or
+                included </li>
+            <li><span class="oi oi-check success" title="Allowed / required"></span> Checklist required or
+                included </li>
+            <li><span class="oi oi-x danger" title="Not allowed / required"></span>This longer list item
+                with a word
+                count of 20 has been included to demonstrate icon alignment with multiline text</li>
+        </ul>
+    </section>
+</section>
+<!-- END SECTION LISTS -->
+
+<!-- SECTION FORM INPUT HEIGHTS -->
+<section class="key-under" id="form-input-heights">
+    <section>
+        <h2>Form input heights</h2>
+        <p>Use Bootstrap 4 'form control' classes in your HTML to choose an input height:</p>
+    </section>
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <p>Standard size input using
+                    <mark><strong>.form-control</strong></mark>
+                    class:</p>
+                <input type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="">
+                <p><small>Height = 50px</small>
+            </div>
+            <div class="form-group">
+                <p>Large size input using
+                    <mark>.form-control</mark>
+                    and
+                    <mark><strong>.form-control-lg</strong></mark>
+                    classes:</p>
+                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1"
+                    placeholder="">
+                <p><small>Height = 60px</small>
+            </div>
+            <div class="form-group">
+                <p>Small size input using
+                    <mark>.form-control</mark>
+                    and
+                    <mark><strong>.form-control-sm</strong></mark>
+                    classes:</p>
+                <input type="text" class="form-control form-control-sm" id="exampleInputRef" placeholder="">
+                <p><small>Height = 40px</small>
+            </div>
+        </fieldset>
+    </form>
+    <p>Inputs and buttons share the same sizing variables. Read more about input sizing with <a
+            href="https://getbootstrap.com/docs/4.0/components/forms/#sizing" target="_blank">Bootstrap 4
+            form
+            control<span class="oi oi-external-link purple" title="Link opens in a new window"></span></a>.
+    </p>
+</section>
+<!-- END SECTION FORM INPUT HEIGHTS -->
+
+<!-- SECTION FORM INPUT WIDTHS -->
+<section class="key-under" id="form-input-widths">
+    <section>
+        <h2>Form input widths</h2>
+        <p>Use Bootstrap 4 'column classes' in your HTML to choose an input width:</p>
+    </section>
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <p>Input using
+                    <mark>.form-control</mark>
+                    and
+                    <mark><strong>.col-sm-12</strong></mark>
+                    classes:</p>
+                <input type="email" class="form-control col-sm-12" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="">
+                <p><small>100% width input, then 12 of 12 columns above the
+                        <mark>sm</mark>
+                        breakpoint
+                        (576px+)</small>
+            </div>
+            <div class="form-group">
+                <p>Input using
+                    <mark>.form-control</mark>
+                    and
+                    <mark><strong>.col-sm-6</strong></mark>
+                    classes:</p>
+                <input type="password" class="form-control col-sm-6" id="exampleInputPassword1"
+                    placeholder="">
+                <p><small>100% width input, then 6 of 12 columns above the
+                        <mark>sm</mark>
+                        breakpoint
+                        (576px+)</small>
+            </div>
+            <div class="form-group">
+                <p>Input using
+                    <mark>.form-control</mark>
+                    and
+                    <mark><strong>.col-sm-2</strong></mark>
+                    classes:</p>
+                <input type="text" class="form-control col-sm-2" id="exampleInputRef" placeholder="">
+                <p><small>100% width input, then 2 of 12 columns above the
+                        <mark>sm</mark>
+                        breakpoint
+                        (576px+)</small>
+            </div>
+            <div class="form-group">
+                <p>Input using
+                    <mark>.form-control</mark>
+                    and
+                    <mark><strong>.col-4</strong></mark>
+                    classes: </p>
+                <input type="text" class="form-control col-4" id="exampleInputRef" placeholder="">
+                <p><small>4 of 12 columns at all screen sizes</small>
+            </div>
+        </fieldset>
+    </form>
+    <p>The above classes may be combined with form input heights. Read more about using the <a
+            href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap 4 layout
+            grid<span class="oi oi-external-link purple" title="Link opens in a new window"></span></a>.
+</section>
+<!-- END SECTION FORM INPUT WIDTHS -->
+
+<!-- SECTION FORM BEST PRACTICE-->
+<section class="key-under" id="form-best-practice">
+    <section>
+        <h2>Form best practice</h2>
+        <p>Example form elements:</p>
+    </section>
+    <section>
+        <form>
+            <legend>Your details
+                <mark>&lt;legend&gt;</mark>
+            </legend>
+            <div class="form-group">
+                <label for="exampleInputRef">First name
+                    <mark>&lt;label&gt;</mark>
+                </label>
+                <input type="text" class="form-control" id="exampleInputRef" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email <span>We will only use this to contact you about
+                        your
+                        application</label>
+                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>-->
+                <input type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password<span>Include at least one uppercase letter,
+                        one number
+                        and
+                        one special character</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="select">Dropdown selection</label>
+                <select class="form-control" id="select">
+                    <option>Please select</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Text area</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Upload a single file</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Stacked radios</label>
+                <fieldset>
+                    <label class="custom-input"> <span>Option 1</span>
+                        <input type="radio" checked="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                    <label class="custom-input">Option 2
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                    <label class="custom-input">Option 3
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label>Stacked checkboxes</label>
+                <fieldset>
+                    <label class="custom-input">One
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span> </label>
+                    <label class="custom-input">Two
+                        <input type="checkbox">
+                        <span class="checkmark"></span> </label>
+                </fieldset>
+            
+            <p class="mt-4">Custom radios and checkboxes follow the <a
+                    href="https://www.w3schools.com/howto/howto_css_custom_checkbox.asp"
+                    target="_blank"><span class="oi oi-external-link purple"
+                        title="Link opens in a new window"></span>w3schools.com method</a></p>
+                    </div>
+
+            <div class="form-group">
+                    
+                <section>
+                    <legend>Conditional questions</legend>
+                    <p>Output a conditional question based on the user's selection, note how the purple border lines up with the select options and the conditional appears below all options:</p>
+                </section>
+                    <label class="custom-input"> <span>Order a new bin or lid for yourself</span>
+                        <input type="radio" checked="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                    <label class="custom-input">Swap or replace your bin
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                    <label class="custom-input">Apply on behalf of someone else
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                        <div class="conditional">
+                                <div class="form-group">
+                                    <label for="reason">What is the reason for the replacement?</label>
+                                    <select class="form-control col-12" id="reason">
+                                        <option>Please select</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                    </select>
+                                </div>     
+                </div>
+                        
+        </form>
+    </section>
+</section>
+<!-- END SECTION FORM BEST PRACTICE-->
+
+<!-- SECTION FORM VALIDATION -->
+<section class="key-under" id="form-validation">
+    <section>
+        <h2>Form validation</h2>
+        <p>Meeting field requirements:</p>
+    </section>
+    <section>
+        <form>
+            <fieldset>
+                <legend>Create a password for your account</legend>
+                <div class="form-group">
+                    <label for="validationServer01">Password</label>
+                    <input type="password" class="form-control is-valid" id="validationServer01"
+                        placeholder="" value="ZXMLNP002132" required>
+                    <div class="valid-feedback">Strong!</div>
+                </div>
+                <div class="form-group">
+                    <label for="validationServer03">Confirm password</label>
+                    <input type="password" class="form-control is-invalid" id="validationServer03"
+                        placeholder="" required>
+                    <div class="invalid-feedback">Passwords do not match</div>
+                </div>
+            </fieldset>
+        </form>
+        <p>The default Bootstrap 4 field validation icons have been replaced with <a
+                href="https://useiconic.com/open" target="_blank">Open Iconinc<span
+                    class="oi oi-external-link purple" title="Link opens in a new window"></span></a> svg
+            background images.</p>
+    </section>
+</section>
+<!-- END SECTION FORM VALIDATION -->
+
+<!-- SECTION ALERTS -->
+<section class="key-under" id="alerts">
+    <section>
+        <h2>Alerts</h2>
+        <p>Alert the user to information, a warning or an action they need to take:</p>
+    </section>
+    <section>
+        <div class="alert alert-info"> <span class="oi oi-info" title="Alert! "></span> This is a
+            information alert with the
+            class
+            <mark>.alert-info</mark>
+        </div>
+    </section>
+    <section>
+        <div class="alert alert-primary"> <span class="oi oi-warning" title="Alert! "></span> This is a soft
+            information alert with the
+            class
+            <mark>.alert-primary</mark>
+        </div>
+    </section>
+    <section>
+        <div class="alert alert-success"> <span class="oi oi-check" title="Alert! "></span> This is a
+            success alert with the class
+            <mark>.alert-success</mark>
+        </div>
+    </section>
+    <section>
+        <div class="alert alert-danger"> <span class="oi oi-warning" title="Alert! "></span> This is a
+            warning alert with the class
+            <mark>.alert-danger</mark>
+        </div>
+    </section>
+    <section>
+        <div class="alert alert-danger"> <span class="oi oi-x" title="Alert! "></span> This is a failure
+            alert with the class
+            <mark>.alert-danger</mark>
+        </div>
+    </section>
+    <section>
+        <p>Icons are defined in the alert markup using <a href="#content-icons">content icons.</a></p>
+    </section>
+</section>
+<!-- END SECTION ALERTS -->
+
+<!-- SECTION BUTTONS THEME-->
+<section class="key-under" id="button-colours">
+    <section>
+        <h2>Button colours</h2>
+        <p>Use Bootstrap 4 'button classes' in your HTML to choose a colour theme.
+    </section>
+    <section>
+        <p>Button using
+            <mark>.btn</mark>
+            and
+            <mark><strong>.btn-primary</strong></mark>
+            classes:</p>
+        <button type="submit" class="btn btn-primary"><span class="oi oi-chevron-right"></span>Start
+            application</button>
+        <p><small>Use by default</small>
+    </section>
+    <section>
+        <p>Button using
+            <mark>.btn</mark>
+            and
+            <mark><strong>.btn-carbon</strong></mark>
+            classes:</p>
+        <button type="submit" class="btn btn-carbon"><span
+                class="oi oi-chevron-left"></span>Previous</button>
+        <p><small>Create contrast with main button or overlay on purple</small>
+    </section>
+    <section>
+        <p>Make a button inactive by adding a
+            <mark><strong>disabled</strong></mark>
+            attribute to the
+            <mark>&lt;button&gt;</mark>
+            input:</p>
+        <button type="submit" class="btn btn-indigo" disabled><span
+                class="oi oi-chevron-right"></span>Next</button>
+        <p><small>Uses 60% opacity</small>
+    </section>
+    <section>
+        <p>Make use of our <a href="#colours">custom SASS colour variables</a> by adding them to the button
+            class.
+            In this example replacing
+            <mark>.btn-primary</mark>
+            with
+            <mark><strong>.btn-indigo</strong></mark>
+            : </p>
+        <button type="submit" class="btn btn-indigo"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>Only use <a href="#colours">colours from the theme</a> that have been colour contrast
+                tested
+                with
+                white text</small>
+    </section>
+    <section>
+        <p>Use the
+            <mark>.btn</mark>
+            and
+            <mark><strong>.btn-link</strong></mark>
+            classes to create inline,
+            link style
+            buttons:</p>
+        <button type="button" class="btn btn-link">Link 1</button>
+        <button type="button" class="btn btn-link">Link
+            2</button>
+        <button type="button" class="btn btn-link">Link 3</button>
+    </section>
+    <section>
+        <p>Read more about button theming with <a
+                href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">Bootstrap 4
+                buttons<span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a>.
+    </section>
+</section>
+<!-- END SECTION BUTTONS THEME-->
+
+<!-- SECTION BUTTONS HEIGHT AND FONT SIZE-->
+<section class="key-under" id="button-height-font-size">
+    <section>
+        <h2>Buttons height and font size</h2>
+        <p>Use Bootstrap 4 'button classes' in your HTML to choose a button height and font size.
+    </section>
+    <section>
+        <p>Standard size button using
+            <mark><strong>.btn</strong></mark>
+            and
+            <mark>.btn-primary</mark>
+            classes: </p>
+        <button type="submit" class="btn btn-primary"><span class="oi oi-chevron-right"></span>Start
+            application</button>
+        <p><small>Use by default (height = 50px)</small>
+    </section>
+    <section>
+        <p>Large size button using
+            <mark>.btn</mark>
+            ,
+            <mark>.btn-primary</mark>
+            and
+            <mark><strong>.btn-lg</strong></mark>
+            classes: </p>
+        <button type="submit" class="btn btn-primary btn-lg"><span class="oi oi-chevron-right"></span>Start
+            application</button>
+        <p><small>Draw attention to key functionality (height = 60px)</small>
+    </section>
+    <section>
+        <p>Small size button using
+            <mark>.btn</mark>
+            ,
+            <mark>.btn-primary</mark>
+            and
+            <mark><strong>.btn-sm</strong></mark>
+            classes:</p>
+        <button type="submit" class="btn btn-primary btn-sm"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>Use where space is limited or when another button requires priority focus (height =
+                40px)</small>
+    </section>
+    <section>
+        <p>Inputs and buttons share the same sizing. Read more about input sizing with <a
+                href="https://getbootstrap.com/docs/4.0/components/forms/#sizing" target="_blank">Bootstrap
+                4 form control<span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a>.
+    </section>
+</section>
+<!-- END SECTION BUTTONS HEIGHT AND FONT SIZE-->
+
+<!-- SECTION BUTTONS WIDTHS -->
+<section class="key-under" id="button-widths">
+    <section>
+        <h2>Button widths</h2>
+        <p>Buttons will expand to accomodate their content, but in order to align buttons to other elements
+            we must
+            use Bootstrap 4 button or column classes.
+    </section>
+    <section>
+        <p>Button with no width defined:</p>
+        <button type="submit" class="btn btn-primary"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>Expands to accomodate text</small></p>
+    </section>
+    <section>
+        <p>Button using the
+            <mark><strong>.col-12</strong></mark>
+            class:</p>
+        <button type="submit" class="btn btn-primary col-12"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>100% with of container at all breakpoints</small></p>
+    </section>
+    <section>
+        <p>Button using
+            <mark><strong>.col-sm-8</strong></mark>
+            class:</p>
+        <button type="submit" class="btn btn-primary col-sm-6"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>100% width button, then 8 of 12 columns above the
+                <mark>sm</mark>
+                breakpoint
+                (576px+)</small></p>
+    </section>
+    <section>
+        <p>Button using
+            <mark><strong>.col-sm-5</strong></mark>
+            class:</p>
+        <button type="submit" class="btn btn-primary col-sm-5"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>100% width button, then 5 of 12 columns above the
+                <mark>sm</mark>
+                breakpoint
+                (576px+)</small></p>
+    </section>
+    <section>
+        <p>Button using
+            <mark><strong>.col-6</strong></mark>
+            and
+            <mark><strong>.col-md-4</strong></mark>
+            classes:</p>
+        <button type="submit" class="btn btn-primary col-6 col-md-4"><span
+                class="oi oi-chevron-right"></span>Submit</button>
+        <p><small>50% width button, then 33.3% above the
+                <mark>md</mark>
+                breakpoint</small></p>
+    </section>
+    <section>
+        <p>Read more about using the <a href="https://getbootstrap.com/docs/4.0/layout/grid/"
+                target="_blank">Bootstrap
+                4 layout grid<span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a>. </p>
+    </section>
+</section>
+<!-- END SECTION BUTTONS WIDTHS -->
+
+<!-- SECTION INLINE TEXT -->
+<section class="key-under" id="inline-text-styles">
+    <section>
+        <h2>Inline text styles </h2>
+        <p>For extra text syling make use of these HTML5 elements:</p>
+    </section>
+    <section>
+        <p>Use the
+            <mark>&lt;<strong>mark</strong>&gt;</mark>
+            tag to highlight text in your pages - It's
+            used throught these guidlines to highlight
+            <mark>tags</mark>
+            and
+            <mark>classes</mark>
+            .</p>
+    </section>
+    <section>
+        <p>Use the
+            <mark>&lt;<strong>small</strong>&gt;</mark>
+            tag to add footnotes:<br>
+            <small>Caption or footnote wrapped in a small tag with a <a href="#/">hyperlink</a></small></p>
+    </section>
+    <section>
+        <p>Use the
+            <mark>&lt;<strong>em</strong>&gt;</mark>
+            tag to emphasise text:<br>
+            Example sentence with <em>emphasised text</em></p>
+    </section>
+    <section>
+        <p>Read more about text styling with <a
+                href="https://getbootstrap.com/docs/4.1/content/typography/#inline-text-elements"
+                target="_blank">Bootstrap
+                4 inline elements<span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a>.
+    </section>
+</section>
+<!-- END INLINE TEXT -->
+
+<!-- SECTION COLOURS -->
+<section class="key-under" id="colours">
+    <!-- Sub section -->
+    <section>
+        <h2>Colours</h2>
+        <p>All theme colours have been tested for colour contrast WCAG level AA. Both as coloured text on a
+            white
+            background and as a background with the default 'Carbon' or white text overlayed.</p>
+    </section>
+    <section>
+        <h3>Default theme colours</h3>
+        <div class="row">
+            <!-- Row -->
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-primary"><strong>Primary</strong><br>
+                    #880088</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-secondary"><strong>Secondary</strong><br>
+                    #121212</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-success"><strong>Success</strong><br>
+                    #338800</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-info"><strong>Information</strong><br>
+                    #121212</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-warning"><strong>Warning</strong><br>
+                    #ff5500</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-danger"><strong>Danger</strong><br>
+                    #ae1100</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-light"><strong>Light</strong><br>
+                    #ededed</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-dark"><strong>Dark</strong><br>
+                    #444444</div>
+            </div>
+        </div>
+        <!-- End row -->
+    </section>
+    <!-- End sub section -->
+
+    <!-- Sub section -->
+    <section>
+        <h3>Custom colours mapped to 'theme colours'</h3>
+        <div class="row">
+            <!-- Row -->
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-purple"><strong>Purple</strong><br>
+                    #880088</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-green"><strong>Green</strong><br>
+                    #77bb55</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-indigo"><strong>Indigo</strong><br>
+                    #540055</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-purple-tint"><strong>Purple tint</strong><br>
+                    #f8eef8</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-green-tint"><strong>Green tint</strong><br>
+                    #eaf5e5</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-indigo-tint"><strong>Indigo tint</strong><br>
+                    #eee5ee</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-carbon"><strong>Carbon</strong><br>
+                    #121212</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-graphite"><strong>Graphite</strong><br>
+                    #282828</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-stonewash"><strong>Stonewash</strong><br>
+                    #a0a0a0</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-gray"><strong>Gray</strong><br>
+                    #dbdfe3</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-gray-dark"><strong>Gray dark</strong><br>
+                    #444444</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-white">White</strong><br>
+                    #FFFFFF</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-gray-tint"><strong>Gray tint</strong><br>
+                    #ededed</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-visited"><strong>Visited</strong><br>
+                    #ad52ad</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-blue"><strong>Blue</strong><br>
+                    #0059a4</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-pink"><strong>Pink</strong><br>
+                    #ad52ad</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-red"><strong>Red</strong><br>
+                    #ae1100</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-orange"><strong>Orange</strong><br>
+                    #ff5500</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-yellow"><strong>Yellow</strong><br>
+                    #ffbb00</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-teal"><strong>Teal</strong><br>
+                    #008877</div>
+            </div>
+            <div class="col-6 col-sm-4">
+                <div class="p-3 mb-3 bg-cyan"><strong>Cyan</strong><br>
+                    #17a2b8</div>
+            </div>
+        </div>
+        <!-- End row -->
+    </section>
+    <!-- End sub section -->
+
+</section>
+<!-- END SECTION COLOURS -->
+
+<!-- SECTION ICONS -->
+<section class="key-under" id="content-icons">
+    <!-- Sub section -->
+    <section>
+        <h2>Icons</h2>
+        <p><a href="https://useiconic.com/open" target="_blank">Open Iconinc Icons <span
+                    class="oi oi-external-link purple" title="Link opens in a new window"></span></a> have
+            been chosen
+            for
+            their simple flat style, bold
+            weight, and availability of desired icons. </p>
+    </section>
+    <section>
+        <h3>Icon examples</h3>
+        <div class="row">
+            <!-- Row -->
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-account-login"
+                        title="Check"></span>account-login </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-ban"
+                        title="Disabled functionality"></span>ban</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-caret-right"
+                        title="Highlighted link"></span>caret-right </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-check" title="Checklist"></span>check
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-chevron-bottom"
+                        title="Expandable closed"></span>chevron-bottom</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-circle-x"
+                        title="Failure alerts"></span>circle-x </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-cog" title="Settings"></span>cog</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-external-link"
+                        title="Link opens in a new window"></span>external-link</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-eye" title="Show content"></span>eye</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-map" title="Link to map"></span>map</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-person" title="User account"></span>person
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><span class="oi oi-x" title="Checklist false"></span>x</div>
+            </div>
+        </div>
+        <!-- End row -->
+    </section>
+    <section>
+        <h4>Example icon markup</h4>
+        <p class="text-monospace"> &lt;span class="oi oi-check" title="Checklist"&gt;&lt;/span&gt; </p>
+    </section>
+    <section>
+        <section>
+            <h3>Using icons with text and links</h3>
+            <p>Icons may accompany inline hyperlinks informing the user of an action they are about to take,
+                in the
+                example below the
+                <mark><strong>external-link</strong></mark>
+                icon is used with an
+                additional
+                <mark>.purple</mark>
+                class: </p>
+            <p>You can <a href="#/" target="_blank">find out more about council tax rates <span
+                        class="oi oi-external-link purple"
+                        title="Link opens in a new window"></span></a>before
+                you apply. </p>
+        </section>
+        <section>
+            <p>Icons may be used aesthetically to organise information, in this example
+                <mark><strong>calendar</strong></mark>
+                :</p>
+            <p><span class="oi oi-calendar" title="Date"></span>15th March 2019</p>
+            <p><small>Provide a
+                    <mark>title</mark>
+                    attribute on the icon if the meaning is not conveyed in
+                    the link
+                    text, in this case 'Date: '</small></p>
+        </section>
+        <section>
+            <p>Icons may be used to accompany actions, in this example viewing a
+                <mark><strong>map</strong></mark>
+                : </p>
+            <p><a href="#/" target="_blank"><span class="oi oi-map"></span>View this on a map</a> </p>
+            <p><small>Avoid screen reader repeats by omitting the
+                    <mark><strong>title</strong></mark>
+                    attribute on
+                    the
+                    icon if the
+                    meaning is already conveyed in the link text</small></p>
+        </section>
+    </section>
+</section>
+
+<!-- END SECTION CONTENT ICONS -->
+
+<!-- SECTION BRAND ICONS -->
+<section class="key-under" id="brand-icons">
+    <!-- Sub section -->
+    <section>
+        <h2>Brand icons</h2>
+        <p>As brand icons are not featured in <a href="https://useiconic.com/open" target="_blank">Open
+                Iconinc<span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a> a custom font has
+            been generated using <a href="http://fontello.com/" target="_blank">Fontello<span
+                    class="oi oi-external-link purple" title="Link opens in a new window"></span></a>
+            creating a
+            lightweight
+            <mark>@font-face</mark>
+            embed, just for brand icons. </p>
+    </section>
+    <section>
+        <h3>Brand icons examples</h3>
+        <div class="row">
+            <!-- Row -->
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><i class="icon-twitter-squared"
+                        title="Twitter"></i>icon-twitter-squared </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><i class="icon-facebook-squared"
+                        title="Facebook"></i>icon-facebook-squared </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><i class="icon-linkedin-squared"
+                        title="Linked in"></i>icon-linkedin-squared </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><i class="icon-flickr" title="Flickr"></i>icon-flickr </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="p-3 mb-3 bg-light"><i class="icon-youtube-squared"
+                        title="Youtube"></i>icon-youtube-squared </div>
+            </div>
+        </div>
+    </section>
+    <!-- End sub section -->
+
+</section>
+<!-- END SECTION BRAND ICONS -->
+
+<!-- SECTION RULES AND KEY LINES -->
+<section class="key-under" id="horizontal-rules-key-lines">
+    <h2>Horizontal rules and key lines</h2>
+    <h3>Key line underneath</h3>
+    <p>Add a key line to the bottom edge of an element using the
+        <mark><strong>.key-under</strong></span></mark>
+        class: </p>
+    <p>For example each
+        <mark>&lt;section&gt;</mark>
+        on this page uses the
+        <mark><strong>.key-under</strong></mark>
+        class.
+</section>
+<!-- END SECTION RULES AND KEY LINES -->
+
+<!-- START SECTION  EXPANDABLES -->
+<section id="expandables" class="expandable-container key-under">
+    <section>
+        <h2>Expandable content - Vanilla Javascript</h2>
+        <p>Provide additional information or functionality inside an expandable comtainer. </p>
+        <p>You must ensure the
+            <mark>&lt;section&gt;</mark>
+            that wraps both the expandable and the trigger
+            uses a class of
+            <mark><strong>.expandable-container</strong></mark>
+        </p>
+    </section>
+    <p><strong>Expandable form triggered by a link:</strong></p>
+    <?php
+            // Include expandable link
+            include( "inc/Expandables/LinkExpandable.html" );
+            ?>
+    <p><strong>Expandable helper triggered by a link:</strong></p>
+    <?php
+            // Include expandable helper
+            include( "inc/Expandables/HelperExpandable.html" );
+            ?>
+    <p><strong>Form expandable triggered by a button:</strong></p>
+    <?php
+                    // Include expandable button
+                    include( "inc/Expandables/ButtonExpandable.html" );
+                    ?>
+</section>
+<!-- END SECTION EXPANDABLES -->
+
+<!-- START SECTION ACCORDION MENU -->
+
+<section id="accordion-menu" class="key-under">
+    <section>
+        <h2>Accordion menu - Vanilla Javascript</h2>
+        <p>For multi category navigation consider an accordion style menu in the sidebar.</p>
+        <p>You must ensure the
+            <mark>&lt;div&gt;</mark>
+            that wraps the navigation uses a class of
+            <mark><strong>.sidebar</strong></mark>
+        </p>
+        <div class="row">
+            <div class="sidebar col-md-6">
+                <?php
+                    // Include accordion menu
+                    include( "inc/SideBars/NavAccordionSideBar.html" );
+                    ?>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- END SECTION ACCORDION MENU-->
+
+<!-- START SECTION SIMPLE MENU -->
+
+<section id="simple-menu" class="key-under">
+    <section>
+        <h2>Simple menu</h2>
+        <p>For multi category navigation consider the simple menu in the sidebar.</p>
+        <p>You must ensure the
+            <mark>&lt;div&gt;</mark>
+            that wraps the navigation uses a class of
+            <mark><strong>.sidebar</strong></mark>
+        </p>
+        <div class="row">
+            <div class="sidebar col-md-6">
+                <?php
+                    // Include accordion menu
+                    include( "inc/SideBars/NavSimpleSideBar.html" );
+                    ?>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- END SECTION SIMPLE MENU -->
+
+<!-- START SECTION CALL OUTS -->
+
+<section id="callout-boxes" class="key-under">
+    <section>
+        <h2>Callout boxes</h2>
+        <p>Focus attention on key information by using a callout box. Typically used a maximum of once per
+            page.</p>
+    </section>
+
+    <!-- Callout -->
+    <section class="tight">
+        <div class="row">
+            <div class="col-md-12 callout">
+                <p>The callout box background colour can be defined using <a href="#colours">custom SASS
+                        colour variables</a>, in the example below
+                    <mark><strong>.bg-teal</strong></mark>
+                    :</p>
+                <section class="bg-teal p-4">
+                    <h3 class="text-center">Your next green recycling collection is Tuesday 18th July 2019
+                    </h3>
+                    <p class="text-center"><span class="oi oi-circle-check"></span>Put out your green bin
+                        (plastic, metal and glass) and your food waste</span> </p>
+                </section>
+            </div>
+    </section>
+    <!-- End callout -->
+
+    <p>In this example
+        <mark><strong>.bg-primary</strong></mark>
+        :</p>
+
+    <!-- Callout -->
+    <section class="tight">
+        <div class="row">
+            <div class="col-md-12 callout">
+                <section class="bg-primary p-4">
+                    <h3 class="text-center">Your next green recycling collection is Tuesday 18th July 2019
+                    </h3>
+                    <p class="text-center"><span class="oi oi-circle-check"></span>Put out your green bin
+                        (plastic, metal and glass) and your food waste</span> </p>
+                </section>
+            </div>
+    </section>
+    <!-- End callout -->
+
+</section>
+<!-- END SECTION CALL OUTS -->
+
+<!-- START SECTION PADDING AND MARGIN  -->
+
+<section id="padding-margin" class="key-under">
+    <section>
+        <h2>Spacing - padding and margin</h2>
+        <p>Use the <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Bootstrap
+                4 spacing classes <span class="oi oi-external-link purple"
+                    title="Link opens in a new window"></span></a> in your HTML code to add styling to your
+            elements.</p>
+    </section>
+
+    <!-- Callout -->
+    <section class="tight">
+        <div class="row">
+            <div class="col-md-12 callout">
+                <p>The example below has the padding class
+                    <mark><strong>.p3</strong></mark>
+                    resulting in a tight padding of 1rem on all sides:</p>
+                <section class="bg-carbon p-3">
+                    <h3 class="text-center">Padding example</h3>
+                    <p class="text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                        consectetur adipisci velit sed quia non numquam eius modi tempora incidunt.</span>
+                    </p>
+                </section>
+            </div>
+    </section>
+    <!-- End callout -->
+
+    <!-- Callout -->
+    <section class="tight">
+        <div class="row">
+            <div class="col-md-12 callout">
+                <p>The example below has the padding class
+                    <mark><strong>.px-5</strong></mark>
+                    and
+                    <mark><strong>.py-4</strong></mark>
+                    resulting in a looser padding of 3rem on the horizontal axis and 1.5rem on the vertical
+                    axis:</p>
+                <section class="bg-green px-5 py-4">
+                    <h3 class="text-center">Padding example</h3>
+                    <p class="text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                        consectetur adipisci velit sed quia non numquam eius modi tempora incidunt.</span>
+                    </p>
+                </section>
+            </div>
+    </section>
+    <!-- End callout -->
+
+    <!-- Callout -->
+    <section class="tight">
+        <div class="row">
+            <div class="col-md-12 callout">
+                <p>The example below has the margin class
+                    <mark><strong>.mt-4</strong></mark>
+                    and
+                    <mark><strong>.mb-5</strong></mark>
+                    resulting in a margin of 1.5rem on the top edge and 3rem on the bottom edge:</p>
+                <section class="bg-indigo p-4 mb-5 mt-4">
+                    <h3 class="text-center">Margin example</h3>
+                    <p class="text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                        consectetur adipisci velit sed quia non numquam eius modi tempora incidunt.</span>
+                    </p>
+                </section>
+                <p><small>This text demonstrates the margin underneath the callout box</small></p>
+            </div>
+    </section>
+    <!-- End callout -->
+
+</section>
+<!-- END SECTION PADDING AND MARGIN -->
+
+<!-- SECTION CONVERSION TABLE -->
+<section id="pixel-rem-conversion-table" class="key-under">
+    <h2>Pixel to REM unit conversion table</h2>
+    <p>The conversion table is useful for converting pixel units to REMs. In Bootstrap 4 font sizes and
+        element
+        spacing are measured in REM units, while design files typically use pixel units.</p>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Pixel</th>
+                <th scope="col">REM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1px</th>
+                <td>0.0625rem</td>
+            </tr>
+            <tr>
+                <th scope="row">2px</th>
+                <td>0.125rem</td>
+            </tr>
+            <tr>
+                <th scope="row">3px</th>
+                <td>0.1875rem</td>
+            </tr>
+            <tr>
+                <th scope="row">4px</th>
+                <td>0.25rem</td>
+            </tr>
+            <tr>
+                <th scope="row">5px</th>
+                <td>0.3125rem</td>
+            </tr>
+            <tr>
+                <th scope="row">6px</th>
+                <td>0.4375rem</td>
+            </tr>
+            <tr>
+                <th scope="row">7px</th>
+                <td>0.375rem</td>
+            </tr>
+            <tr>
+                <th scope="row">8px</th>
+                <td>0.5rem</td>
+            </tr>
+            <tr>
+                <th scope="row">9px</th>
+                <td>0.5625rem</td>
+            </tr>
+            <tr>
+                <th scope="row">10px</th>
+                <td>0.625rem</td>
+            </tr>
+            <tr>
+                <th scope="row">12px</th>
+                <td>0.75rem</td>
+            </tr>
+            <tr>
+                <th scope="row">14px</th>
+                <td>0.875rem</td>
+            </tr>
+            <tr>
+                <th scope="row">15px</th>
+                <td>0.9375rem</td>
+            </tr>
+            <tr class="bg-light">
+                <th scope="row"><mark><strong>16px</strong></mark></th>
+                <td><mark><strong>1rem (base)</strong></mark></td>
+            </tr>
+            <tr>
+                <th scope="row">17px</th>
+                <td>1.063rem</td>
+            </tr>
+            <tr>
+                <th scope="row">18px</th>
+                <td>1.125rem</td>
+            </tr>
+            <tr>
+                <th scope="row">19px</th>
+                <td>1.188rem</td>
+            </tr>
+            <tr>
+                <th scope="row">20px</th>
+                <td>1.25rem</td>
+            </tr>
+            <tr>
+                <th scope="row">22px</th>
+                <td>1.375rem</td>
+            </tr>
+            <tr>
+                <th scope="row">24px</th>
+                <td> 1.5rem</td>
+            </tr>
+            <tr>
+                <th scope="row">26px</th>
+                <td>1.625rem</td>
+            </tr>
+            <tr>
+                <th scope="row">28px</th>
+                <td>1.75rem</td>
+            </tr>
+            <tr>
+                <th scope="row">30px</th>
+                <td>1.875rem</td>
+            </tr>
+            <tr>
+                <th scope="row">32px</th>
+                <td>2rem</td>
+            </tr>
+            <tr>
+                <th scope="row">34px</th>
+                <td>2.125rem</td>
+            </tr>
+            <tr>
+                <th scope="row">36px</th>
+                <td>2.25rem</td>
+            </tr>
+            <tr>
+                <th scope="row">38px</th>
+                <td>2.375rem</td>
+            </tr>
+            <tr>
+                <th scope="row">40px</th>
+                <td>2.5rem</td>
+            </tr>
+            <tr>
+                <th scope="row">42px</th>
+                <td>2.625rem</td>
+            </tr>
+            <tr>
+                <th scope="row">44px</th>
+                <td>2.75rem</td>
+            </tr>
+            <tr>
+                <th scope="row">46px</th>
+                <td>2.875rem</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<!-- END SECTION CONVERSION TABLE -->

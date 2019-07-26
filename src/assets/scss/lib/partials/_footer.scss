@@ -1,0 +1,160 @@
+
+/* /// FOOTER /// */
+
+.footer-bottom {
+	section {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	i {
+		display: inline-flex;
+		font-size: 1.625rem;	
+		&:before {
+			margin-left: 0;
+			margin-right: 5px;
+		}
+	}
+	h2 {
+		margin-right: ($spacer * 1);
+		margin-bottom: ($spacer * 1);
+	}
+	p {
+		margin-bottom: ($spacer * 1);
+		margin-right: ($spacer * 1);
+		align-self: flex-end;
+	}
+}
+
+.footer-top .oi,
+.footer-bottom .oi {
+	padding-right: .625rem; //10px
+	color: $white;
+}
+
+.footer-top a,
+.footer-bottom a {
+	color: $white;
+	text-decoration: underline
+}
+
+footer .iconlist .oi {
+	min-width: 25px;
+}
+
+footer .iconlist li strong {
+	font-size: 125%;
+}
+
+.flex-break {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+
+/* /// VANILLA FOOTER NAV BOTTOM  /// */
+
+//Footer vanilla nav outer container
+.navbar-light.nav-vanilla {
+	padding: 0.5rem 0;
+	display: block;
+}
+
+//Footer vanilla nav links  
+.navbar-light.nav-vanilla .nav-item {
+	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	font-weight: normal; // for fallbacks only
+	white-space: nowrap;
+	font-size: .9375rem; //15px
+}
+
+// Foot nav navigation logo
+.navbar-light.nav-vanilla .navbar-brand {
+	margin-right: 1.125rem; //18px
+	color: $purple;
+}
+
+//Nav links container
+.navbar-light.nav-vanilla .navbar-nav {
+	padding: 1rem 0;
+}
+
+//Nav links li
+.navbar-light.nav-vanilla ul li {
+	margin-bottom: ($spacer * .5);
+}
+
+//Foot nav links mobile
+.navbar-light.nav-vanilla .navbar-nav .nav-link {
+	color: $carbon;
+	padding: 0 2rem 0 0;
+}
+
+//Foot nav hover and focus
+.navbar-light.nav-vanilla .navbar-nav .nav-link:hover {
+	color: $indigo;
+	text-decoration: underline;
+}
+
+// Foot nav navigation active
+.navbar-light.nav-vanilla .navbar-nav .active>.nav-link {
+	color: $purple;
+}
+
+.navbar-light.nav-vanilla .navbar-nav .active {
+	color: $purple;
+}
+
+// Foot nav navigation dropdown icon
+.navbar-light.nav-vanilla .active a:hover {
+	color: $indigo !important;
+}
+
+// Foot nav below nav and above search (mobile)
+.navbar-light.nav-vanilla.navbar-nav {
+	margin-bottom: 0; // 0 px
+}
+
+.copyright {
+	display: flex;
+	color: $gray-dark;
+	justify-content: flex-start;
+	align-self: center;
+	padding-bottom: ($spacer * 2);
+}
+
+.copyright p {
+	margin-bottom: 0;
+	font-size: .9375rem; //15px
+}
+
+footer section {
+	padding-bottom: 0;
+	margin-bottom: ($spacer * 4);
+	padding-right: ($spacer * 2);
+}
+
+.footer-top a,
+.footer-bottom a {
+	font-weight: 700;
+}
+
+.footer-bottom section {
+	padding-bottom: 0;
+	margin-bottom: ($spacer * 3);
+}
+
+.footer-bottom div section:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+footer .footer-top {
+	padding-bottom: 0;
+	padding-top: ($spacer * 3);
+}
+
+footer .footer-bottom {
+	padding-top: ($spacer * 3);
+	padding-bottom: ($spacer * 3);
+}

@@ -1,0 +1,25 @@
+//Sidebar text sizes
+.sidebar h2,
+footer h2 {
+	font-size: $h3-font-size;
+	margin-bottom: ($spacer * 1.5);
+}
+
+.sidebar h3 {
+	font-size: $h4-font-size;
+}
+
+.sidebar h4 {
+	font-size: $h5-font-size;
+}
+
+.sidebar h5 {
+	font-size: $h6-font-size;
+}
+
+.sidebar p,
+.sidebar ul,
+.sidebar ol {
+	font-size: 1.063rem; //17px
+	margin-bottom: ($spacer * 1);
+}
