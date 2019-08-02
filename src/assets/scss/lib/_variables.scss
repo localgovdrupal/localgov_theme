@@ -1,0 +1,185 @@
+// * * * * * * OVERRIDE SASS VARIABLES BEFORE BOOTSTRAP 4 IMPORT  * * * * * * //
+// Colour variables - Setting them first allows usage before Bootstrap import
+// Primary Colours
+$black: #000000 !default;
+$white: #FFFFFF !default;
+$red: #AE1100 !default;
+$yellow: #FFBB00 !default;
+$blue: #0059A4 !default;
+
+// General colours
+$orange: #FF5500 !default;
+$green: #77BB55 !default;
+$purple: #551A8B !default;
+// $brown
+// $magenta
+// $tan
+$cyan: #17A2B8 !default;
+// $olive
+// $maroon
+// $navy
+// $aquamarine
+// $turquoise
+// $silver
+// $lime
+$teal: #008877 !default;
+$indigo: #540055 !default;
+//$violet
+$pink: #AD52AD !default;
+$gray: #DBDFE3 !default;
+
+//custom
+$gray-dark: #444444 !default;
+$carbon: #121212 !default;
+$graphite: #282828 !default;
+$stonewash: #A0A0A0 !default;
+$gray-tint: #EDEDED !default;
+$gray-bs: #6C757D !default;
+$purple-tint: #F8EEF8 !default;
+$green-tint: #EAF5E5 !default;
+$indigo-tint: #EEE5EE !default;
+$success: #338800 !default;
+$danger: #ae1100 !default;
+$light: #ededed !default;
+$dark: #444444 !default;
+$visited: #ad52ad !default;
+
+// Site colours
+
+$primary: $purple !default;
+$secondary: $green !default;
+ 
+
+// grays
+$gray-primary: $gray;
+$gray-secondary: $gray-dark;
+$gray-tertiary: $carbon;
+$gray-quaternary: $graphite;
+$gray-quinary: $stonewash;
+$gray-senary: $gray-tint;
+//$gray-septenary:;
+// $gray-octonary: ;
+// $gray-nonary: ;
+// $gray-denary: ;
+
+
+$breadcrumb: $gray-quinary;
+$focus: 4px solid $yellow; 
+
+
+// Theme colours - SASS Map our varieables above, to 'theme-colours'
+$theme-colors: ( // Bootstrap colours
+"primary": $purple, "secondary": $green, "success": $success, "info": $carbon, "warning": $orange, "danger": $red, "light": $light, "dark": $dark, // Map additional colours to 'theme colours'
+"carbon": $carbon, "graphite": $graphite, "stonewash": $stonewash, "gray-tint": $gray-tint, "purple-tint": $purple-tint, "green-tint": $green-tint, "indigo-tint": $indigo-tint, // Map additional colours to 'theme colours' - can be used for backgrounds for example '.bg-green'
+"blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "gray": $gray, "gray-dark": $gray-dark, "white": $white, "visited": $visited, );
+
+
+$link-hover-color: $indigo;
+
+// Background colours
+$body-bg: #ffffff !default;
+$body-color: #121212 !default;
+$breadcrumb-bg: #FFF !default;
+// Set all border radius to 0 by default
+$border-radius: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-sm: 0 !default;
+
+// Fonts
+$font-family-base:'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$font-family-sans-serif: 'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$line-height-base: 1.5 !default;
+$headings-font-family: 'Fiendstar W01 Bold', 'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$headings-line-height: 1.1 !default;
+$headings-font-weight: bold !default; // for fallbacks only
+// Heading sizes
+$h1-font-size: 2.375rem !default; //38px
+$h2-font-size: 2rem !default; //32px
+$h3-font-size: 1.625rem !default; //26px
+$h4-font-size: 1.5rem !default; //24px
+$h5-font-size: 1.375rem !default; //22px
+$h6-font-size: 1.25rem !default; //20px
+$btn-font-weight: bold !default; // for fallbacks only
+
+//STANDARD BUTTONS
+$input-btn-padding-y: .5rem !default; //8px
+$input-btn-padding-x: .9375rem !default; //15px
+$input-btn-font-size: 1.25rem !default; //20px
+$input-btn-line-height: 1.5 !default; //10px
+//$btn-border-radius: 0 !default;
+//SMALL BUTTONS
+$input-btn-padding-y-sm: .3125rem !default; //5px
+$input-btn-padding-x-sm: .9375rem !default; //15px
+$input-btn-font-size-sm: 1.125rem !default; //18px
+$input-btn-line-height-sm: 1.5 !default; //10px
+
+//LARGE BUTTONS
+$input-btn-padding-y-lg: .75 !default; //12px
+$input-btn-padding-x-lg: .9375rem !default; //15px
+$input-btn-font-size-lg: 1.375rem !default; //22px
+$input-btn-line-height-lg: 1.5 !default; //10px
+
+// Hide default input focus
+$input-btn-focus-width: 0 !default;
+$component-active-bg: $yellow !default;
+$input-btn-focus-color: rgba($component-active-bg, 1) !default;
+
+
+// Main navigation links
+$navbar-nav-link-padding-x: 0 !default;
+$navbar-nav-link-padding-y: .5rem !default; //8px
+$navbar-brand-font-size: 2.125rem !default; //34px
+$navbar-dark-brand-color: $white !default;
+$navbar-dark-brand-hover-color: rgba($white, .5) !default;
+$navbar-dark-color: $white !default;
+$navbar-dark-hover-color: $yellow !default;
+$navbar-dark-active-color: $purple !default;
+$navbar-dark-disabled-color: rgba($white, .8) !default;
+$navbar-dark-toggler-icon-bg: $purple !default;
+$navbar-dark-toggler-border-color: $white !default;
+// Remove breadcrumb bottom margin
+$breadcrumb-margin-bottom: 0 !default;
+// Dropdown menu
+$dropdown-min-width: 290px !default;
+$dropdown-padding-y: 0 !default;
+$dropdown-margin-y: 0 !default;
+$dropdown-bg: $purple !default;
+$dropdown-border-width: 0 !default;
+// $dropdown-border-color:  !default;
+$dropdown-border-radius: 0 !default;
+$dropdown-box-shadow: none !default;
+$nav-divider-color: $white !default;
+$nav-divider-margin-y: 0 !default;
+// Dropdown hovers 
+$dropdown-link-color: $white !default;
+$dropdown-link-hover-color: $yellow !default;
+$dropdown-link-hover-bg: $purple !default;
+$dropdown-link-active-color: $white !default;
+$dropdown-link-active-bg: $indigo !default;
+$dropdown-item-padding-y: .625rem !default;
+$dropdown-item-padding-x: 0 !default;
+//Horizontal rule
+$hr-margin-y: 1.25rem !default; //20px
+//Small tags
+$small-font-size: 85% !default;
+//Form input remove rounded corners
+$input-border-radius: 0 !default;
+$input-border-radius-sm: 0 !default;
+$input-border-radius-lg: 0 !default;
+$input-color: $gray-dark !default;
+//Alert styles
+$alert-border-width: .1875rem !default; //3px
+$alert-bg-level: 0 !default;
+$alert-border-level: 0 !default;
+$alert-color-level: 0 !default;
+$alert-link-font-weight: 700 !default;
+$alert-font-weight: 700 !default;
+//Breadcrumb divider
+$breadcrumb-divider: quote(">") !default;
+// Form validation
+$form-feedback-valid-color: $success !default;
+$form-feedback-invalid-color: $danger !default;
+$form-feedback-font-size: 1.063rem !default; //17px
+//Form input
+$input-border-color: $stonewash !important !default;
+

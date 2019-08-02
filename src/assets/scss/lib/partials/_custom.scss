@@ -1,0 +1,282 @@
+
+/* /// GARDEN WASTE /// */
+//Fix for right aligned link - back to dashboard
+.text-right {
+	padding-right: 0;
+}
+
+//Dash items (grid)
+.dash-item {
+	margin-bottom: ($spacer * 2);
+}
+
+.dash-item h3 {
+	font-size: $h5-font-size;
+	background: $primary;
+	color: $white;
+	padding: 0.3125rem 0.5rem; //5/8px
+}
+
+//Right aligned image inside dash item
+.dash-item img,
+.gw-item img {
+	width: 100%;
+	height: auto;
+	border: .0625rem solid $gray !important; //1px
+}
+
+.dash-item p {
+	padding-right: 0;
+	margin-bottom: 0.3125rem; //5px
+}
+
+.dash-item p a .oi,
+.dash-item p a:visited .oi,
+.dash-item p a:visited:hover .oi {
+	color: $green !important;
+}
+
+// Sections inside garden waste dash items
+.dash-item section {
+	margin-bottom: ($spacer * 1) !important;
+}
+
+//Sections within garden waste item (2 col lists)
+.gw-item section {
+	margin-bottom: ($spacer * 3) !important;
+}
+
+// Zoom links   
+.dash-item figcaption {
+	white-space: nowrap;
+}
+
+.dash-item figcaption .oi {
+	padding-right: 0.1875rem; //3px
+}
+
+.dash-item figcaption a .oi,
+.dash-item figcaption a:visited .oi,
+.dash-item figcaption a:visited:hover .oi {
+	color: $carbon !important;
+}
+
+//Callout box content
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5,
+.callout h6,
+.callout p {
+	margin-bottom: ($spacer * 1);
+	padding-right: 0;
+}
+
+.callout p:last-child {
+	margin-bottom: 0;
+}
+
+
+
+/* Other */
+
+.expand-link {
+	font-size: $h4-font-size;
+	color: $purple;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.expand-link:visited {
+	color: $purple !important;
+}
+
+.expand-link .oi,
+.expand-link:visited .oi,
+.expand-link:visited:hover .oi {
+	color: $green !important;
+}
+
+//Prevent icon side movement inside expand button
+.expand-link .oi,
+.expand-btn .oi {
+	padding-right: .5rem; //8px
+	padding-left: .5rem; //8px
+}
+
+
+
+
+/* /// Above 576px /// */
+
+@include media-breakpoint-up(sm) {
+	//Sections within garden waste item (2 col lists)
+	.gw-item section:first-child {
+		margin-bottom: 0 !important;
+	}
+	.gw-item section {
+		margin-bottom: 0 !important;
+	}
+}
+
+
+/* /// Gutter width = 30px Above 768px /// */
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+	.row>.col,
+	.row>[class*="col-"] {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+
+/* /// Above 768px /// */
+
+@include media-breakpoint-up(md) {
+	/* /// Global heading sizes/// */
+	h1 {
+		font-size: 2.875rem;
+	} //46px
+	h2 {
+		font-size: 2.125rem;
+	} //34px
+	h3 {
+		font-size: 1.75rem;
+	} //28px
+	//$h4-font-size: 1.5rem; //24px
+	h5 {
+		font-size: 1.375rem;
+	} //22px
+	h6 {
+		font-size: 1.25rem;
+	} //20px
+	// Global font sizes
+	main p,
+	main ul,
+	main ol {
+		font-size: 1.188rem; //19px
+	}
+	//Main header paragraph size
+	main header p {
+		font-size: 1.375rem; //22px
+	}
+	.breadcrumb-item {
+		font-size: 1rem;
+		color: $breadcrumb;
+	} //16px
+	//Sidebar and footer h2 sizes
+	.sidebar h2,
+	.footer h2 {
+		font-size: 1.75rem; //28px
+	}
+	.sidebar p,
+	.sidebar ul,
+	.sidebar ol {
+		font-size: 1.063rem; //17px
+	}
+	//Account bar style
+	.account-bar .oi {
+		padding-left: .625rem; //10px
+	}
+	.account-bar p {
+		font-size: 1.125rem; //18px
+		flex-wrap: nowrap;
+		margin-bottom: 1rem;
+	}
+	.account-bar div:last-child {
+		margin-bottom: 0;
+	}
+	.account-links {
+		justify-content: flex-end;
+	}
+	.account-links a {
+		padding-right: .625rem; //10px
+	}
+	footer .footer-top {
+		padding-bottom: ($spacer * 3);
+	}
+	footer section {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+
+/* /// Above 992px /// */
+
+@include media-breakpoint-up(lg) {
+	//Hide mobile menu
+	#js-nav-toggle {
+		display: none;
+	}
+
+	.icon-search {
+		width: $input-height;
+		height: $input-height;
+	}
+	//Add white border under active tab 
+	.navbar-dark.nav-vanilla .nav-item.active {
+		border-bottom: $white solid 5px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	//Set big tab dark padding
+	.navbar-dark.nav-bigtabs {
+		padding: 0;
+	}
+	//Set big tab link padding to accomodate tab design
+	.navbar-dark.nav-bigtabs .navbar-nav .nav-link {
+		padding: 0.75rem 1.125rem; // 16/18px
+	}
+	//Add remove padding from active tab 
+	.navbar-dark.nav-bigtabs .nav-item.active {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.cookiealert p {
+		font-size: 1.063rem; //17px
+	}
+	
+	.navbar-dark.nav-vanilla .navbar-nav {
+		margin-bottom: 0;
+	}
+	.dropdown-item {
+		padding: .625rem .9375rem; // 10/15px
+	}
+	.dropdown-item.active {
+		padding-left: .9375rem; //15px
+		padding-right: .9375rem; //15px
+	}
+	.copyright {
+		justify-content: flex-end;
+		padding-bottom: 0;
+	}
+	.copyright p {
+		justify-content: flex-end;
+	}
+	.navbar-light.nav-vanilla {
+		padding: 0.5rem 0;
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		align-self: flex-start;
+		justify-content: flex-start;
+	}
+	//Nav links container
+	.navbar-light.nav-vanilla .navbar-nav {
+		padding: 0;
+	}
+	.navbar-light.nav-vanilla ul li {
+		margin-bottom: 0;
+	}
+	.navbar-light.nav-vanilla .navbar-nav .nav-link {
+		padding: 0 1rem;
+	}
+}
+
+/* /// Above 1200px /// */
+
+@include media-breakpoint-up(xl) {}

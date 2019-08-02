@@ -1,0 +1,12 @@
+header p {
+	font-size: 1.25rem; //20px
+}
+
+.headers {
+	padding: ($spacer * 3) 0;
+	.subheader {
+		p:last-child {
+			margin-bottom:0;
+		}
+	}
+}

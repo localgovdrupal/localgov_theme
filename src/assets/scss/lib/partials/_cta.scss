@@ -1,0 +1,109 @@
+.cta-button {
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  @include rem(padding, 13);
+  @include rem(font-size, 18);
+  height: 100%; // maintain equal heighs when responding
+  @include rem(line-height, 22);
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  color: $white;
+    &:hover, &:focus {
+        color: $white;
+        text-decoration: none;
+    }
+    span {
+        color: $white;
+        text-align: left;
+        /* ie10 fix */
+        @include width(100%, 13px, 0.8125rem);
+        @include rem(padding-right, 5);
+        display: block;
+    }
+    &:after {
+        color: $white;
+        display: flex;
+        align-items: center;
+        font-family: 'Font Awesome 5 Free';
+        content: '\f054';
+        font-weight: 900;
+        @include rem(font-size, 20);
+        @include rem(margin-top, 2);
+    }
+    &:focus {
+        outline: $focus;
+    }
+	&:not(:last-child)  {
+    @include rem(margin-bottom, 20);
+    
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+	}
+}
+
+.cta-pull .col-sm-4:not(:last-child) .cta-button {
+    @include rem(margin-bottom, 20);
+
+  	@include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+}
+
+/* Modifiers */
+
+.cta-green {
+    background-color: $green;
+    border-bottom: 5px solid $teal;
+    &:hover {
+        background-color: $teal;
+        border-bottom: 5px solid $green;
+    }
+}
+
+.cta-blue {
+    background-color: $blue;
+    border-bottom: 5px solid $cyan;
+    &:hover {
+        background-color: $cyan;
+        border-bottom: 5px solid $blue;
+    }
+}
+
+.cta-orange {
+    background-color: $orange;
+    border-bottom: 5px solid $yellow;
+    &:hover {
+        background-color: $yellow;
+        border-bottom: 5px solid $orange;
+    }
+}
+
+.cta-single {
+    @include rem(margin-top, 30);
+    
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+        @include rem(width, 350);
+    }
+}
+
+.cta-close {
+    @include rem(margin-top, 30);
+    
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+        @include rem(width, 200);
+    }
+
+    &:after {
+        content: "\f00d";
+    }
+}
+
+.cta-small {
+	@include rem(width, 140);
+}

@@ -1,0 +1,50 @@
+<!-- VANILLA JS EXPANDABLE TRIGERRED BY BUTTON
+Make sure a container has the class 'expandable-container' to make this work-->
+
+<section>
+    <!-- Start expandable toggle-->
+    <button type="submit" class="btn btn-primary col-sm-5 expand-btn"><span class="oi oi-chevron-bottom"></span>Apply
+        now</button>
+
+    <!-- Start expandable -->
+    <section class="expandable expanded bg-purple-tint">
+        <form>
+            <fieldset>
+                <div class="form-group">
+                    <legend>What would you like to do?</legend>
+                    <label class="custom-input"> <span>Order a new bin or lid for yourself</span>
+                        <input type="radio" checked="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                    <label class="custom-input">Swap or replace your bin
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                    <label class="custom-input">Apply on behalf of someone else
+                        <input type="radio" name="radio">
+                        <span class="radiomark"></span> </label>
+                <div class="conditional">
+                    <div class="form-group">
+                        <label for="reason">What is the reason for the replacement?</label>
+                        <select class="form-control col-12" id="reason">
+                            <option>Please select</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">How many bins would you like to replace?</label>
+                        <select class="form-control col-12" id="reason">
+                            <option>Please select</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary col-sm-5"><span
+                                class="oi oi-chevron-right"></span>Submit</button>
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+        </form>
+    </section>
+    <!-- End expandable -->
+
+</section>
