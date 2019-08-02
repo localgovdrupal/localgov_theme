@@ -1,0 +1,23 @@
+.account-bar {
+	p {
+		font-size: 1.063rem; // 17px
+		margin-bottom: .5rem; // 8px
+	}
+	div:last-child {
+		margin-bottom: .5rem; // 8px
+	}
+	a {
+		color: #121212;
+		&:hover {
+			color: #121212;
+		}
+	}
+	.oi {
+		padding-right: .3125rem; // 5px
+	}
+}
+
+.account-links a {
+	white-space: nowrap;
+	padding-right: .3125rem;
+}

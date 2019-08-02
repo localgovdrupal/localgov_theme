@@ -1,0 +1,47 @@
+/* /// CUSTOM CLASSES USING THEME COLOURS /// */
+
+//Visited links - Indigo at 60% opacity
+main section a:visited,
+main section a:visited .oi,
+.sidebar a:visited,
+.sidebar a:visited .oi,
+main section a:visited i,
+.sidebar a:visited i {
+	color: $visited !important;
+}
+
+main section a:visited:hover,
+main section a:visited:hover .oi,
+.sidebar a:visited:hover,
+.sidebar a:visited:hover .oi {
+	color: $indigo !important;
+}
+
+.success {
+	color: $success;
+}
+
+.danger {
+	color: $danger;
+}
+
+.purple {
+	color: $purple !important;
+}
+
+// Theme colour backgrounds that must have white text 
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-danger,
+.bg-dark,
+.bg-carbon,
+.bg-graphite,
+.bg-blue,
+.bg-indigo,
+.bg-purple,
+.bg-red,
+.bg-gray-dark,
+.bg-teal {
+	color: $white;
+}

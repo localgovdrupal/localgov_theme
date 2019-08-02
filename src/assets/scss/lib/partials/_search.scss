@@ -1,0 +1,23 @@
+// Search icon button
+.icon-search {
+	width: $input-height;
+	height: $input-height;
+	background: $indigo;
+	color: $white;
+	font-size: $btn-font-size-sm;
+}
+
+// Search icon button hover
+.icon-search:hover {
+	background: $green !important;
+}
+
+// Search icon button icon
+.icon-search:hover .oi {
+	color: $navbar-dark-toggler-border-color;
+}
+
+// Margin below nav and above search (mobile)
+.navbar-dark.nav-vanilla.navbar-nav {
+	margin-bottom: .9375rem; // 15 px
+}

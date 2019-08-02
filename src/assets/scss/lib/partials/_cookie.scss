@@ -1,0 +1,55 @@
+
+/*
+  * Bootstrap Cookie Alert by Wruczek
+  * https://github.com/Wruczek/Bootstrap-Cookie-Alert
+  * Released under MIT license
+  */
+
+.cookiealert {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 !important;
+	z-index: 999;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: all 500ms ease-out;
+	color: $white;
+}
+
+.alert-dismissible {
+	padding-right: 0;
+}
+
+.cookiealert .btn {
+	font-family: $headings-font-family;
+	min-width: 260px;
+	margin-top: 0;
+	margin-bottom: 1.25rem; //20px 
+}
+
+.cookiealert.show {
+	opacity: 1;
+	transform: translateY(0%);
+	transition-delay: 1000ms;
+}
+
+.cookiealert p {
+	font-size: 1.063rem; //17px
+}
+
+.cookiealert a {
+	color: $white;
+	text-decoration: underline
+}
+
+.cookiealert .acceptcookies {
+	margin-left: 10px;
+	vertical-align: baseline;
+}
+
+.cookiealert p .oi {
+	padding-right: .625rem; //10px
+	color: $yellow;
+}
