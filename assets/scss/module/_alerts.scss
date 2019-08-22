@@ -1,0 +1,57 @@
+.bhcc-alert {
+    display: table;
+    width: 100%;
+    @include rem(padding, 10);
+    border: 5px solid;
+    @include rem(margin-bottom, 20);
+    font-weight: bold;
+    font-weight: 900 !important;
+    &:before {
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'Font Awesome 5 Free';
+        @include rem(font-size, 40);
+        @include rem(width, 60);
+        font-weight: 900 !important;
+    }
+}
+
+.bhcc-alert-borderless {
+    border: none;
+    @include rem(padding, 2);
+    @include rem(margin-bottom, 20);
+    font-weight: bold;
+}
+
+.bhcc-alert-info {
+    color: $bhcc-black !important;
+    border-color: $bhcc-black;
+    &:before {
+        content: '\f06a';
+    }
+}
+
+
+.bhcc-alert-warning {
+    color: $bhcc-red !important;
+    border-color: $bhcc-red;
+    &:before {
+        content: '\f06a';
+    }
+}
+
+.bhcc-alert-failure {
+    color: $bhcc-red !important;
+    border-color: $bhcc-red;
+    &:before {
+        content: '\f057';
+    }
+}
+
+.bhcc-alert-success {
+    color: $bhcc-green !important;
+    border-color: $bhcc-green;
+    &:before {
+        content: '\f058';
+    }
+}

@@ -1,0 +1,19 @@
+{% extends "page.html.twig" %}
+
+{% block content_inner %}
+  <div class="clearfix">
+    {{ page.messages }}
+  </div>
+
+  <div class="row">
+    <main {{ content_attributes.addClass('directory-listing-content col-md-8 order-1') }}>
+      {{ page.content }}
+    </main>
+
+    {% if page.sidebar_second %}
+      <div class="sidebar col-md-4 order-2">
+        {{ page.sidebar_second }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

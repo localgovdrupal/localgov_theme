@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * This is a template file for a banner prompting user to give their consent for
+ * the website to set cookies.
+ *
+ * When overriding this template it is important to note that jQuery will use
+ * the following classes to assign actions to buttons:
+ *
+ * agree-button      - agree to setting cookies
+ * find-more-button  - link to an information page
+ *
+ * Variables available:
+ * - message:  Contains the text that will be display whithin the banner
+ * - agree_button: Label for the agree button
+ * - disagree_button: Label for the disagree button
+ */
+#}
+
+<div class="cookies-notice">
+  <div class="wrapper">
+    <div class="cookies-notice-inner">
+      <span>We use cookies to improve our service.</span>
+      <span>By using this site, you agree to this use.</span>
+      <a href="/about-website/how-we-use-cookies">See our cookie policy</a>
+      <a href="#" class="agree-button button-accept">{{ agree_button }} <i class="fa fa-check"></i></a>
+    </div>
+  </div>
+</div>

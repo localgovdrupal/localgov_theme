@@ -1,0 +1,40 @@
+// .wrapper {
+//     position: relative;
+//     margin: 0 auto;
+//     @include rem(max-width, 1200);
+// }
+
+// .page {
+//     position: relative;
+//     overflow: auto;
+//     box-sizing: border-box;
+//     background: #ffffff;
+//     @include rem(min-height, 500);
+//     @include rem(padding, 0, 35);
+//     @include rem(max-width, 1170);
+//     @media only screen and (min-width: $screen-sm-min){
+//         @include rem(margin, 0, 15);
+//     }
+//     @media only screen and (max-width: $screen-xs-max) {
+//         @include rem(padding, 0, 15);
+//         @include rem(max-width, 1170);
+//         margin: 0;
+//     }
+//     p, li {
+//         @include rem(font-size, 19);
+//         @media only screen and (max-width: $screen-xs-max){
+//             @include rem(font-size, 17);
+//         }
+//     }
+// }
+
+// .page-raised {
+//     @include rem(margin-top, -25);
+//     border-top: 5px solid $bhcc-orange;
+// }
+
+// .section {
+// 	@media only screen and (max-width: $screen-xs-max){ 
+// 		@include rem(margin-bottom, 20);
+// 	}
+// }

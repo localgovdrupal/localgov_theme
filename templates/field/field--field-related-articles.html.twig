@@ -1,0 +1,16 @@
+<section class="top-story top-story--newsroom">
+
+  <h2>More like this</h2>
+
+  <div class="top-story--slice">
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+
+    {# If there are only 2 items, we add an empty third item to stop display flex doing wierd things #}
+    {% if items|length == 2 %}
+      <div class="top-story--block_3up"></div>
+    {% endif %}
+  </div>
+
+</section>

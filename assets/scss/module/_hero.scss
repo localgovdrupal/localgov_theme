@@ -1,0 +1,133 @@
+.hero-wrapper {
+    background: #A41055; }
+  
+  .hero {
+    @include rem(height, 300);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    @include rem(max-width, 1200); }
+    @media only screen and (max-width: 767px) {
+      .hero {
+        @include rem(height, 330); } }
+    @media only screen and (max-width: 539px) {
+      .hero {
+        @include rem(height, 200); } }
+  
+  .hero-inner {
+    margin: 0 15px; }
+  
+  .hero-inner > .hero-heading > h1 {
+    display: inline-block;
+    @include rem(margin-top, 100);
+    font-family: "Sentinel SSm A", "Sentinel SSm B", Georgia, serif;
+    font-weight: 700;
+	line-height: 1.1;
+    @include rem(font-size, 50);
+    color: #ffffff; }
+    @media only screen and (max-width: 767px) {
+      .hero-inner > .hero-heading > h1 {
+        @include rem(width, 300);
+        @include rem(margin-top, 40);
+        @include rem(font-size, 40); } }
+    @media only screen and (max-width: 539px) {
+      .hero-inner > .hero-heading > h1 {
+        @include rem(width, 300);
+        @include rem(margin-top, 40);
+        @include rem(font-size, 40); } }
+  
+  .hero-border {
+    @include rem(margin, 0, 15);
+    border-bottom: 5px solid #F37021; }
+	
+	
+.newsroom--hero {
+	background-color: $bhcc-purple;
+	background-image: url($image-folder+'/newsroom-hero.jpg');
+	background-repeat: no-repeat;
+    background-position: right;
+    @include rem(background-size, 450); 
+	@include rem(padding, 35);
+	@include rem(margin-bottom, 10);
+	font-family: $font-header-bold;
+	color: white;
+	h1 {
+		display: inline;
+		margin: 0;
+		@include rem(font-size, 30);
+		font-weight: 500;
+		line-height: 1.1;
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(font-size, 26);
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+	.newsroom--title {
+		display: inline;
+		margin: 0;
+		@include rem(font-size, 30);
+		line-height: 1.1;
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(font-size, 26);
+		}		
+	}
+	&-tagline {
+		position: relative;
+		display: inline;
+		@include rem(padding-left, 20);
+		@include rem(margin-left, 15);
+		@include rem(font-size, 20);
+		font-weight: 400;
+		&:before {
+			content: "";
+		  	background: $bhcc-orange;
+		  	position: absolute;
+		  	bottom: 20%;
+		  	left: 0;
+		  	height: 60%;
+		  	@include rem(width, 2);
+		}
+	}
+	@media only screen and (max-width: $screen-sm-max){
+		@include rem(padding, 15);
+		&-tagline {
+			display: none;
+		}
+	}
+	@media only screen and (max-width: $screen-xs-max){
+		background-image: none;
+	}
+	.newsroom--search-toggle {
+		
+		@media only screen and (min-width: $screen-sm-min){
+			display: none;
+		}
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(font-size, 17);
+			font-family: $font-main;
+			text-decoration: none;
+			font-weight: bold;
+			float: right;
+			color: white;
+			span {
+				@include rem(font-size, 15);
+				@include rem(margin-left, 4);
+			}
+		}
+	}
+
+	
+	.newsroom--search {
+		@media only screen and (max-width: $screen-xs-max){
+			display: none;
+			padding: 0;
+		}
+		@media only screen and (min-width: $screen-sm-min){
+			display: none;
+		}
+	}
+}

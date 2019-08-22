@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% if breadcrumb %}
+  
+<div class="key-under">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb site-max">
+              <li class="breadcrumb-item"><a href="#"><span class="oi oi-home purple" title="Home"></span></a></li>
+            {% for key, item in breadcrumb %}
+        {% if item.url %}
+          <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% else %}
+          <li class="breadcrumb-item">{{ item.text }}</li>
+        {% endif %}
+      {% endfor %}
+            <!-- 
+            <li class="breadcrumb-item"><a href="#">Section title</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Page title</li> -->
+            </ol>
+        </nav><!-- End Breadcrumb -->
+    </div><!-- End breadcrumb wrapper -->
+
+{% endif %}

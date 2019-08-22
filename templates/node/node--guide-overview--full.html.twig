@@ -1,0 +1,19 @@
+{#
+This file provides the HTML structure for baic pages.
+#}
+
+<main {{ content_attributes.addClass('col-md-8 order-1') }}>
+
+  {% if guide_contents %}
+    {{ guide_contents }}
+  {% endif %}
+
+  <h2>Overview</h2>
+  {{ content }}
+
+  {% if next_url %}
+    <aside class="navigation-link-container clearfix">
+      <a href="{{ next_url }}" class="cta-button cta-small cta-blue next"> <span>Next</span> </a>
+    </aside>
+  {% endif %}
+</main>
