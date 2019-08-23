@@ -1,0 +1,46 @@
+.beta-notice {
+    p {
+        @include rem(font-size, 15);
+        @include rem(line-height, 15);
+    }
+    a {
+            @include rem(font-size, 15);
+            color: white;
+        }
+    .first-line {
+        span, p {
+            display: inline;
+        }
+        span {
+            background: $bhcc-black;
+            color: white;
+            @include rem(border-radius, 5);
+            @include rem(padding, 0, 4);
+            @include rem(margin-right, 3);
+            @include rem(font-size, 13);
+            font-weight: 700;
+        }
+    }
+}
+
+.beta-notice-full {
+    // @include rem(padding-top, 10);
+    // @include rem(margin-left, 30);
+    // @media only screen and (max-width: $screen-sm-max) {
+        display:none;
+    // }
+    // .first-line a {
+    //     font-weight: 700;
+    // }
+}
+
+.beta-notice-sm {
+    display: none;
+    // @media only screen and (max-width: $screen-sm-max) {
+    //     display: inline-block;
+    //     float: right;
+    // }
+    // a {
+    //     color: $bhcc-blue;
+    // }
+}

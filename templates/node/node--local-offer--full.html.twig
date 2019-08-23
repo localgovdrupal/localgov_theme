@@ -1,0 +1,56 @@
+{#
+This file provides the HTML structure for local offer pages.
+#}
+
+<article{{ content_attributes.addClass('directory-listing-content') }}>
+  <h2>{{ label }}</h2>
+
+  {{ content.body }}
+
+  <ul>
+    {% if content.field_addressfield|render %}
+      <li><span class="fas fa-map-marker-alt"></span>{{ content.field_addressfield|render }}</li>
+    {% endif %}
+
+    {% if content.field_phone|render %}
+      <li><span class="fas fa-phone"></span>{{ content.field_phone|render }}</li>
+    {% endif %}
+
+    {% if content.field_email_address|render %}
+      <li><span class="far fa-envelope"></span>{{ content.field_email_address|render}}</li>
+    {% endif %}
+
+    {% if content.field_website|render %}
+      <li><span class="fas fa-external-link-alt"></span><a class="external-link" href="{{ content.field_website|render }}">Visit website</a></li>
+    {% endif %}
+  </ul>
+
+  {% if content.field_date_and_time_text|render %}
+    <hr>
+    <h3>Date and time</h3>
+    {{ content.field_date_and_time_text|render }}
+  {% endif %}
+
+  {% if content.field_costs_text|render %}
+    <hr>
+    <h3>Costs</h3>
+    {{ content.field_costs_text|render }}
+  {% endif %}
+
+  {% if content.field_accessibility_text|render %}
+    <hr>
+    <h3>Accessibility</h3>
+    {{ content.field_accessibility_text|render }}
+    {{ content.field_accessibility|render }}
+  {% endif %}
+
+  {% if content.field_other_text|render %}
+    <hr>
+    <h3>Other information</h3>
+    {{ content.field_other_text|render }}
+  {% endif %}
+
+  <div class="directories-back-results">
+    <span class="fa fa-chevron-left"></span><a href="{{ path('search_api_page.en.local_offers') }}">Back to search results</a>
+  </div>
+</article>

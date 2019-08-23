@@ -1,0 +1,66 @@
+.alert-bar {
+    background: $bhcc-yellow;
+    color: $bhcc-black;
+}
+
+.alert-bar--inner {
+    @include rem(min-height, 50);
+    @include rem(margin, 0, 15);
+    @include rem(padding, 10, 0);
+    @media only screen and (min-width: $screen-lg-min){
+        display: flex;
+        align-items: center;
+    }
+    @media only screen and (max-width: $screen-xs-max){
+        @include rem(line-height, 25);
+    }
+    i {
+        @include rem(font-size, 30);
+        @include rem(margin-right, 10);
+        @media only screen and (max-width: $screen-md-max){
+            display: none;
+        }
+    }
+    strong {
+        font-weight: 700;
+        @include rem(margin-right, 5);
+    }
+    p {
+        margin: 0;
+		@include rem(font-size, 17);
+        @media only screen and (max-width: $screen-md-max){
+            display: block;
+        }
+    }
+    a {
+        color: $bhcc-black;
+        font-weight: 700;
+        @include rem(margin-left, 5);
+        @media only screen and (max-width: $screen-md-max){
+            margin-left: 0;
+        }
+    }
+}
+
+.alert-bar--left {
+    @media only screen and (min-width: $screen-lg-min){
+        display: flex;
+        align-items: center;
+    }
+    @include rem(padding-right, 60);
+}
+
+.alert-bar--right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  @include rem(font-size, 17);
+  span {
+    @include rem(margin-left, 5);
+  }
+  @media only screen and (max-width: $screen-md-max) {
+    position: absolute;
+    @include rem(bottom, 10);
+    @include rem(right, 5);
+  }
+}

@@ -1,0 +1,24 @@
+name: "Croydon Council Theme"
+description: "Drupal 8 theme for Croydon Council"
+core: 8.x
+type: theme
+
+libraries:
+  - croydon/global
+
+regions:
+  tasks: "Tasks"
+  primary_menu: "Primary menu"
+  secondary_menu: "Secondary menu"
+  search: "Search"
+  mobile_search: "Mobile search"
+  banner: "Banner"
+  breadcrumb: "Breadcrumb"
+  messages: "Messages"
+  header: "Header"
+  content: "Content"
+  content_bottom: "Content bottom"
+  sidebar_first: "Sidebar First"
+  sidebar_second: "Sidebar Second"
+  footer: "Footer"
+  disabled: "Disabled"

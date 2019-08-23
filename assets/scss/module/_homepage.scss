@@ -1,0 +1,157 @@
+// .homepage--hero-wrapper {
+//     background: $bhcc-homepage-bg-pink; 
+// }
+
+// .homepage--hero {
+//     @include rem(height, 300);
+//     background-size: cover;
+//     background-position: center;
+//     margin: 0 auto;
+//     @include rem(max-width, 1200);
+//     @media only screen and (max-width: $screen-xs-max){
+//         @include rem(height, 330);
+//     }
+//     @media only screen and (max-width: $screen-xxs-max){
+//         @include rem(height, 200);
+//     }
+// }
+
+// .homepage--hero-inner {
+//     @include rem(margin, 0, 15);
+// }
+
+// .homepage--welcome {
+//     @include rem(padding-top, 60);
+//     @media only screen and (max-width: $screen-xs-max) {
+//         @include rem(padding-top, 40);
+//     }
+//     color: white;
+//     span {
+//         display: block;
+// 		line-height: 1.1;
+//     }
+//     span:first-child {
+//         font-family: $font-header-medium;
+//         @include rem(letter-spacing, 0);
+//         @include rem(font-size, 25);
+// 		font-weight: 500;
+//         @media only screen and (max-width: $screen-xs-max){
+//             @include rem(margin-bottom, 5);
+//             @include rem(font-size, 18);
+//         }
+//     }
+//     span:last-child {
+//         font-family: $font-header-bold;
+//         font-weight: 700;
+//         @include rem(font-size, 70);
+//         @media only screen and (max-width: $screen-xs-max){
+//             @include rem(line-height, 50);
+//             @include rem(font-size, 48);
+//             @include rem(padding-right, 40);
+//         }
+//     }
+// }
+
+// .homepage--search {
+//     @include rem(margin, -105, 15, 0, 15);
+//     @include rem(padding, 25, 30);
+//     background: rgba(0,0,0,0.6);
+//     color: white;
+//     border-bottom: 5px solid $bhcc-orange;
+//     @media only screen and (max-width: $screen-xs-max){
+//         @include rem(padding, 15, 30);
+//         @include rem(margin, -150, 15, 0, 15);
+//     }
+//     @media only screen and (max-width: $screen-xxs-max){
+//         @include rem(padding, 15);
+//         margin: 0;
+//         height: auto;
+//         background: rgba(0,0,0,1);
+//     }
+
+//     .search-left {
+//         float: left;
+//         @include rem(width, 280);
+//         @include rem(padding-top, 10);
+//         @media only screen and (max-width: $screen-xs-max){
+//             float: left;
+//             width: 100%;
+//             padding-top: 0px;      
+//             @include rem(margin-bottom, 10);
+//         }
+//         h2 {
+//             display: block;
+//             @include rem(font-size, 30);
+//             font-weight: 600;
+//             @include rem(letter-spacing, 1);
+//             margin: 0;
+// 			font-family: "Source Sans Pro", sans-serif;
+// 			line-height: 1.1;
+//             @media only screen and (max-width: $screen-xs-max){
+//                 @include rem(font-size, 24);
+//                 float: left;
+//             }
+//         }
+//         a {
+//             color: white;
+//             @include rem(font-size, 15);
+//             @media only screen and (max-width: $screen-xs-max){
+//                 float: right;
+//             }
+//         }
+//     }
+
+//     .search-right {
+//         @include rem(margin-left, 280);
+//         @media only screen and (max-width: $screen-xs-max){
+//             margin-left: 0px;
+//             clear: both;
+//         }
+//         input, .btn-default {
+//             @include rem(height, 50);
+//             border-radius: 0px;
+//         }
+//         .btn-default {
+//             @include rem(width, 160);
+//             color: white;
+//             background: $bhcc-blue;
+//             border: none;
+// 			margin-bottom: 0;
+// 			@include rem(padding, 6, 12);
+//             @include rem(font-size, 22);
+// 			@include rem(line-height, 20);
+// 			text-align: center;
+//             font-weight: 600;
+//             @media only screen and (max-width: $screen-xxs-max){
+//                 @include rem(width, 110);
+//                 @include rem(font-size, 17);
+//             }            
+//             &:focus {
+//                 outline: 4px solid #FFCC33;
+//             }
+//         }
+//         input {
+//             width: 100%;
+//             color: #74797E;
+//             @include rem(padding, 13);
+//             border: 0;
+//             @include rem(font-size, 18);
+//             @media only screen and (max-width: $screen-xxs-max){
+//                 float: none;
+//                 width: 100%;
+//             }
+//         }
+//         .input-group {
+//             @media only screen and (max-width: $screen-xxs-max){
+//                 @include rem(margin-top, 10);
+//             }
+//         }
+//         .fa-search {
+//             padding-left: 5px;
+//             @include rem(font-size, 18);
+//         }
+//         @media only screen and (max-width: $screen-xs-max){
+//             float: none;
+//         }
+//     }
+// }

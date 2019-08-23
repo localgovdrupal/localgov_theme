@@ -1,0 +1,175 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function croydon_preprocess_html(&$variables) {
+  /** @var \Drupal\bhcc_helper\CurrentPage $current_page */
+  $current_page = \Drupal::service('bhcc_helper.current_page');
+
+  if ($current_page->isNode() && $current_page->getNode() instanceof \Drupal\node\NodeInterface) {
+    $node = $current_page->getNode();
+
+    if (!$variables['attributes']) {
+      $variables['attributes'] = new \Drupal\Core\Template\Attribute();
+    }
+
+    // Add content type to body class.
+    if (is_object($variables['attributes'])) {
+      $variables['attributes']->addClass('node');
+      $variables['attributes']->addClass('node--' . $current_page->getNode()->bundle());
+    } else {
+      $variables['attributes']['class'][] = 'node';
+      $variables['attributes']['class'][] = 'node--' . $current_page->getNode()->bundle();
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function croydon_preprocess_page(&$variables) {
+  /** @var \Drupal\bhcc_helper\CurrentPage $current_page */
+  $current_page = \Drupal::service('bhcc_helper.current_page');
+
+  // Initiate a pageAttibutes variables so we can add classes to the main page
+  // element.
+  $variables['pageAttributes'] = new \Drupal\Core\Template\Attribute(['class' => 'page']);
+  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+
+  if ($current_page->isNode()) {
+
+    // Add page-raised class to page builder pages.
+    if ($current_page->getNode()->bundle() == 'page_builder') {
+      $variables['pageAttributes']->addClass('page-raised');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function croydon_preprocess_node(&$variables) {
+  global $base_root;
+  $variables['base_root'] = $base_root;
+
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+
+  // For search index nodes, we want to direct the user to the website the
+  // content was imported from. To do that, we update the url field in the
+  // teaser template to match the uri in the field_url field.
+  if ($variables['view_mode'] === 'teaser' && $variables['node']->bundle() === 'search_index') {
+    $variables['url'] = $variables['node']->get('field_url')->first()->getValue()['uri'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function croydon_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+
+  if ($paragraph->bundle() === 'box_link') {
+    if (!$paragraph->get('field_link')->isEmpty()) {
+      $link = $paragraph->get('field_link')->first()->getValue();
+      $variables['field_link']['title'] = $link['title'];
+      $variables['field_link']['url'] = \Drupal\Core\Url::fromUri($link['uri']);
+    }
+  }
+
+  if ($paragraph->bundle() === 'video_page_builder_') {
+    if (!$paragraph->get('field_video_url')->isEmpty()) {
+      $video = $paragraph->get('field_video_url')->first()->getValue();
+      $variables['field_video_url'] = $video['uri'];
+    }
+  }
+
+  if ($paragraph->bundle() === 'call_out_box') {
+    if (!$paragraph->get('field_button')->isEmpty()) {
+      $button = $paragraph->get('field_button')->first()->getValue();
+      $variables['button_url'] = \Drupal\Core\Url::fromUri($button['uri']);
+    }
+
+    if (!$paragraph->get('field_background_image')->isEmpty()) {
+      $image_uri = $paragraph->get('field_background_image')->entity->getFileUri();
+      $variables['background_url'] = \Drupal\image\Entity\ImageStyle::load('full_width_banner')->buildUrl($image_uri);
+    }
+  }
+
+  if ($paragraph->bundle() === 'newsroom_teasers') {
+    if (!$paragraph->get('field_link')->isEmpty()) {
+      $link = $paragraph->get('field_link')->first()->getValue();
+      $variables['link'] = \Drupal\Core\Url::fromUri($link['uri']);
+    }
+  }
+}
+
+/**
+ * Counts how many nodes are attached to a taxonomy term.
+ *
+ * @param $tid
+ *
+ * @return int
+ */
+function count_nodes_with_taxonomy($tid) {
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->fields('ti', ['nid']);
+  $query->condition('ti.tid', $tid);
+  $nodes = $query->execute()->fetchAll();
+  return count($nodes);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function croydon_preprocess_field(&$variables) {
+  $variables['attributes']['id'] = 'field--' . $variables['field_name'];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function croydon_preprocess_menu(&$variables) {
+  // Add classes to the relevant menu.
+  if ($variables['menu_name'] === 'main') {
+    $variables['attributes']['class'] = ['services-list', 'services-list--multi'];
+  }
+
+  if ($variables['menu_name'] === 'business') {
+    $variables['attributes']['class'] = ['services-list'];
+  }
+
+  if ($variables['menu_name'] === 'about-this-website') {
+    $variables['attributes']['class'] = ['footer-about'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function croydon_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  // Create a new page suggestion for each content type.
+  if ($hook === 'page') {
+    /** @var \Drupal\bhcc_helper\CurrentPage $current_page */
+    $current_page = Drupal::service('bhcc_helper.current_page');
+
+    if ($current_page->isNode()) {
+      $suggestions[] = 'page__' . $current_page->getNode()->bundle();
+    }
+  }
+
+  // Fields to be rendered through the field--clean.html.twig template.
+  $clean_fields = [
+    'field_addressfield',
+    'field_category',
+    'field_email_address',
+    'field_phone',
+    'field_website',
+  ];
+
+  if ($hook === 'field' && in_array($variables['element']['#field_name'], $clean_fields)) {
+    $suggestions[] = 'field__clean';
+  }
+}

@@ -1,0 +1,53 @@
+.cookies-notice {
+    @media only screen and (min-width: $screen-md-min) {
+        @include rem(height, 50);
+        @include rem(line-height, 40);
+    }
+    @media only screen and (max-width: $screen-sm-max){
+        @include rem(line-height, 25);
+    }
+    @include rem(font-size, 17);
+    background: $bhcc-black;
+    color: white;
+    .cookies-notice-inner {
+        @include rem(padding, 5, 15);
+        height: 100%;
+        @include rem(font-size, 17);
+    }
+    span:last-of-type {
+        @media only screen and (max-width: $screen-xs-max){
+            display: block;
+        }
+    }
+    a {
+        color: white;
+        font-weight: 600;
+        @media only screen and (max-width: $screen-sm-max){
+            display: block;
+        }
+    }
+    .button-accept{
+        background: $bhcc-green;
+        @include rem(height, 40);
+        @include rem(line-height, 40);
+        @include rem(font-size, 18);
+        font-weight: 600;
+        text-decoration: none;
+        @include rem(padding, 0, 10);
+        float: right;
+        @media only screen and (max-width: $screen-sm-max){
+            float: none;
+            display: inline-block;
+            @include rem(margin, 10, 0);
+        }
+        &:hover {
+            background-color: $bhcc-green-dark1;
+        }
+        &:focus {
+            outline: $bhcc-focus;
+        }
+        .fa {
+            @include rem(margin-left, 5);
+        }
+    }
+}

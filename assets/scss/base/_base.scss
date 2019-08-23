@@ -1,0 +1,158 @@
+// body, html {
+//     padding: 0;
+//     margin: 0;
+//     background: #E8E8E8;
+//     font-family: $font-main;
+// }
+
+// html {
+//     font-size: 100%;
+// }
+
+// body {
+//     @include rem(line-height, 28);
+//     color: black !important;
+// }
+
+// article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+// 	display: block;
+// }
+
+
+
+// header, footer, .wrapper {
+//     @include rem(font-size, 19);
+// }
+
+// p,h1,h2,h3,h4 {
+//     @include rem(margin, 0, 0, 10, 0);
+//     padding: 0;
+// }
+
+// h1 {
+//   font-family: $font-header-bold;
+//   font-weight: 700;
+//   @include rem(font-size, 26);
+//   @include rem(line-height, 30);
+//   @include rem(margin-bottom, 35);
+//   @media only screen and (min-width: $screen-xs-min){
+// 	@include rem(font-size, 36);
+// 	@include rem(line-height, 40);  
+//   }
+// }
+
+// h2 {
+// 	font-family: $font-header-bold;
+// 	font-weight: 700;
+// 	@include rem(font-size, 20);
+// 	@include rem(line-height, 26);
+// 	@include rem(margin-bottom, 20);
+// 	@media only screen and (min-width: $screen-xs-min){
+// 		@include rem(font-size, 30);
+// 		@include rem(line-height, 40);
+// 	}
+// }
+
+// h3 {
+//     font-weight: 700;
+//     @include rem(font-size, 21);
+//     @include rem(line-height, 28);
+//     @include rem(margin-top, 30);
+//     @include rem(margin-bottom, 20);
+// }
+
+// .subheader {
+//     font-weight: 700;
+//     @include rem(font-size, 21);
+//     @include rem(line-height, 28);
+//     @include rem(margin-bottom, 20);	
+// }
+
+// h4 {
+// 	font-weight: 700;
+// 	@include rem(font-size, 19);
+// 	@include rem(line-height, 28);
+// 	@include rem(margin-bottom, 20);
+// }
+
+// p {
+// 	font-weight: 400;
+// 	@include rem(font-size, 17);
+// 	@include rem(line-height, 25);
+// 	@include rem(margin-bottom, 20);
+// 	@media only screen and (min-width: $screen-xs-min){
+// 		@include rem(font-size, 19);
+// 		@include rem(line-height, 28);
+// 	}
+// }
+
+// a {
+//     color: $bhcc-blue;
+//     text-decoration: underline;
+//     &:hover {
+//         color: $bhcc-blue-light;
+//         text-decoration: underline;
+//     }
+//     &:focus {
+//         color: $bhcc-blue-light;
+//         outline: $bhcc-focus;
+//     }
+// }
+
+// ul,ol,li {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// *|*:link {
+//     color: $bhcc-blue; 
+// }
+
+// hr {
+//     margin-top: 20px;
+//     margin-bottom: 20px;
+//     border: 0;
+//     border-top: 1px solid #eee;
+// }
+
+// hr.keyline {
+//     border-top: $bhcc-keyline;
+// }
+
+// img {
+//     max-width: 100%;
+//     height: auto;
+// 	vertical-align: middle;
+// }
+
+// figure {
+// 	margin: 0px;
+// }
+
+// figure img {
+//     width: 100%;
+// }
+
+// figcaption {
+//     @include rem(margin-top, 10);
+//     @include rem(font-size, 16);
+// }
+
+// figcaption span {
+//     font-weight: bold;
+// }
+
+// * {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+
+/* Clearfix */
+
+// .clearfix:after { 
+//     content: " ";
+//     display: block; 
+//     height: 0; 
+//     clear: both;
+//  }

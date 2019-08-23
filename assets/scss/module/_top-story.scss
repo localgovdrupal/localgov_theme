@@ -1,0 +1,542 @@
+@mixin top-story--block_wide {
+	width: 100%;
+	float: left;
+	@include rem(padding-top, 10);
+	&:not(:last-child){
+		@include rem(margin-bottom, 25);
+	}
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+@mixin top-story--small-image_left {
+	.top-story--image {
+		width: 25%;
+		float: left;
+	}
+	.top-story--content {
+		width: 70%;
+		margin-left: 3%;
+	}
+}
+
+@mixin top-story--medium-image_left {
+	.top-story--image {
+		width: 35%;
+		float: left;
+	}
+	.top-story--content {
+		width: 60%;
+		margin-left: 3%;
+	}
+}
+
+@mixin top-story--large-image_left {
+	.top-story--image {
+		width: 70%;
+		float: left;
+	}
+	.top-story--content {
+		width: 27%;
+		float: right;
+	}
+}
+
+@mixin top-story--small-image_right {
+	.top-story--image {
+		width: 25%;
+		float: right;
+	}
+	.top-story--content {
+		width: 70%;
+	}
+}
+
+@mixin top-story--medium-image_right {
+	.top-story--image {
+		width: 35%;
+		float: right;
+	}
+	.top-story--content {
+		width: 60%;
+	}
+}
+
+
+@mixin top-story--large-image_right {
+	.top-story--image {
+		width: 75%;
+		float: right;
+	}
+	.top-story--content {
+		width: 20%;
+	}
+}
+
+
+/* Top stories */
+.top-story {
+	@include rem(padding-bottom, 50);
+	h2 {
+		@include rem(font-size, 26);
+		font-family: $font-main;
+	}
+}
+
+.top-story--title {
+
+	border-bottom: $bhcc-keyline;
+	font-family: $font-header-medium;
+	font-weight: bold;
+	@include rem(margin-bottom, 20);
+	
+	@media only screen and (min-width: $screen-sm-min){
+		overflow: auto;
+	}
+	h3 {
+		margin: 0;
+		background: $bhcc-pink;
+		@include rem(padding, 13, 10);
+		@include rem(font-size, 24);
+		font-weight: 500;
+		line-height: 1.1;
+		@media only screen and (min-width: $screen-sm-min){
+			float: left;
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+	span {
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(padding, 15, 0);
+			display: block;
+		}
+		@media only screen and (min-width: $screen-sm-min){
+			float: left;
+			@include rem(line-height, 52);
+			@include rem(padding-left, 15);
+			font-size: 22px;
+		}
+	}
+}
+
+
+.top-story--slice {
+	 text-align: justify;
+  	 font-size: 0.1px; /* IE 9/10 fix */
+}
+
+.top-story--slice:after {
+  content: '';
+  width: 100%; /* Ensures justification for single lines */
+  display: inline-block;
+}
+
+
+.top-story--image {
+	position: relative;
+	img {
+		width: 100%;
+	}
+	&.is-video i {
+		position: absolute;
+		@include rem(bottom, 10);
+		@include rem(left, 10);
+		border-radius: 50%;
+		background: $bhcc-orange;
+		text-align: center;
+		color: white;
+		@include rem(font-size, 16);
+		@include rem(padding, 7, 0, 0, 2);
+		@include rem(width, 30);
+		@include rem(height, 30);
+	}
+
+}
+
+.top-story--content {
+	@include rem(font-size, 18);
+	@include rem(line-height, 24);
+	p {
+	  @include rem(line-height, 24);
+	}
+	text-align: left;
+	h3 {
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(font-size, 19);
+			@include rem(line-height, 25);
+		}
+		margin: 0;
+		@include rem(font-size, 22);
+		font-weight: bold;
+		@include rem(line-height, 28);
+		@include rem(margin-bottom, 10);
+		a {
+			color: black;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}	
+}
+
+.top-story--block_3up {
+	position: relative;
+	width: 31%;
+	display: inline-block;
+	vertical-align: top;
+	@media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+		width: 100%;
+		.top-story--subheading {
+			margin-top: 0 !important;
+		}
+		@include top-story--small-image_right;
+		@include top-story--block_wide;
+
+	}
+	@media only screen and (max-width: $screen-xxs-max){
+		@include top-story--block_wide;
+	}
+	.top-story--subheading {
+		@include rem(margin-top, 10);
+	}
+}
+
+// Used in newsroom
+.column-2-quarter {
+    float: left;
+    width: 50%;
+    @media only screen and (max-width: $screen-xs-max){
+        width: 100%;
+    }
+}
+
+// feature block at the top of newsroom homepage
+.top-story--grid {
+	position: relative;
+	overflow: auto;
+	display: inline-block;
+	@include rem(margin-top, 25);
+	@media only screen and (min-width: $screen-md-min){
+		.column-2-quarter:first-child {
+			@include rem(padding-right, 15);
+		}
+		.column-2-quarter:last-child {
+			@include rem(padding-left, 15);
+		}
+	}
+	@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+		.column-2-quarter:first-child {
+			width: 100%;
+			@include rem(margin-bottom, 20);
+		}
+		.column-2-quarter:last-child {
+			width: 100%;
+			& > article {
+				width: 50%;
+			}
+			& > article:first-child {
+				@include rem(padding-right, 15);
+			}
+			& > article:last-child {
+				@include rem(padding-left, 15);
+			}
+		}
+	}
+
+}
+
+.top-story--block_standard, .top-story--block_alt, .top-story--block_medium {
+	@include top-story--block_wide;
+	position: relative;
+	padding-top: 0;
+	h3 {
+		@include rem(font-size, 21);
+		@include rem(line-height, 24);
+		@media only screen and (max-width: $screen-sm-max){
+			@include rem(font-size, 18);
+		}
+	}
+	.top-story--image {
+		@media only screen and (max-width: $screen-xxs-max){
+			@include rem(margin-bottom, 10);
+		}
+		@media only screen and (min-width: $screen-xs-max){
+			width: 50%;
+		}
+		
+	}
+	.top-story--content {
+		display: inline-block;
+		@media only screen and (min-width: $screen-sm-min){
+		 	width: 50%;
+		}
+	}
+	@media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+	 	@include top-story--small-image_left;
+	}
+}
+
+.top-story--block_3up {
+	.top-story--image {
+		@include rem('margin-bottom',10)
+	}
+}
+
+.top-story--block_standard {
+	.top-story--image {
+		float: right;
+	}
+	.top-story--content {
+		margin-left: 0;
+	}
+
+}
+
+.top-story--block_alt {
+	.top-story--image {
+		@media only screen and (min-width: $screen-xs-min){
+			float: left;
+		}
+		@media only screen and (min-width: $screen-sm-min){
+			@include rem(padding-right, 20);
+		}
+	}
+}
+
+.top-story--block_medium {
+	.top-story--image {
+		float: right;
+	}
+	.top-story--content {
+		margin-left: 0;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	@media only screen and (min-width: $screen-sm-min){
+		@include top-story--medium-image_right;
+	}
+	.top-story--meta {
+		line-height: 0;
+		@include rem(margin-top, 15);
+		li {
+			display: inline;
+		}
+	}
+
+}
+
+.top-story--block_main {
+	overflow: auto;
+	.top-story--image {
+		@include rem(margin-bottom, 10);
+	}
+	h3 {
+		font-size: 28px !important;
+		font-size: 1.75rem !important;
+		@media only screen and (max-width: $screen-xxs-max){
+			font-size: 22px !important;
+			font-size: 1.375rem !important;
+		}
+	}
+	@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+		@include top-story--large-image_left;
+	}
+}
+
+.top-story--block_main, .top-story--block_alt, .top-story--block_standard, .top-story--block_medium {
+	@media only screen and (max-width: $screen-xxs-max){
+		margin-bottom: 10px !important;
+		margin-bottom: 0.625rem !important;
+	}
+	@media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+		margin-bottom: 20px !important;
+		margin-bottom: 1.25rem !important;
+	}
+}
+
+// if the top stories are in a content class then there is a sidebar, so stack at $screen-sm-max
+.content {
+	@media only screen and (max-width: $screen-sm-max){ 
+		.top-story--block_3up, .top-story--block_main, .top-story--block_alt {
+			@include top-story--block_wide;
+			@include top-story--small-image_right;
+		}
+	}
+	@media only screen and (max-width: $screen-xs-max){ 
+		.top-story--block_medium {
+			@include top-story--block_wide;
+			@include top-story--small-image_right;
+		}
+	}
+	.top-story--block_main, .top-story--block_alt, .top-story--block_medium {
+		&:not(:last-child){
+			border-bottom: $bhcc-keyline;
+			@include rem(padding-bottom, 25);
+		}
+	}
+	.top-story--block_3up {
+		@media only screen and (max-width: $screen-sm-max){
+			&:not(:last-child){
+				border-bottom: $bhcc-keyline;
+				@include rem(padding-bottom, 25);
+			}
+		}
+	}
+}
+
+.top-story--subheading {	
+	@include rem(margin, 0, 0, 5, 0);
+	display: inline-block;
+    span {
+    	@media only screen and (max-width: $screen-xs-max){
+			@include rem(margin-right, 8);
+		}
+		float: left;
+		@include rem(padding, 3, 5);
+		@include rem(margin-right, 8);
+		@include rem(margin-bottom, 5);
+		@include rem(line-height, 10);
+		color: white;
+		@include rem(font-size, 11);
+		@include rem(letter-spacing, 1);
+		font-weight: bold;
+	}
+	.top-story--category {
+		float: left;
+		color: $bhcc-blue;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.top-story--tag {
+	float: left;
+	color: $bhcc-purple;
+	font-weight: bold;
+	@include rem(font-size, 21);
+	@include rem(margin-right, 10);
+
+}
+
+.top-story--category {
+	@include rem(line-height, 16);
+	font-weight: 300;
+	@include rem(font-size, 14);
+	text-decoration: none;
+	color: $bhcc-blue;
+}
+
+.top-story--meta {
+	@include rem(margin-top, 18);
+	padding-left: 0px !important;
+	li {
+		display: inline-block;
+		padding-left: 0px !important;
+		@include rem(font-size, 14);
+		font-weight: 600;
+		@include rem(line-height, 15);
+		&:not(:last-child){
+			@include rem(margin-right, 10);
+		}
+	}
+	a {
+		color: $bhcc-blue;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+/* add to style.scss */
+body {
+	-webkit-font-smoothing: antialiased;
+	-mos-osx-font-smoothing: grayscale;
+}
+
+.visible-xxs {
+	@media only screen and (max-width: $screen-xxs-max){
+		display: block;
+	}
+	@media only screen and (min-width: $screen-xs-min){
+		display: none;
+	}
+}
+
+.hidden-xxxs {
+	@media only screen and (max-width: $screen-xxs-max){
+		display: none;
+	}
+	@media only screen and (min-width: $screen-xs-min){
+		display: block;
+	}
+}
+
+.highlight-1 {
+	background: $bhcc-orange;
+}
+
+.highlight-2 {
+	background: $bhcc-purple;
+}
+
+.bhcc--link-list {
+	font-weight: bold;
+	li {
+		margin-bottom: 15px !important;
+		margin-bottom: 0.9375rem !important;
+		&:before {
+			content: "\f054";
+			font-family: Font Awesome\ 5 Free;
+			@include rem(font-size, 16);
+			font-weight: bold;
+			color: $bhcc-orange;
+			@include rem(margin-right, 5);
+		}
+	}
+	a {
+		@include rem(font-size, 18);
+	}
+}
+
+.content.content-right {
+	@include rem(padding, 0, 0, 35, 35);
+	@media only screen and (max-width: $screen-xs-max) {
+		padding: 0;
+	}
+}
+
+
+.top-story--newsroom {
+
+	@media only screen and (max-width: $screen-xs-max){
+		padding-bottom: 10px !important;
+		padding-bottom: 0.625rem !important;
+	}
+	padding-bottom: 20px !important;
+	padding-bottom: 1.25rem !important;
+	border-bottom: $bhcc-keyline;
+	h3 {
+		@include rem(font-size, 18);
+		@include rem(line-height, 22);
+		@include rem(margin-top, 20);
+		@media only screen and (max-width: $screen-sm-max){
+			margin-top: 0px;
+		}
+	}
+	p {
+		@include rem(font-size, 16);
+		@include rem(line-height, 23);
+		margin-bottom: 0;
+	}
+}
+
+	

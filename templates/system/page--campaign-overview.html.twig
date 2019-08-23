@@ -1,0 +1,23 @@
+{% extends 'page.html.twig' %}
+
+{% block header %}
+  {% include '@bhcc/system/header.html.twig' with {'page': page, 'border': false} %}
+{% endblock %}
+
+{% block content_inner %}
+  <div class="clearfix">
+    {{ page.messages }}
+  </div>
+
+  <div class="row">
+    <main {{ content_attributes.addClass('col-md-8 order-1') }}>
+      {{ page.content }}
+    </main>
+
+    {% if page.sidebar_second %}
+      <div class="sidebar col-md-4 order-2">
+        {{ page.sidebar_second }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
