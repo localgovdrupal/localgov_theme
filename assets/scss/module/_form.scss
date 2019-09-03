@@ -1,126 +1,126 @@
-form {
-  background-color: $bhcc-lightgrey;
-  @include rem(padding, 20, 18);
-}
+// form {
+//   background-color: $bhcc-lightgrey;
+//   @include rem(padding, 20, 18);
+// }
 
-form label {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  display: inline-block;
-  @include rem(font-size, 21);
-  @include rem(line-height, 21);
-  @include rem(margin-bottom, 7);
-  @media only screen and (min-width: $screen-sm-min){
-    @include rem(font-size, 22);
-    @include rem(line-height, 28);
-  }
-}
+// form label {
+//   font-family: "Source Sans Pro", sans-serif;
+//   font-weight: 400;
+//   display: inline-block;
+//   @include rem(font-size, 21);
+//   @include rem(line-height, 21);
+//   @include rem(margin-bottom, 7);
+//   @media only screen and (min-width: $screen-sm-min){
+//     @include rem(font-size, 22);
+//     @include rem(line-height, 28);
+//   }
+// }
 
-form .sub-label {
-  font-family: "Source Sans Pro", sans-serif;
-  @include rem(font-size, 19);
-  @include rem(line-height, 28);
-  font-weight: normal;
-}
+// form .sub-label {
+//   font-family: "Source Sans Pro", sans-serif;
+//   @include rem(font-size, 19);
+//   @include rem(line-height, 28);
+//   font-weight: normal;
+// }
 
-form input[type=text], form select {
-  width: 100%;
-  @include rem(margin-bottom, 22);
-  @include rem(padding, 13.5);
-  border: 1px solid #dddddd;
-  border-radius: 0px;
-  @media only screen and (max-width: $screen-xs-max){
-    @include rem(margin-bottom, 15);
-  }
-}
+// form input[type=text], form select {
+//   width: 100%;
+//   @include rem(margin-bottom, 22);
+//   @include rem(padding, 13.5);
+//   border: 1px solid #dddddd;
+//   border-radius: 0px;
+//   @media only screen and (max-width: $screen-xs-max){
+//     @include rem(margin-bottom, 15);
+//   }
+// }
 
-form input[type=text]:focus,
-form select:focus,
-form button:focus {
-  outline: 4px solid #FFCC33;
-}
+// form input[type=text]:focus,
+// form select:focus,
+// form button:focus {
+//   outline: 4px solid #FFCC33;
+// }
 
-form select {
-  background: white url(../img/black-arrow.png) no-repeat right center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  @include rem(padding, 13.5, 63.5, 13.5, 13.5);
-}
+// form select {
+//   background: white url(../img/black-arrow.png) no-repeat right center;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   @include rem(padding, 13.5, 63.5, 13.5, 13.5);
+// }
 
-form select::-ms-expand {
-  display: none;
-}
+// form select::-ms-expand {
+//   display: none;
+// }
 
-fieldset {
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
+// fieldset {
+//     min-width: 0;
+//     padding: 0;
+//     margin: 0;
+//     border: 0;
+// }
 
-/* Form Overrides */
+// /* Form Overrides */
 
-.site-search--desktop form,
-.site-search--mobile form,
-.homepage--search form,
-.newsroom--search-input form,
-.newsroom--search form,
-.directory-map-results form,
-.directories-facet-form,
-.views-element-container form {
-  padding: 0px;
-  background-color: transparent;
-}
+// .site-search--desktop form,
+// .site-search--mobile form,
+// .homepage--search form,
+// .newsroom--search-input form,
+// .newsroom--search form,
+// .directory-map-results form,
+// .directories-facet-form,
+// .views-element-container form {
+//   padding: 0px;
+//   background-color: transparent;
+// }
 
-.site-search--mobile form {
-  display: inherit;
-}
+// .site-search--mobile form {
+//   display: inherit;
+// }
 
-.directory-map-results select {
-  background: transparent;
-  -webkit-appearance: menulist;
-  -moz-appearance: menulist;
-  appearance: menulist;  
-}
+// .directory-map-results select {
+//   background: transparent;
+//   -webkit-appearance: menulist;
+//   -moz-appearance: menulist;
+//   appearance: menulist;  
+// }
 
-.directory-map-results label {
-  font-weight: 700;
-}
+// .directory-map-results label {
+//   font-weight: 700;
+// }
 
-.site-search--desktop input[type=text],
-.site-search--mobile input[type=text],
-.homepage--search input[type=text],
-.newsroom--search-input input[type=text] {
-  margin-bottom: 0px;
-}
+// .site-search--desktop input[type=text],
+// .site-search--mobile input[type=text],
+// .homepage--search input[type=text],
+// .newsroom--search-input input[type=text] {
+//   margin-bottom: 0px;
+// }
 
-.bhcc--pull_councillor input[type=text] {
-  border: 0px;
-}
+// .bhcc--pull_councillor input[type=text] {
+//   border: 0px;
+// }
 
-.input-group {
-  position: relative;
-  display: table;
-  border-collapse: separate;
-}
+// .input-group {
+//   position: relative;
+//   display: table;
+//   border-collapse: separate;
+// }
 
-.input-group-btn {
-  position: relative;
-  font-size: 0;
-  white-space: nowrap;
-  width: 1%;
-  vertical-align: middle;
-  display: table-cell;
-}
+// .input-group-btn {
+//   position: relative;
+//   font-size: 0;
+//   white-space: nowrap;
+//   width: 1%;
+//   vertical-align: middle;
+//   display: table-cell;
+// }
 
-input::-webkit-input-placeholder,
-input:-moz-placeholder,
-input::-moz-placeholder, 
-input:-ms-input-placeholder,
-input::placeholder {
-  font-weight: 700;
-  font-style: italic;
-  color: $bhcc-form-labels;
-  opacity: 1;
-}
+// input::-webkit-input-placeholder,
+// input:-moz-placeholder,
+// input::-moz-placeholder, 
+// input:-ms-input-placeholder,
+// input::placeholder {
+//   font-weight: 700;
+//   font-style: italic;
+//   color: $bhcc-form-labels;
+//   opacity: 1;
+// }

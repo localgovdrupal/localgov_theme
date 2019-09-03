@@ -39,11 +39,13 @@
 #}
 
 <section{{ attributes.addClass('services--feature') }}>
-  {% for row in items|batch(5) %}
-    <div class="row">
-      {% for column in row %}
-        {{ column.content }}
-      {% endfor %}
-    </div>
-  {% endfor %}
+	<div class="services--feature-container container-fluid">
+	  {% for row in items|batch(12) %}
+	    <div class="row justify-content-center">
+	      {% for column in row %}
+	        {{ column.content }}
+	      {% endfor %}
+	    </div>
+	  {% endfor %}
+  	</div>
 </section>

@@ -1,7 +1,17 @@
 .services--feature {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+  border-bottom: 1px solid $gray;
+  background: $gray-light;
+
+  .services--feature-container {
     @include rem(padding, 20, 0);
-    border-bottom: 1px solid red;
+  }
 }
+
+
 
 .services--feature-block {
     @include rem(padding, 20, 5);
@@ -29,12 +39,7 @@
     @include rem(width, 47);
     @include rem(height, 47);
     @include rem(line-height, 47);
-    border-radius: 50%;
-    color: white;
-    background: $black;
-      &:hover {
-        background: $primary;
-    }
+    color: $gray-dark;
 }
 
 .services--feature-title {
