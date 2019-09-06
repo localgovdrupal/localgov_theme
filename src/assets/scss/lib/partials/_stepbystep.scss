@@ -1,19 +1,78 @@
+// main content area
 .node--step_by_step_page  {
+  a:focus {
+    outline: none !important; // reset global focus of links
+  }
   section {
     margin-bottom: 0;
     padding-bottom: 1rem;
   }
 }
 
+// Buttons used to navigate between steps
+
+ul.step-list {
+  list-style-type: none;
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-bottom: 0;
+    &:first-child {
+      margin-right: 1rem;
+    }
+    .btn {
+      margin: 0;
+    }
+  }
+}
+
+// Block that shows the user the Homepage that the step by step is 'Part of'
+
+.step-by-step-pages__relationship {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  border-left: 0.3125rem solid $primary;
+  background: $gray-light;
+  .step-by-step-pages__part-of {
+    color:$primary;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .step-by-step-pages__homepage {
+    color:$carbon;
+    font-size: 1.8rem;
+    font-weight: bold;
+    a {
+      color:$carbon;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Step by step navigation
+
 .step-by-step-pages {
   margin-top: 3rem;
 
-  .step-list {
+  .step-by-step-pages__relationship { // hides 'part of' block in sidebar
+    display: none;
+  }
+
+  .step-master {
+    font-size: 16px;
+    font-weight: bold;
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  ol.step-list {
     list-style-type:none;
     counter-reset: section;
     overflow-y: auto;
     overflow-x: hidden;
-    margin: 1em -1.5rem;
+    margin: 0 -1.5rem;
     padding: 0 1.5rem;
     padding: 1.5rem;
 
@@ -53,6 +112,28 @@
         color: $carbon;
       }
 
+      .step__title {
+        width: 100%;
+        margin: 0 0 0 2.5rem;
+        cursor: pointer;
+        padding: .6rem 0 1.5rem 0;
+        display: block;
+        font-weight: bold;
+        font-size: $h6-font-size;
+        color: $carbon;
+        
+        a {
+          color: $carbon;
+          display: block;
+
+          &.step-show {
+            font-size: 14px;
+            color: $blue;
+            text-decoration: underline;
+          }
+        }
+      }
+
       &.step--active {
         &:before {
           background-color: $primary;
@@ -62,16 +143,12 @@
         &:not(:last-of-type):after {
           border:1px solid $primary;
         }
-      }
-
-      .step__title {
-        width: 100%;
-        margin: 0 0 0 2.5rem;
-        cursor: pointer;
-        padding: .6rem 0 1.5rem 0;
-        display: block;
-        font-weight: bold;
-        font-size: $h6-font-size;
+        .step__title {
+          color: $primary;
+          a {
+            color: $primary;
+          }
+        }
       }
 
       &:not(:first-child) {
@@ -84,7 +161,7 @@
         display: none; // hide step summaries that are not active
         position: relative;
         height: calc(100% - 132px);
-        width: inherit;
+        width: calc(100% - 41px);
         overflow: visible;
         margin-left: 41px;
         margin-right: 24px;
@@ -92,11 +169,8 @@
           text-decoration: underline;
           color: $primary;
         }
-      }
-
-      &.step--active {
-        >.step__summary {
-          display: block; // show active step summary
+        &.step-show-summary {
+          display: block;
         }
       }
     }
@@ -104,58 +178,7 @@
 }
 
 
-.step-by-step-pages__relationship {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 2.5rem;
-  border-left: 0.3125rem solid $primary;
-  background: $gray-light;
-  .step-by-step-pages__part-of {
-    color:$primary;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  .step-by-step-pages__homepage {
-    color:$carbon;
-    font-size: 1.8rem;
-    font-weight: bold;
-    a {
-      color:$carbon;
-      text-decoration: underline;
-    }
-  }
-}
-
-ol.step-list>li:not(:last-of-type) {
-      margin-bottom: .625rem;
-      transition: margin-bottom .4s;
-}
-ol.step-list .step:not(:last-of-type).active {
-      margin-bottom: 2.25rem;
-}
 
 
-ol.step-list>.step.active:not(:last-child):after {
-    height: calc(100% - 12px);
-}
-
-
-
-
-.step-buttons {
-  list-style-type: none;
-  margin: 0 0 2.5rem 0;
-  padding: 0;
-  li {
-    display: inline-block;
-    margin-bottom: 0;
-    &:first-child {
-      margin-right: 1rem;
-    }
-    .btn {
-      margin: 0;
-    }
-  }
-}
 
 
