@@ -1,3 +1,18 @@
+// NOTE: if you came here looking for the media queries we use the ones predefined in bootstrap
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }
+
 // * * * * * * OVERRIDE SASS VARIABLES BEFORE BOOTSTRAP 4 IMPORT  * * * * * * //
 // Colour variables - Setting them first allows usage before Bootstrap import
 // Primary Colours
