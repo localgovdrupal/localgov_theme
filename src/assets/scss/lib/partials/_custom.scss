@@ -125,3 +125,72 @@
 		padding-left: 15px;
 	}
 }
+
+
+@include media-breakpoint-up(md) {
+  /* /// Global heading sizes/// */
+  h1 {
+    font-size: 2.875rem;
+  } //46px
+  h2 {
+    font-size: 2.125rem;
+  } //34px
+  h3 {
+    font-size: 1.75rem;
+  } //28px
+  //$h4-font-size: 1.5rem; //24px
+  h5 {
+    font-size: 1.375rem;
+  } //22px
+  h6 {
+    font-size: 1.25rem;
+  } //20px
+  // Global font sizes
+  main p,
+  main ul,
+  main ol {
+    font-size: 1.188rem; //19px
+  }
+  //Main header paragraph size
+  main header p {
+    font-size: 1.375rem; //22px
+  }
+  .breadcrumb-item {
+    font-size: 1rem;
+    color: $breadcrumb;
+  } //16px
+  //Sidebar and footer h2 sizes
+  .sidebar h2,
+  .footer h2 {
+    font-size: 1.75rem; //28px
+  }
+  .sidebar p,
+  .sidebar ul,
+  .sidebar ol {
+    font-size: 1.063rem; //17px
+  }
+  //Account bar style
+  .account-bar .oi {
+    padding-left: .625rem; //10px
+  }
+  .account-bar p {
+    font-size: 1.125rem; //18px
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+  }
+  .account-bar div:last-child {
+    margin-bottom: 0;
+  }
+  .account-links {
+    justify-content: flex-end;
+  }
+  .account-links a {
+    padding-right: .625rem; //10px
+  }
+ }
+
+ @include media-breakpoint-up(lg) {
+   .cookiealert p {
+     font-size: 1.063rem; //17px
+   }
+ }
