@@ -21,3 +21,12 @@
 .navbar-dark.nav-vanilla.navbar-nav {
 	margin-bottom: .9375rem; // 15 px
 }
+
+.homepage--search {
+  background: rgba($black, 0.6);
+  color: $white;
+  border-bottom: 5px solid $white;
+  @include rem(padding, 15, 30);
+  margin-top: -4rem;
+
+}

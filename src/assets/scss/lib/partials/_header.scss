@@ -10,3 +10,113 @@ header p {
 		}
 	}
 }
+
+
+/* Desktop Menu (Services) Button */
+
+.header--list-item {
+  display: inline-block;
+  @include rem(margin-right, 10);
+  @include rem(padding-top, 7);
+  &:last-of-type{
+    margin-right: 0px;
+  }
+}
+
+.header--list-item .list-item--icon {
+  display: inline-block;
+  vertical-align: middle;
+  @include rem(font-size, 35);
+}
+
+.header--list-item .list-item--description {
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+
+.header--list-item a { 
+  display: block;
+  color: $white;
+  text-decoration: none;
+  @include rem(padding, 0, 10, 0, 0);
+}
+
+.header--inner-homepage .header--list-item a, .header--inner-mendix .header--list-item a {
+  padding: 0;
+}
+
+.header--expand {
+  display: none;
+}
+
+.header--toggle {
+  background: $white;
+  //overflow: auto;
+  @include rem(margin-bottom, 15);
+  // xs scroll version
+  // @media only screen and (max-width: $screen-xs-max) {
+  //   height: 75vh;
+  // }
+  // @media(max-width: 768px){
+  //   &::-webkit-scrollbar {
+  //     -webkit-appearance: none;
+  //     @include rem(width, 12);
+  //   }
+  //   &::-webkit-scrollbar-thumb {
+  //     border-radius: 6px;
+  //     @include rem(border-radius, 6);
+  //     border: 2px solid white;
+  //     background-color: rgba(0,0,0,.5);
+  //     box-shadow: 0 0 1px rgba(255,255,255,.5);
+  //     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  //   }
+  // }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.header--toggle .services-list {
+  list-style-type: none;
+  height: 100%;
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+
+.header--toggle .services-list--multi {
+  //@media only screen and (min-width: $screen-sm-min){
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  //}
+}
+
+.header--toggle .services-title {
+  font-weight: 400;
+  @include rem(font-size, 28);
+  color: $black;
+  @include rem(line-height, 32);
+  margin: 0;
+  @include rem(padding-bottom, 20);
+}
+
+.header--toggle .services-title-blank {
+  @include rem(height, 55);
+}
+
+.header--toggle li {
+  @include rem(line-height, 20);
+}
+
+.header--toggle a {
+  @include rem(font-size, 17);
+  text-decoration: none;
+  font-weight: 600;
+  @include rem(line-height, 28);
+}
+
+

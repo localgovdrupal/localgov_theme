@@ -20,17 +20,6 @@
         display: block;
         text-decoration: none;
         @include rem(padding, 5);
-        &:hover {
-            span:first-child {
-                background: $primary;
-            }
-            span:last-child {
-                color: $secondary;
-            }
-        }
-        &:focus {
-            outline-offset: 0px;
-        }
     }
 }
 

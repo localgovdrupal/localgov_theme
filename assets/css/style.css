@@ -7,48 +7,60 @@
 /* Clearfix */
 /* Module */
 /* Layout */
-/* Site header 
-
+/* Site header */
 .header--container {
-  background: $bhcc-pink;
+  background: #A41055;
   color: white;
 }
 
 .header--inner-page {
-  @include rem(margin, 0, 15);
-  border-bottom: solid 5px $bhcc-orange;
-  @media only screen and (max-width: $screen-xs-max){
+  margin: 0px 15px;
+  margin: 0rem 0.9375rem;
+  border-bottom: solid 5px #F37021;
+}
+@media only screen and (max-width: 767px) {
+  .header--inner-page {
     border-bottom: none;
-    @include rem(padding-bottom, 5);
+    padding-bottom: 5px;
+    padding-bottom: 0.3125rem;
   }
 }
 
 .header--inner-homepage {
-  @include rem(margin, 0, 15);
-  @include rem(padding-bottom, 5);
+  margin: 0px 15px;
+  margin: 0rem 0.9375rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
 }
 
 .header--desktop {
   overflow: visible;
-  @include rem(height, 100);
-  @include rem(padding, 10, 0);
-  @media only screen and (max-width: $screen-xs-max) {
+  height: 100px;
+  height: 6.25rem;
+  padding: 10px 0px;
+  padding: 0.625rem 0rem;
+}
+@media only screen and (max-width: 767px) {
+  .header--desktop {
     display: none;
   }
-  @media only screen and (min-width: $screen-sm-min) {
+}
+@media only screen and (min-width: 768px) {
+  .header--desktop {
     display: block;
   }
 }
 
-.header--desktop .site-logo, .header--desktop .beta-notice-full {
-  @media only screen and (min-width: $screen-md-min) {
+@media only screen and (min-width: 992px) {
+  .header--desktop .site-logo, .header--desktop .beta-notice-full {
     display: inline-block;
     vertical-align: middle;
   }
 }
 
 .header--desktop img {
-  @include rem(max-width, 115);
+  max-width: 115px;
+  max-width: 7.1875rem;
 }
 
 .header--desktop #desktop-services-link {
@@ -61,31 +73,38 @@
 
 .header--desktop-right {
   float: right;
-  @include rem(padding, 20 ,0);
-}*/
-/* No border 
+  padding: 20px 0px;
+  padding: 1.25rem 0rem;
+}
 
+/* No border */
 .header--container.no-border .header--inner-page {
   border-bottom: 5px solid transparent;
 }
 
 .header--container.no-border .header--desktop {
-  @include rem(height, 105);
+  height: 105px;
+  height: 6.5625rem;
 }
-*/
-/* Mobile 
 
+/* Mobile */
 .header--mobile {
   position: relative;
   overflow: auto;
   color: white;
   text-align: center;
-  @include rem(padding, 5, 0);
-  @include rem(height, 80);
-  @media only screen and (max-width: $screen-xs-max) {
+  padding: 5px 0px;
+  padding: 0.3125rem 0rem;
+  height: 80px;
+  height: 5rem;
+}
+@media only screen and (max-width: 767px) {
+  .header--mobile {
     display: block;
   }
-  @media only screen and (min-width: $screen-sm-min) {
+}
+@media only screen and (min-width: 768px) {
+  .header--mobile {
     display: none;
   }
 }
@@ -99,8 +118,10 @@
 }
 
 .header--mobile .site-logo img {
-  @include rem(max-width, 100);
-}*/
+  max-width: 100px;
+  max-width: 6.25rem;
+}
+
 .margin-bottom--20 {
   margin-bottom: 20px !important;
   margin-bottom: 1.25rem !important;
@@ -1623,188 +1644,7 @@ button.action-link:active, button.action-link:focus {
 }
 
 /* Mobile Menu  Button */
-.header--mobile .header--list-item {
-  padding-top: 19px;
-  padding-top: 1.1875rem;
-}
-
-.site-menu-mobile {
-  display: inline-block;
-  float: right;
-  margin-top: 15px;
-  margin-top: 0.9375rem;
-}
-
-.header--mobile .icon-menu-open {
-  background-image: url("../img/burger-ico-01.svg");
-  display: block;
-  width: 40px;
-  width: 2.5rem;
-  height: 40px;
-  height: 2.5rem;
-  border: solid 1px #FFFFFF;
-}
-
-.header--mobile .icon-menu-close {
-  background-image: url("../img/close-ico-01.svg") !important;
-  border: solid 1px #ffcc33;
-}
-
-/* Desktop Menu (Services) Button */
-.header--list-item {
-  display: inline-block;
-  margin-right: 10px;
-  margin-right: 0.625rem;
-  padding-top: 7px;
-  padding-top: 0.4375rem;
-}
-.header--list-item:last-of-type {
-  margin-right: 0px;
-}
-
-.header--list-item .list-item--icon {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 35px;
-  font-size: 2.1875rem;
-}
-
-.header--list-item .list-item--description {
-  vertical-align: middle;
-  font-weight: 600;
-}
-
-.header--list-item .icon-services {
-  background-image: url("../img/down-ico-01.svg");
-  width: 35px;
-  width: 2.1875rem;
-  height: 35px;
-  height: 2.1875rem;
-}
-
-.header--list-item .icon-services-active {
-  background-image: url("../img/up-ico-01.svg") !important;
-}
-
-.header--list-item .icon-myaccount {
-  background-image: url("../img/my-account-ico-01.svg");
-  width: 35px;
-  width: 2.1875rem;
-  height: 35px;
-  height: 2.1875rem;
-}
-
-.header--list-item a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 0px 10px 0px 0px;
-  padding: 0rem 0.625rem 0rem 0rem;
-}
-
-.header--list-item a:focus {
-  outline-offset: 2px;
-  outline-offset: 0.125rem;
-}
-
-.header--inner-homepage .header--list-item a, .header--inner-mendix .header--list-item a {
-  padding: 0;
-}
-
-.header--expand {
-  display: none;
-}
-
 /* Menu */
-.header--services {
-  overflow: auto;
-  background: white;
-  margin-bottom: 15px;
-  margin-bottom: 0.9375rem;
-}
-@media only screen and (max-width: 767px) {
-  .header--services {
-    height: 75vh;
-  }
-}
-@media (max-width: 768px) {
-  .header--services::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 12px;
-    width: 0.75rem;
-  }
-  .header--services::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    border-radius: 6px;
-    border-radius: 0.375rem;
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-  }
-}
-
-.header--services [class*=col-] {
-  padding: 20px;
-  padding: 1.25rem;
-}
-
-.header--services .services-list {
-  list-style: none;
-  height: 100%;
-  color: black;
-}
-
-@media only screen and (min-width: 768px) {
-  .header--services .services-list--multi {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-}
-
-.header--services .services-title {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", Georgia, serif;
-  font-weight: 400;
-  font-size: 28px;
-  font-size: 1.75rem;
-  color: #000000;
-  line-height: 32px;
-  line-height: 2rem;
-  margin: 0;
-  padding-bottom: 20px;
-  padding-bottom: 1.25rem;
-}
-
-.header--services .services-title-blank {
-  height: 55px;
-  height: 3.4375rem;
-}
-
-.header--services li {
-  line-height: 20px;
-  line-height: 1.25rem;
-}
-
-.header--services a {
-  font-size: 17px;
-  font-size: 1.0625rem;
-  text-decoration: none;
-  font-weight: 600;
-  line-height: 28px;
-  line-height: 1.75rem;
-}
-
-.header--services .bhcc-underline:after {
-  content: "";
-  position: relative;
-  display: block;
-  height: 3px;
-  width: 20px;
-  bottom: -5px;
-  background-color: #F37021;
-}
-
 .ol-overlay-container .popup {
   width: 260px;
   height: 160px;
@@ -2846,10 +2686,6 @@ body {
 }
 
 /* State */
-.show-outline {
-  outline: 4px solid #FFCC33 !important;
-}
-
 /* Layout */
 @media only screen and (max-width: 767px) {
   .newsroom--sidebar {

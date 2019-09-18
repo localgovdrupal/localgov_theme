@@ -1,6 +1,8 @@
 
 /* /// VANILLA NAV BAR (Has Big tabs merged - in progress) /// */
 
+
+
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
@@ -39,6 +41,29 @@
 //Nav hover and focus
 .navbar-dark.nav-vanilla .navbar-nav .nav-link:hover {
 	color: $yellow;
+}
+
+//Switch arrows 
+.navbar-dark.nav-vanilla .navbar-nav .nav-link {
+	// .fa-chevron-up {
+	// 	display: none;
+	// }
+	.fa-chevron-down {
+	  transform: rotate( -360deg );            
+      transition: transform 150ms ease;
+	}
+	&.show-outline {
+		color:$yellow;
+		.dropdown-icon {
+			&.fa-chevron-down {
+				transform: rotate( -180deg );            
+    			transition: transform 150ms ease;
+			}
+			// &.fa-chevron-up {
+			// 	display: inline-block;
+			// }
+		}
+	}
 }
 
 //Bigtabs tab link alignment

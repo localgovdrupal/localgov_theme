@@ -11,10 +11,13 @@
  */
 #}
 
-<div class="input-group">
-  <input{{ attributes }} />{{ children }}
-
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="submit" value="Search"><span class="fa fa-search"></span></button>
-  </span>
+<div class="form-inline ng-pristine ng-valid">
+  <input{{ attributes }} class="form-control form-control" type="search" placeholder="Search this site" />
+  	{{ children }}
+	<button class="btn icon-search" type="submit" value="Search" title="Search">
+    	<span class="fa fa-search"></span>
+    </button>
 </div>
+
+
+   

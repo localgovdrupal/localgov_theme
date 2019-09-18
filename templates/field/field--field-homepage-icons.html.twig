@@ -38,8 +38,8 @@
  */
 #}
 
-<section{{ attributes.addClass('services--feature') }}>
-	<div class="services--feature-container container-fluid">
+<section{{ attributes.addClass('services--feature container-fluid') }}>
+	<div class="services--feature-container container">
 	  {% for row in items|batch(12) %}
 	    <div class="row justify-content-center">
 	      {% for column in row %}

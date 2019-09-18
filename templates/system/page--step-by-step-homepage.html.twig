@@ -47,7 +47,7 @@
 #}
 
 {% block header %}
-  {% include '@bhcc/system/header.html.twig' with {'page': page, 'border': true} %}
+  {% include '@croydon/system/header.html.twig' with {'page': page, 'border': true} %}
 {% endblock %}
 
 {% block sitewide_alert %}
@@ -102,7 +102,7 @@
   <a id="main-content"></a>
   <div {{ attributes.addClass('page row') }}>
     
-  <div class="col-8 pb-4">
+  <div class="col-md-8 pb-4">
     <main>
 
       {% if page.header %}

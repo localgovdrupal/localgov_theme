@@ -1,124 +1,63 @@
 {% extends "page.html.twig" %}
 
 {% block header %}
-  <!-- HEADER 
-  <header class="header--container">
-    <div class="wrapper">
-      <div class="header--inner-homepage">
-        <div class="header--desktop">
-          <div class="header--desktop-left">
-            <div class="site-logo">
-              <img src="{{ base_path ~ directory }}/assets/img/brighton-and-hove-city-council@3x.png" alt="Brighton and Hove City Council logo"/>
-            </div>
-            <div class="beta-notice beta-notice-full">
-              <div class="first-line">
-                <span class="beta-badge">NEW</span>
-                <a href="https://services.brighton-hove.gov.uk/link/websitefeedback">Give feedback</a>
-              </div>
-            </div>
-          </div>
-          {#<ul class="header--desktop-right">#}
-            {#<li class="header--list-item">#}
-              {#<a href="#">#}
-                {#<span class="list-item--icon icon-myaccount"></span>#}
-                {#<span class="list-item--description">My account</span>#}
-              {#</a>#}
-            {#</li>#}
-          {#</ul>#}
-        </div>
+  <header>
+    <div class="bg-primary">
+      <!-- Main navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
 
-        <div class="header--mobile">
-          <div class="header--mobile-left">
-            <div class="site-logo">
-              <img src="{{ base_path ~ directory }}/assets/img/brighton-and-hove-city-council@3x.png" alt="Brighton and Hove City Council logo"/>
-            </div>
-          </div>
-          {#<ul class="header--mobile-right">#}
-            {#<li class="header--list-item">#}
-              {#<a href="#">#}
-                {#<span class="list-item--description">Log in</span>#}
-                {#<span class="list-item--icon icon-myaccount"></span>#}
-              {#</a>#}
-            {#</li>#}
-          {#</ul>#}
-        </div>
-      </div>
-    </div>
-  </header><!--/header-container-->
-  <!--/HEADER-->
+          <!-- Navbar content -->
+          <a class="navbar-brand" href="#/" title="Go to the London Borough of Croydon homepage">
+            <img class="img-responsive w-75" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
+          </a>
 
-  <div class="bg-primary">
-    <!-- Main navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
+          <!-- Mobile toggle button -->
+          <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation">
+            <span class="oi oi-x d-none"></span>
+            <span class="oi oi-menu"></span>
+          </button>
 
-        <!-- Navbar content -->
-        <a class="navbar-brand" href="#/" title="Go to the London Borough of Croydon homepage">
-          <img class="img-responsive w-75" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
-        </a>
-        <!-- Mobile toggle button -->
-        <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation"> <span
-                class="oi oi-x d-none"></span> <span class="oi oi-menu"></span> </button>
-        <div class="collapse navbar-collapse" id="menu-purejs">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown" id="js-drop-toggle"> <a class="nav-link" href="#" id="navbarDropdown"
-                        role="button"> <span>Do it online</span> <span
-                            class="oi oi-chevron-bottom dropdown-icon"></span> </a>
-                    <div class="dropdown-menu" id="drop-purejs"> <a class="dropdown-item" href="#">Example one</a> <a
-                            class="dropdown-item active" href="#">Example two (active)</a>
-                        <!--<span class="sr-only">(current)</span>-->
-                        <a class="dropdown-item" href="#">Example three</a> <a class="dropdown-item" href="#">Example
-                            four</a>
-                        <!--<div class="dropdown-divider d-block d-md-none"></div>-->
-                    </div>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="#">A - Z</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">In your area</a> </li>
-                <li class="nav-item active"> <a class="nav-link" href="#">News</a>
-                    <!--<span class="sr-only">(current)</span>-->
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Jobs</a> </li>
-                <!--<li class="nav-item">
-                      <a class="nav-link disabled" href="#">Page title</a>
-                      </li>-->
+          <div class="collapse navbar-collapse" id="menu-purejs">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"> <a class="nav-link" href="#">A - Z</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">In your area</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">News</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Jobs</a> </li>
             </ul>
-            <form class="form-inline">
-                <input class="form-control form-control" type="search" placeholder="Search this site">
-                <button class="btn icon-search" type="submit" title="Search"><span
-                        class="oi oi-magnifying-glass"></span></button>
-            </form>
-        </div>
-    </nav>
-    <!-- End main navigation -->
-</div>
+          </div>
+
+      </nav>
+      <!-- End main navigation -->
+    </div>
+  </header>
 {% endblock %}
 
 
 {% block content %}
 
-  <div class="wrapper">
-    <div class="homepage--search">
-
-      <div class="search-left">
-        <h2>How can we help?</h2>
-      </div>
-
+  <div class="container homepage--search">
+<div class="row">
+  <div class="col-md-4">
+      <h2>What are you looking for?</h2>
+  </div>
+  <div class="col-md-8">
       <form action="/search/google" method="get">
-        <div class="search-right">
           <div id="home-site-search" class="input-group">
             <input type="text" name="keys" />
             <span class="input-group-btn">
                 <button class="btn btn-default" type="submit">Search <span class="fa fa-search"></span></button>
               </span>
           </div>
-        </div>
       </form>
     </div>
+    </div>
+  </div>
 
-    <div class="page">
+  <main role="main" class="container">
       {{ page.breadcrumb }}
       {{ page.messages }}
       {{ page.content }}
       {{ page.content_bottom }}
-    </div>
-  </div>
+  </main>
+  
 {% endblock %}

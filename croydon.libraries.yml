@@ -18,7 +18,6 @@ global:
     assets/js/owl.carousel.min.js: {}
     # council theme
     dist/assets/js/main.js: {}
-    assets/js/main.js: {}
     assets/js/directories.js: {}
     
 
