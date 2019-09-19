@@ -23,7 +23,11 @@
         color: $white;
         line-height: 1.1;
         font-weight: 500;
-      
+        &:before {
+          content: 'Welcome to';
+          font-size: 22px;
+
+        }
       }
     }
   }
