@@ -36,24 +36,25 @@
 {% block content %}
 
   <div class="container homepage--search">
-<div class="row">
-  <div class="col-md-4">
-      <h2>What are you looking for?</h2>
-  </div>
-  <div class="col-md-8">
-      <form action="/search/google" method="get">
-          <div id="home-site-search" class="input-group">
-            <input type="text" name="keys" />
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">Search <span class="fa fa-search"></span></button>
-              </span>
+    <div class="row">
+      <div class="col-12">
+        <form action="/search/google" method="get">
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label for="form-control" class="mb-0 mr-3">What are you looking for?</label>
+            </div>
+            <input type="text" class="form-control" aria-label="Search" aria-describedby="label" name="keys">
+            <div class="input-group-append">
+              <button class="btn btn-primary pl-5 pr-5" type="button">Search <span class="fa fa-search"></span></button>
+            </div>
           </div>
-      </form>
-    </div>
+        </form>
+      </div>
     </div>
   </div>
 
-  <main role="main" class="container">
+  <main role="main" class="container mt-0">
       {{ page.breadcrumb }}
       {{ page.messages }}
       {{ page.content }}
