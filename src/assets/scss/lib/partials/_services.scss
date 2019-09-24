@@ -2,6 +2,7 @@
   width: 100vw;
   position: relative;
   margin-left: -50vw;
+  padding-bottom: 0;
   left: 50%;
   border-bottom: 1px solid $gray;
   background: $gray-light;
@@ -11,16 +12,19 @@
   }
 }
 
-
-
 .services--feature-block {
-    @include rem(padding, 20, 5);
-    text-align: center;
-    a {
-        display: block;
-        text-decoration: none;
-        @include rem(padding, 5);
+  @include rem(padding, 20, 5);
+  text-align: center;
+  a {
+    display: block;
+    text-decoration: none;
+    @include rem(padding, 5);
+  }
+  @include media-breakpoint-up(sm) {
+    &.col-sm {
+      @include make-col(1, 5); // magic columns
     }
+  }
 }
 
 .services--feature-icon {
@@ -44,78 +48,67 @@
 }
 
 .services--list {
-    overflow: auto;
-    @include rem(padding, 10, 0);
-    @include media-breakpoint-up(sm) {
-        @include rem(padding, 10, 0, 10, 10);
-    }
+  padding: 0;
 }
 
-.services--list-block {
-    display: inline-block;
-    width: 49%;
-    vertical-align: top;
-
-    @include media-breakpoint-up(sm) {
-        width: 33%;
-    }
-    @include rem(padding, 15, 30);
-    @include media-breakpoint-up(sm) {
-        @include rem(padding, 15, 0);
-    }
-
+ .services--list-block {
     h3 {
-        font-weight: bold;
-        @include rem(margin, 10, 0, 20, 0);
-     line-height: 1.1;
-        a {
-            display: inline-block;
-            text-decoration: underline;
-            color: $black;
-            @include rem(font-size, 24);
-        }
-    }
-    a {
-        color: $blue;
-        @include rem(font-size, 17);
-            text-decoration: underline; 
-        
-        &:hover {
-            color: $secondary;
-            text-decoration: underline;
-        }
-        @include media-breakpoint-up(sm) {
-             text-decoration: none;
-        }
+      font-weight: bold;
+      @include rem(margin, 10, 0, 20, 0);
+      line-height: 1.1;
+      a {
+        display: inline-block;
+        text-decoration: underline;
+        color: $black;
+        @include rem(font-size, 24);
+      }
     }
     ul {
-        list-style: none;
-     margin: 0px;
-     padding: 0px;
-    }
-    li {
-     margin: 0px;
-     padding: 0px;       
-     @include rem(line-height, 28);
-         @include media-breakpoint-up(sm) {
-            display: inline-block;
-         width: auto;
-            @include rem(padding-right, 10);
-                &:not(:last-child):after{
-                content: ',';
-                color: $primary;
-            }
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        @include rem(padding-right, 10);
+        display: inline-block;
+        margin: 0px;       
+        @include rem(line-height, 28);
+        &:not(:last-child):after {
+          content: ',';
+          color: $blue;
         }
-    } 
-    li:before {
+
         @include media-breakpoint-up(sm) {
+          display: block;
+          width: auto;
+          padding: 0px;
+          
+          &:not(:last-child):after {
+            content: '';
+          }
+        }
+        &:before {
+          @include media-breakpoint-up(sm) {
             content: "\f054";
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             @include rem(font-size, 13);
             color: $secondary;
             @include rem(margin-right, 5);
+            &:hover {
+              text-decoration: none;
+            }
+          }
         }
+        a {
+          color: $blue;
+          @include rem(font-size, 17);
+          
+          &:hover {
+            color: $secondary;
+            text-decoration: underline;
+          }
+        }
+      } 
     }
 }
 

@@ -129,12 +129,6 @@ a.pdf-link:after {
 }
 
 
-@media only screen and (max-width: 767px) {
-  .services--list-block li {
-    display: inherit !important;
-  }
-}
-
 .homepage--hero::before {
   display: inline !important;
 }

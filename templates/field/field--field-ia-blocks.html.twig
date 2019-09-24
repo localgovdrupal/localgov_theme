@@ -38,7 +38,7 @@
  */
 #}
 
-<section{{ attributes.addClass('services--list') }}>
+<section{{ attributes.addClass('services--list row') }}>
   {% for item in items|slice(0,6) %}
     {{ item.content }}
   {% endfor %}

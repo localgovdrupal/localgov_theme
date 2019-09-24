@@ -39,18 +39,16 @@
  */
 #}
 
-<div class="top-story--block_3up">
-  <div class="top-story--image">
+<div class="col-md-4">
+  
     <a href="{{ link }}">
       {{ content.field_image|render }}
     </a>
-  </div>&nbsp;
-
-  <div class="top-story--content">
-    <h3>
+  
+    <h3 class="pt-4">
       <a href="{{ link }}">{{ content.field_title|render }}</a>
     </h3>
 
     {{ content.field_summary|render }}
-  </div>
+  
 </div>

@@ -40,12 +40,12 @@
 #}
 
 {% if promoted %}
-  <div class="services--business services--list-block">
+  <div class="services--business services--list-block col-12">
     <h3><a href="{{ field_link }}" style="color: #000000 !important;">{{ content.field_title }}</a></h3>
     {{ list }}
   </div>
 {% else %}
-<div class="services--list-block">
+<div class="services--list-block col-sm-6 col-md-4">
   <h3><a href="{{ field_link }}">{{ content.field_title }}</a></h3>
   {{ list }}
 </div>
