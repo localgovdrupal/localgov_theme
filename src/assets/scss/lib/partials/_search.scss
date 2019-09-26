@@ -23,7 +23,11 @@
 }
 
 .homepage--search {
-  background: rgba($black, 0.6);
+  background: $black;
+
+  @include media-breakpoint-up(sm) {
+    background: rgba($black, 0.6);
+  }
   color: $white;
   @include rem(padding, 30);
   margin-top: -6.75rem;
@@ -31,5 +35,15 @@
   	@include rem(font-size, 22);
   	display: flex;
     align-items: center;
+  }
+
+  .input-group-prepend { // adapt bs input group to respond
+    flex-basis: 100%;
+    @include rem(padding, 0, 0, 10, 0);
+
+    @include media-breakpoint-up(sm) {
+      flex-basis: initial;
+      padding: 0;
+    }
   }
 }

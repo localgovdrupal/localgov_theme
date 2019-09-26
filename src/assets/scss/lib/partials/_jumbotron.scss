@@ -18,7 +18,10 @@
         @include rem(padding-top, 60);
         h1 {
           @include rem(letter-spacing, 0);
-          @include rem(font-size, 54);
+          @include rem(font-size, 42);
+          @include media-breakpoint-up(sm) {
+            @include rem(font-size, 52);
+          }
           color: $white;
           line-height: 1.1;
           font-weight: 800;
