@@ -1,6 +1,8 @@
 
 /* /// VANILLA NAV BAR (Has Big tabs merged - in progress) /// */
 
+
+
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
@@ -39,6 +41,29 @@
 //Nav hover and focus
 .navbar-dark.nav-vanilla .navbar-nav .nav-link:hover {
 	color: $yellow;
+}
+
+//Switch arrows 
+.navbar-dark.nav-vanilla .navbar-nav .nav-link {
+	// .fa-chevron-up {
+	// 	display: none;
+	// }
+	.fa-chevron-down {
+	  transform: rotate( -360deg );            
+      transition: transform 150ms ease;
+	}
+	&.show-outline {
+		color:$yellow;
+		.dropdown-icon {
+			&.fa-chevron-down {
+				transform: rotate( -180deg );            
+    			transition: transform 150ms ease;
+			}
+			// &.fa-chevron-up {
+			// 	display: inline-block;
+			// }
+		}
+	}
 }
 
 //Bigtabs tab link alignment
@@ -255,4 +280,62 @@
 
 .expanded {
 	display: none;
+}
+
+
+/* /// VANILLA FOOTER NAV BOTTOM  /// */
+
+//Footer vanilla nav outer container
+.navbar-light {
+	&.nav-vanilla {
+  	padding: 0.5rem 0;
+
+  	.nav-item {
+		  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+		  font-weight: normal; // for fallbacks only
+		  white-space: nowrap;
+		  font-size: .9375rem; //15px
+		}
+
+		.navbar-brand {
+		  margin-right: 1.125rem; //18px
+		  color: $purple;
+		}
+
+		.navbar-nav {
+		  padding: 1rem 0;
+		  margin-bottom: 0;
+
+		  .nav-link {
+			  color: $carbon;
+			  padding: 0 2rem 0 0;
+
+			  &:hover {
+				  color: $indigo;
+				  text-decoration: underline;
+				}
+			}
+			.active {
+			  color: $purple;
+
+			  a:hover {
+				  color: $indigo !important;
+				}
+			}
+			.active>.nav-link {
+			  color: $purple;
+			}
+		}
+	}
+}
+
+.copyright {
+  display: flex;
+  color: $gray-dark;
+  justify-content: flex-end;
+  align-self: center;
+  p {
+    margin-bottom: 0;
+    font-size: .9375rem; //15px
+  }
 }

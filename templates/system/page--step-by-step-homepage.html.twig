@@ -1,0 +1,233 @@
+{#
+/**
+* @file
+* Default theme implementation to display a single page.
+*
+* The doctype, html, head and body tags are not in this template. Instead they
+* can be found in the html.html.twig template in this directory.
+*
+* Available variables:
+*
+* General utility variables:
+* - base_path: The base URL path of the Drupal installation. Will usually be
+*   "/" unless you have installed Drupal in a sub-directory.
+* - is_front: A flag indicating if the current page is the front page.
+* - logged_in: A flag indicating if the user is registered and signed in.
+* - is_admin: A flag indicating if the user has permission to access
+*   administration pages.
+*
+* Site identity:
+* - front_page: The URL of the front page. Use this instead of base_path when
+*   linking to the front page. This includes the language domain or prefix.
+*
+* Page content (in order of occurrence in the default page.html.twig):
+* - messages: Status and error messages. Should be displayed prominently.
+* - node: Fully loaded node, if there is an automatically-loaded node
+*   associated with the page and the node ID is the second argument in the
+*   page's path (e.g. node/12345 and node/12345/revisions, but not
+*   comment/reply/12345).
+*
+* Regions:
+* - page.header: Items for the header region.
+* - page.primary_menu: Items for the primary menu region.
+* - page.secondary_menu: Items for the secondary menu region.
+* - page.highlighted: Items for the highlighted content region.
+* - page.help: Dynamic help text, mostly for admin pages.
+* - page.content: The main content of the current page.
+* - page.sidebar_first: Items for the first sidebar.
+* - page.sidebar_second: Items for the second sidebar.
+* - page.footer: Items for the footer region.
+* - page.breadcrumb: Items for the breadcrumb region.
+*
+* @see template_preprocess_page()
+* @see html.html.twig
+*
+* @ingroup themeable
+*/
+#}
+
+{% block header %}
+  {% include '@croydon/system/header.html.twig' with {'page': page, 'border': true} %}
+{% endblock %}
+
+{% block sitewide_alert %}
+ {{ sitewide_alert }}
+{% endblock%}
+
+{% block unpublished_banner %}
+  {% if unpublished_banner %}
+    <div class="temp-alert-bar">
+      <div class="temp-alert-bar--inner">
+        <p>
+          <span class="fas fa-exclamation-circle"></span>
+          <span class="temp-alert-bar--text">This page is not published and should not be shared with the general public</span>
+        </p>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block banner %}
+  {% if page.banner %}
+    {{ page.banner }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+{% block breadcrumbs %}
+  {% if page.breadcrumb %}
+  <div class="breadcrumb-container">
+    {{ page.breadcrumb }}
+
+    <nav class="breadcrumb-block visible-xs-inline-block">
+      <ul class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+
+    <div class="beta-notice-sm">
+      <div class="beta-notice beta-notice-sm">
+        <div class="first-line">
+          <span class="beta-badge">NEW</span>
+          <p><a href="#">What's this?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endblock %}
+
+<div class="container-fluid bg-white site-max">
+  <a id="main-content"></a>
+  <div {{ attributes.addClass('page row mr-0 ml-0') }}>
+    
+  <div class="col-md-8 pb-4">
+    <main role="main">
+
+      {% if page.header %}
+        {{ page.header }}
+      {% endif %}
+
+      {% block content_inner %}
+        {{ page.messages }}
+        {{ page.content }}
+      {% endblock %}
+    </main>
+  </div>
+    <div class="col-md-4">
+        {{ page.sidebar_second }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+
+
+<!-- FOOTER -->
+<footer class="bg-carbon">
+    <!-- END FOOTER --><!-- Footer top row wrapper -->
+    <div class="row site-max footer-top">
+        <div class="col-md-4">
+            <section>
+
+              {{ page.footer }}
+                <ul class="iconlist">
+                    <h2>Contact us</h2>
+                    <li><span class="oi oi-envelope-open"></span><a href="#/">Send us a message</a></li>
+                    <li><span class="oi oi-phone"></span><span class="flex-break">General enquiries<strong class="flex-break">020 8726 6000</strong></li>
+                </ul>
+                <p>See a full list of <a href="#/">departments and phone numbers</a></p>
+            </section>
+        </div>
+        <div class="col-md-4">
+            <section>
+                <ul class="iconlist">
+                    <h2>Visit us</h2>
+                    <li><span class="oi oi-map-marker"></span><span class="flex-break"><strong>Croydon
+                                Council</strong><span class="flex-break">Bernard Weatherill House</span><span
+                                class="flex-break">8
+                                Mint Walk</span><span class="flex-break">Croydon</span><span class="flex-break">CR0
+                                1EA</span></span> </li>
+                </ul>
+            </section>
+        </div>
+        <div class="col-md-4">
+            <section>
+                <h2>Accessibility</h2>
+                <p>We are committed to making our website accessible to all visitors.</p>
+                <p>Read our <a href="#/">accessibility statement</a> or <a href="#/">give feedback</a></p>
+            </section>
+        </div>
+    </div>
+    <!-- End footer top row wrapper -->
+
+    <!-- Divider -->
+    <div class="key-under"></div>
+
+    <!-- Start footer bottom row wrapper -->
+    <div class="row site-max footer-bottom">
+        <div class="col-md-4">
+            <section>
+                <h2>Follow us</h2>
+                <p> <a href="#"><i class="icon-twitter-squared" title="Twitter"></i></a> <a href="#"><i
+                            class="icon-facebook-squared" title="Facebook"></i></a> <a href="#"><i
+                            class="icon-linkedin-squared" title="Linked in"></i></a> <a href="#"><i class="icon-flickr"
+                            title="Flickr"></i></a> <a href="#"><i class="icon-youtube-squared" title="Youtube"></i></a>
+                </p>
+            </section>
+        </div>
+        <div class="col-md-8">
+            <section>
+                <h2>Do it online</h2>
+                <p>We are improving online services all the time</p>
+                <p class="account-links"><a href="#"><span class="oi oi-account-login"></span><strong>Log in to do it online</strong></a></p>
+            </section>
+        </div>
+    </div>
+    <!-- End footer bottom row wrapper -->
+</footer>
+
+
+{% endblock %}
+
+{% block sub_footer %}
+ <nav class="bg-light">
+        <div class="row site-max">
+
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light nav-vanilla">
+                    <a class="navbar-brand" href="#">CROYDON</a>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Do it online</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">A-Z</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">In your area</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jobs</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="col-lg-3 copyright">
+                <p>&copy; Croydon Council {{ "now"|date("Y") }}</p>
+            </div>
+        </div>
+    </nav>
+{% endblock %}

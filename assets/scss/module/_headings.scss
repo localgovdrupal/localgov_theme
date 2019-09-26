@@ -1,0 +1,76 @@
+// .headers {
+//     box-sizing: border-box;
+//     width: 100%;
+//     display: block;
+//     margin: 0;
+//     padding: 0;
+
+//     h1 {
+//         font-family: $font-header-bold;
+//         font-weight: 700;
+//         @include rem(font-size, 44);
+//         @include rem(line-height, 50);
+//         color: $bhcc-black;
+//         @include rem(margin-bottom, 10);
+//     }
+
+//     h2 {
+//         font-family: $font-header-medium;
+//         font-weight: 400;
+//         @include rem(font-size, 36);
+//         @include rem(line-height, 40);
+//         color: $bhcc-black;
+//         @include rem(margin-bottom, 35);
+//     }
+//     .subheader {
+//         font-family: $font-main;
+//         font-weight: 400;
+//         @include rem(font-size, 21);
+//         @include rem(line-height, 30);
+//         color: $bhcc-black;
+//         margin-bottom: 0px;
+//         @include rem(margin-top, 30);
+//         @include rem(padding-bottom, 20);
+//         border-bottom: $bhcc-keyline;
+//     }
+	
+// 	.bhcc-underline:after {
+//         content: "";
+//         position: relative;
+//         display: block;
+//         @include rem(height, 5);
+//         @include rem(width, 80);
+//         @include rem(bottom, -13);
+//         background-color: $bhcc-orange;
+//     }  
+//     @media only screen and (max-width: $screen-xs-max){
+
+//         h1 {
+//             @include rem(font-size, 32);
+//             @include rem(line-height, 38);
+//         }
+        
+//         h2 {
+
+//             font-size: 30px !important;
+//             line-height: 32px !important;
+// 			font-size: 1.875rem !important;
+// 			line-height: 2rem !important;
+//         }
+
+//         .subheader {
+//             @include rem(font-size, 18);
+//             @include rem(line-height, 24);
+//         }
+//     }
+// }
+
+// .bhcc-underline:after {
+// 	content: "";
+// 	position: relative;
+// 	display: block;
+// 	@include rem(height, 5);
+// 	@include rem(width, 40);
+// 	@include rem(bottom, -7);
+// 	background-color: $bhcc-orange;
+// }

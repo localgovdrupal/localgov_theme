@@ -50,4 +50,8 @@ main {
 		line-height: 1.4rem;
 		display: inline-block;
 	}
+
+	.croydonlogo {fill:$white;}
+
+	.navbar-light .croydonlogo {fill:$purple;}
 }

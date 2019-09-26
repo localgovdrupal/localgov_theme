@@ -1,0 +1,337 @@
+.newsroom--sidebar {
+	@media only screen and (max-width: $screen-xs-max){
+		border-top: none !important;
+		padding-top: 0 !important;
+		margin-top: 0 !important;
+	}
+	
+}
+
+.newsroom--article {
+	@media only screen and (max-width: $screen-xs-max){
+		padding-right: 0px !important;
+	}
+	&-image {
+		img {
+			width: 100%;
+		}
+		.caption {
+			@include rem(margin-top, 10);
+			@include rem(font-size, 16);
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	.newsroom--info {
+		@include rem(margin-top, -5);
+		@include rem(margin-bottom, 20);
+		@include rem(font-size, 17);
+	}
+	.newsroom--date {
+		display: inline;
+	}
+	.newsroom--category {
+		display: inline;
+		@include rem(margin-left, 10);
+		a {
+			text-decoration: none;
+			color: $bhcc-blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&-body {
+		@include rem(margin-top, 20);
+	}
+}
+
+.newsroom--social {
+	h2 {
+		margin: 0;
+		@include rem(font-size, 22);
+		@include rem(margin-bottom, 10);
+
+	}
+	li { 
+		display: inline;
+		@include rem(margin-right, 5);
+	}
+	@media only screen and (max-width: $screen-xs-max){
+		margin-top: 0;
+	}
+}
+
+.newsroom--search {
+	@include rem(padding, 30, 30, 40);
+	@media only screen and (max-width: $screen-xs-max){
+		@include rem(padding, 30, 15);
+	}
+	color: white;
+	background: $bhcc-purple;
+	h2 {
+		margin: 0;
+		font-family: $font-header-bold;
+		@include rem(font-size, 30);
+		color: white;
+		line-height: 1.1;
+		font-weight: 500;
+	}
+	&-input {
+		margin-top: 20px;
+		input, label, select {
+			display: block;
+		}
+		label {
+			@include rem(font-size, 20);
+			font-weight: 400;
+			font-family: $font-main;
+			font-weight: bold;
+			@media only screen and (max-width: $screen-xs-max){
+				font-size: 20px !important;
+				font-size: 1.25rem !important;
+				margin-bottom: 10px !important;
+				margin-bottom: 0.625rem !important;
+			}
+		}
+		input {
+			@include rem(height, 50);
+			@include rem(font-size, 18);
+			border-radius: 0px;
+		}
+		select {
+			width: 100%;
+			@include rem(padding, 5);
+		    @include rem(font-size, 16);
+		    line-height: 1;
+		    border: 0;
+		    border-radius: 0px;
+		    @include rem(height, 50);
+		    background: url($image-folder+'/down-arrow.png') no-repeat right white;
+		    -moz-appearance:none; /* Firefox */
+		    -webkit-appearance:none; /* Safari and Chrome */
+		    appearance:none;
+		}
+		// ie 9 fix
+		@media screen and (min-width:0\0) {
+		    select {
+		        background:none\9;
+		        padding: 5px\9;
+		    } 
+		}
+		// ie 10/11 fix
+		select::-ms-expand { 
+		display: none; /* remove default arrow on ie10 and ie11 */
+		}
+		.btn-default {
+			color: white;
+			background: $bhcc-blue;
+			border: $bhcc-blue;
+			@include rem(padding, 16);
+			@include rem(font-size, 19);
+			line-height: 0 !important;
+			height: 50px;
+		}
+
+	}
+	&-main {
+		padding: 20px 15px 15px !important;
+		padding: 1.25rem 0.9375rem 0.9375rem !important;
+		h1 {
+			font-family: $font-header-bold;
+			@include rem(font-size, 30);
+		}
+	}
+	.filters-show, .filters-hide {
+		color: white;
+		font-weight: bold;
+		@include rem(margin-top, 25);
+		display: block;
+		span {
+			@include rem(margin-right, 5);
+		}
+		&:focus {
+			outline: none !important;
+		}
+	}
+	.filters-show {
+		@media only screen and (min-width: $screen-xs-max){
+			display: none;
+		}
+	}
+	.filters-hide {
+		display: none;
+		@media only screen and (min-width: $screen-xs-max){
+			display: block;
+		}
+	}
+	.filters-group {
+		background: white;
+		@include rem(padding, 0, 10, 10, 10);
+		@include rem(margin-top, 10);
+		@media only screen and (max-width: $screen-xs-max){
+			display: none;
+		}
+	}
+	.filters-item {
+		@include rem(padding, 15, 0);
+		&:not(:last-child){
+			border-bottom: $bhcc-keyline;
+		}
+		span {
+			@include rem(font-size, 22);
+			color: $bhcc-orange;
+			@include rem(padding-bottom, 2);
+			@include rem(margin-right, 7);
+			vertical-align: middle;
+		}
+		a {
+			@include rem(font-size, 20);
+			font-weight: bold;
+			display: block;
+			color: $bhcc-blue;
+		}
+	}
+}
+
+.newsroom--search-results {
+	@include rem(margin-bottom, 20);
+	h2 {
+		@include rem(margin-top, -5);
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(font-size, 25);
+		}
+	}
+	&_stat {
+		display: block;
+		margin-bottom: 40px !important;
+		margin-bottom: 2.5rem !important;
+		a {
+			color: $bhcc-green;
+			font-weight: bold;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.newsroom--search-input {
+		margin-top: 0;
+	}
+	label {
+		@include rem(margin-bottom, 20);
+		@include rem(font-size, 26);
+		font-weight: bold;
+	}
+	.newsroom--search {
+		@include rem(padding-bottom, 15);
+	}
+	.filters-group {
+		a {
+			@include rem(padding-left, 4);
+		}
+		ul {
+			@include rem(margin-top, 25);
+		}
+		li {
+			display: block;
+			position: relative;
+			@include rem(font-size, 22);
+			&:last-child {
+				margin-bottom: 0px;
+			}
+			input[type=checkbox] {
+				@include rem(width, 25);
+			    @include rem(height, 25);
+			    top: 0px;
+			    left: 0px;
+			    position: absolute;
+			    opacity: 0;
+			}
+			input[type=checkbox]:checked ~ label:before {
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				content: '\f00c';
+				@include rem(height, 25);
+				@include rem(width, 25);
+				border: 1px solid $bhcc-green;
+				color: $bhcc-green;
+				display: block;
+				position: absolute;
+				left: 0px; 
+				@include rem(padding, 2, 3);
+			}
+		}
+		label {
+			position: relative;
+			color: black;
+			@include rem(font-size, 18);
+			font-weight: 100;
+			@include rem(padding-left, 40);
+			@include rem(padding-top, 2);
+			@include rem(margin-bottom, 10);
+			&:before {
+				content: '';
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				@include rem(height, 25);
+				@include rem(width, 25);
+				border: 2px solid $bhcc-midgrey;
+			}
+		}
+		fieldset {
+			padding: 0;
+		}
+		legend {
+			border: none;
+			@include rem(font-size, 18);
+			font-weight: bold;
+			@include rem(margin-bottom, 15);
+			> span {
+				color: black;
+				@include rem(font-size, 18);
+				font-weight: bold;
+			}
+		}
+		.date-select {
+			text-align: justify;
+		}
+		.date-select:first-child {
+			@include rem(margin-bottom, 20);
+		}
+		.date-input:after {
+		  content: '';
+		  width: 100%; /* Ensures justification for single lines */
+		  display: inline-block;
+		}
+		.date-input input {
+			position: relative;
+			width: 30%;
+			display: inline-block;
+			color: black;
+			margin-bottom: 0px;
+			@include rem(height, 45);
+			@include rem(padding, 5);
+		}
+		.cta-button {
+			padding: 15px 15px 15px !important;
+			padding: 0.9375rem 0.9375rem 0.9375rem !important;
+			margin: 0px;
+			@include rem(font-size, 21);
+			border: 0;
+			border-bottom: 5px solid #004783;
+
+			&:hover {
+				background-color: #004783;
+				border-bottom: 5px solid #003969;
+			}
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,13 @@
+{#
+This file provides the HTML structure for baic pages.
+#}
+
+<section{{ content_attributes }}>
+  {{ content }}
+
+  {% if link %}
+    <a href="{{ link.getUrl() }}" class="cta-button cta-single cta-green">
+      <span>{{ link.title }}</span>
+    </a>
+  {% endif %}
+</section>

@@ -1,0 +1,30 @@
+.jumbotron {
+  background: $primary;
+  margin: 0;
+  padding: 0;
+
+  .container {
+    background-size: cover;
+    background-position: center;
+
+    @include rem(height, 330);
+
+    @include media-breakpoint-up(sm) {
+      @include rem(height, 300);
+    }
+
+    .homepage--hero-inner {
+      @include rem(margin, 0, 15);
+
+      .homepage--welcome {
+        @include rem(padding-top, 60);
+        @include rem(letter-spacing, 0);
+        @include rem(font-size, 25);
+        color: $white;
+        line-height: 1.1;
+        font-weight: 500;
+      
+      }
+    }
+  }
+}

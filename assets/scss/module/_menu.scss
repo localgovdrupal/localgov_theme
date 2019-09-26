@@ -1,0 +1,160 @@
+/* Mobile Menu  Button */
+
+// .header--mobile .header--list-item {
+//   @include rem(padding-top, 19);
+// }
+
+// .site-menu-mobile {
+//   display: inline-block;
+//   float: right;
+//   @include rem(margin-top, 15);
+// }
+
+// .header--mobile .icon-menu-open {
+//   background-image: url('#{$image-folder}/burger-ico-01.svg');
+//   display: block;
+//   @include rem(width, 40);
+//   @include rem(height, 40);
+//   border: solid 1px #FFFFFF;
+// }
+
+// .header--mobile .icon-menu-close {
+//   background-image: url('#{$image-folder}/close-ico-01.svg') !important;
+//   border: solid 1px rgb(255, 204, 51);
+// }
+
+// /* Desktop Menu (Services) Button */
+
+// .header--list-item {
+//   display: inline-block;
+//   @include rem(margin-right, 10);
+//   @include rem(padding-top, 7);
+//   &:last-of-type{
+//     margin-right: 0px;
+//   }
+// }
+
+// .header--list-item .list-item--icon {
+//   display: inline-block;
+//   vertical-align: middle;
+//   @include rem(font-size, 35);
+// }
+
+// .header--list-item .list-item--description {
+//   vertical-align: middle;
+//   font-weight: 600;
+// }
+
+// .header--list-item .icon-services {
+//   background-image: url('#{$image-folder}/down-ico-01.svg');
+//   @include rem(width, 35);
+//   @include rem(height, 35);
+// }
+
+// .header--list-item .icon-services-active {
+//   background-image: url('#{$image-folder}/up-ico-01.svg') !important;
+// }
+
+// .header--list-item .icon-myaccount {
+//   background-image: url('#{$image-folder}/my-account-ico-01.svg');
+//   @include rem(width, 35);
+//   @include rem(height, 35);
+// }
+
+// .header--list-item a { 
+//   display: block;
+//   color: white;
+//   text-decoration: none;
+//   @include rem(padding, 0, 10, 0, 0);
+// }
+
+// .header--list-item a:focus {
+//   @include rem(outline-offset, 2);
+// }
+
+// .header--inner-homepage .header--list-item a, .header--inner-mendix .header--list-item a {
+//   padding: 0;
+// }
+
+// .header--expand {
+//   display: none;
+// }
+
+/* Menu */
+
+// .header--services {
+//   overflow: auto;
+//   background: white;
+//   @include rem(margin-bottom, 15);
+//   // xs scroll version
+//   @media only screen and (max-width: $screen-xs-max) {
+//     height: 75vh;
+//   }
+//   @media(max-width: 768px){
+//     &::-webkit-scrollbar {
+//       -webkit-appearance: none;
+//       @include rem(width, 12);
+//     }
+//     &::-webkit-scrollbar-thumb {
+//       border-radius: 6px;
+//       @include rem(border-radius, 6);
+//       border: 2px solid white;
+//       background-color: rgba(0,0,0,.5);
+//       box-shadow: 0 0 1px rgba(255,255,255,.5);
+//       -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+//     }
+//   }
+// }
+
+// .header--services [class*="col-"] {
+//   @include rem(padding, 20);
+// }
+
+// .header--services .services-list {
+//   list-style: none;
+//   height: 100%;
+//   color: black;
+// }
+
+// .header--services .services-list--multi {
+//   @media only screen and (min-width: $screen-sm-min){
+//     -moz-column-count: 3;
+//     -webkit-column-count: 3;
+//     column-count: 3;
+//   }
+// }
+
+// .header--services .services-title {
+//   font-family: $font-header-medium;
+//   font-weight: 400;
+//   @include rem(font-size, 28);
+//   color: $bhcc-black;
+//   @include rem(line-height, 32);
+//   margin: 0;
+//   @include rem(padding-bottom, 20);
+// }
+
+// .header--services .services-title-blank {
+//   @include rem(height, 55);
+// }
+
+// .header--services li {
+//   @include rem(line-height, 20);
+// }
+
+// .header--services a {
+//   @include rem(font-size, 17);
+//   text-decoration: none;
+//   font-weight: 600;
+//   @include rem(line-height, 28);
+// }
+
+// .header--services .bhcc-underline:after {
+//   content: "";
+//   position: relative;
+//   display: block;
+//   height: 3px;
+//   width: 20px;
+//   bottom: -5px;
+//   background-color: $bhcc-orange;
+// }

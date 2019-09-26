@@ -1,0 +1,41 @@
+// .breadcrumb-container {
+//     overflow: auto;
+//     border-bottom: $bhcc-keyline;
+//     @include rem(line-height, 50);
+//     @include rem(margin-bottom, 15);
+// }
+
+// .breadcrumb-block {
+//     display: inline-block;
+//     @include rem(font-size, 16);
+//     .breadcrumb-prefix {
+//         display: inline;
+//         @include rem(padding-right, 15);
+//         font-weight: bold;
+//     }
+//     .breadcrumb-list {
+//         display: inline;
+//         li {
+//             display: inline;
+//             @include rem(font-size, 16);
+//         }
+//         li:not(:last-child):after {
+//             font-family: 'Font Awesome 5 Free';
+//             font-weight: 900;
+//             @include rem(font-size, 13);
+//             content: '\f054';
+//             @include rem(padding, 0, 10, 0, 13);
+//             color: $bhcc-midgrey;
+//         }
+//         @media only screen and (max-width: $screen-xs-max) {
+//             li:first-child:before {
+//                 font-family: 'Font Awesome 5 Free';
+//                 font-weight: 900;
+//                 @include rem(font-size, 13);
+//                 content: '\f053';
+//                 @include rem(padding-right, 10);
+//                 color: $bhcc-midgrey;
+//             }
+//         }
+//     }
+// }

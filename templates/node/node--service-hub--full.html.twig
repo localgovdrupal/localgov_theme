@@ -1,0 +1,93 @@
+
+{% if content.field_destinations|render %}
+<section class="servicehub--more">
+  {{ content.field_destinations }}
+</section>
+{% endif %}
+
+{{ service_updates }}
+
+<aside class="servicehub--contact row">
+
+  {% if field_email_address or content.field_address|render or content.field_opening_hours|render or field_phone or field_facebook or field_twitter %}
+  <div class="col-md-8">
+    <div class="contact-container">
+      <div class="contact-top">
+        <h2>Contact this service</h2>
+		<div class="row">
+          <div class="col-sm-6">
+            <ul>
+              {% if field_email_address %}
+                <li>
+                  <span class="fa fa-envelope"></span>
+                  <a href="mailto:{{ field_email_address }}">Send us a message</a>
+                </li>
+              {% endif %}
+
+              {% if field_phone %}
+              <li>
+                <span class="fa fa-phone"></span>
+                {{ field_phone }}
+              </li>
+              {% endif %}
+            </ul>
+
+            {% if content.field_opening_hours|render %}
+            <p class="opening-times">
+              <h3>Opening times</h3>
+              {{ content.field_opening_hours }}
+            </p>
+            {% endif %}
+          </div>
+          <div class="col-sm-6">
+
+            {% if field_address_first_line %}
+              <span class="contact-title"><i class="fa fa-map-marker-alt"></i>{{ field_address_first_line }}</span>
+            {% endif %}  
+
+            {% if content.field_address %}
+              <div class="contact-address">
+              {{ content.field_address }}
+
+            {% if field_link_to_map %}
+              <a href="{{ field_link_to_map }}" class="external-link" target="_blank">View map</a>
+            {% endif %}
+            </div>
+            {% endif %}
+          </div>
+	    </div>
+      </div>
+      {% if field_facebook or field_twitter or field_hearing_difficulties_phone %}
+      <div class="contact-bottom">
+        {% if field_facebook or field_twitter %}
+        <ul>
+          <li>Find us on</li>
+          {% if field_facebook %}<li><i class="fab fa-facebook-square"></i><a href="{{ field_facebook}}">Facebook</a></li>{% endif %}
+          {% if field_twitter %}<li><i class="fab fa-twitter-square"></i><a href="{{ field_twitter }}">Twitter</a></li>{% endif %}
+        </ul>
+        {% endif %}
+        {% if field_hearing_difficulties_phone %}
+        <p>If you have hearing or speech difficulties, please call <b>{{ field_hearing_difficulties_phone }}</b></p>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+
+  {% if content.field_popular_topics['#items'] is not empty %}
+  <div class="sidebar col-sm-4">
+    <div class="section">
+      {{ content.field_popular_topics }}
+    </div>
+  </div>
+  {% endif %}
+
+</aside>
+
+{#<div class="action-link-container">#}
+  {#<a href="javascript:window.print()" class="action-link action-link--print">Print this page</a>#}
+{#</div>#}
+
+

@@ -1,0 +1,170 @@
+.services--feature {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+  border-bottom: 1px solid $gray;
+  background: $gray-light;
+
+  .services--feature-container {
+    @include rem(padding, 20, 0);
+  }
+}
+
+
+
+.services--feature-block {
+    @include rem(padding, 20, 5);
+    text-align: center;
+    a {
+        display: block;
+        text-decoration: none;
+        @include rem(padding, 5);
+    }
+}
+
+.services--feature-icon {
+    @include rem(font-size, 26);
+    @include rem(width, 47);
+    @include rem(height, 47);
+    @include rem(line-height, 47);
+    color: $gray-dark;
+}
+
+.services--feature-title {
+    display: block;
+    color: $black;
+    @include rem(font-size, 17);
+    @include rem(line-height, 24);
+    @include rem(margin-top, 5);
+    text-decoration: none;
+    &:hover {
+            color: $primary;
+        }
+}
+
+.services--list {
+    overflow: auto;
+    @include rem(padding, 10, 0);
+    @include media-breakpoint-up(sm) {
+        @include rem(padding, 10, 0, 10, 10);
+    }
+}
+
+.services--list-block {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+
+    @include media-breakpoint-up(sm) {
+        width: 33%;
+    }
+    @include rem(padding, 15, 30);
+    @include media-breakpoint-up(sm) {
+        @include rem(padding, 15, 0);
+    }
+
+    h3 {
+        font-weight: bold;
+        @include rem(margin, 10, 0, 20, 0);
+     line-height: 1.1;
+        a {
+            display: inline-block;
+            text-decoration: underline;
+            color: $black;
+            @include rem(font-size, 24);
+        }
+    }
+    a {
+        color: $primary;
+        @include rem(font-size, 17);
+            text-decoration: underline; 
+        
+        &:hover {
+            color: $secondary;
+            text-decoration: underline;
+        }
+        @include media-breakpoint-up(sm) {
+             text-decoration: none;
+        }
+    }
+    ul {
+        list-style: none;
+     margin: 0px;
+     padding: 0px;
+    }
+    li {
+     margin: 0px;
+     padding: 0px;       
+     @include rem(line-height, 28);
+         @include media-breakpoint-up(sm) {
+            display: inline-block;
+         width: auto;
+            @include rem(padding-right, 10);
+                &:not(:last-child):after{
+                content: ',';
+                color: $primary;
+            }
+        }
+    } 
+    li:before {
+        @include media-breakpoint-up(sm) {
+            content: "\f054";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            @include rem(font-size, 13);
+            color: $secondary;
+            @include rem(margin-right, 5);
+        }
+    }
+}
+
+.services--business {
+    float: left;
+    @include rem(margin-top, 20);
+    width: 100%;
+    @include rem(min-height, 150);
+    background-color: $primary;
+    @include rem(padding, 30);
+    .business-list {
+         @include media-breakpoint-up(sm) {
+            column-count: 2;
+        }
+         @include media-breakpoint-up(sm) {
+            column-count: 3;
+        }
+    }
+    h3 {
+        @include rem(margin, 0, 0, 20, 0);
+     @include rem(font-size, 24);
+    }
+    a {
+        color: $primary !important;
+    }
+    .column-3:first-child {
+        @include rem(padding-left, 30);
+    }
+}
+
+#services--expand-container {
+    display: none;
+}
+
+
+#services--expand-link {
+    border: none;
+    background: none;
+    color: $primary;
+    text-decoration: underline;
+    padding: 0;
+}
+
+#services--expand-link:focus {
+    outline: 4px solid #FFCC33;
+}
+
+
+.services--expand {
+    float: left;
+    cursor: pointer;
+}

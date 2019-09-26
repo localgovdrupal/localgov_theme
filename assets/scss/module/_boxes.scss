@@ -1,0 +1,450 @@
+/* Pull */
+
+.bhcc--pull {
+  @include rem(padding, 30);
+  @media only screen and (max-width: $screen-xs-max){
+	@include rem(padding, 20, 30);
+  }
+  background: $bhcc-lightgrey;
+}
+
+.bhcc--pull img {
+  width: 100%;
+}
+
+.bhcc--pull h2 {
+  @include rem(font-size, 24);
+  @include rem(margin-bottom, 20);
+}
+
+.bhcc--pull p {
+  margin-bottom: 0;
+}
+
+.bhcc--pull-container {
+  display: table;
+  float: left;
+}
+	
+.bhcc--pull-icon {
+  display: table-cell;
+  @include rem(width, 80);
+  height: 100%;
+  @include rem(padding-right, 20);
+  img {
+    width: 100%;
+    @include rem(min-width, 50);
+  }
+}
+	
+.bhcc--pull-content {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.bhcc--pull-content h2 {
+  float: left;
+  font-family: $font-header-bold;
+  margin: 0;
+  @include rem(margin-bottom, 5);
+  @include rem(font-size, 32);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.bhcc--pull-content p {
+  clear: left;
+}
+
+.bhcc--pull .cta-single {
+  float: right;
+  @include rem(height, 55);
+  @include rem(font-size, 22);
+  margin-top: 10px !important;
+  margin-top: 0.625rem !important;
+  margin-bottom: 0px;
+  @media only screen and (max-width: $screen-sm-max){		
+    width: 100%;
+    margin-top: 20px !important;
+    margin-top: 1.25rem !important;
+  }
+}
+
+.bhcc--pull-stat {
+  text-align: center;
+}
+
+.bhcc--pull-stat span {
+  display: block;
+  font-family: $font-header-bold;	
+  color: $bhcc-blue;
+  @include rem(font-size, 75);
+  @include rem(padding, 20, 0, 25);
+  @media only screen and (max-width: $screen-xs-max){
+    @include rem(font-size, 46);
+  }
+}
+
+.bhcc--pull-stat p {
+  margin: 0;
+  @include rem(font-size, 18);
+  font-weight: bold;
+}
+
+.bhcc--pull-quote .quote {
+  &:before,&:after {
+    content: '"';
+  }
+}
+
+.bhcc--pull-quote .author {
+  font-weight: bold;
+  margin-bottom: 0;
+  &:before {
+    content: '- ';
+  }
+}
+
+.bhcc--pull .external-link {
+  display: block;
+  font-weight: bold;
+  @include rem(margin-top, 15);
+}
+
+
+.pink-left {
+  border-left: 5px solid $bhcc-purple;
+}
+	
+.blue-left {
+  border-left: 5px solid $bhcc-blue;
+  background: $bhcc-blue-tint;
+}
+	
+.orange-left {
+  border-left: 5px solid $bhcc-orange;
+}
+	
+.pink-bottom {
+  border-bottom: 5px solid $bhcc-purple;
+}
+
+.blue-bottom {
+  border-bottom: 5px solid $bhcc-blue;
+}
+	
+.orange-bottom {
+  border-bottom: 5px solid $bhcc-orange;
+}
+
+// if the pullout appears in a sidebar, hide the icon on screen-sm to save space
+.sidebar {
+	.cta-single {
+		width: 100%;
+		margin-top: 20px !important;
+		margin-top: 1.25rem !important;
+	}
+	@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+		.bhcc--pull {
+			@include rem(padding, 30, 20);
+		}
+		.bhcc--pull-icon {
+			display: none;
+		}
+		.bhcc--callout-content {
+			@include rem(padding, 50, 20, 30);
+		}
+	}
+}
+
+/* Councillor Pull */
+
+.bhcc--pull_councillor {
+	padding: 10px 15px 13px 20px !important;
+	padding: 0.625rem 0.9375rem 0.8125rem 1.25rem !important;
+	img { 
+		display: inline-block;
+		@include rem(width, 80); 
+		@include rem(margin-top, -8);
+		@include rem(margin-left, 15);
+		@media only screen and (max-width: $screen-sm-max){
+			display: none;
+		}
+	}
+	p {
+		display: inline-block;
+		@include rem(margin-left, 35);
+		font-weight: bold;
+		@include rem(padding-top, 15);
+		@include rem(font-size, 21);
+		@media only screen and (max-width: $screen-sm-max){
+			display: block;
+			@include rem(padding-top, 5);
+		}
+		@media only screen and (max-width: $screen-md-max){
+			@include rem(font-size, 18);
+			margin-left: 0px;
+		}
+		@media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max){
+			@include rem(margin-left, 25);
+		}
+	}
+	.site-search {
+		@include rem(width, 350);
+		border: 1px solid $bhcc-midgrey;
+		@media only screen and (max-width: $screen-md-max){
+			float: none;
+			width: 100%;
+		}
+		@include rem(margin-top, 3);
+		.btn {
+			background: $bhcc-blue !important;
+			border: 2px solid $bhcc-blue !important;
+		}
+		input:focus {
+			outline: 2px solid $bhcc-yellow;
+			box-shadow: none;
+		}
+		padding: 0px;
+	}
+	.form-control {
+		box-shadow: none;
+	}
+}
+
+/* Call out */ 
+
+.bhcc--callout {
+	@include rem(padding-top, 5);
+	position: relative;
+	overflow: hidden;
+	&-inner {
+		background: $bhcc-lightgrey;
+		&:before {
+			content: '';
+			position: absolute;
+			background: white;
+			@include rem(height, 15);
+			width: 100%;
+		}
+	}
+	&-title {
+		@include rem(padding, 10);
+		padding-top: 0px;
+		width: 80%;
+	}
+	&-title .highlight {
+		$highlight: $bhcc-purple;
+		position: relative;
+		display: inline;
+		font-family: $font-header-bold;
+		@include rem(font-size, 24);
+	    background: $highlight;
+	    color: white;
+	    @include rem(line-height, 33); 
+	    @include rem(padding, 5);
+	    padding-left: 0;
+	    padding-right: 0;
+	    -webkit-box-decoration-break: clone;
+	    -ms-box-decoration-break: clone;
+	    -o-box-decoration-break: clone;
+	    box-decoration-break: clone;
+	    box-shadow: 
+	      10px 0 0 $highlight, 
+	     -10px 0 0 $highlight;
+	}
+	&-content {
+		position: relative;
+		@include rem(margin-top, -20);
+		@include rem(padding, 35, 40, 40, 40);
+		@media only screen and (max-width: $screen-xs-max){
+			@include rem(padding, 35, 20, 20, 20);
+		}
+		ul {
+			list-style: none;
+			padding-left: 0;
+			@include rem(font-size, 18);
+		}
+		span {
+			@include rem(width, 20);
+			text-align: center;
+			@include rem(margin-right, 10);
+		}
+		img {
+			width: 100%;
+			@include rem(margin, 10, 0);
+		}
+		p {
+			@include rem(font-size, 18);
+		}
+		.internal-link, .external-link {
+			font-weight: bold;
+			text-decoration: none;
+		}
+	}
+	&-link {
+		@include rem(font-size, 22);
+		color: black;
+		font-weight: bold;
+		@include rem(margin-bottom, 20);
+		display: block;
+		&:hover {
+			color: black;
+			text-decoration: underline;
+		}
+	}
+} 
+
+/* Expanded Info */
+
+.expanded-info {
+    color: $bhcc-black;
+    @include rem(font-size, 18);
+    @include rem(padding, 30);
+    @include rem(margin-top, 10);
+    border-left: 8px solid $bhcc-orange;
+    border-bottom: 2px solid $bhcc-lightmidgrey;
+}
+
+/* Servicehub Contact */
+
+.servicehub--contact {
+
+    overflow: auto;
+
+    .contact-container {
+        background: $bhcc-lightgrey;
+        border-left: 5px solid $bhcc-green;
+        @include rem(padding, 20, 30, 15);
+		@include rem(margin-bottom, 25);
+        h2 {
+            margin: 0;
+            @include rem(padding-bottom, 15);
+            font-weight: 600;
+            @include rem(font-size, 24);
+			font-family: "Source Sans Pro", sans-serif;
+			line-height: 1;
+        }
+        ul {
+            font-weight: 700;
+            list-style: none;
+            span {
+                @include rem(width, 20);
+                display: inline-block;
+                text-align: center;
+                @include rem(padding-right, 10);
+            }
+            .fa {
+                @include rem(font-size, 15);
+            }
+        }
+        i {
+            @include rem(margin-right, 5);
+            @include rem(font-size, 18);
+        }
+        p {
+            @include rem(font-size, 17);
+        }
+    }
+
+    .sidebar {
+        @include rem(margin-top, 10);
+        @media only screen and (min-width: $screen-sm-min){
+            @include rem(padding-left, 30);
+        }
+    }
+    .contact-top {
+        @include rem(padding-bottom, 20);
+        .column-2 {
+            @include rem(padding-right, 30);
+        }
+        ul {
+            @include rem(margin-bottom, 15);
+        }
+        h3 {
+            margin: 0;
+            font-weight: 700;
+            @include rem(font-size, 17);
+            @include rem(line-height, 25);
+        }
+    }
+	
+    .opening-times {
+        @include rem(font-size, 17);
+        @include rem(line-height, 22);
+        @media only screen and (max-width: $screen-xs-max){
+            @include rem(margin-bottom, 30);
+        }
+    }
+    .contact-title {
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .contact-address {
+        span {
+            display: block;
+            font-size: 17px;
+        }
+    }
+    .contact-bottom {
+        @include rem(padding-top, 15);
+        border-top: $bhcc-keyline;
+        li {
+            @include rem(font-size, 17);
+            display: inline;
+            @include rem(margin-right, 10);
+            @media only screen and (max-width: $screen-xxs-max){
+                display: block;
+            }
+        }
+    }
+
+}
+
+.servicehub--contact [class*="col-"], .contact-top [class*="col-"], .cta-pull [class*="col-"] {
+  @include rem(padding-top, 0);
+  @include rem(padding-bottom, 0);
+}
+
+.cta-pull {
+  @include rem(padding, 30, 35);
+  @media only screen and (max-width: $screen-xs-max){
+	@include rem(padding, 30, 15, 1, 15);
+  }
+  background: $bhcc-lightgrey;
+}
+
+.cta-pull h2 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  @include rem(font-size, 19);
+  @include rem(line-height, 35);
+  font-weight: 700;
+  padding: 0;
+  @include rem(margin, 0, 0, 3, 0);
+}
+
+.cta-pull ul {
+  list-style: none;
+  padding-left: 0px;
+  @include rem(margin-bottom, 30);
+}
+
+.cta-pull .col-sm-6:not(:last-child) ul {
+  @media only screen and (max-width: $screen-xs-max){
+    @include rem(margin-bottom, 0);
+  }
+}
+
+.cta-pull li {
+  @include rem(font-size, 16);
+  @include rem(line-height, 33);
+  @include rem(margin-left, 15);
+  position: relative;
+  &:before {
+    position: absolute;
+    display: block;
+    content: "-";
+    left: -10px;
+  }
+}
+

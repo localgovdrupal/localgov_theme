@@ -1,0 +1,95 @@
+// /* Site header */
+
+// .header--container {
+//   background: $bhcc-pink;
+//   color: white;
+// }
+
+// .header--inner-page {
+//   @include rem(margin, 0, 15);
+//   border-bottom: solid 5px $bhcc-orange;
+//   @media only screen and (max-width: $screen-xs-max){
+//     border-bottom: none;
+//     @include rem(padding-bottom, 5);
+//   }
+// }
+
+// .header--inner-homepage {
+//   @include rem(margin, 0, 15);
+//   @include rem(padding-bottom, 5);
+// }
+
+// .header--desktop {
+//   overflow: visible;
+//   @include rem(height, 100);
+//   @include rem(padding, 10, 0);
+//   @media only screen and (max-width: $screen-xs-max) {
+//     display: none;
+//   }
+//   @media only screen and (min-width: $screen-sm-min) {
+//     display: block;
+//   }
+// }
+
+// .header--desktop .site-logo, .header--desktop .beta-notice-full {
+//   @media only screen and (min-width: $screen-md-min) {
+//     display: inline-block;
+//     vertical-align: middle;
+//   }
+// }
+
+// .header--desktop img {
+//   @include rem(max-width, 115);
+// }
+
+// .header--desktop #desktop-services-link {
+//   outline: none;
+// }
+
+// .header--desktop-left {
+//   float: left;
+// }
+
+// .header--desktop-right {
+//   float: right;
+//   @include rem(padding, 20 ,0);
+// }
+
+// /* No border */
+
+// .header--container.no-border .header--inner-page {
+//   border-bottom: 5px solid transparent;
+// }
+
+// .header--container.no-border .header--desktop {
+//   @include rem(height, 105);
+// }
+
+// /* Mobile */
+
+// .header--mobile {
+//   position: relative;
+//   overflow: auto;
+//   color: white;
+//   text-align: center;
+//   @include rem(padding, 5, 0);
+//   @include rem(height, 80);
+//   @media only screen and (max-width: $screen-xs-max) {
+//     display: block;
+//   }
+//   @media only screen and (min-width: $screen-sm-min) {
+//     display: none;
+//   }
+// }
+
+// .header--mobile-left {
+//   float: left;
+// }
+
+// .header--mobile-right {
+//   float: right;
+// }
+
+// .header--mobile .site-logo img {
+//   @include rem(max-width, 100);
+// }
