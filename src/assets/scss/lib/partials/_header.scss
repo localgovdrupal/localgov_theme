@@ -52,6 +52,7 @@ header p {
 
 .header--toggle {
   background: $white;
+  border-bottom: 2rem solid $primary;
   //overflow: auto;
   @include rem(margin-bottom, 15);
   // xs scroll version

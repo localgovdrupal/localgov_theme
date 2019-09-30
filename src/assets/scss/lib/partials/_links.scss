@@ -32,43 +32,39 @@
     @include rem(font-size, 17);
 }
 .action-link {
-    display: inline-block;
-    font-weight: bold;
-    @include rem(font-size, 20);
-    &:before {
-        font-family: 'Font Awesome 5 Free';
-        @include rem(font-size, 19);
-        font-weight: 900;
-        display: inline-block;
-        @include rem(padding-right, 10);
-        color: $black;
-        // ie bug fix for removing before/after underline
-        text-decoration: underline;
-    }
-    // ie bug fix for removing before/after underline
-    &:before {
-        text-decoration: none;
-    }
-}
+  display: inline-block;
+  font-weight: bold;
+  @include rem(font-size, 22);
 
-button.action-link {
-    color: $blue;
-    text-decoration: underline;
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    @include rem(font-size, 19);
+    font-weight: 800;
+    display: inline-block;
+    @include rem(padding-right, 10);
+    color: $primary;
+  }
+  
+
+}
+  button.action-link {
+   
+    color: $primary;
     background: none;
     border: none;
-	padding: 0px;
+    padding: 0px;
+    cursor: pointer;
+    
     &:focus {
         @include rem(padding, 5, 5, 10, 0);
         outline: none;
         margin: 0;
     }
-    // &:disabled {
-    //     color: $bhcc-blue-light;
-    // }
+    
     &:active, &:focus {
         @include rem(padding, 1, 7, 2, 7);
     }
-}
+  }
 
 .action-link--inline {
     color: $green;
@@ -95,7 +91,7 @@ button.action-link {
 
 .action-link--expand-icon {
     color: $green;
-    @include rem(margin-right, 10);
+    @include rem(margin-right, 5);
     @include rem(font-size, 14);
 }
 

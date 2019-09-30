@@ -47,3 +47,9 @@
     }
   }
 }
+
+.site-search--mobile {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
