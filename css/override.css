@@ -1,3 +1,4 @@
+/* Admin area styling */
 #block-croydon-local-tasks, #block-bhcc-local-tasks, #block-workplace-local-tasks {
   position: fixed;
   left: 0;
@@ -128,13 +129,6 @@ a.pdf-link:after {
 
 .embedded-entity.align-right {
   margin: 10px 0 10px 10px;
-}
-
-
-@media only screen and (max-width: 767px) {
-  .services--list-block li {
-    display: inherit !important;
-  }
 }
 
 .homepage--hero::before {

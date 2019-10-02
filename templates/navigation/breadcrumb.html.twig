@@ -9,11 +9,11 @@
 #}
 {% if breadcrumb %}
   
-<div class="key-under">
+<div class="key-under container-fluid">
         <!-- Breadcrumb navigation -->
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb site-max">
-              <li class="breadcrumb-item"><a href="#"><span class="oi oi-home purple" title="Home"></span></a></li>
+            <ol class="breadcrumb container">
+              <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
             {% for key, item in breadcrumb %}
         {% if item.url %}
           <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.text }}</a></li>

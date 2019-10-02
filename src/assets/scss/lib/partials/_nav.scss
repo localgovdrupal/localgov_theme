@@ -287,6 +287,7 @@
 
 //Footer vanilla nav outer container
 .navbar-light {
+
 	&.nav-vanilla {
   	padding: 0.5rem 0;
 
@@ -304,7 +305,7 @@
 		}
 
 		.navbar-nav {
-		  padding: 1rem 0;
+			padding: 0;
 		  margin-bottom: 0;
 
 		  .nav-link {

@@ -2,11 +2,7 @@
 /* /// FOOTER /// */
 
 footer {
-  section {
-    padding-bottom: 0;
-    margin-bottom: ($spacer * 4);
-    padding-right: ($spacer * 2);
-  }
+
   a {
     font-weight: 700;
     color: $white;
@@ -15,53 +11,83 @@ footer {
       color: $white;
     }
   }
+
+  .flex-break {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding-bottom: 0;
+    margin-bottom: ($spacer * 4);
+  }
+
+  .iconlist {
+    li {
+      strong {
+        font-size: 125%;
+      }
+
+      i {
+        min-width: 25px;
+        padding-right: .625rem;
+      }
+    }
+  }
+
   .footer-top {
     padding-bottom: 0;
     padding-top: ($spacer * 3);
   }
+
   .footer-bottom {
     padding-top: ($spacer * 3);
     padding-bottom: ($spacer * 3);
+
     section {
       display: flex;
       flex-wrap: wrap;
       padding-bottom: 0;
       margin-bottom: ($spacer * 3);
-    }
-    div section:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-    i {
-    display: inline-flex;
-    font-size: 1.625rem;  
-      &:before {
-        margin-left: 0;
-        margin-right: 5px;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      i {
+        display: inline-flex;
+        font-size: 1.625rem;
+
+        &:before {
+          margin-left: 0;
+          margin-right: 5px;
+        }
+
+        &.fa-sign-in-alt {
+          font-size: 16px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+        margin-right: ($spacer * 1);
+        align-self: flex-end;
+
+        &.account-links {
+          margin-right: 0;
+
+          a {
+            padding-right: 0;
+          }
+        }
       }
     }
-    h2 {
-      margin-right: ($spacer * 1);
-      margin-bottom: ($spacer * 1);
-    }
-    p {
-      margin-bottom: ($spacer * 1);
-      margin-right: ($spacer * 1);
-      align-self: flex-end;
-    }
-  }
-  .iconlist li strong {
-    font-size: 125%;
-  }
-  .oi {
-    min-width: 25px;
-    padding-right: .625rem; //10px
-    color: $white;
-  }
-  .flex-break {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
   }
 }
 
@@ -119,31 +145,4 @@ footer {
     }
   }
 
-  .copyright {
-    justify-content: flex-end;
-    padding-bottom: 0;
-    p {
-      justify-content: flex-end;
-    }
-  }
-
-  .navbar-light {
-    &.nav-vanilla {
-      padding: 0.5rem 0;
-      position: relative;
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      align-self: flex-start;
-      justify-content: flex-start;
-      ul li {
-        margin-bottom: 0;
-      }
-      .navbar-nav {
-        .nav-link {
-          padding: 0 1rem;
-        }
-      }
-    }
-  }
 }
