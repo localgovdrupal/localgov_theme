@@ -45,6 +45,11 @@
     color: $primary;
   }
   
+  i  {
+    color:$green;
+    @include rem(margin-right, 5);
+    @include rem(font-size, 14);
+  }
 
 }
   button.action-link {
@@ -63,6 +68,11 @@
     
     &:active, &:focus {
         @include rem(padding, 1, 7, 2, 7);
+    }
+    i  {
+      color:$green;
+      @include rem(margin-right, 5);
+      @include rem(font-size, 14);
     }
   }
 
@@ -87,18 +97,6 @@
 
 .action-link--load:before {
     content: '\f0c7';
-}
-
-.action-link--expand-icon {
-    color: $green;
-    @include rem(margin-right, 5);
-    @include rem(font-size, 14);
-}
-
-.action-link--icon {
-    color: $green;
-    @include rem(margin-right, 10);
-    @include rem(font-size, 14);
 }
 
 /* Skip Link */

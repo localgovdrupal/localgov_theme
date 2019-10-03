@@ -77,18 +77,15 @@
 
 {% block breadcrumbs %}
   {% if page.breadcrumb %}
-  <div class="breadcrumb-container">
-    {{ page.breadcrumb }}
-
-    <div class="beta-notice-sm">
-      <div class="beta-notice beta-notice-sm">
-        <div class="first-line">
-          <span class="beta-badge">NEW</span>
-          <p><a href="#">What's this?</a></p>
-        </div>
-      </div>
+  <div class="container">
+    <div class="row">
+      {{ page.breadcrumb }}
+    </div>
+    <div class="row mt-4 mb-4"> 
+      {% include '@croydon/system/notice.html.twig' with {'page': page, 'border': true} %}
     </div>
   </div>
+
   {% endif %}
 {% endblock %}
 

@@ -6,13 +6,17 @@ body {
 	widows: 2;
 }
 
-* {
-	outline: 1px solid hotpink;
-}
+// * {
+// 	outline: 1px solid hotpink;
+// }
 
 .container-fluid, .container { // BS override - padding is added via cols
 	padding-left: 0;
 	padding-right: 0;
+}
+.row {
+	margin-left: 0;
+	margin-right: 0;
 }
 .text-monospace {
 	font-size: 1rem; //16px
