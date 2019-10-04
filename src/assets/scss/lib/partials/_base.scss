@@ -6,9 +6,9 @@ body {
 	widows: 2;
 }
 
-// * {
-// 	outline: 1px solid hotpink;
-// }
+* {
+	outline: 1px solid hotpink;
+}
 
 .container-fluid, .container { // BS override - padding is added via cols
 	padding-left: 0;
