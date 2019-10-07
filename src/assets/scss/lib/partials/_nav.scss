@@ -1,8 +1,4 @@
 
-/* /// VANILLA NAV BAR (Has Big tabs merged - in progress) /// */
-
-
-
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
@@ -16,6 +12,7 @@
 .navbar-dark.nav-vanilla .navbar-brand {
 	margin-right: 1.125rem; //18px
 	font-weight: bold; //For fallback
+	font-size: unset; // we have an image here and the bs font size affects the spacing
 }
 
 // Main navigation logo

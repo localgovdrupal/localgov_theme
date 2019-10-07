@@ -6,17 +6,32 @@ body {
 	widows: 2;
 }
 
-* {
-	outline: 1px solid hotpink;
-}
+// * {
+// 	outline: 1px solid hotpink;
+// }
 
-.container-fluid, .container { // BS override - padding is added via cols
+.container-fluid { // BS override 
 	padding-left: 0;
 	padding-right: 0;
 }
-.row {
-	margin-left: 0;
-	margin-right: 0;
+
+@include media-breakpoint-up(md) {
+
+	.container { // BS override 
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.row { // BS override
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.img-fluid { // BS override
+	width: 100%;
+	@include media-breakpoint-up(md) {
+		max-width: 100%;
+	}
 }
 .text-monospace {
 	font-size: 1rem; //16px

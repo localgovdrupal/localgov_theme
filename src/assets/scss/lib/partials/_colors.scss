@@ -1,19 +1,17 @@
 /* /// CUSTOM CLASSES USING THEME COLOURS /// */
 
 //Visited links - Indigo at 60% opacity
-main section a:visited,
-main section a:visited .oi,
-.sidebar a:visited,
-.sidebar a:visited .oi,
-main section a:visited i,
-.sidebar a:visited i {
-	color: $visited !important;
-}
+// main section a:visited,
+// main section a:visited .oi,
+// .sidebar a:visited,
+// .sidebar a:visited .oi,
+// main section a:visited i,
+// .sidebar a:visited i {
+// 	color: $visited !important;
+// }
 
 main section a:visited:hover,
-main section a:visited:hover .oi,
-.sidebar a:visited:hover,
-.sidebar a:visited:hover .oi {
+.sidebar a:visited:hover {
 	color: $indigo !important;
 }
 
