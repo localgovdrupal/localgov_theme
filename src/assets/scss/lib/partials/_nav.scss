@@ -75,8 +75,8 @@
 }
 
 // Main navigation anf and big tabs dropdown menu icon (desktop)
-.navbar-dark.nav-vanilla .nav-link .oi,
-.navbar-dark.nav-bigtabs .nav-link .oi {
+.navbar-dark.nav-vanilla .nav-link .fa,
+.navbar-dark.nav-bigtabs .nav-link .fa {
 	padding-left: 0 .3125rem; // 5px
 }
 
@@ -112,7 +112,7 @@
 }
 
 // Main navigation dropdown icon
-.navbar-dark.nav-vanilla .nav-item .oi {
+.navbar-dark.nav-vanilla .nav-item .fa {
 	font-size: 85%;
 }
 
@@ -175,7 +175,7 @@
 }
 
 // Main navigation toggle button
-#js-nav-toggle .oi {
+#js-nav-toggle .fa {
 	color: $white;
 	font-size: 1.125rem; //18px
 }
