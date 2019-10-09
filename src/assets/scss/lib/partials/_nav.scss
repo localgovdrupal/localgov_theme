@@ -13,6 +13,12 @@
 	margin-right: 1.125rem; //18px
 	font-weight: bold; //For fallback
 	font-size: unset; // we have an image here and the bs font size affects the spacing
+	@include media-breakpoint-up(sm) {
+		.img-fluid {
+			width: 75%;
+		}
+	}
+
 }
 
 // Main navigation logo
