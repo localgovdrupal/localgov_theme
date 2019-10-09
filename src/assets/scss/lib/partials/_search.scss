@@ -13,7 +13,7 @@
 }
 
 // Search icon button icon
-.icon-search:hover .oi {
+.icon-search:hover .fa {
 	color: $navbar-dark-toggler-border-color;
 }
 
@@ -23,10 +23,33 @@
 }
 
 .homepage--search {
-  background: rgba($black, 0.6);
-  color: $white;
-  border-bottom: 5px solid $white;
-  @include rem(padding, 15, 30);
-  margin-top: -4rem;
+  background: $black;
 
+  @include media-breakpoint-up(sm) {
+    background: rgba($black, 0.6);
+  }
+  color: $white;
+  @include rem(padding, 30);
+  margin-top: -6.75rem;
+  label {
+  	@include rem(font-size, 22);
+  	display: flex;
+    align-items: center;
+  }
+
+  .input-group-prepend { // adapt bs input group to respond
+    flex-basis: 100%;
+    @include rem(padding, 0, 0, 10, 0);
+
+    @include media-breakpoint-up(sm) {
+      flex-basis: initial;
+      padding: 0;
+    }
+  }
+}
+
+.site-search--mobile {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }

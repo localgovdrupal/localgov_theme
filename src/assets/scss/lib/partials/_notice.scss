@@ -1,0 +1,23 @@
+.notice {
+  p {
+    @include rem(font-size, 15);
+    @include rem(line-height, 15);
+    color: $carbon;
+  }
+  a {
+    @include rem(font-size, 15);
+  }
+  > DIV {
+    span, p {
+      display: inline;
+    }
+    span {
+      background: $primary;
+      color: $white;
+      @include rem(padding, 0, 4);
+      @include rem(margin-right, 3);
+      @include rem(font-size, 13);
+      font-weight: 700;
+    }
+  }
+}

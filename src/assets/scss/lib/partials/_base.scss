@@ -6,9 +6,32 @@ body {
 	widows: 2;
 }
 
-.container-fluid {
+// * {
+// 	outline: 1px solid hotpink;
+// }
+
+.container-fluid { // BS override 
 	padding-left: 0;
 	padding-right: 0;
+}
+
+@include media-breakpoint-up(md) {
+
+	.container { // BS override 
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.row { // BS override
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.img-fluid { // BS override
+	width: 100%;
+	@include media-breakpoint-up(md) {
+		max-width: 100%;
+	}
 }
 .text-monospace {
 	font-size: 1rem; //16px
@@ -157,9 +180,9 @@ mark {
 }
 
 //Icon padding right main and sidebars
-main .oi,
-main li .oi,
-.sidebar li .oi,
+main .fa,
+main li .fa,
+.sidebar li .fa,
 .sidebar,
 main i,
 main li i,
@@ -250,7 +273,7 @@ main i {
 	padding-left: 0;
 }
 
-.iconlist li .oi,
+.iconlist li .fa,
 .iconlist li i {
 	padding-top: .3125rem;
 }

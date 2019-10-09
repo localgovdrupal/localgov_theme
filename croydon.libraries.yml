@@ -6,19 +6,17 @@ global:
     theme:
       css/override.css: {}
       # vanilla
-      assets/css/style.css: {}
-      assets/css/vendor/owl.carousel.min.css: {}
-      assets/css/vendor/owl.theme.bhcc.css: {}
+      
       # council theme
       dist/assets/css/lib/main.css: {}
       dist/assets/css/font-face.css: {}
 
   js:
     # vanilla
-    assets/js/owl.carousel.min.js: {}
+  
     # council theme
     dist/assets/js/main.js: {}
-    assets/js/directories.js: {}
+ 
     
 
   dependencies:

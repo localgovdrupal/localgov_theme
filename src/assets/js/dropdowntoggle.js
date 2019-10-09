@@ -16,7 +16,7 @@
 		}
 	};
 
-	dropdown.dropToggle.addEventListener('click', function(e) { dropdown.doToggleDrop(e); });
+	//dropdown.dropToggle.addEventListener('click', function(e) { dropdown.doToggleDrop(e); });
 	//dropdown.dropToggle.addEventListener('focus', function(e) { dropdown.doToggleDrop(e); }, true);
 	//dropdown.dropToggle.addEventListener('blur', function(e) { dropdown.doToggleDrop(e); }, true);
 	  

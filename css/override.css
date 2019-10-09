@@ -1,4 +1,6 @@
-#block-bhcc-local-tasks, #block-workplace-local-tasks {
+
+/* Admin area styling */
+#block-croydon-local-tasks, #block-bhcc-local-tasks, #block-workplace-local-tasks {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -8,18 +10,23 @@
   z-index: 10;
 }
 
+
+#block-croydon-local-tasks ul,
 #block-bhcc-local-tasks ul,
 #block-workplace-local-tasks ul {
   margin: 0;
   list-style-type: none;
 }
 
+#block-croydon-local-tasks ul li,
 #block-bhcc-local-tasks ul li,
 #block-workplace-local-tasks ul li {
   width: auto;
   float: left;
 }
 
+
+#block-croydon-local-tasks ul li a,
 #block-bhcc-local-tasks ul li a,
 #block-workplace-local-tasks ul li a {
   display: block;
@@ -126,13 +133,6 @@ a.pdf-link:after {
 
 .embedded-entity.align-right {
   margin: 10px 0 10px 10px;
-}
-
-
-@media only screen and (max-width: 767px) {
-  .services--list-block li {
-    display: inherit !important;
-  }
 }
 
 .homepage--hero::before {

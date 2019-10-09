@@ -1,16 +1,17 @@
-<header class="header--container {{ border ? '' : 'no-border' }}">
-  <div class="wrapper">
-    <div class="bg-primary">
+  <header class="bg-primary">
+    <div class="container pl-sm-0 pr-sm-0">
       <!-- Main navigation -->
-      <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
+      <nav class="navbar navbar-expand-lg navbar-dark nav-vanilla">
 
           <!-- Navbar content -->
-          <a class="navbar-brand" href="#/" title="Go to the London Borough of Croydon homepage">
-            <img class="img-responsive w-75" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
+          <a class="navbar-brand col-4 col-md-2 p-0" href="#/" title="Go to the London Borough of Croydon homepage">
+            <img class="img-fluid" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
           </a>
           <!-- Mobile toggle button -->
           <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation"> <span
-                  class="oi oi-x d-none"></span> <span class="oi oi-menu"></span> </button>
+                  class="fa fa-times d-none"></span> <span class="fa fa-bars fa-1x"></span> </button>
+
+                
           <div class="collapse navbar-collapse" id="menu-purejs">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item" id="js-drop-toggle"> <a class="nav-link show-menu" href="#" id="navbarDropdown"
@@ -41,7 +42,7 @@
           </div>
       </nav>
       <!-- Toggle Menu -->
-      <nav class="header--expand header--toggle site-max">
+      <nav class="header--expand header--toggle">
         <div id="site-search--mobile" class="site-search site-search--mobile">
           {{ page.search }}
         </div>
@@ -58,11 +59,10 @@
     <!--   <div class="beta-notice beta-notice-full">
             <div class="first-line">
               <span class="beta-badge">NEW</span>
-              <a href="https://services.brighton-hove.gov.uk/link/websitefeedback">Give feedback</a>
+              <a href="#">Give feedback</a>
             </div>
           </div> -->
 
-    </div>
   </div>
 </header>
 

@@ -37,19 +37,16 @@
  * @see template_preprocess_field()
  */
 #}
-<section class="top-story--homepage">
-  <div class="top-story--title">
-    <h3><a href="/news">Newsroom</a></h3>
-    <span>Latest news from Brighton & Hove City Council</span>
-  </div>
-
-  <div class="top-story--slice">
+<section class="pb-0">
+  <h3><a href="/news">Latest News</a></h3>
+  <div class="row">
     {% for item in items %}
       {{ item.content }}
     {% endfor %}
+    <div class="col-12">
+	    <a href="#" class="action-link mt-4">
+	    <i class="fas fa-chevron-right"></i>Read more news
+	  	</a>
+  	</div>
   </div>
-
-  <a href="/news" class="action-link action-link--expand margin-top--20 margin-bottom--40">
-    <i class="action-link--expand-icon fas fa-chevron-right"></i>Visit the Newsroom
-  </a>
 </section>

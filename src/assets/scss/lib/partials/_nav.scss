@@ -1,8 +1,4 @@
 
-/* /// VANILLA NAV BAR (Has Big tabs merged - in progress) /// */
-
-
-
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
@@ -16,6 +12,13 @@
 .navbar-dark.nav-vanilla .navbar-brand {
 	margin-right: 1.125rem; //18px
 	font-weight: bold; //For fallback
+	font-size: unset; // we have an image here and the bs font size affects the spacing
+	@include media-breakpoint-up(sm) {
+		.img-fluid {
+			width: 75%;
+		}
+	}
+
 }
 
 // Main navigation logo
@@ -78,8 +81,8 @@
 }
 
 // Main navigation anf and big tabs dropdown menu icon (desktop)
-.navbar-dark.nav-vanilla .nav-link .oi,
-.navbar-dark.nav-bigtabs .nav-link .oi {
+.navbar-dark.nav-vanilla .nav-link .fa,
+.navbar-dark.nav-bigtabs .nav-link .fa {
 	padding-left: 0 .3125rem; // 5px
 }
 
@@ -115,7 +118,7 @@
 }
 
 // Main navigation dropdown icon
-.navbar-dark.nav-vanilla .nav-item .oi {
+.navbar-dark.nav-vanilla .nav-item .fa {
 	font-size: 85%;
 }
 
@@ -136,7 +139,7 @@
 
 	//Set navbar dark padding to accomodate tab design
 	.navbar-dark.nav-vanilla {
-		padding: .8rem 1rem 0;
+		padding: .8rem 0 0;
 	}
 	//Set navbar link padding to accomodate tab design
 	.navbar-dark.nav-vanilla .navbar-nav .nav-link {
@@ -178,7 +181,7 @@
 }
 
 // Main navigation toggle button
-#js-nav-toggle .oi {
+#js-nav-toggle .fa {
 	color: $white;
 	font-size: 1.125rem; //18px
 }
@@ -287,6 +290,7 @@
 
 //Footer vanilla nav outer container
 .navbar-light {
+
 	&.nav-vanilla {
   	padding: 0.5rem 0;
 
@@ -300,10 +304,11 @@
 		.navbar-brand {
 		  margin-right: 1.125rem; //18px
 		  color: $purple;
+		  font-weight: 700;
 		}
 
 		.navbar-nav {
-		  padding: 1rem 0;
+			padding: 0;
 		  margin-bottom: 0;
 
 		  .nav-link {

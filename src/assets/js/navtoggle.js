@@ -5,8 +5,8 @@
 	var hamburger = {
 		navToggle: document.querySelector('#js-nav-toggle'),
 		nav: document.querySelector('#menu-purejs'),
-		iconClosed: document.querySelector('#js-nav-toggle .oi-menu'),
-		iconOpen: document.querySelector('#js-nav-toggle .oi-x'),
+		iconClosed: document.querySelector('#js-nav-toggle .fa-bars'),
+		iconOpen: document.querySelector('#js-nav-toggle .fa-times'),
 
 		doToggle: function(e) {
 			e.preventDefault();

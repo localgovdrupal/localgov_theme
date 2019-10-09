@@ -10,8 +10,8 @@
 .accordionItemHeading a:hover,
 .accordionItemHeading a:visited,
 .accordionItemHeading a:visited:hover,
-.accordionItemHeading a:visited .oi,
-.accordionItemHeading a:visited:hover .oi {
+.accordionItemHeading a:visited .fa
+.accordionItemHeading a:visited:hover .fa {
 	color: $white !important;
 	text-decoration: none !important;
 }
@@ -44,7 +44,7 @@
 	color: $white;
 }
 
-.accordionItemHeading a .oi {
+.accordionItemHeading a .fa {
 	font-size: $input-btn-font-size-sm;
 	color: $white;
 	padding-left: 0;
