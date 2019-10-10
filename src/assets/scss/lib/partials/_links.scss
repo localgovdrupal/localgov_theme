@@ -134,18 +134,16 @@
     width: auto;
 }
 
-/* More Link */
 
-.servicehub--link-more {
-    @include rem(font-size, 20);
-    font-weight: 700;
-    // @media only screen and (min-width: $screen-sm-min){
-    //     float: right;
-    // }
-    i {
-        color: $green;
-        display: inline;
-        @include rem(font-size, 16);
-        @include rem(margin-right, 5);
-    }
+// link blocks generally used on service pages //
+.link-block { 
+  padding-left: 0.5rem;
+
+  i {
+    font-size: 1rem;
+    color: $orange;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+  }
 }
