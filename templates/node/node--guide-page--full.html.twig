@@ -13,8 +13,8 @@ This file provides the HTML structure for baic pages.
 
   {% if previous_url or next_url %}
   <aside class="navigation-link-container clearfix">
-    {% if previous_url %}<a href="{{ previous_url }}" class="cta-button cta-small cta-blue previous"><span>Previous</span></a>{% endif %}
-    {% if next_url %}<a href="{{ next_url }}" class="cta-button cta-small cta-blue next"><span>Next</span></a>{% endif %}
+    {% if previous_url %}<button type="button" onclick="location.href='{{ previous_url }}'" class="btn btn-carbon"><span class="fa fa-chevron-left"></span>Previous</button>{% endif %}
+    {% if next_url %}<button type="button" onclick="location.href='{{ next_url }}'" class="btn btn-primary"><span class="fa fa-chevron-right"></span>Next</button>{% endif %}
   </aside>
   {% endif %}
 </main>
