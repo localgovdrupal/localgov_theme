@@ -1,3 +1,19 @@
+/*Accessible in para links*/
+
+.page p, .notice p, .cookies-notice-inner,
+.step-by-step-pages__relationship, .step-by-step-pages--nav {
+  a {
+    text-decoration: underline;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $yellow;
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
+
 /* External Link */
 
 .external-link {
@@ -139,7 +155,7 @@
 .link-block { 
   padding-left: 0.5rem;
 
-  i {
+  span {
     font-size: 1rem;
     color: $orange;
     position: absolute;

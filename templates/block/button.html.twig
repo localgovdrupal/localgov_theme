@@ -1,0 +1,12 @@
+
+{% if grid %}
+  <div class="mb-2 {{ grid }}">
+{% endif %}
+
+<a href="{{ url }}" class="cta-button {{ type }}">
+    <span>{{ title }}</span>
+</a>
+
+{% if grid %}
+  </div>
+{% endif %}
