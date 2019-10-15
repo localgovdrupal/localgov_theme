@@ -11,9 +11,6 @@
 @import 'variables';
 
 //@import 'variables-REPLACEWITHYOURCOUNCILNAME';
-// vendor import
-@import 'vendor/open-iconic-bootstrap';
-@import 'vendor/fontello';
 
 // Functions
 @import 'functions';
@@ -39,10 +36,14 @@
 @import "../../../../node_modules/bootstrap/scss/tables";
 @import "../../../../node_modules/bootstrap/scss/buttons";
 @import "../../../../node_modules/bootstrap/scss/alert";
+@import "../../../../node_modules/bootstrap/scss/jumbotron";
+@import "../../../../node_modules/bootstrap/scss/input-group";
+@import "../../../../node_modules/bootstrap/scss/images";
 // Import partials
-@import 'partials/base';
 @import 'partials/account';
 @import 'partials/accordion';
+@import 'partials/alert';
+@import 'partials/base';
 @import 'partials/buttons';
 @import 'partials/cookie';
 @import 'partials/colors';
@@ -51,7 +52,13 @@
 @import 'partials/footer';
 @import 'partials/forms';
 @import 'partials/header';
+@import 'partials/jumbotron';
+@import 'partials/links';
 @import 'partials/main';
 @import 'partials/nav';
+@import 'partials/notice';
 @import 'partials/search';
 @import 'partials/sidebar';
+@import 'partials/service';
+@import 'partials/services';
+@import 'partials/stepbystep';

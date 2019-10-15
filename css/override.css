@@ -1,0 +1,203 @@
+
+/* Admin area styling */
+#block-croydon-local-tasks, #block-bhcc-local-tasks, #block-workplace-local-tasks {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  background: #ccc;
+  z-index: 10;
+}
+
+
+#block-croydon-local-tasks ul,
+#block-bhcc-local-tasks ul,
+#block-workplace-local-tasks ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+#block-croydon-local-tasks ul li,
+#block-bhcc-local-tasks ul li,
+#block-workplace-local-tasks ul li {
+  width: auto;
+  float: left;
+}
+
+
+#block-croydon-local-tasks ul li a,
+#block-bhcc-local-tasks ul li a,
+#block-workplace-local-tasks ul li a {
+  display: block;
+  padding: 10px;
+}
+
+body.logged-in {
+  margin-bottom: 40px;
+}
+
+#field--body a.cta-button.cta-green {
+  width: 400px;
+  max-width: 100%;
+}
+
+#google-cse-results {
+  overflow: hidden;
+}
+
+.gsc-result .gs-title{ color: #0059A4 !important;}
+
+.gs-webResult.gs-result a.gs-title:link b
+{ color: #0059A4 !important;}
+
+.gs-result a.gs-visibleUrl, .gs-result .gs-visibleUrl {
+  color: #008920 !important;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-page{
+  color: #0059A4 !important;
+}
+
+.gsc-result-info-container {
+  padding: 0 !important;
+}
+
+/*.gsc-webResult.gsc-result.gsc-promotion {*/
+  /*border: none !important;*/
+/*}*/
+
+.gsc-result .gs-title {
+  height: auto !important;
+}
+
+.gsc-thumbnail-inside, .gsc-url-top {
+  padding: 0 !important;
+}
+
+.entity-moderation-form {
+  margin-top: 0;
+}
+
+.entity-moderation-form .entity-moderation-form__item {
+  float: left;
+  width: 30%;
+  margin: 0;
+}
+
+.entity-moderation-form .entity-moderation-form__item select {
+  width: 80%;
+}
+
+a.pdf-link:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f1c1';
+  font-weight: 400;
+  display: inline-block;
+  font-size: 13px;
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+#field--body ul {
+  width: 100%;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+#field--body ul li {
+  width: 100%;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+#sliding-popup {
+  z-index: 1;
+}
+
+.search-block-form {
+  width: 100%;
+}
+
+.search-block-form #home-site-search {
+  width: 100%;
+}
+
+.embedded-entity.align-left {
+  margin: 10px 10px 10px 0;
+}
+
+.embedded-entity.align-right {
+  margin: 10px 0 10px 10px;
+}
+
+.homepage--hero::before {
+  display: inline !important;
+}
+
+/* Add a margin to the top of site messages so they dont sit through the title border. */
+.croydon-alert {
+  margin-top: 10px;
+}
+
+/* .form-control items have the border stripped from the styleguide, we add them back to select forms here. */
+#user-login-form .form-control,
+#user-pass .form-control {
+  border: 1px solid #ccc;
+}
+
+/* Invalid feedback does not seem to be in the loaded version of Bootstrap. */
+.invalid-feedback {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+/* Unpublished bar */
+
+.temp-alert-bar {
+  background-color: #FFCC33;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 79px;
+}
+
+.temp-alert-bar--inner {
+  margin: 0 auto;
+}
+
+.temp-alert-bar--inner p {
+  margin: 0;
+  padding: 15px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Campaign pages */
+
+.campaign-banner {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+body.node--campaign_page .breadcrumb-block {
+  margin-bottom: 10px;
+}
+
+body.node--campaign_page .breadcrumb-block .breadcrumb-prefix {
+  display: none;
+}
+
+.navigation-stacked {
+  margin-bottom: 50px;
+}
+
+.sidebar .paragraph {
+  margin-bottom: 50px;
+}

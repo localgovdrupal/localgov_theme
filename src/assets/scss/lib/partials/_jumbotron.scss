@@ -1,0 +1,38 @@
+.jumbotron {
+  background: $primary;
+  margin: 0;
+  padding: 0;
+
+  .container {
+    background-size: cover;
+    background-position: center;
+
+    @include rem(height, 330);
+
+    @include media-breakpoint-up(sm) {
+      @include rem(height, 300);
+    }
+
+    .homepage--hero-inner {
+      .homepage--welcome {
+        @include rem(padding-top, 60);
+        h1 {
+          @include rem(letter-spacing, 0);
+          @include rem(font-size, 42);
+          @include media-breakpoint-up(sm) {
+            @include rem(font-size, 52);
+          }
+          color: $white;
+          line-height: 1.1;
+          font-weight: 800;
+          &:before {
+            content: 'Welcome to';
+            display: block;
+            @include rem(font-size, 24);
+            font-weight: 600;  
+          }
+        }
+      }
+    }
+  }
+}

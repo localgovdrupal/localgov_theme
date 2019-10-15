@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="newsroom--search-input">
+  <h1 class="visible-xs">Newsroom</h1>
+    <label for="keyword">Search for more news</label>
+    <div class="input-group">
+      <input{{ attributes }} />{{ children }}
+      <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+              <span class="fa fa-search"></span>
+          </button>
+      </span>
+    </div>
+</div>

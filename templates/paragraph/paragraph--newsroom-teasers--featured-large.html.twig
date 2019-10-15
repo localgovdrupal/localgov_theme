@@ -1,0 +1,24 @@
+
+
+<div class="top-story--block_main">
+
+  {% if content.field_image|render %}
+    <div class="top-story--image">
+      <a href="{{ link }}">
+        {{ content.field_image|render }}
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="top-story--content">
+    {#<div class="top-story--subheading">#}
+      {#<span class="highlight-2">FEATURED</span>#}
+      {#{% if not node.field_category.isEmpty() %}#}
+        {#<a class="top-story--category" href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_category.entity.id()}) }}">#}
+          {#{{ node.field_category.entity.label() }}#}
+        {#</a>#}
+      {#{% endif %}#}
+    {#</div>#}
+    <h3><a href="{{ link }}">{{ content.field_title|render }}</a></h3>
+  </div>
+</div>

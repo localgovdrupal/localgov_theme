@@ -1,0 +1,165 @@
+/*Accessible in para links*/
+
+.page p, .notice p, .cookies-notice-inner,
+.step-by-step-pages__relationship, .step-by-step-pages--nav {
+  a {
+    text-decoration: underline;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $yellow;
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
+
+/* External Link */
+
+.external-link {
+	color: $green;
+	&:hover {
+		color: $blue;
+	}
+	&:focus {
+		color: $blue;
+		@include rem(padding, 5, 5, 10, 0);
+	}
+	&:after {
+		font-family: 'Font Awesome 5 Free';
+		content: '\f35d';
+		font-weight: 900;
+		display: inline-block;
+		@include rem(font-size, 13);
+		@include rem(padding-left, 5);
+		// ie bug fix for removing before/after underline
+		text-decoration: underline;
+	}
+	// ie bug fix for removing before/after underline
+	&:after {
+		text-decoration: none;
+	}
+}
+
+/* Action Link */
+
+.action-link-container {
+    @include rem(margin, 30, 0, 40);
+    @include rem(font-size, 17);
+}
+.action-link {
+  display: inline-block;
+  font-weight: bold;
+  @include rem(font-size, 22);
+
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    @include rem(font-size, 19);
+    font-weight: 800;
+    display: inline-block;
+    @include rem(padding-right, 10);
+    color: $primary;
+  }
+  
+  i  {
+    color:$green;
+    @include rem(margin-right, 5);
+    @include rem(font-size, 14);
+  }
+
+}
+  button.action-link {
+   
+    color: $primary;
+    background: none;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    
+    &:focus {
+        @include rem(padding, 5, 5, 10, 0);
+        outline: none;
+        margin: 0;
+    }
+    
+    &:active, &:focus {
+        @include rem(padding, 1, 7, 2, 7);
+    }
+    i  {
+      color:$green;
+      @include rem(margin-right, 5);
+      @include rem(font-size, 14);
+    }
+  }
+
+.action-link--inline {
+    color: $green;
+    &:hover {
+        color: $blue;
+    }
+}
+
+.action-link--print:before {
+    content: '\f02f';
+}
+
+.action-link--save:before {
+    content: '\f0c7';
+}
+
+.action-link--share:before {
+    content: '\f064';
+}
+
+.action-link--load:before {
+    content: '\f0c7';
+}
+
+/* Skip Link */
+
+.skip-link {
+  font-size: 15px;
+  line-height: 30px;
+  padding-right: 5px;
+  display: inline-block;
+}
+
+.skip-link i {
+  float: left;
+  display: inline-block;
+  line-height: 30px;
+  font-size: 15px;
+  color: #555;
+  margin: 0 8px 0 15px;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+}
+
+.visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+    position: static !important;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+    width: auto;
+}
+
+
+// link blocks generally used on service pages //
+.link-block { 
+  padding-left: 0.5rem;
+
+  span {
+    font-size: 1rem;
+    color: $orange;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+  }
+}

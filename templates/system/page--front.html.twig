@@ -1,0 +1,67 @@
+{% extends "page.html.twig" %}
+
+{% block header %}
+  <header class="bg-primary">
+    <div class="container pl-sm-0 pr-sm-0">
+      <!-- Main navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
+
+          <!-- Navbar content -->
+          <a class="navbar-brand col-4 col-md-2 p-0" href="#/" title="Go to the London Borough of Croydon homepage">
+            <img class="img-fluid" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
+          </a>
+
+          <!-- Mobile toggle button -->
+          <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation">
+            <span class="fa fa-times d-none"></span>
+            <span class="fa fa-bars fa-1x"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu-purejs">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"> <a class="nav-link" href="#">A - Z</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">In your area</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">News</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Jobs</a> </li>
+            </ul>
+          </div>
+
+      </nav>
+      <!-- End main navigation -->
+    </div>
+  </header>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="container homepage--search">
+    <div class="row">
+      <div class="col-12">
+        <form action="/search/google" method="get">
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label for="form-control" class="mb-0 mr-3" id="whatlooking">What are you looking for?</label>
+            </div>
+            <input type="text" id="form-control" class="form-control" aria-label="Search" aria-describedby="whatlooking" name="keys">
+            <div class="input-group-append">
+              <button class="btn btn-primary pl-5 pr-5" type="button">Search <span class="fa fa-search"></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <main role="main" class="container mt-0">
+      {{ page.breadcrumb }}
+      {{ page.messages }}
+      {{ page.content }}
+      <div class="row mt-4 mb-4"> 
+        {% include '@croydon/system/notice.html.twig' with {'page': page, 'border': true} %}
+      </div>
+      {{ page.content_bottom }}
+  </main>
+  
+{% endblock %}

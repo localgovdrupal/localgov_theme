@@ -1,0 +1,148 @@
+.services--feature { 
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  padding-bottom: 0;
+  left: 50%;
+  border-bottom: 1px solid $gray;
+  background: $gray-light;
+
+  .services--feature-container {
+    @include rem(padding, 20, 0);
+  }
+}
+
+.services--feature-block {
+  @include rem(padding, 20, 5);
+  text-align: center;
+
+  a {
+    display: block;
+    text-decoration: none;
+    @include rem(padding, 5);
+  }
+
+  @include media-breakpoint-up(sm) {
+    &.col-sm {
+      @include make-col(1, 5); // magic columns
+    }
+  }
+}
+
+.services--feature-icon {
+  @include rem(font-size, 26);
+  @include rem(width, 47);
+  @include rem(height, 47);
+  @include rem(line-height, 47);
+  color: $gray-dark;
+}
+
+.services--feature-title {
+  display: block;
+  color: $black;
+  @include rem(font-size, 17);
+  @include rem(line-height, 24);
+  @include rem(margin-top, 5);
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.services--list {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+ .services--list-block {
+    h3 {
+      font-weight: bold;
+      @include rem(margin, 10, 0, 20, 0);
+      line-height: 1.1;
+      a {
+        display: inline-block;
+        text-decoration: underline;
+        color: $black;
+        @include rem(font-size, 24);
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        @include rem(padding-right, 10);
+        display: inline-block;
+        margin: 0px;       
+        @include rem(line-height, 28);
+        &:not(:last-child):after {
+          content: ',';
+          color: $blue;
+        }
+
+        @include media-breakpoint-up(sm) {
+          display: block;
+          width: auto;
+          padding: 0px;
+          
+          &:not(:last-child):after {
+            content: '';
+          }
+        }
+        &:before {
+          @include media-breakpoint-up(sm) {
+            content: "\f054";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            @include rem(font-size, 13);
+            color: $secondary;
+            @include rem(margin-right, 5);
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+        a {
+          color: $blue;
+          @include rem(font-size, 17);
+          
+          &:hover {
+            color: $secondary;
+            text-decoration: underline;
+          }
+        }
+      } 
+    }
+}
+
+.services--business {
+  float: left;
+  @include rem(margin-top, 20);
+  width: 100%;
+  @include rem(min-height, 150);
+  background-color: $gray-tint;
+  @include rem(padding, 30);
+
+  h3 {
+      @include rem(margin, 0, 0, 20, 0);
+   @include rem(font-size, 24);
+  }
+  a {
+      color: $primary !important;
+  }
+  .column-3:first-child {
+      @include rem(padding-left, 30);
+  }
+  .business-list {
+    column-count: 2;
+    @include media-breakpoint-up(md) {
+      column-count: 3;
+    }
+  }
+}
+
+#services--expand-container { // Initial hide of 'more services' area 
+  display: none;
+}
+

@@ -1,0 +1,57 @@
+  <header class="bg-primary">
+    <div class="container pl-sm-0 pr-sm-0">
+      <!-- Main navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark nav-vanilla">
+
+          <!-- Navbar content -->
+          <a class="navbar-brand col-4 col-md-2 p-0" href="#/" title="Go to the London Borough of Croydon homepage">
+            <img class="img-fluid" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
+          </a>
+          <!-- Mobile toggle button -->
+          <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation"> <span
+                  class="fa fa-times d-none"></span> <span class="fa fa-bars fa-1x"></span> </button>
+
+                
+          <div class="collapse navbar-collapse" id="menu-purejs">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item" id="js-drop-toggle"> <a class="nav-link show-menu" href="#" id="navbarDropdown"
+                          role="button"> <span>Do it online</span> <span
+                              class="fa fa-chevron-down dropdown-icon"></span> </a>
+                  </li> 
+                  <li class="nav-item"> <a class="nav-link" href="#">A - Z</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#">In your area</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#">News</a>
+                      <!--<span class="sr-only">(current)</span>-->
+                  </li>
+                  <!--use 'active' on active tabs-->
+                  <li class="nav-item"> <a class="nav-link" href="#">Jobs</a> </li>
+                  
+                  <!--<li class="nav-item">
+                        <a class="nav-link disabled" href="#">Page title</a>
+                        </li>-->
+              </ul>
+              {{ page.search }}
+              
+          </div>
+      </nav>
+      <!-- Toggle Menu -->
+      <nav class="header--expand header--toggle mt-4">
+        <div id="site-search--mobile" class="site-search site-search--mobile">
+          {{ page.search }}
+        </div>
+        <div class="row">
+          <div class="col-md-8 p-4">
+            {{ page.primary_menu }}
+          </div>
+          <div class="col-sm-4 p-4">
+            {{ page.secondary_menu }}
+          </div>
+        </div>
+      </nav>
+
+
+  </div>
+</header>
+
+
+

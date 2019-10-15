@@ -1,0 +1,241 @@
+.servicehub--status {
+    overflow: auto;
+    .fa-info-circle {
+        position: absolute;
+        left: 0;
+        @include rem(font-size, 35);
+        vertical-align: middle;
+        @include rem(margin-right, 10);
+    }
+    h2 {
+        @include rem(margin, 25, 0);
+    }
+    h3 {
+        @include rem(margin-top, 5);
+        @include rem(margin-bottom, 10);
+        display: inline-block;
+    }
+    p {
+        font-weight: bold;
+        display: inline;
+    }
+    span {
+        position: relative;
+        @include rem(padding-left, 50);
+        @include rem(margin-bottom, 15);
+        display: inline-block;
+    }
+}
+
+.servicehub--update {
+    overflow: auto;
+    @include rem(margin-top, 30);
+    @include rem(margin-bottom, 20);
+    background-color: $indigo-tint;
+    @include rem(padding, 20);
+    &_inner {
+        background: $white;
+        @include rem(padding, 20, 30, 25);
+
+    }
+    ul {
+        display: table;
+        width: 100%;
+        list-style-type: none;
+        &:not(:last-child){
+            @include rem(margin-bottom, 20);
+        }
+        h2 {
+            @include rem(font-size, 25);
+            float: left;
+            @include rem(margin, 10, 0);
+            font-weight: 600;
+            @include rem(padding-right, 20);
+
+		}
+
+    }
+    li {
+        display: table-cell;
+        &:first-child {
+            @include rem(width, 150);
+            font-weight: bold;
+        }
+    }
+    .read-more {
+        font-weight: bold;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+    &.striped ul:not(:last-child) {
+        border-bottom: $gray-tint;
+        @include rem(padding-bottom, 20);
+    }
+}
+
+.servicehub--link-block {
+    position: relative;
+    @include rem(padding-left, 25);
+    display: inline-block;
+
+    i {
+        position: absolute;
+        left: 0;
+        @include rem(top, 2);
+        @include rem(width, 20);
+        height: 100%;
+        @include rem(padding-right, 12);
+        color: $orange;
+        @include rem(font-size, 19);
+        height: 100%;
+    }
+    h3 {
+        margin: 0;
+        @include rem(font-size, 21);
+        font-weight: 700;
+        line-height: 1.1;
+
+    }
+    p {
+        @include rem(padding, 15, 0);
+    }
+}
+
+.servicehub--link-section {
+    overflow: auto;
+    float: left;
+    @include rem(padding, 30, 0);
+    width: 100%;
+    h2 {
+        @include rem(margin-bottom, 35);
+    }
+    &:not(:last-child){
+        border-bottom: $gray-tint;
+    }
+}
+
+.servicehub--link-slice {
+    width: 100%;
+    @include rem(margin-bottom, 20);
+}
+
+.servicehub--link-slice [class*="col-"] {
+  @include rem(padding-top, 0);
+  @include rem(padding-bottom, 0);
+}
+
+.servicehub--link-list {
+    @include rem(margin-right, 50);
+    
+}
+
+.servicehub--more {
+    overflow: auto;
+    padding: 30px 35px 30px 0;
+    @include rem(padding, 30, 35, 30, 0);
+    border-bottom: $gray-tint;
+    @include rem(margin-bottom, 20);
+    h2 {
+        line-height: 1;
+        @include rem(margin-bottom, 30);
+        @include rem(font-size, 30);
+    }
+}
+
+.servicehub--more [class*="col-"] {
+  @include rem(padding-top, 0);
+  @include rem(padding-bottom, 0);
+}
+
+/* Servicehub Contact */
+
+.servicehub--contact {
+
+    overflow: auto;
+
+    .contact-container {
+        background: $gray-light;
+        border-left: 5px solid $green;
+        @include rem(padding, 20, 30, 15);
+        @include rem(margin-bottom, 25);
+        h2 {
+            margin: 0;
+            @include rem(padding-bottom, 15);
+            line-height: 1;
+        }
+        ul {
+            font-weight: 700;
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            span {
+                @include rem(width, 20);
+                display: inline-block;
+                text-align: center;
+                @include rem(padding-right, 10);
+            }
+            .fa {
+                @include rem(font-size, 15);
+            }
+        }
+        i {
+            @include rem(margin-right, 5);
+            @include rem(font-size, 18);
+        }
+        p {
+            @include rem(font-size, 17);
+        }
+    }
+
+    .sidebar {
+        @include rem(margin-top, 10);
+
+    }
+    .contact-top {
+        @include rem(padding-bottom, 20);
+        .column-2 {
+            @include rem(padding-right, 30);
+        }
+        ul {
+            @include rem(margin-bottom, 15);
+        }
+        h3 {
+            margin: 0;
+            font-weight: 700;
+            @include rem(font-size, 17);
+            @include rem(line-height, 25);
+        }
+    }
+    
+    .opening-times {
+        @include rem(font-size, 17);
+        @include rem(line-height, 22);
+
+    }
+    .contact-title {
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .contact-address {
+        span {
+            display: block;
+            font-size: 17px;
+        }
+    }
+    .contact-bottom {
+        @include rem(padding-top, 15);
+        border-top: $gray-tint;
+        li {
+            @include rem(font-size, 17);
+            display: inline;
+            @include rem(margin-right, 10);
+     
+        }
+    }
+
+}
+
+.servicehub--contact [class*="col-"], .contact-top [class*="col-"], .cta-pull [class*="col-"] {
+  @include rem(padding-top, 0);
+  @include rem(padding-bottom, 0);
+}

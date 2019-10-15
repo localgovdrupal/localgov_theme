@@ -1,3 +1,42 @@
+.cta-pull {
+  @include rem(padding, 30, 35);
+
+  background: $gray-light;
+
+  h2 {
+    padding: 0;
+    @include rem(margin, 0, 0, 3, 0);
+  }
+  ul, ol {
+    
+    @include rem(margin-bottom, 30);
+    padding-left: 0px;
+
+    &.guide-dashes {
+      list-style: none;
+
+      li {
+        @include rem(margin-left, 15);
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: "-";
+          left: -10px;
+        }
+      }
+    }
+
+    li {
+      @include rem(font-size, 16);
+      @include rem(line-height, 33);
+      position: relative;
+    }
+  }
+}
+
+
+
 .cta-button {
   display: flex;
   -webkit-box-sizing: border-box;
@@ -11,6 +50,7 @@
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   color: $white;
+  
     &:hover, &:focus {
         color: $white;
         text-decoration: none;
@@ -57,28 +97,22 @@
 
 .cta-green {
     background-color: $green;
-    border-bottom: 5px solid $teal;
     &:hover {
         background-color: $teal;
-        border-bottom: 5px solid $green;
     }
 }
 
 .cta-blue {
     background-color: $blue;
-    border-bottom: 5px solid $cyan;
     &:hover {
         background-color: $cyan;
-        border-bottom: 5px solid $blue;
     }
 }
 
 .cta-orange {
     background-color: $orange;
-    border-bottom: 5px solid $yellow;
     &:hover {
         background-color: $yellow;
-        border-bottom: 5px solid $orange;
     }
 }
 
