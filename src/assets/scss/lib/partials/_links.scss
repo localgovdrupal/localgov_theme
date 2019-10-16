@@ -61,7 +61,7 @@
     color: $primary;
   }
   
-  i  {
+  span, i  {
     color:$green;
     @include rem(margin-right, 5);
     @include rem(font-size, 14);
@@ -155,7 +155,7 @@
 .link-block { 
   padding-left: 0.5rem;
 
-  span {
+  span, i {
     font-size: 1rem;
     color: $orange;
     position: absolute;
