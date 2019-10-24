@@ -4,19 +4,26 @@
   background: $gray-light;
 
   h2 {
-    padding: 0;
-    @include rem(margin, 0, 0, 3, 0);
+    display: none;
   }
   ul, ol {
     
-    @include rem(margin-bottom, 30);
     padding-left: 0px;
+    margin-bottom: 0;
+    
+    @include media-breakpoint-up(md) {
+      height: 135px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
 
     &.guide-dashes {
       list-style: none;
 
       li {
         @include rem(margin-left, 15);
+        @include rem(margin-right, 20);
 
         &:before {
           position: absolute;
@@ -28,9 +35,12 @@
     }
 
     li {
-      @include rem(font-size, 16);
+      @include rem(font-size, 18);
       @include rem(line-height, 33);
       position: relative;
+      a {
+        @include rem(font-size, 18);
+      }
     }
   }
 }
@@ -43,19 +53,20 @@
   box-sizing: border-box;
   @include rem(padding, 13);
   @include rem(font-size, 18);
-  height: 100%; // maintain equal heighs when responding
+  height: 100%; // maintain equal heights when responding
   @include rem(line-height, 22);
   font-weight: 700;
   text-decoration: none;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-  color: $white;
+  color: $white; 
   
     &:hover, &:focus {
         color: $white;
         text-decoration: none;
     }
     span {
+        width: 100%;
         color: $white;
         text-align: left;
         /* ie10 fix */
