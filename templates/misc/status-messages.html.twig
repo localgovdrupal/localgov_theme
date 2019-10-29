@@ -27,8 +27,8 @@
 
 {% block messages %}
   {% for type, messages in message_list %}
-  <div class="bhcc-alert bhcc-alert-{{ getStatusMessageWrapperClass(type) }}">
-    <span class="bhcc-alert-content">
+  <div class="alert alert-{{ getStatusMessageWrapperClass(type) }}">
+    <span class="alert-content">
       {% if messages|length > 1 %}
         <ul>
           {% for message in messages %}
