@@ -97,14 +97,15 @@
   display: none;
 }
 
-.directory-map-results a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.directory-map-results .fas {
-  color: $black;
-  @include rem(padding-right, 5);
+.directory-map-results {
+  .fas, .far {
+    color: $black;
+    @include rem(padding-right, 5);
+  }
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
 .directories-results-search-term {
@@ -113,9 +114,14 @@
 }
 
 .hide-map,
-.show-map {
-  text-decoration: underline;
+.show-map,
+.reset-map {
+  text-decoration: none;
   cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  width: auto;
 }
 
 .directories-map {

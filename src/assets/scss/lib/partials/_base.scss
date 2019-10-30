@@ -278,3 +278,10 @@ main i {
 	padding-top: .3125rem;
 }
 
+.pull-left {
+	@extend .float-left;
+}
+.pull-right {
+	@extend .float-right;
+}
+
