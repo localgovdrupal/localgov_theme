@@ -1,0 +1,17 @@
+{% if enabled %}
+  <div class="container-fluid alert-bar" id="globalBanner" role="alert" style="display: none;">
+    <div class="container">
+      <div class="alert-bar--inner">
+
+        <div class="alert-bar--left">
+          <i class="fas fa-exclamation-circle"></i>
+          {{ text }}
+        </div>
+        <div class="alert-bar--right">
+          <a href="#" id="closeGlobalBanner">Hide <span class="sr-only">Notifications</span><span class="fas fa-times-circle"></span></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endif %}

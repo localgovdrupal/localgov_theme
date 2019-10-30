@@ -50,11 +50,8 @@
 
 {% block content_inner %}
   <div class="row">
-    <aside class="col-sm-4">
-      {{ page.sidebar_first }}
-    </aside>
 
-    <main {{ content_attributes.addClass('directory-listing-content col-md-8 order-1') }}>
+    <main {{ content_attributes.addClass('directory-listing-content col-12 order-1') }}>
       {{ page.messages }}
       {{ page.content }}
     </main>

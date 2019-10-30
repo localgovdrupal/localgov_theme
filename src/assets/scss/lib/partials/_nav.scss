@@ -2,287 +2,284 @@
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
-	font-family: "Fiendstar W01 Bold", 'Source Sans Pro', Arial, Helvetica, sans-serif;
-	font-weight: bold; // for fallbacks only
-	white-space: nowrap;
-	font-size: 1.25rem; //20px  
+    font-family: "Fiendstar W01 Bold", 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold; // for fallbacks only
+    white-space: nowrap;
+    font-size: 1.25rem; //20px  
 }
 
 // Main navigation logo
 .navbar-dark.nav-vanilla .navbar-brand {
-	margin-right: 1.125rem; //18px
-	font-weight: bold; //For fallback
-	font-size: unset; // we have an image here and the bs font size affects the spacing
-	@include media-breakpoint-up(sm) {
-		.img-fluid {
-			width: 75%;
-		}
-	}
+    margin-right: 1.125rem; //18px
+    font-weight: bold; //For fallback
+    font-size: unset; // we have an image here and the bs font size affects the spacing
+    @include media-breakpoint-up(sm) {
+        .img-fluid {
+            width: 75%;
+        }
+    }
 
 }
 
 // Main navigation logo
 .navbar-dark.nav-vanilla .navbar-brand {
-	margin-right: 1.125rem; //18px
-	font-weight: bold; //For fallback
+    margin-right: 1.125rem; //18px
+    font-weight: bold; //For fallback
 }
 
 //Nav links mobile
 .navbar-dark.nav-vanilla .navbar-nav {
-	margin-bottom: 1.25rem; //20px
-	@include media-breakpoint-up(lg) {
-		margin-bottom: 0;
-	}
+    margin-bottom: 1.25rem; //20px
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
 }
 
 //Nav links mobile
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
-	padding-top: .4375rem;
-	padding-bottom: .4375rem;
+    padding-top: .4375rem;
+    padding-bottom: .4375rem;
 }
 
 //Nav hover and focus
 .navbar-dark.nav-vanilla .navbar-nav .nav-link:hover {
-	color: $yellow;
+    color: $yellow;
 }
 
 //Switch arrows 
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
-	// .fa-chevron-up {
-	// 	display: none;
-	// }
-	.fa-chevron-down {
-	  transform: rotate( -360deg );            
+    // .fa-chevron-up {
+    //  display: none;
+    // }
+    .fa-chevron-down {
+      transform: rotate( -360deg );            
       transition: transform 150ms ease;
-	}
-	&.show-outline {
-		color:$yellow;
-		.dropdown-icon {
-			&.fa-chevron-down {
-				transform: rotate( -180deg );            
-    			transition: transform 150ms ease;
-			}
-			// &.fa-chevron-up {
-			// 	display: inline-block;
-			// }
-		}
-	}
+    }
+    &.show-outline {
+        color:$yellow;
+        .dropdown-icon {
+            &.fa-chevron-down {
+                transform: rotate( -180deg );            
+                transition: transform 150ms ease;
+            }
+            // &.fa-chevron-up {
+            //  display: inline-block;
+            // }
+        }
+    }
 }
 
 //Bigtabs tab link alignment
 .navbar-dark.nav-bigtabs .navbar-nav .nav-link {
-	text-align: center;
+    text-align: center;
 }
 
 //Bigtabs hover and focus
 .navbar-dark.nav-bigtabs .navbar-nav .nav-link:hover {
-	background: $indigo;
-	color: $white;
+    background: $indigo;
+    color: $white;
 }
 
 // Main navigation anf and big tabs dropdown menu icon (desktop)
 .navbar-dark.nav-vanilla .nav-link .fa,
 .navbar-dark.nav-bigtabs .nav-link .fa {
-	padding-left: 0 .3125rem; // 5px
+    padding-left: 0 .3125rem; // 5px
 }
 
 //Bigtabs make fill width
 .navbar-dark.nav-bigtabs {
-	margin-bottom: ($spacer * 3);
+    margin-bottom: ($spacer * 3);
 }
 
 //Bigtabs make fill width
 .navbar-dark.nav-bigtabs .navbar-nav {
-	flex-grow: 100;
-	padding-right: 0;
+    flex-grow: 100;
+    padding-right: 0;
 }
 
 //Bigtabs make fill width and remove margins
 .navbar-dark.nav-bigtabs .nav-item {
-	align-self: stretch;
-	flex: 1 0 0;
-	margin-bottom: 0;
+    align-self: stretch;
+    flex: 1 0 0;
+    margin-bottom: 0;
 }
 
 // Main and big tab navigation active tab
 .navbar-dark.nav-vanilla .nav-item.active,
 .navbar-dark.nav-bigtabs .nav-item.active {
-	background: $white;
-	padding-left: .9375rem; //15px
-	padding-right: .9375rem; //15px
+    background: $white;
+    padding-left: .9375rem; //15px
+    padding-right: .9375rem; //15px
+    border-bottom: 0.5rem solid $white;
+    margin-bottom: -0.5rem;
 }
 
 // Main navigation dropdown icon
 .navbar-dark.nav-vanilla .active a:hover {
-	color: $indigo !important;
+    color: $indigo !important;
 }
 
 // Main navigation dropdown icon
 .navbar-dark.nav-vanilla .nav-item .fa {
-	font-size: 85%;
+    font-size: 85%;
 }
 
 // Prevent search button wrapping
 .navbar-dark.nav-vanilla .form-inline {
-	flex-flow: nowrap;
-	background: none;
+    flex-flow: nowrap;
+    background: none;
 }
 // Set search form padding to accomodate tab design
-.navbar-dark.nav-vanilla form {	
-	padding: 0;
-	@include media-breakpoint-up(lg) {
-		flex-wrap: nowrap;
-		margin-bottom: .75rem; //12px
-	}
+.navbar-dark.nav-vanilla form { 
+    padding: 0;
+    @include media-breakpoint-up(lg) {
+        flex-wrap: nowrap;
+    }
 }
 @include media-breakpoint-up(lg) {
 
-	//Set navbar dark padding to accomodate tab design
-	.navbar-dark.nav-vanilla {
-		padding: .8rem 0 0;
-	}
-	//Set navbar link padding to accomodate tab design
-	.navbar-dark.nav-vanilla .navbar-nav .nav-link {
-		padding: 1rem 1.125rem; // 16/18px
-	}
-	// Set logo padding to accomodate tab design
-	.navbar-dark.nav-vanilla .navbar-brand {
-		margin-bottom: .75rem; //12px
-	}
+    //Set navbar dark padding to accomodate tab design
+    .navbar-dark.nav-vanilla {
+        padding: .5rem 0;
+    }
+    //Set navbar link padding to accomodate tab design
+    .navbar-dark.nav-vanilla .navbar-nav .nav-link {
+        padding: 1rem 1.125rem; // 16/18px
+    }
 
-	// Make search form auto width (desktop)
-	.navbar-dark.nav-vanilla form .form-control {
-		width: auto;
-		height: $input-height;
-		padding: .3125rem .9375rem; // 5/15 px
-	}
+    // Make search form auto width (desktop)
+    .navbar-dark.nav-vanilla form .form-control {
+        width: auto;
+        height: $input-height;
+        padding: .3125rem .9375rem; // 5/15 px
+    }
 }
 // Navbar search form 100% width (mobile) and custom font size
 .navbar-dark.nav-vanilla .form-inline .form-control {
-	width: 100%;
-	border: 0;
-	font-size: $input-btn-font-size-sm;
+    width: 100%;
+    border: 0;
+    font-size: $input-btn-font-size-sm;
 }
 // Main navigation logo & foot navigation logo
 .navbar-dark.nav-vanilla .navbar-brand,
 .navbar-light.nav-vanilla .navbar-brand {
-	font-family: $headings-font-family;
+    font-family: $headings-font-family;
 }
 
 // Main navigation toggle button
 #js-nav-toggle {
-	padding: 0;
-	background-color: transparent;
-	border: 1px solid transparent;
-	border-radius: 0;
-	width: 38px;
-	height: 38px;
-	border: 2px solid $navbar-dark-toggler-border-color;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
+    width: 38px;
+    height: 38px;
+    border: 2px solid $navbar-dark-toggler-border-color;
 }
 
 // Main navigation toggle button
 #js-nav-toggle .fa {
-	color: $white;
-	font-size: 1.125rem; //18px
+    color: $white;
+    font-size: 1.125rem; //18px
 }
 
 // Mobile menu container
 #menu-purejs {
-	-ms-flex-preferred-size: 100%;
-	flex-basis: 100%;
-	-ms-flex-positive: 1;
-	flex-grow: 1;
-	-ms-flex-align: center;
-	align-items: center;
-	padding: .625rem 0;
-	@include media-breakpoint-up(lg) {
-		padding: 0;
-	}
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .625rem 0;
+    @include media-breakpoint-up(lg) {
+        padding: 0;
+    }
 }
 
 // Mobile menu container
 .navbar-dark.nav-vanilla .dropdown-menu {
-	margin: 0 0 .625rem 0; //10px; 
+    margin: 0 0 .625rem 0; //10px; 
 }
 
 .navbar-dark.nav-vanilla .dropdown-item {
-	font-size: 1.125rem; //18px
-	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-	font-weight: 400; // for fallbacks only 
+    font-size: 1.125rem; //18px
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: 400; // for fallbacks only 
 }
 
 .navbar-dark.nav-vanilla .dropdown-item.active {
-	padding-left: .625rem;
-	padding-right: .625rem;
+    padding-left: .625rem;
+    padding-right: .625rem;
 }
 
 
 // SIMPLE NAV 
 .simple-nav,
 .simple-nav ul {
-	margin: 0 !important;
-	padding: 0;
+    margin: 0 !important;
+    padding: 0;
 }
 
 .simple-nav h3 {
-	margin: 0 !important;
-	padding: 0;
-	border-bottom: .0625rem solid $gray !important; //1px
-	padding-bottom: ($spacer * .5) !important;
-	margin-bottom: 0;
+    margin: 0 !important;
+    padding: 0;
+    border-bottom: .0625rem solid $gray !important; //1px
+    padding-bottom: ($spacer * .5) !important;
+    margin-bottom: 0;
 }
 
 .simple-nav li {
-	padding: $input-btn-padding-y 0;
-	font-size: $input-btn-font-size-sm;
-	border-bottom: .0625rem solid $gray !important; //1px
-	margin: 0 !important;
+    padding: $input-btn-padding-y 0;
+    font-size: $input-btn-font-size-sm;
+    border-bottom: .0625rem solid $gray !important; //1px
+    margin: 0 !important;
 }
 
 .simple-nav a {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .simple-nav a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 //NAVIGATION VANILLA - BLOCK NAV - REMOVED, in progress
 .block-nav,
 .block-nav ul {
-	margin: 0 !important;
-	padding: 0;
+    margin: 0 !important;
+    padding: 0;
 }
 
 .block-nav li {
-	padding: $input-btn-padding-y $input-btn-padding-x;
-	font-size: $input-btn-font-size-sm;
-	border-bottom: .0625rem solid $white !important; //1px
-	background: $purple-tint;
-	margin: 0 !important;
+    padding: $input-btn-padding-y $input-btn-padding-x;
+    font-size: $input-btn-font-size-sm;
+    border-bottom: .0625rem solid $white !important; //1px
+    background: $purple-tint;
+    margin: 0 !important;
 }
 
 .block-nav .btn {
-	margin: 0 !important;
-	border-bottom: .0625rem solid $white !important; //1px
+    margin: 0 !important;
+    border-bottom: .0625rem solid $white !important; //1px
 }
 
 //EXPANDABLE VANILLA 
 //Expandable panel
 .expandable {
-	margin-top: ($spacer * 1);
-	margin-bottom: ($spacer * 3);
-	padding: ($spacer * 2) ($spacer * 2);
+    margin-top: ($spacer * 1);
+    margin-bottom: ($spacer * 3);
+    padding: ($spacer * 2) ($spacer * 2);
 }
 
 .expandable-helper {
-	padding: ($spacer * 1) ($spacer * 1.5) ($spacer * 0.2);
-	margin-top: ($spacer * 1);
-	margin-bottom: ($spacer * 3);
+    padding: ($spacer * 1) ($spacer * 1.5) ($spacer * 0.2);
+    margin-top: ($spacer * 1);
+    margin-bottom: ($spacer * 3);
 }
 
 .expanded {
-	display: none;
+    display: none;
 }
 
 
@@ -291,47 +288,47 @@
 //Footer vanilla nav outer container
 .navbar-light {
 
-	&.nav-vanilla {
-  	padding: 0.5rem 0;
+    &.nav-vanilla {
+    padding: 0.5rem 0;
 
-  	.nav-item {
-		  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-		  font-weight: normal; // for fallbacks only
-		  white-space: nowrap;
-		  font-size: .9375rem; //15px
-		}
+    .nav-item {
+          font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+          font-weight: normal; // for fallbacks only
+          white-space: nowrap;
+          font-size: .9375rem; //15px
+        }
 
-		.navbar-brand {
-		  margin-right: 1.125rem; //18px
-		  color: $purple;
-		  font-weight: 700;
-		}
+        .navbar-brand {
+          margin-right: 1.125rem; //18px
+          color: $purple;
+          font-weight: 700;
+        }
 
-		.navbar-nav {
-			padding: 0;
-		  margin-bottom: 0;
+        .navbar-nav {
+            padding: 0;
+          margin-bottom: 0;
 
-		  .nav-link {
-			  color: $carbon;
-			  padding: 0 2rem 0 0;
+          .nav-link {
+              color: $carbon;
+              padding: 0 2rem 0 0;
 
-			  &:hover {
-				  color: $indigo;
-				  text-decoration: underline;
-				}
-			}
-			.active {
-			  color: $purple;
+              &:hover {
+                  color: $indigo;
+                  text-decoration: underline;
+                }
+            }
+            .active {
+              color: $purple;
 
-			  a:hover {
-				  color: $indigo !important;
-				}
-			}
-			.active>.nav-link {
-			  color: $purple;
-			}
-		}
-	}
+              a:hover {
+                  color: $indigo !important;
+                }
+            }
+            .active>.nav-link {
+              color: $purple;
+            }
+        }
+    }
 }
 
 .copyright {
@@ -343,4 +340,13 @@
     margin-bottom: 0;
     font-size: .9375rem; //15px
   }
+}
+
+.progress {
+    li {
+        font-size: 1.2rem;
+        a {
+            font-size: 1.2rem;
+        }
+    }
 }

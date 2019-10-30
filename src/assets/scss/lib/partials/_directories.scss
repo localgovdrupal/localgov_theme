@@ -1,0 +1,185 @@
+/* Results Article */
+
+.directory-result {
+  @include rem(padding-bottom, 4);
+  @include rem(margin-bottom, 25);
+  border-bottom: 1px solid #eee;
+}
+
+.directory-result h2 {
+  @include rem(margin, 0, 0, 14, 0);
+  font-weight: 700;
+  @include rem(font-size, 18);
+  @include rem(line-height, 24);
+  // @media only screen and (min-width: $screen-sm-min){
+  //   @include rem(font-size, 22);
+  //   @include rem(line-height, 28);
+  //  }
+  font-family: "Source Sans Pro", sans-serif;
+}
+  
+.directory-result p {
+  @include rem(margin-bottom, 12);
+ //  @media only screen and (max-width: $screen-xs-max){
+	// @include rem(font-size, 17);
+	// @include rem(line-height, 26);
+	// @include rem(margin-bottom, 4);
+ //  }
+}
+  
+.directory-result ul {
+  list-style: none;
+  @include rem(margin, 12, 0);
+  padding: 0px;
+  // @media only screen and (max-width: $screen-xs-max){
+  //   @include rem(margin, 4, 0);
+  // }
+}
+  
+.directory-result  ul li {
+  @include rem(font-size, 17);
+  @include rem(line-height, 34);
+  // @media only screen and (max-width: $screen-xs-max){
+  //   @include rem(font-size, 16);
+  //   @include rem(line-height, 30);
+  // }
+}
+
+.directory-result .fas {
+  @include rem(width, 20);
+  @include rem(margin-right, 20);
+}
+
+/* Map Header */
+  
+.directory-map-results {
+  margin-bottom: 0px;
+  @include rem(font-size, 18);
+  @include rem(line-height, 28);
+ //  @media only screen and (max-width: $screen-xs-max){
+	// @include rem(font-size, 17);
+ //  }
+}
+  
+.directory-map-results [class*="col-"] {
+  @include rem(padding-top, 0);
+  @include rem(padding-bottom, 0);
+}
+
+.directory-map-results [class*="col-"]:nth-child(2) {
+  text-align: right;
+}
+
+.directory-map-results label {
+  @include rem(margin-right, 8);
+  @include rem(font-size, 17);
+ //  @media only screen and (min-width: $screen-sm-min){
+	// @include rem(font-size, 19);
+ //  }
+}
+
+  
+.directory-map-results select {
+  @include rem(padding, 7);
+  border-radius: 4px;
+  @include rem(width, 197);
+  border: 1px solid #dddddd;
+  @include rem(font-size, 19);
+}
+
+/* Map Show/Hide */
+
+.hide-map {
+  display: inline;
+}
+
+.show-map {
+  display: none;
+}
+
+.directory-map-results {
+  .fas, .far {
+    color: $black;
+    @include rem(padding-right, 5);
+  }
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.directories-results-search-term {
+  color: $green;
+  font-weight: bold;
+}
+
+.hide-map,
+.show-map,
+.reset-map {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  width: auto;
+}
+
+.directories-map {
+  @include rem(margin-bottom, 40);
+  @include rem(padding-top, 18);
+  @include rem(margin-top, 12);
+  border-top: 1px solid #eee;
+  display: block;
+}
+  
+  
+// @media only screen and (max-width: $screen-xs-max){
+//   .hide-map {
+//     display: none;
+//   }
+//   .show-map {
+//     display: inline;
+//   }
+//   .directories-map {
+//     display: none;
+//   }
+// }
+
+/* Directory Listing */
+
+.node--directory_item h2 {
+  @include rem(margin-bottom, 30);
+}
+
+.node--directory_item h3 {
+  @include rem(margin, 35, 0, 14, 0);
+}
+
+.contact-list{margin:26px 0;padding-left:0px;list-style:none}
+.contact-list li{padding-left:5px}
+.contact-list span{margin-right:20px;width:20px}
+
+.directories-search .form-select {
+ @extend .form-control;
+}
+.directories-search{padding:20px 18px;padding:1.25rem 1.125rem}
+.directories-search form{background-color:transparent;padding:0px;margin-top:20px;margin-top:1.25rem;display:none}
+@media only screen and (min-width:768px){
+  .directories-search form{display:block}
+}
+.directories-hide-filters {display:block}
+.directories-search h2{margin-bottom:0px !important;margin-bottom:0rem !important;display:inline-block}
+@media only screen and (min-width:768px){.directories-search-form--search-toggle{display:none}}
+@media only screen and (max-width:767px){.directories-search-form--search-toggle{text-decoration:none;float:right}
+.directories-search-form--search-toggle span{margin-left:4px;margin-left:0.25rem}
+.directories-search-form--search-toggle:hover{text-decoration:none}}
+.node--directory_listing .directories-search form{margin-top:0px;margin-top:0rem;display:block}
+.node--directory_listing .directories-search-form--search-toggle{display:none}
+.node--directory_listing .directories-search h2{display:none}
+.directories-search{background-color:#f4f4f4}
+.directories-search h2{font-size:30px !important;font-size:1.875rem !important;line-height:1.1;font-family:"Sentinel SSm A","Sentinel SSm B",Georgia,serif !important;font-weight:500}
+@media only screen and (max-width:767px){.directories-search h2{font-size:26px !important;font-size:1.625rem !important}}
+@media only screen and (max-width:767px){.directories-search-form--search-toggle{font-size:17px;font-size:1.0625rem;font-family:"Source Sans Pro",sans-serif;font-weight:700;color:#000}
+.directories-search-form--search-toggle:hover{color:#000}}
+@media only screen and (max-width:767px){.directories-search-form--search-toggle span{font-size:15px;font-size:0.9375rem}}
+
