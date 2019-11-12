@@ -23,10 +23,10 @@
 }
 
 .homepage--search {
-  background: $black;
+  background: $carbon;
 
   @include media-breakpoint-up(sm) {
-    background: rgba($black, 0.6);
+    background: rgba($carbon, 0.6);
   }
   color: $white;
   @include rem(padding, 30);

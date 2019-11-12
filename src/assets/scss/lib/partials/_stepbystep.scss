@@ -1,8 +1,5 @@
 // main content area
 .node--step_by_step_page, .node--step_by_step_homepage {
-  a:focus {
-    outline: none !important; // reset global focus of links
-  }
   section {
     margin-bottom: 0;
     padding-bottom: 1rem;

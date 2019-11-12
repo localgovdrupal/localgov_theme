@@ -6,9 +6,6 @@ body {
 	widows: 2;
 }
 
-// * {
-// 	outline: 1px solid hotpink;
-// }
 
 .container-fluid { // BS override 
 	padding-left: 0;
@@ -139,11 +136,9 @@ textarea:focus,
 select:focus,
 .custom-file-input:focus~.custom-file-label,
 button:focus,
-a:focus,
 .show-outline
  {
-	outline: .1875rem solid $yellow !important; //3px
-	outline-offset: -.1875rem;
+ 	@extend .focus-outline;
 }
 
 b,
@@ -259,6 +254,13 @@ main i {
 // Breadcrumb font size
 .breadcrumb-item {
 	font-size: 0.9375rem;
+	&:first-child {
+		a {
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
 } //15px
 
 /* /// LISTS WITH ICONS REPLACING BULLETS /// */
@@ -283,5 +285,25 @@ main i {
 }
 .pull-right {
 	@extend .float-right;
+}
+
+
+/* css fadein */
+.fade-in {
+	display: flex !important;
+	opacity: 1 !important;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 

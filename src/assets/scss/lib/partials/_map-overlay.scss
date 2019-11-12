@@ -59,18 +59,20 @@
   }
 
   .marker {
-    width: 25px;
+    width: 20px;
     height: 30px;
     background-color: transparent;
     background-image: url(../../img/map-marker.png);
     background-repeat: no-repeat;
-    background-size: 50px;
-    background-position: 0 -11px;
+    background-size: cover;
+    background-position: 2px 0;
     background-origin: border-box;
     cursor: pointer;
+    outline: none;
+    border: 0;
 
-    &.selected {
-      background-position: -25px -11px;
+    &.selected, &:hover {
+      background-position: -18px 0;
     }
   }
 

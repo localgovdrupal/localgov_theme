@@ -20,6 +20,24 @@
     display: block;
     text-decoration: none;
     @include rem(padding, 5);
+    background: transparent;
+
+    .services--feature-title {
+      display: block;
+      color: $carbon;
+      @include rem(font-size, 17);
+      @include rem(line-height, 24);
+      @include rem(margin-top, 5);
+      text-decoration: none;
+    }
+
+    &:hover, &:focus {
+      .services--feature-title {
+        background-color: $yellow;
+        color: $carbon;
+        text-decoration: none;
+      }
+    }
   }
 
   @include media-breakpoint-up(sm) {
@@ -37,18 +55,7 @@
   color: $gray-dark;
 }
 
-.services--feature-title {
-  display: block;
-  color: $black;
-  @include rem(font-size, 17);
-  @include rem(line-height, 24);
-  @include rem(margin-top, 5);
-  text-decoration: none;
 
-  &:hover {
-    color: $primary;
-  }
-}
 
 .services--list {
   padding: 0;
@@ -56,14 +63,14 @@
 }
 
  .services--list-block {
-    h3 {
+    h2 {
       font-weight: bold;
       @include rem(margin, 10, 0, 20, 0);
       line-height: 1.1;
       a {
         display: inline-block;
         text-decoration: underline;
-        color: $black;
+        color: $carbon;
         @include rem(font-size, 24);
       }
     }
@@ -108,7 +115,7 @@
           @include rem(font-size, 17);
           
           &:hover {
-            color: $secondary;
+            color: $carbon;
             text-decoration: underline;
           }
         }

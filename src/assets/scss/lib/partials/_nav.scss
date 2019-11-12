@@ -39,12 +39,14 @@
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
     padding-top: .4375rem;
     padding-bottom: .4375rem;
+    
+    &:focus, &:hover {
+        color: $carbon !important;
+        background-color: $white !important;
+    }
 }
 
-//Nav hover and focus
-.navbar-dark.nav-vanilla .navbar-nav .nav-link:hover {
-    color: $yellow;
-}
+
 
 //Switch arrows 
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
@@ -66,6 +68,10 @@
             //  display: inline-block;
             // }
         }
+        &:hover {
+            background: transparent;
+            color:$yellow;
+        }
     }
 }
 
@@ -79,7 +85,10 @@
     background: $indigo;
     color: $white;
 }
-
+.navbar-dark.nav-bigtabs .navbar-nav .nav-link:focus {
+    background: $white !important;
+    color: $carbon !important;
+}
 // Main navigation anf and big tabs dropdown menu icon (desktop)
 .navbar-dark.nav-vanilla .nav-link .fa,
 .navbar-dark.nav-bigtabs .nav-link .fa {
@@ -163,7 +172,14 @@
 // Main navigation logo & foot navigation logo
 .navbar-dark.nav-vanilla .navbar-brand,
 .navbar-light.nav-vanilla .navbar-brand {
-    font-family: $headings-font-family;
+    &:hover {
+        background: transparent;
+    }
+    &:focus {
+        @extend .focus-outline;
+        background: transparent;
+        padding: 0.2rem !important;
+    }
 }
 
 // Main navigation toggle button
@@ -302,6 +318,12 @@
           margin-right: 1.125rem; //18px
           color: $purple;
           font-weight: 700;
+
+          &:focus {
+            @extend .focus-outline;
+            background: transparent;
+            padding: 0.2rem !important;
+          }
         }
 
         .navbar-nav {

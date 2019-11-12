@@ -36,11 +36,11 @@
 
       &:hover {
           background-color: $primary;
-          color: $white;
+          color: $white !important;
       }
 
       &:focus {
-          outline: $secondary;
+        @extend .focus-outline;
       }
       
       .fa {

@@ -83,7 +83,7 @@ header p {
 .header--toggle .services-list {
   list-style-type: none;
   height: 100%;
-  color: $black;
+  color: $carbon;
   margin: 0;
   padding: 0;
 }
@@ -99,7 +99,7 @@ header p {
 .header--toggle .services-title {
   font-weight: 400;
   @include rem(font-size, 28);
-  color: $black;
+  color: $carbon;
   @include rem(line-height, 32);
   margin: 0;
   @include rem(padding-bottom, 20);

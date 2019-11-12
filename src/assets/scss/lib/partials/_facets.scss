@@ -1,4 +1,4 @@
-.facet-filter {
+.facet-filter, #edit-field-accessibility--wrapper {
     background-color: #e5eef7;
     padding: 0px 9px;
     margin-bottom: 11px;
@@ -10,21 +10,21 @@
     line-height: 28px;
   }
   
-  .facet-filter h3 {
+  .facet-filter h3, #edit-field-accessibility--wrapper h3 {
     font-size: 20px;
     line-height: 50px;
     font-weight: bold;
     margin: 0px;
   }
   
-  .facet-filter h3 a,
-  .facet-filter h3 a:visited {
-    color: $black;
+  .facet-filter h3 a, #edit-field-accessibility--wrapper h3 a,
+  .facet-filter h3 a:visited, #edit-field-accessibility--wrapper h3 a:visited {
+    color: $carbon;
     text-decoration: none;
     display: block;
   }
   
-  .facet-filter h3 span {
+  .facet-filter h3 span, #edit-field-accessibility--wrapper h3 span{
     padding-left: 5px;
     color: #F37021;
     font-size: 19px;
@@ -32,18 +32,28 @@
     margin-right: 10px;
   }
   
+  #edit-field-accessibility--wrapper .form-checkboxes {
+
+    div {
+      display: flex;
+      width: 100%;
+
+      .form-checkbox {
+        width: auto;
+      }
+    }
+  }
   
-  
-  .facet-filter .checkbox-wrapper {
+  .facet-filter .checkbox-wrapper, #edit-field-accessibility--wrapper .checkbox-wrapper {
     display: none;
   
   }
   
-  .facet-filter .checkbox-wrapper.open {
+  .facet-filter .checkbox-wrapper.open, #edit-field-accessibility--wrapper .checkbox-wrapper.open {
     padding-bottom: 9px;
   }
   
-  .facet-filter .collapsed {
+  .facet-filter .collapsed, #edit-field-accessibility--wrapper .collapsed {
     padding-bottom: 0px;
   }
   
@@ -134,7 +144,7 @@
   
   .directories-hide-filters .fas,
   .directories-hide-map .fas {
-    color: $black;
+    color: $carbon;
     padding-right: 5px;
   }
   

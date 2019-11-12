@@ -33,6 +33,13 @@
   padding: 10px;
 }
 
+#block-croydon-local-tasks ul li a:focus,
+#block-bhcc-local-tasks ul li a:focus,
+#block-workplace-local-tasks ul li a:focus {
+  background: transparent;
+  color: inherit;
+}
+
 body.logged-in {
   margin-bottom: 40px;
 }

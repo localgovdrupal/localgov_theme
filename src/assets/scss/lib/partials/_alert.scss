@@ -1,6 +1,6 @@
 .alert-bar {
     background: $yellow;
-    color: $black;
+    color: $carbon;
 }
 
 .alert-bar--inner {
@@ -33,7 +33,7 @@
         // }
     }
     a {
-        color: $black;
+        color: $carbon;
         font-weight: 700;
         @include rem(margin-left, 5);
         // @media only screen and (max-width: $screen-md-max){
@@ -63,4 +63,36 @@
   //   @include rem(bottom, 10);
   //   @include rem(right, 5);
   // }
+}
+
+/*Pseudo icons for wysiwig added alerts*/
+.alert-pseudo {
+  &:before {
+    margin-right: 0.5rem;
+  }
+}
+.alert-success.alert-pseudo {
+  &:before {
+     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00c";
+  }
+}
+.alert-info.alert-pseudo {
+  &:before {
+     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f129";
+  }
+}
+.alert-primary.alert-pseudo {
+  &:before {
+     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f071";
+  }
+}
+.alert-danger.alert-pseudo {
+  &:before {
+     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f071";
+  }
+}
+.alert-fail.alert-pseudo {
+  &:before {
+     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00d";
+  }
 }

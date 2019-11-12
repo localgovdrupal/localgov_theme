@@ -40,7 +40,11 @@
 #}
 
 <section class="servicehub--link-section">
-  <h2>{{ header }}</h2>
+ 
+  {% if header %}
+  	<h2>{{ header }}</h2>
+  {% endif %}
+ 
   {{ content.field_links }}
 
   {% if show_more %}
