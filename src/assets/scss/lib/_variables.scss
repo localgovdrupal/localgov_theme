@@ -103,10 +103,12 @@ $border-radius-lg: 0 !default;
 $border-radius-sm: 0 !default;
 
 // Fonts
-$font-family-base:'Source Sans Pro', Arial, Helvetica, sans-serif !default;
-$font-family-sans-serif: 'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$font-family-base:'Source Sans Pro', Arial, Helvetica, sans-serif !default; // BS font variable
+$font-family-sanserif:'Source Sans Pro', Arial, Helvetica, sans-serif !default; // BS font variable
+$font-family-secondary: 'Fiendstar W01 Bold', 'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$font-family-icons: 'Font Awesome 5 Free' !default;
 $line-height-base: 1.5 !default;
-$headings-font-family: 'Fiendstar W01 Bold', 'Source Sans Pro', Arial, Helvetica, sans-serif !default;
+$headings-font-family: $font-family-secondary;
 $headings-line-height: 1.1 !default;
 $headings-font-weight: bold !default; // for fallbacks only
 // Heading sizes

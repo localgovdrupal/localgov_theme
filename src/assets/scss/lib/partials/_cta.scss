@@ -89,7 +89,7 @@
         color: $white;
         display: flex;
         align-items: center;
-        font-family: 'Font Awesome 5 Free';
+        font-family: $font-family-icons;
         content: '\f054';
         font-weight: 900;
         @include rem(font-size, 20);

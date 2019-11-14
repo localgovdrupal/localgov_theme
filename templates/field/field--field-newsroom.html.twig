@@ -37,16 +37,11 @@
  * @see template_preprocess_field()
  */
 #}
-<section class="pb-0">
-  <h3>Latest News</h3>
-  <div class="row">
+<section class="row pb-md-0">
+  <h3 class="col-12">Latest News</h3>
+
     {% for item in items %}
       {{ item.content }}
     {% endfor %}
-    <!-- <div class="col-12"> // removed as newsroom section not being used 
-	    <a href="#" class="action-link mt-4">
-	    <i class="fas fa-chevron-right"></i>Read more news
-	  	</a>
-  	</div> -->
-  </div>
+
 </section>

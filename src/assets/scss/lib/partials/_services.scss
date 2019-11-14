@@ -1,15 +1,7 @@
 .services--feature { 
-  width: 100vw;
-  position: relative;
-  margin-left: -50vw;
-  padding-bottom: 0;
-  left: 50%;
   border-bottom: 1px solid $gray;
   background: $gray-light;
-
-  .services--feature-container {
-    @include rem(padding, 20, 0);
-  }
+  margin-bottom: 0;
 }
 
 .services--feature-block {
@@ -40,9 +32,9 @@
     }
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     &.col-sm {
-      @include make-col(1, 5); // magic columns
+      @include make-col(1, 5); // chris's magic columns
     }
   }
 }
@@ -59,6 +51,7 @@
 
 .services--list {
   padding: 0;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -100,7 +93,7 @@
         &:before {
           @include media-breakpoint-up(sm) {
             content: "\f054";
-            font-family: 'Font Awesome 5 Free';
+            font-family: $font-family-icons;
             font-weight: 900;
             @include rem(font-size, 13);
             color: $secondary;

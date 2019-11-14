@@ -6,24 +6,6 @@ body {
 	widows: 2;
 }
 
-
-.container-fluid { // BS override 
-	padding-left: 0;
-	padding-right: 0;
-}
-
-@include media-breakpoint-up(md) {
-
-	.container { // BS override 
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.row { // BS override
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
 .img-fluid { // BS override
 	width: 100%;
 	@include media-breakpoint-up(md) {
@@ -37,18 +19,9 @@ body {
 	padding: ($spacer * 1);
 }
 
-//Prevent auto resizing of text on Android Chrome 
-// main p,
-// main ul,
-// main ol,
-// main ol li,
-// section,
-// main {
-// 	width: 100%;
-// 	height: auto;
-// 	min-height: 1px;
-// 	max-height: 999999px;
-// } conflicting with list items - do we need this?
+* {
+	outline: 1px solid hotpink;
+}
 
 /* /// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING /// */
 
@@ -307,3 +280,11 @@ main i {
 	}
 }
 
+
+/*flex align items within this container class to vertical center*/
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

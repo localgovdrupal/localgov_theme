@@ -27,7 +27,7 @@
 
 {% block messages %}
   {% for type, messages in message_list %}
-  <div class="alert alert-{{ getStatusMessageWrapperClass(type) }}">
+  <div class="alert alert-{{ getStatusMessageWrapperClass(type) }} col-12 mt-2">
     <span class="alert-content">
       {% if messages|length > 1 %}
         <ul>

@@ -49,7 +49,7 @@
             @include rem(-webkit-border-radius, 100);
             @include rem(-moz-border-radius, 100);
             @include rem(border-radius, 100);
-            font-family: Font Awesome\ 5 Free;
+            font-family: $font-family-icons;
             font-weight: 900;
             color: $white;
             @include rem(font-size, 24);
@@ -187,7 +187,7 @@
 
             &::before {
                 content: "\f054";
-                font-family: 'Font Awesome 5 Free';
+                font-family: $font-family-icons;
                 font-weight: 900;
                 @include rem(font-size, 13);
                 color: #F37021;

@@ -2,14 +2,16 @@
 
 {% block header %}
   <header class="bg-primary">
-    <div class="container pl-sm-0 pr-sm-0">
+    
       <!-- Main navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
 
           <!-- Navbar content -->
-          <a class="navbar-brand col-4 col-md-2 p-0" href="#/" title="Go to the London Borough of Croydon homepage">
-            <img class="img-fluid" src="{{ logopath }}" alt="" />
-          </a>
+       
+            <a class="navbar-brand" href="/" title="Go to the London Borough of Croydon homepage">
+              <img class="img-fluid" src="{{ logopath }}" alt="" />
+            </a>
+     
 
           <!-- Mobile toggle button -->
           <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation">
@@ -28,14 +30,14 @@
 
       </nav>
       <!-- End main navigation -->
-    </div>
+
   </header>
 {% endblock %}
 
 
 {% block content %}
 
-  <div class="container homepage--search">
+  <div class="container-fluid site-max homepage--search">
     <div class="row">
       <div class="col-12">
         <form action="/search/google" method="get">
@@ -54,7 +56,7 @@
     </div>
   </div>
 
-  <main role="main" class="container mt-0">
+  <main role="main" class="container-fluid site-max mt-0">
       {{ page.breadcrumb }}
       {{ page.messages }}
       {{ page.content }}
