@@ -1,11 +1,11 @@
 {% extends "page.html.twig" %}
 
 {% block content_inner %}
-  <div class="clearfix">
+  <div class="col-12 clearfix">
     {{ page.messages }}
   </div>
 
-  <div class="row">
+ 
     <main {{ content_attributes.addClass('directory-listing-content col-md-8 order-1') }}>
       {{ page.content }}
     </main>
@@ -15,5 +15,5 @@
         {{ page.sidebar_second }}
       </div>
     {% endif %}
-  </div>
+  
 {% endblock %}

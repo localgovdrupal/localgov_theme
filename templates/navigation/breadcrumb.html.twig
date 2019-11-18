@@ -9,23 +9,21 @@
 #}
 {% if breadcrumb %}
   
-<div class="key-under container-fluid">
-        <!-- Breadcrumb navigation -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb container">
-              <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-            {% for key, item in breadcrumb %}
-        {% if item.url %}
-          <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.text }}</a></li>
-        {% else %}
-          <li class="breadcrumb-item">{{ item.text }}</li>
-        {% endif %}
+
+<div class="col-12 key-under">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+      {% for key, item in breadcrumb %}
+      {% if item.url %}
+      <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.text }}</a></li>
+      {% else %}
+      <li class="breadcrumb-item">{{ item.text }}</li>
+      {% endif %}
       {% endfor %}
-            <!-- 
-            <li class="breadcrumb-item"><a href="#">Section title</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Page title</li> -->
-            </ol>
-        </nav><!-- End Breadcrumb -->
-    </div><!-- End breadcrumb wrapper -->
+    </ol>
+  </nav>
+</div>
+
 
 {% endif %}

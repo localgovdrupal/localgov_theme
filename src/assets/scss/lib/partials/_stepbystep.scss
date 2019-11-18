@@ -7,6 +7,9 @@
   .key-under {
     margin-bottom: 1.4rem;
   }
+  header {
+    padding-left: 0;
+  }
 }
 
 // Buttons used to navigate between steps
@@ -123,7 +126,6 @@ ul.step-list {
       }
 
       .step__title {
-        width: 100%;
         margin: 0 0 0 2.5rem;
         cursor: pointer;
         padding: .6rem 0 .8rem 0;
@@ -135,6 +137,7 @@ ul.step-list {
         a {
           color: $carbon;
           display: block;
+          line-height: 1.5rem;
 
           &.step-show {
             font-size: 14px;

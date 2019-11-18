@@ -41,7 +41,7 @@
 {% for row in items|batch(3) %}
   <div class="row">
     {% for item in row %}
-      <div{{ attributes.addClass('col-sm-4') }}>
+      <div{{ attributes.addClass('col-sm-4').removeAttribute('id') }}>
         {{ item.content }}
       </div>
     {% endfor %}

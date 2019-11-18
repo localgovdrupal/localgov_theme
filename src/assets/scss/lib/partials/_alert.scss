@@ -55,18 +55,16 @@
   align-items: center;
   margin-left: auto;
   @include rem(font-size, 17);
+  
   span {
     @include rem(margin-left, 5);
   }
-  // @media only screen and (max-width: $screen-md-max) {
-  //   position: absolute;
-  //   @include rem(bottom, 10);
-  //   @include rem(right, 5);
-  // }
 }
 
 /*Pseudo icons for wysiwig added alerts*/
 .alert {
+  width: 100%; // always go full width 
+
   &:before {
     margin-right: 0.5rem;
   }

@@ -2,6 +2,9 @@
 This file provides the HTML structure for baic pages.
 #}
 
-<section{{ content_attributes }}>
-  {{ content }}
-</section>
+	<div{{ attributes.addClass('container-fluid site-max') }}> 
+		<div class="row">
+			{{ content }}
+		</div>
+	</div>
+ 

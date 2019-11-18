@@ -36,7 +36,6 @@ footer {
       &:hover, &:focus {
         background: transparent;
         color: $white !important;
-        @extend .focus-outline;
       }
     }
   }

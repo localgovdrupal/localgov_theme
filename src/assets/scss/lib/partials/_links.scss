@@ -2,6 +2,12 @@
   outline: .1875rem solid $yellow !important; //3px
   outline-offset: -.1875rem;
 }
+.access-background { // use this extendable class for backgrounds
+  background-color: $yellow;
+  color: $carbon;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px $yellow;
+}
 
 /*Accessible links*/
 
@@ -11,9 +17,7 @@ a {
   font-weight: 700;
 
   &:hover, &:focus {
-    background-color: $yellow;
-    color: $carbon;
-    text-decoration: none;
+    @extend .access-background;
 
     > img {
       @extend .focus-outline;
@@ -23,17 +27,21 @@ a {
 
 }
 
+main a {
+  font-weight: 400 !important; // remove bold for main copy links
+}
+
 
 
 /* External Link */
 
 .external-link {
-	color: $green;
+	color: $carbon;
 	&:hover {
-		color: $blue;
+		color: $primary;
 	}
 	&:focus {
-		color: $blue;
+		color: $primary;
 		@include rem(padding, 5, 5, 10, 0);
 	}
 	&:after {
@@ -76,6 +84,10 @@ a {
     color:$green;
     @include rem(margin-right, 5);
     @include rem(font-size, 14);
+
+    &:hover, &:focus {
+      color: $carbon;
+    }
   }
 
 }
@@ -90,7 +102,7 @@ a {
     &:hover, &:focus {
       @extend .focus-outline;
     }
-    
+
     i  {
       color:$green;
       @include rem(margin-right, 5);
@@ -100,6 +112,21 @@ a {
        color: $carbon;
       }
     }
+
+    &#services--expand-link { 
+      
+      &:hover, &:focus {
+        @extend .access-background;
+        outline: none !important;
+        
+        i {
+          color: $carbon;
+        }
+      }
+      
+
+    }
+
   }
 
 .action-link--inline {
@@ -171,5 +198,9 @@ a {
     position: absolute;
     left: 0;
     top: 0.5rem;
+  }
+
+  a {
+    line-height: 2rem; // fix for text cutting off on focus
   }
 }

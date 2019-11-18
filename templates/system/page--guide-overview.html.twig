@@ -49,10 +49,10 @@
 {% extends "page.html.twig" %}
 
 {% block content_inner %}
-  <div class="clearfix">
+  <div class="col-12 clearfix">
     {{ page.messages }}
   </div>
-  <div class="row">
+  
     {{ page.content }}
 
     {% if page.sidebar_second %}
@@ -62,5 +62,5 @@
         </nav>
       </div>
     {% endif %}
-  </div>
+
 {% endblock %}

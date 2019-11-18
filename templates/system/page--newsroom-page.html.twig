@@ -49,7 +49,7 @@
 {% extends "page.html.twig" %}
 
 {% block content_inner %}
-  <div class="row">
+ 
     <main {{ content_attributes.addClass('content clearfix col-md-8 order-1') }}>
       {{ page.messages }}
 
@@ -64,5 +64,5 @@
         {{ page.sidebar_second }}
       </div>
     {% endif %}
-  </div>
+  
 {% endblock %}

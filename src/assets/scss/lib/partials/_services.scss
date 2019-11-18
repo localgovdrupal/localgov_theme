@@ -5,7 +5,8 @@
 }
 
 .services--feature-block {
-  @include rem(padding, 20, 5);
+  @include rem(padding-top, 20);
+  @include rem(padding-bottom, 20);
   text-align: center;
 
   a {
@@ -13,6 +14,7 @@
     text-decoration: none;
     @include rem(padding, 5);
     background: transparent;
+    box-shadow: none;
 
     .services--feature-title {
       display: block;
@@ -25,9 +27,7 @@
 
     &:hover, &:focus {
       .services--feature-title {
-        background-color: $yellow;
-        color: $carbon;
-        text-decoration: none;
+        @extend .access-background;
       }
     }
   }

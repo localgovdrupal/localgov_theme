@@ -19,10 +19,6 @@ body {
 	padding: ($spacer * 1);
 }
 
-* {
-	outline: 1px solid hotpink;
-}
-
 /* /// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING /// */
 
 .site-max {
@@ -221,8 +217,8 @@ main i {
 	font-size: 1.125rem; //19px
 }
 
-.breadcrumb-container {
-	margin-bottom: 15px;
+.breadcrumb {
+	padding: 0.75rem 0;
 }
 // Breadcrumb font size
 .breadcrumb-item {
@@ -234,7 +230,7 @@ main i {
 			}
 		}
 	}
-} //15px
+}
 
 /* /// LISTS WITH ICONS REPLACING BULLETS /// */
 
@@ -279,12 +275,16 @@ main i {
 		opacity: 1;
 	}
 }
-
-
-/*flex align items within this container class to vertical center*/
-
-.vertical-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@include media-breakpoint-up(lg) {
+	.sliding-popup-top {
+	text-align: right; // right align the cookies button
+	}
 }
+
+/*temp styling related to soft launch*/
+
+.beta-notice-sm, .notice {
+	display: none;
+}
+
+

@@ -49,11 +49,11 @@
 {% extends "page.html.twig" %}
 
 {% block content_inner %}
-  <div class="clearfix">
+  <div class="col-12 clearfix">
     {{ page.messages }}
   </div>
 
-  <div class="row">
+  
   <main {{ content_attributes.addClass('startpage col-md-8 order-1') }}>
   
       {{ page.content }}
@@ -66,5 +66,5 @@
         </nav>
       </div>
     {% endif %}
-  </div>
+  
 {% endblock %}
