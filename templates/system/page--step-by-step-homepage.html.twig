@@ -77,29 +77,31 @@
 
 {% block breadcrumbs %}
   {% if page.breadcrumb %}
-  <div class="breadcrumb-container">
-    {{ page.breadcrumb }}
+  <div class="container-fluid site-max">
+    <div class="row">
+      {{ page.breadcrumb }}
+    </div>
+    <div class="row mt-4 mb-4"> 
+      {% include '@croydon/system/notice.html.twig' with {'page': page, 'border': true} %}
+    </div>
   </div>
+
   {% endif %}
 {% endblock %}
 
-<div class="container-fluid bg-white">
-  <a id="main-content"></a>
-  <div {{ attributes.addClass('page row container mr-auto ml-auto') }}>
+<div class="container-fluid site-max">
+  <div {{ attributes.addClass('page row') }}>
     
-  <div class="col-md-8 pb-4">
-    <main role="main">
-
+    <main role="main" id="main-content" class="col-md-8 pb-4">
       {% if page.header %}
         {{ page.header }}
       {% endif %}
-
       {% block content_inner %}
         {{ page.messages }}
         {{ page.content }}
       {% endblock %}
     </main>
-  </div>
+
     <div class="col-md-4">
         {{ page.sidebar_second }}
     </div>

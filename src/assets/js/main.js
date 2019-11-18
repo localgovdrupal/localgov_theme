@@ -131,7 +131,7 @@
             $(this).text('Show fewer services');
             $(this).prepend($i);
             $(this).removeClass('show');
-            $(homeExpandServicesContainer).fadeIn();
+            $(homeExpandServicesContainer).addClass('fade-in');
 
           }
           else {
@@ -142,8 +142,7 @@
             $(this).text('Show more services');
             $(this).prepend($i);
             $(this).addClass('show');
-            $(homeExpandServicesContainer).fadeOut();
-
+            $(homeExpandServicesContainer).removeClass('fade-in');
           }
         });
 		$(homeExpandServicesLink).keyup(function(e) {

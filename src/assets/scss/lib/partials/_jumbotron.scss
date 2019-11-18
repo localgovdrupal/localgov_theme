@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 
-  .container {
+  .container-fluid {
     background-size: cover;
     background-position: center;
 
@@ -13,7 +13,7 @@
       @include rem(height, 300);
     }
 
-    .homepage--hero-inner {
+    //.homepage--hero-inner {
       .homepage--welcome {
         @include rem(padding-top, 60);
         h1 {
@@ -33,6 +33,6 @@
           }
         }
       }
-    }
+    //}
   }
 }

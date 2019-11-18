@@ -77,7 +77,7 @@
 
 {% block breadcrumbs %}
   {% if page.breadcrumb %}
-  <div class="container">
+  <div class="container-fluid site-max">
     <div class="row">
       {{ page.breadcrumb }}
     </div>
@@ -89,9 +89,9 @@
   {% endif %}
 {% endblock %}
 
-<div class="container-fluid bg-white">
+<div class="container-fluid site-max bg-white">
     <a id="main-content"></a>
-    <div {{ pageAttributes.addClass('container') }}>
+    <div {{ pageAttributes.addClass('row') }}>
       
       {% if page.header %}
         {{ page.header }}

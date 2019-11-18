@@ -6,27 +6,6 @@ body {
 	widows: 2;
 }
 
-// * {
-// 	outline: 1px solid hotpink;
-// }
-
-.container-fluid { // BS override 
-	padding-left: 0;
-	padding-right: 0;
-}
-
-@include media-breakpoint-up(md) {
-
-	.container { // BS override 
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.row { // BS override
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
 .img-fluid { // BS override
 	width: 100%;
 	@include media-breakpoint-up(md) {
@@ -39,19 +18,6 @@ body {
 	color: $gray-dark;
 	padding: ($spacer * 1);
 }
-
-//Prevent auto resizing of text on Android Chrome 
-// main p,
-// main ul,
-// main ol,
-// main ol li,
-// section,
-// main {
-// 	width: 100%;
-// 	height: auto;
-// 	min-height: 1px;
-// 	max-height: 999999px;
-// } conflicting with list items - do we need this?
 
 /* /// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING /// */
 
@@ -139,11 +105,9 @@ textarea:focus,
 select:focus,
 .custom-file-input:focus~.custom-file-label,
 button:focus,
-a:focus,
 .show-outline
  {
-	outline: .1875rem solid $yellow !important; //3px
-	outline-offset: -.1875rem;
+ 	@extend .focus-outline;
 }
 
 b,
@@ -253,13 +217,20 @@ main i {
 	font-size: 1.125rem; //19px
 }
 
-.breadcrumb-container {
-	margin-bottom: 15px;
+.breadcrumb {
+	padding: 0.75rem 0;
 }
 // Breadcrumb font size
 .breadcrumb-item {
 	font-size: 0.9375rem;
-} //15px
+	&:first-child {
+		a {
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}
 
 /* /// LISTS WITH ICONS REPLACING BULLETS /// */
 
@@ -284,4 +255,36 @@ main i {
 .pull-right {
 	@extend .float-right;
 }
+
+
+/* css fadein */
+.fade-in {
+	display: flex !important;
+	opacity: 1 !important;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.sliding-popup-top {
+	text-align: right; // right align the cookies button
+	}
+}
+
+/*temp styling related to soft launch*/
+
+.beta-notice-sm, .notice {
+	display: none;
+}
+
 

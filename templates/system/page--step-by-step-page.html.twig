@@ -83,12 +83,11 @@
   {% endif %}
 {% endblock %}
 
-<div class="container-fluid bg-white">
+<div class="container-fluid site-max">
   <a id="main-content"></a>
-  <div {{ attributes.addClass('page row container mr-auto ml-auto') }}>
+  <div {{ attributes.addClass('page row') }}>
     
-  <div class="col-md-8 pb-4">
-    <main>
+    <main class="col-md-8 pb-4">
 
       <div class="step-by-step-pages__relationship">
         <span class="step-by-step-pages__part-of">Part of </span><br/>
@@ -104,7 +103,6 @@
         {{ page.content }}
       {% endblock %}
     </main>
-  </div>
   <div class="col-md-4">
     {{ page.sidebar_second }}
   </div>

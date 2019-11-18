@@ -51,14 +51,18 @@ header p {
 }
 
 .header--toggle {
+  display: block;
   background: $white;
   border-bottom: 2rem solid $primary;
   //overflow: auto;
   @include rem(margin-bottom, 15);
-  // xs scroll version
-  // @media only screen and (max-width: $screen-xs-max) {
-  //   height: 75vh;
-  // }
+  //xs scroll version
+  // height: 75vh;
+
+  @include media-breakpoint-up(sm) {
+    // height: auto;
+    display: none;
+  }
   // @media(max-width: 768px){
   //   &::-webkit-scrollbar {
   //     -webkit-appearance: none;
@@ -78,40 +82,98 @@ header p {
     margin-left: 0;
     margin-right: 0;
   }
-}
 
-.header--toggle .services-list {
-  list-style-type: none;
-  height: 100%;
-  color: $black;
-  margin: 0;
-  padding: 0;
-}
+  .services-list {
+    list-style-type: none;
+    height: 100%;
+    color: $carbon;
+    margin: 0;
+    padding: 0;
+  }
 
-.header--toggle .services-list--multi {
-  //@media only screen and (min-width: $screen-sm-min){
+  .services-list--multi {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
-  //}
+  }
+
+  .services-title {
+    font-weight: 400;
+    @include rem(font-size, 28);
+    color: $carbon;
+    @include rem(line-height, 32);
+    margin: 0;
+    @include rem(padding-bottom, 20);
+  }
+
+  .services-title-blank {
+    @include rem(height, 55);
+  }
+
+  li {
+    @include rem(line-height, 20);
+  }
 }
 
-.header--toggle .services-title {
-  font-weight: 400;
-  @include rem(font-size, 28);
-  color: $black;
-  @include rem(line-height, 32);
-  margin: 0;
-  @include rem(padding-bottom, 20);
+
+
+
+
+
+
+.responsive-services {
+  background: $white;
+  height: 75vh;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    @include rem(width, 12);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    @include rem(border-radius, 6);
+    border: 2px solid white;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+
+  .services-title {
+    font-weight: 400;
+    @include rem(font-size, 28);
+    color: $carbon;
+    margin: 0;
+    @include rem(padding, 10);
+  }
+
+  ul {
+    padding: 0 0 0 1rem;
+    color: $carbon;
+    list-style-type: none;
+
+    li {
+      padding: 0.4rem;
+      a {
+        font-size: 1.1rem;
+      }
+
+      ul {
+        padding: 0;
+        
+        li {
+          a {
+            font-size:1rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
 }
 
-.header--toggle .services-title-blank {
-  @include rem(height, 55);
-}
 
-.header--toggle li {
-  @include rem(line-height, 20);
-}
 
 .header--toggle a {
   @include rem(font-size, 17);

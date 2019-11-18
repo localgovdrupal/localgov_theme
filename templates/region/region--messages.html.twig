@@ -15,5 +15,11 @@
  */
 #}
 {% if content %}
-  <div class="site-messages">{{ content }}</div>
+<div class="container-fluid site-max">
+  <div class="site-messages row">
+    <div class="col-12">
+      {{ content }}
+    </div>
+  </div>
+</div>
 {% endif %}

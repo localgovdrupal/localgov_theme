@@ -18,9 +18,16 @@ aside .btn .fa,
 }
 
 //Button hover
-.btn:hover {
-	color: $white;
-	background: $indigo;
+.btn {
+	&:hover {
+		color: $white;
+		background: $indigo;
+	}
+	&:focus {
+		color: $white;
+		background: $indigo;
+		@extend .focus-outline;
+	}
 }
 
 //disabled button

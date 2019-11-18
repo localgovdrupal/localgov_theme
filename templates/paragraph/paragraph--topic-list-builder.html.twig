@@ -39,8 +39,12 @@
  */
 #}
 
-<section class="servicehub--link-section">
-  <h2>{{ header }}</h2>
+
+ 
+  {% if header %}
+  	<h2 class="col-12 mb-4">{{ header }}</h2>
+  {% endif %}
+ 
   {{ content.field_links }}
 
   {% if show_more %}
@@ -48,4 +52,4 @@
     <span class="fa fa-chevron-right"></span><a href="{{ path('entity.taxonomy_term.canonical', {taxonomy_term: paragraph.field_topic_term.0.value.target_id}) }}">More</a>
   </div>
   {% endif %}
-</section>
+

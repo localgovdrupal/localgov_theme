@@ -2,14 +2,16 @@
 
 {% block header %}
   <header class="bg-primary">
-    <div class="container pl-sm-0 pr-sm-0">
+    
       <!-- Main navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
 
           <!-- Navbar content -->
-          <a class="navbar-brand col-4 col-md-2 p-0" href="#/" title="Go to the London Borough of Croydon homepage">
-            <img class="img-fluid" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
-          </a>
+       
+            <a class="navbar-brand" href="/" title="Go to the London Borough of Croydon homepage">
+              <img class="img-fluid" src="{{ logopath }}" alt="" />
+            </a>
+     
 
           <!-- Mobile toggle button -->
           <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation">
@@ -19,23 +21,23 @@
 
           <div class="collapse navbar-collapse" id="menu-purejs">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"> <a class="nav-link" href="#">A - Z</a></li>
-              <li class="nav-item"> <a class="nav-link" href="#">In your area</a></li>
-              <li class="nav-item"> <a class="nav-link" href="#">News</a></li>
-              <li class="nav-item"> <a class="nav-link" href="#">Jobs</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="https://www.croydon.gov.uk/atoz">A - Z</a></li>
+              <li class="nav-item"> <a class="nav-link" href="http://maps.croydon.gov.uk/aya/pages/aya/aya.html">In your area</a></li>
+              <li class="nav-item"> <a class="nav-link" href="http://news.croydon.gov.uk/">News</a></li>
+              <li class="nav-item"> <a class="nav-link" href="https://www.croydon.gov.uk/jobsatcroydon/search-jobs">Jobs</a> </li>
             </ul>
           </div>
 
       </nav>
       <!-- End main navigation -->
-    </div>
+
   </header>
 {% endblock %}
 
 
 {% block content %}
 
-  <div class="container homepage--search">
+  <div class="container-fluid site-max homepage--search">
     <div class="row">
       <div class="col-12">
         <form action="/search/google" method="get">
@@ -54,7 +56,7 @@
     </div>
   </div>
 
-  <main role="main" class="container mt-0">
+  <main role="main" class="container-fluid site-max mt-0">
       {{ page.breadcrumb }}
       {{ page.messages }}
       {{ page.content }}

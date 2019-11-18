@@ -69,10 +69,10 @@
 */
 #}
 
-<div{{ attributes.addClass('link-block') }}>
+<div{{ attributes.addClass('link-block position-relative') }}>
   <span class="fa fa-chevron-right"></span>
-  <h3>
+  <h2 class="pl-2">
     <a href="{{ url }}">{{ label }}</a>
-  </h3>
-  <p>{{ content|render|striptags|raw }}</p>
+  </h2>
+  <p class="pl-2">{{ content|render|striptags|raw }}</p>
 </div>

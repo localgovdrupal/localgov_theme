@@ -1,14 +1,14 @@
 
 {% if content.field_destinations|render %}
-<section class="servicehub--more">
-  {{ content.field_destinations }}
+<section class="container-fluid site-max servicehub--more">
+    {{ content.field_destinations }}
 </section>
 {% endif %}
 
 {{ service_updates }}
-
-<aside class="servicehub--contact row">
-
+<div class="container-fluid site-max">
+<aside class="row servicehub--contact">
+  
   {% if field_email_address or content.field_address|render or content.field_opening_hours|render or field_phone or field_facebook or field_twitter %}
   <div class="col-md-8">
     <div class="contact-container">
@@ -85,7 +85,7 @@
   {% endif %}
 
 </aside>
-
+</div>
 {#<div class="action-link-container">#}
   {#<a href="javascript:window.print()" class="action-link action-link--print">Print this page</a>#}
 {#</div>#}

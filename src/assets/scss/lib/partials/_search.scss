@@ -23,14 +23,17 @@
 }
 
 .homepage--search {
-  background: $black;
-
+  background: $carbon;
   @include media-breakpoint-up(sm) {
-    background: rgba($black, 0.6);
+    background: rgba($carbon, 0.6);
   }
+  
+  @include rem(padding-top, 30);
+  @include rem(padding-bottom, 30);
+  @include rem(margin-top, -108);
   color: $white;
-  @include rem(padding, 30);
-  margin-top: -6.75rem;
+  
+
   label {
   	@include rem(font-size, 22);
   	display: flex;

@@ -1,51 +1,9 @@
 .cookies-notice {
-    @include rem(font-size, 17);
-    @include rem(line-height, 25);
-    background: $gray;
-    color: white;
-
-    @include media-breakpoint-up(md) {
-      @include rem(height, 50);
-      @include rem(line-height, 40);
-    }
-
-  .cookies-notice-inner {
-    @include rem(padding, 5, 15);
-    @include rem(font-size, 17);
-    height: 100%;
-    text-align: left;
-
-    span {
-      color: $carbon;
-    }
-
-    a {
-      color: $carbon;
-      font-weight: 600;
-    }
-
-    .button-accept {
-      background: $green;
-      @include rem(height, 40);
-      @include rem(line-height, 40);
-      @include rem(font-size, 18);
-      @include rem(padding, 0, 10);
-      font-weight: 600;
-      text-decoration: none;
-      float: right;
-
-      &:hover {
-          background-color: $primary;
-          color: $white;
-      }
-
-      &:focus {
-          outline: $secondary;
-      }
-      
-      .fa {
-          @include rem(margin-left, 5);
-      }
-    }
+  
+  background: $gray;
+  
+  p {
+    color: $carbon;
   }
+  
 }

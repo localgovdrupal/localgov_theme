@@ -1,44 +1,48 @@
-  <header class="bg-primary">
-    <div class="container pl-sm-0 pr-sm-0">
+<header class="bg-primary">
+
       <!-- Main navigation -->
-      <nav class="navbar navbar-expand-lg navbar-dark nav-vanilla">
+      <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
 
           <!-- Navbar content -->
-          <a class="navbar-brand col-4 col-lg-2 p-0" href="#/" title="Go to the London Borough of Croydon homepage">
-            <img class="img-fluid" src="{{ logopath }}" alt="London Borough of Croydon homepage" />
-          </a>
+       
+            <a class="navbar-brand" href="/" title="Go to the London Borough of Croydon homepage">
+              <img class="img-fluid" src="{{ logopath }}" alt="" />
+            </a>
+ 
           <!-- Mobile toggle button -->
           <button id="js-nav-toggle" class="btn" type="button" aria-label="Toggle navigation"> <span
                   class="fa fa-times d-none"></span> <span class="fa fa-bars fa-1x"></span> </button>
 
                 
           <div class="collapse navbar-collapse" id="menu-purejs">
+            <div class="d-lg-none">
+                {{ page.search }}
+              </div>
               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item" id="js-drop-toggle"> <a class="nav-link show-menu" href="#" id="navbarDropdown"
-                          role="button"> <span>Do it online</span> <span
-                              class="fa fa-chevron-down dropdown-icon"></span> </a>
-                  </li> 
-                  <li class="nav-item"> <a class="nav-link" href="#">A - Z</a> </li>
-                  <li class="nav-item"> <a class="nav-link" href="#">In your area</a> </li>
-                  <li class="nav-item"> <a class="nav-link" href="#">News</a>
-                      <!--<span class="sr-only">(current)</span>-->
+                  <li class="nav-item d-none d-lg-block" id="js-drop-toggle">
+                    <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>Do it online</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>         
                   </li>
-                  <!--use 'active' on active tabs-->
-                  <li class="nav-item"> <a class="nav-link" href="#">Jobs</a> </li>
+                  <li class="d-block d-lg-none responsive-services my-2">
+                    {{ page.primary_menu }}
+                    {{ page.secondary_menu }}
+                  </li>
+                  <li class="nav-item"> <a class="nav-link px-2 px-lg-3" href="https://www.croydon.gov.uk/atoz">A - Z</a> </li>
+                  <li class="nav-item"> <a class="nav-link px-2 px-lg-3" href="http://maps.croydon.gov.uk/aya/pages/aya/aya.html">In your area</a> </li>
+                  <li class="nav-item"> <a class="nav-link px-2 px-lg-3" href="http://news.croydon.gov.uk/">News</a>
+                  </li>
+                  <li class="nav-item"> <a class="nav-link px-2 px-lg-3" href="https://www.croydon.gov.uk/jobsatcroydon/search-jobs">Jobs</a> </li>
                   
-                  <!--<li class="nav-item">
-                        <a class="nav-link disabled" href="#">Page title</a>
-                        </li>-->
+                
               </ul>
-              {{ page.search }}
+              
+              <div class="d-none d-lg-block">
+                {{ page.search }}
+              </div>
               
           </div>
       </nav>
       <!-- Toggle Menu -->
-      <nav class="header--expand header--toggle mt-2">
-        <div id="site-search--mobile" class="site-search site-search--mobile">
-          {{ page.mobile_search }}
-        </div>
+      <nav class="header--expand site-max header--toggle mt-2">
         <div class="row">
           <div class="col-md-8 p-4">
             {{ page.primary_menu }}
@@ -49,8 +53,6 @@
         </div>
       </nav>
 
-
-  </div>
 </header>
 
 

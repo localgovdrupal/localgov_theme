@@ -1,0 +1,34 @@
+<!-- temp removed for soft launch <div class="directory-map-results">
+
+  {% if items %}
+    <div>
+      <button class="hide-map"><span class="fas fa-eye-slash"></span>Hide map</button>
+      <button class="show-map"><span class="fas fa-eye"></span>Show map</button>
+    </div>
+  {% endif %}
+
+  <div class="directories-map">
+    {% if items %}
+      <h2 class="sr-only">Directories Map</h2>
+      <div id="map-wrapper">
+        <div id="map" class="map"></div>
+
+        {% for key, item in items %}
+          <div class="popup hidden" id="popup-{{ key }}">
+            <h3>{{ item.title }}</h3>
+
+            <ul>
+              {% if item.address %}<li>{{ item.address }}</li>{% endif %}
+            </ul>
+
+            {% if item.website %}
+              <p><a href="{{ item.website }}" class="external-link">Visit website</a></p>
+            {% endif %}
+    		<p><a href="{{ item.url }}">Full details</a></p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+</div> -->

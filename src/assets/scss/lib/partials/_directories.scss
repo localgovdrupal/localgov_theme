@@ -1,3 +1,5 @@
+
+
 /* Results Article */
 
 .directory-result {
@@ -15,7 +17,6 @@
   //   @include rem(font-size, 22);
   //   @include rem(line-height, 28);
   //  }
-  font-family: "Source Sans Pro", sans-serif;
 }
   
 .directory-result p {
@@ -47,7 +48,7 @@
 
 .directory-result .fas {
   @include rem(width, 20);
-  @include rem(margin-right, 20);
+  @include rem(margin-right, 3);
 }
 
 /* Map Header */
@@ -99,7 +100,7 @@
 
 .directory-map-results {
   .fas, .far {
-    color: $black;
+    color: $carbon;
     @include rem(padding-right, 5);
   }
   a {
@@ -159,16 +160,12 @@
 .contact-list li{padding-left:5px}
 .contact-list span{margin-right:20px;width:20px}
 
-.directories-search .form-select {
+.directories-search-form .form-select {
  @extend .form-control;
 }
-.directories-search{padding:20px 18px;padding:1.25rem 1.125rem}
-.directories-search form{background-color:transparent;padding:0px;margin-top:20px;margin-top:1.25rem;display:none}
-@media only screen and (min-width:768px){
-  .directories-search form{display:block}
-}
+.directories-search-form{padding:20px 18px;padding:1.25rem 1.125rem;background-color:$gray-light;}
 .directories-hide-filters {display:block}
-.directories-search h2{margin-bottom:0px !important;margin-bottom:0rem !important;display:inline-block}
+.directories-search-form h2{margin-bottom:0px !important;margin-bottom:0rem !important;display:inline-block}
 @media only screen and (min-width:768px){.directories-search-form--search-toggle{display:none}}
 @media only screen and (max-width:767px){.directories-search-form--search-toggle{text-decoration:none;float:right}
 .directories-search-form--search-toggle span{margin-left:4px;margin-left:0.25rem}

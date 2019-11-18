@@ -1,30 +1,40 @@
 .services--feature { 
-  width: 100vw;
-  position: relative;
-  margin-left: -50vw;
-  padding-bottom: 0;
-  left: 50%;
   border-bottom: 1px solid $gray;
   background: $gray-light;
-
-  .services--feature-container {
-    @include rem(padding, 20, 0);
-  }
+  margin-bottom: 0;
 }
 
 .services--feature-block {
-  @include rem(padding, 20, 5);
+  @include rem(padding-top, 20);
+  @include rem(padding-bottom, 20);
   text-align: center;
 
   a {
     display: block;
     text-decoration: none;
     @include rem(padding, 5);
+    background: transparent;
+    box-shadow: none;
+
+    .services--feature-title {
+      display: block;
+      color: $carbon;
+      @include rem(font-size, 17);
+      @include rem(line-height, 24);
+      @include rem(margin-top, 5);
+      text-decoration: none;
+    }
+
+    &:hover, &:focus {
+      .services--feature-title {
+        @extend .access-background;
+      }
+    }
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     &.col-sm {
-      @include make-col(1, 5); // magic columns
+      @include make-col(1, 5); // chris's magic columns
     }
   }
 }
@@ -37,33 +47,23 @@
   color: $gray-dark;
 }
 
-.services--feature-title {
-  display: block;
-  color: $black;
-  @include rem(font-size, 17);
-  @include rem(line-height, 24);
-  @include rem(margin-top, 5);
-  text-decoration: none;
 
-  &:hover {
-    color: $primary;
-  }
-}
 
 .services--list {
   padding: 0;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
  .services--list-block {
-    h3 {
+    h2 {
       font-weight: bold;
       @include rem(margin, 10, 0, 20, 0);
       line-height: 1.1;
       a {
         display: inline-block;
         text-decoration: underline;
-        color: $black;
+        color: $carbon;
         @include rem(font-size, 24);
       }
     }
@@ -93,7 +93,7 @@
         &:before {
           @include media-breakpoint-up(sm) {
             content: "\f054";
-            font-family: 'Font Awesome 5 Free';
+            font-family: $font-family-icons;
             font-weight: 900;
             @include rem(font-size, 13);
             color: $secondary;
@@ -108,7 +108,7 @@
           @include rem(font-size, 17);
           
           &:hover {
-            color: $secondary;
+            color: $carbon;
             text-decoration: underline;
           }
         }

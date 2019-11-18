@@ -47,33 +47,29 @@
 #}
 
 {% extends "page.html.twig" %}
-
 {% block content %}
+
+  <div class="container-fluid bg-white site-max">
+    <a id="main-content"></a>
+
   {% block breadcrumbs %}
     {% if page.breadcrumb %}
-    <div class="breadcrumb-container">
+    
       {{ page.breadcrumb }}
 
-      <nav class="breadcrumb-block visible-xs-inline-block">
-        <ul class="breadcrumb-list">
-          <li><a href="/">Home</a></li>
-        </ul>
-      </nav>
-
+  
       <div class="beta-notice-sm">
         <div class="beta-notice beta-notice-sm">
           <div class="first-line">
             <span class="beta-badge">NEW</span>
-            <p><a href="#">What's this?</a></p>
+            <p>This web page has been redesigned. <a href="/">Give feedback.</a></p>
           </div>
         </div>
       </div>
-    </div>
+
     {% endif %}
   {% endblock %}
 
-  <div class="container-fluid bg-white site-max">
-    <a id="main-content"></a>
 
     <div class="page row">
       <main {{ pageAttributes.addClass('design-system-page col-md-8 order-md-2')}}>

@@ -8,7 +8,7 @@
   }
   ul, ol {
     
-    padding-left: 0px;
+    @include rem(padding-left, 20);
     margin-bottom: 0;
     
     @include media-breakpoint-up(md) {
@@ -61,9 +61,20 @@
   -ms-hyphens: auto;
   color: $white; 
   
-    &:hover, &:focus {
+    &:hover {
         color: $white;
         text-decoration: none;
+    }
+    &:focus {
+      @extend .focus-outline;
+
+      span {
+        color: $carbon;
+      }
+      
+      &:after {
+        color: $carbon;
+      }
     }
     span {
         width: 100%;
@@ -78,7 +89,7 @@
         color: $white;
         display: flex;
         align-items: center;
-        font-family: 'Font Awesome 5 Free';
+        font-family: $font-family-icons;
         content: '\f054';
         font-weight: 900;
         @include rem(font-size, 20);
@@ -108,21 +119,28 @@
 
 .cta-green {
     background-color: $green;
-    &:hover {
+    span, &:after {
+      color: $carbon;
+    }
+    &:hover, &:focus {
         background-color: $teal;
+        
+      span, &:after {
+        color: $white;
+      }
     }
 }
 
 .cta-blue {
     background-color: $blue;
-    &:hover {
+    &:hover, &:focus {
         background-color: $cyan;
     }
 }
 
 .cta-orange {
     background-color: $orange;
-    &:hover {
+    &:hover, &:focus {
         background-color: $yellow;
     }
 }

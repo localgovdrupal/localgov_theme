@@ -37,15 +37,9 @@
  * @see template_preprocess_field()
  */
 #}
-
-<section{{ attributes.addClass('services--feature container-fluid') }}>
-	<div class="services--feature-container container">
-	  {% for row in items|batch(12) %}
-	    <div class="row justify-content-center mr-0 ml-0">
-	      {% for column in row %}
-	        {{ column.content }}
-	      {% endfor %}
-	    </div>
-	  {% endfor %}
-  	</div>
+<section{{ attributes.setAttribute('id', 'main-content').setAttribute('class', 'row services--feature justify-content-center pb-0') }}>
+    {% for service_item in items %}
+        {{ service_item.content }}
+    {% endfor %}
 </section>
+

@@ -2,7 +2,7 @@
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
-    font-family: "Fiendstar W01 Bold", 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-family: $font-family-secondary;
     font-weight: bold; // for fallbacks only
     white-space: nowrap;
     font-size: 1.25rem; //20px  
@@ -13,7 +13,12 @@
     margin-right: 1.125rem; //18px
     font-weight: bold; //For fallback
     font-size: unset; // we have an image here and the bs font size affects the spacing
-    @include media-breakpoint-up(sm) {
+    
+    .img-fluid {
+        width: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
         .img-fluid {
             width: 75%;
         }
@@ -39,12 +44,14 @@
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
     padding-top: .4375rem;
     padding-bottom: .4375rem;
+    
+    &:focus, &:hover {
+        color: $carbon !important;
+        background-color: $white !important;
+    }
 }
 
-//Nav hover and focus
-.navbar-dark.nav-vanilla .navbar-nav .nav-link:hover {
-    color: $yellow;
-}
+
 
 //Switch arrows 
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
@@ -62,9 +69,11 @@
                 transform: rotate( -180deg );            
                 transition: transform 150ms ease;
             }
-            // &.fa-chevron-up {
-            //  display: inline-block;
-            // }
+        }
+
+        &:hover {
+            background: transparent;
+            color:$yellow;
         }
     }
 }
@@ -79,7 +88,10 @@
     background: $indigo;
     color: $white;
 }
-
+.navbar-dark.nav-bigtabs .navbar-nav .nav-link:focus {
+    background: $white !important;
+    color: $carbon !important;
+}
 // Main navigation anf and big tabs dropdown menu icon (desktop)
 .navbar-dark.nav-vanilla .nav-link .fa,
 .navbar-dark.nav-bigtabs .nav-link .fa {
@@ -139,9 +151,9 @@
 @include media-breakpoint-up(lg) {
 
     //Set navbar dark padding to accomodate tab design
-    .navbar-dark.nav-vanilla {
-        padding: .5rem 0;
-    }
+    // .navbar-dark.nav-vanilla {
+    //     padding: .5rem 0;
+    // }
     //Set navbar link padding to accomodate tab design
     .navbar-dark.nav-vanilla .navbar-nav .nav-link {
         padding: 1rem 1.125rem; // 16/18px
@@ -161,26 +173,26 @@
     font-size: $input-btn-font-size-sm;
 }
 // Main navigation logo & foot navigation logo
-.navbar-dark.nav-vanilla .navbar-brand,
-.navbar-light.nav-vanilla .navbar-brand {
-    font-family: $headings-font-family;
+.navbar-dark.nav-vanilla .navbar-brand {
+    &:hover, &:focus {
+      background: transparent;
+      box-shadow: none;
+    }
 }
 
 // Main navigation toggle button
 #js-nav-toggle {
-    padding: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 0;
-    width: 38px;
-    height: 38px;
-    border: 2px solid $navbar-dark-toggler-border-color;
-}
-
-// Main navigation toggle button
-#js-nav-toggle .fa {
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  width: 38px;
+  height: 38px;
+  border: 2px solid $navbar-dark-toggler-border-color;
+  .fa { // Main navigation toggle button
     color: $white;
     font-size: 1.125rem; //18px
+  }
 }
 
 // Mobile menu container
@@ -204,7 +216,7 @@
 
 .navbar-dark.nav-vanilla .dropdown-item {
     font-size: 1.125rem; //18px
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-family: $font-family-base;
     font-weight: 400; // for fallbacks only 
 }
 
@@ -287,21 +299,22 @@
 
 //Footer vanilla nav outer container
 .navbar-light {
-
+    
     &.nav-vanilla {
-    padding: 0.5rem 0;
 
     .nav-item {
-          font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+          font-family: $font-family-base;
           font-weight: normal; // for fallbacks only
           white-space: nowrap;
           font-size: .9375rem; //15px
         }
 
         .navbar-brand {
-          margin-right: 1.125rem; //18px
-          color: $purple;
-          font-weight: 700;
+
+          &:hover, &:focus {
+            background: transparent;
+            box-shadow: none;
+          }
         }
 
         .navbar-nav {

@@ -4,12 +4,7 @@
 footer {
   margin-top: 1.5rem;
   a {
-    font-weight: 700;
     color: $white;
-    text-decoration: underline;
-    &:hover {
-      color: $white;
-    }
   }
 
   .flex-break {
@@ -32,6 +27,15 @@ footer {
       i {
         min-width: 25px;
         padding-right: .625rem;
+      }
+    }
+  }
+
+  .socials {
+    a {
+      &:hover, &:focus {
+        background: transparent;
+        color: $white !important;
       }
     }
   }
