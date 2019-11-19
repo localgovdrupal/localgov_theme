@@ -7,6 +7,11 @@ footer {
     color: $white;
   }
 
+  h2 {
+    font-size: $h3-font-size;
+    margin-bottom: ($spacer * 1.5);
+  }
+
   .flex-break {
     display: flex;
     width: 100%;
@@ -31,15 +36,6 @@ footer {
     }
   }
 
-  .socials {
-    a {
-      &:hover, &:focus {
-        background: transparent;
-        color: $white !important;
-      }
-    }
-  }
-
   .footer-top {
     padding-bottom: 0;
     padding-top: ($spacer * 3);
@@ -48,6 +44,17 @@ footer {
   .footer-bottom {
     padding-top: ($spacer * 3);
     padding-bottom: ($spacer * 3);
+
+    .socials {
+      margin-bottom: 1rem !important;
+      
+      a {
+        &:hover, &:focus {
+          background: transparent;
+          color: $white !important;
+        }
+      }
+    }
 
     section {
       display: flex;

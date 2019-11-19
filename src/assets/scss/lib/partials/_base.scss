@@ -55,6 +55,14 @@ main ol,
 	padding-right: ($spacer * 1.5);
 }
 
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+	margin-top: 3rem;
+}
+
 section {
 	margin-bottom: ($spacer * 2.5);
 	padding-bottom: ($spacer * 2.5);
