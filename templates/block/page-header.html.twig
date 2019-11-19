@@ -1,4 +1,4 @@
-<header class="col-12 key-under pb-2">
+<header class="col-12 pb-2 mb-4">
   <h1>{{ title }}</h1>
 
   {% set is_lede_a_render_array = lede is iterable %}
@@ -7,5 +7,7 @@
     {{ lede }}
   {% elseif is_lede_not_a_render_array and lede %}
     <p>{{ lede }}</p>
-  {% endif %}
+  {% endif %} 
+  <div class="key-under"></div>
 </header>
+

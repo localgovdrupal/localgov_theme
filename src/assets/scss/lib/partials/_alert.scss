@@ -63,10 +63,16 @@
 
 /*Pseudo icons for wysiwig added alerts*/
 .alert {
+  position: relative;
   width: 100%; // always go full width 
 
   &:before {
-    margin-right: 0.5rem;
+    position: absolute;
+  }
+
+  > label, .alert-content, p, ul, ol {
+    display: block;
+    padding: 0 0 0 1.75rem;
   }
 }
 .alert-success {

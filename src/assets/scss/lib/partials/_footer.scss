@@ -1,3 +1,7 @@
+/* fix form.io overriding this specific pseudo in the footer */
+.fa-youtube-square:before {
+  content: "\f431" !important;
+}
 
 /* /// FOOTER /// */
 
@@ -5,6 +9,11 @@ footer {
   margin-top: 1.5rem;
   a {
     color: $white;
+  }
+
+  h2 {
+    font-size: $h3-font-size;
+    margin-bottom: ($spacer * 1.5);
   }
 
   .flex-break {
@@ -31,15 +40,6 @@ footer {
     }
   }
 
-  .socials {
-    a {
-      &:hover, &:focus {
-        background: transparent;
-        color: $white !important;
-      }
-    }
-  }
-
   .footer-top {
     padding-bottom: 0;
     padding-top: ($spacer * 3);
@@ -48,6 +48,17 @@ footer {
   .footer-bottom {
     padding-top: ($spacer * 3);
     padding-bottom: ($spacer * 3);
+
+    .socials {
+      margin-bottom: 1rem !important;
+      
+      a {
+        &:hover, &:focus {
+          background: transparent;
+          color: $white !important;
+        }
+      }
+    }
 
     section {
       display: flex;
@@ -74,8 +85,11 @@ footer {
         }
       }
 
-      h2 {
-        margin-bottom: 0;
+      h5 {
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+          width: auto;
+        }
       }
 
       p {
@@ -96,8 +110,6 @@ footer {
 }
 
 
-/* /// Above 768px /// */
-
 @include media-breakpoint-up(md) {
   footer .footer-top {
     padding-bottom: ($spacer * 3);
@@ -109,6 +121,7 @@ footer {
 }
 
 @include media-breakpoint-up(lg) {
+
   //Hide mobile menu
   #js-nav-toggle {
     display: none;

@@ -10,9 +10,9 @@
 {% if breadcrumb %}
   
 
-<div class="col-12 key-under">
+<div class="col-12">
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb key-under">
       <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
       {% for key, item in breadcrumb %}
       {% if item.url %}
@@ -23,7 +23,7 @@
       {% endfor %}
     </ol>
   </nav>
-</div>
 
+</div>
 
 {% endif %}

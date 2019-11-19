@@ -17,14 +17,29 @@
     var directorySearchToggle = document.querySelector('#directories-search-form--search-toggle');
     var directorySearchFilters = document.querySelector('.directories-hide-filters');
 
+    var menuDisplay = function() {
+      console.log('the function was called');
+    // if (parseInt($(window).width()) > 992) {
+    //   $('.show-menu').click(function () {
+    //     $('.header--expand').slideToggle();
+    //     $('.show-menu').toggleClass('show-outline');
+    //   });
+    // } else 
+      if (parseInt($(window).width()) < 992) {
+        $('.header--expand').hide();
+        $('.show-menu').removeClass('show-outline');
+      }
 
-    /* Services menu */
+    };
+
     $('.show-menu').click(function () {
       $('.header--expand').slideToggle();
-      // $('.show-menu').find('.icon-services').toggleClass('icon-services-active');
-      // $('.show-menu').find('.icon-menu-open').toggleClass('icon-menu-close');
       $('.show-menu').toggleClass('show-outline');
     });
+
+    menuDisplay(); // call when the page loads
+  
+    $(window).on('resize',menuDisplay); // call when the window resizes
 
     $('.site-menu-mobile .show-menu').click(function () {
       $('.scroll-away').fadeToggle();
