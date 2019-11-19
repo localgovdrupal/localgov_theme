@@ -163,7 +163,7 @@
 .directories-search-form .form-select {
  @extend .form-control;
 }
-.directories-search-form{padding:20px 18px;padding:1.25rem 1.125rem;background-color:$gray-light;}
+.directories-search-form{padding:20px 18px;padding:1.25rem 1.125rem;background-color:$gray-tint;}
 .directories-hide-filters {display:block}
 .directories-search-form h2{margin-bottom:0px !important;margin-bottom:0rem !important;display:inline-block}
 @media only screen and (min-width:768px){.directories-search-form--search-toggle{display:none}}

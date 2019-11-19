@@ -8,14 +8,19 @@
 		iconClosed: document.querySelector('#js-nav-toggle .fa-bars'),
 		iconOpen: document.querySelector('#js-nav-toggle .fa-times'),
 
-		doToggle: function(e) {
-			e.preventDefault();
-			this.iconClosed.classList.toggle('d-none');
-			this.iconOpen.classList.toggle('d-inline-block');
-			this.nav.classList.toggle('collapse');
-		}
+		
+			
+			doToggle: function(e) {
+				e.preventDefault();
+				this.iconClosed.classList.toggle('d-none');
+				this.iconOpen.classList.toggle('d-inline-block');
+				this.nav.classList.toggle('collapse');
+			}
+    	
 	};
 
 	hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+	
+    
 
 }());

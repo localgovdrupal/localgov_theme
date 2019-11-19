@@ -13,9 +13,14 @@
     margin-right: 1.125rem; //18px
     font-weight: bold; //For fallback
     font-size: unset; // we have an image here and the bs font size affects the spacing
+    display: contents; // fix for BS container size bug causing wrapping of the toggler in mobile
     
+    @include media-breakpoint-up(sm) {
+        display: inline-block; // reset display
+    }
+
     .img-fluid {
-        width: 50%;
+        width: 40%;
     }
 
     @include media-breakpoint-up(lg) {
@@ -48,6 +53,7 @@
     &:focus, &:hover {
         color: $carbon !important;
         background-color: $white !important;
+        box-shadow: none !important;
     }
 }
 

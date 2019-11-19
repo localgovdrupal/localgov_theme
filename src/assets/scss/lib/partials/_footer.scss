@@ -74,8 +74,11 @@ footer {
         }
       }
 
-      h2 {
-        margin-bottom: 0;
+      h5 {
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+          width: auto;
+        }
       }
 
       p {
@@ -96,8 +99,6 @@ footer {
 }
 
 
-/* /// Above 768px /// */
-
 @include media-breakpoint-up(md) {
   footer .footer-top {
     padding-bottom: ($spacer * 3);
@@ -109,6 +110,7 @@ footer {
 }
 
 @include media-breakpoint-up(lg) {
+
   //Hide mobile menu
   #js-nav-toggle {
     display: none;
