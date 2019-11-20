@@ -54,29 +54,10 @@ header p {
   display: block;
   background: $white;
   border-bottom: 2rem solid $primary;
-  //overflow: auto;
-  @include rem(margin-bottom, 15);
-  //xs scroll version
-  // height: 75vh;
 
   @include media-breakpoint-up(sm) {
-    // height: auto;
     display: none;
   }
-  // @media(max-width: 768px){
-  //   &::-webkit-scrollbar {
-  //     -webkit-appearance: none;
-  //     @include rem(width, 12);
-  //   }
-  //   &::-webkit-scrollbar-thumb {
-  //     border-radius: 6px;
-  //     @include rem(border-radius, 6);
-  //     border: 2px solid white;
-  //     background-color: rgba(0,0,0,.5);
-  //     box-shadow: 0 0 1px rgba(255,255,255,.5);
-  //     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-  //   }
-  // }
 
   .row {
     margin-left: 0;

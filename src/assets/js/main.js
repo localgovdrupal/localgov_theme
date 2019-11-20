@@ -43,7 +43,7 @@
       $('.cookies-notice').hide();
     });
 
-    $('.alert-bar--inner a').click(function () {
+    $('#closeGlobalBanner').click(function () {
       $('.alert-bar').hide();
     });
 
