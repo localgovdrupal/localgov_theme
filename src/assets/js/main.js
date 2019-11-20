@@ -18,13 +18,7 @@
     var directorySearchFilters = document.querySelector('.directories-hide-filters');
 
     var menuDisplay = function() {
-      console.log('the function was called');
-    // if (parseInt($(window).width()) > 992) {
-    //   $('.show-menu').click(function () {
-    //     $('.header--expand').slideToggle();
-    //     $('.show-menu').toggleClass('show-outline');
-    //   });
-    // } else 
+  
       if (parseInt($(window).width()) < 992) {
         $('.header--expand').hide();
         $('.show-menu').removeClass('show-outline');

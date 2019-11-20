@@ -65,14 +65,11 @@
 .alert {
   position: relative;
   width: 100%; // always go full width 
+  padding-left: 2.75rem; // indent content to allow for absolute icon
 
   &:before {
     position: absolute;
-  }
-
-  > label, .alert-content, p, ul, ol {
-    display: block;
-    padding: 0 0 0 1.75rem;
+    left: 1rem;
   }
 }
 .alert-success {
