@@ -1,78 +1,54 @@
 .alert-bar {
-    background: $yellow;
-    color: $carbon;
-}
+  background: $yellow;
 
-.alert-bar--inner {
-    @include rem(min-height, 50);
-    @include rem(margin, 0, 15);
-    @include rem(padding, 10, 0);
-    @include media-breakpoint-up(lg) {
-        display: flex;
-        align-items: center;
-    }
-    // @media only screen and (max-width: $screen-xs-max){
-    //     @include rem(line-height, 25);
-    // }
-    i {
-        @include rem(font-size, 30);
-        @include rem(margin-right, 10);
-        // @media only screen and (max-width: $screen-md-max){
-        //     display: none;
-        // }
-    }
-    strong {
-        font-weight: 700;
-        @include rem(margin-right, 5);
-    }
-    p {
+  DIV > DIV {
+
+      > DIV {
+
+        p {
+          position: relative;
+          @include rem(padding-left, 40);
+
+          &:before {
+            position: absolute;
+            left: 0;
+            top: -9px;
+            font-family: $font-family-icons; 
+            font-weight: 900; 
+            content: "\f06a";
+            @include rem(font-size, 30);
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      > p {
         margin: 0;
-		@include rem(font-size, 17);
-        // @media only screen and (max-width: $screen-md-max){
-        //     display: block;
-        // }
-    }
-    a {
+  		  @include rem(font-size, 17);
+        
+      }
+      a {
         color: $carbon;
-        font-weight: 700;
-        @include rem(margin-left, 5);
-        // @media only screen and (max-width: $screen-md-max){
-        //     margin-left: 0;
-        // }
-    }
-}
 
-.alert-bar--left {
-    @include media-breakpoint-up(lg) {
-        display: flex;
-        align-items: center;
-    }
-    @include rem(padding-right, 60);
-}
-
-.alert-bar--right {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  @include rem(font-size, 17);
-  
-  span {
-    @include rem(margin-left, 5);
+        &:hover, &:focus {
+          background: $white;
+          color: $carbon;
+        }
+      }
   }
 }
+
 
 /*Pseudo icons for wysiwig added alerts*/
 .alert {
   position: relative;
   width: 100%; // always go full width 
+  padding-left: 2.75rem; // indent content to allow for absolute icon
 
   &:before {
     position: absolute;
-  }
-
-  > label, .alert-content, p, ul, ol {
-    display: block;
-    padding: 0 0 0 1.75rem;
+    left: 1rem;
   }
 }
 .alert-success {
