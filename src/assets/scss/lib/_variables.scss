@@ -59,12 +59,10 @@ $light: #ededed !default;
 $dark: #444444 !default;
 $visited: #ad52ad !default;
 
-$gray-tint: #FAFAFA;
-
 // Site colours
 
 $primary: $purple !default;
-$secondary: $carbon !default;
+$secondary: $carbon !default; // used to override the BS and formio colours applied as secondary
  
 
 // grays

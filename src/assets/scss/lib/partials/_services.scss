@@ -1,6 +1,6 @@
 .services--feature { 
-  border-bottom: 1px solid $gray;
-  background: $gray-tint;
+  //border-bottom: 1px solid $gray;
+  background: $gray;
   margin-bottom: 0;
 }
 
@@ -96,7 +96,7 @@
             font-family: $font-family-icons;
             font-weight: 900;
             @include rem(font-size, 13);
-            color: $secondary;
+            color: $green;
             @include rem(margin-right, 5);
             &:hover {
               text-decoration: none;
