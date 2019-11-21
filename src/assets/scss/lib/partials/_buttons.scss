@@ -28,6 +28,17 @@ aside .btn .fa,
 		background: $indigo;
 		@extend .focus-outline;
 	}
+
+	&.btn-secondary {
+		background: $secondary;
+		color: $white;
+		border-color: $secondary;
+
+		&:hover, &:focus {
+			color: $white;
+    		background: $indigo;
+		}
+	}
 }
 
 //disabled button

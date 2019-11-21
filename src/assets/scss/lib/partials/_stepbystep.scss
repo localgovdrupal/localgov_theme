@@ -38,7 +38,7 @@ ul.step-list {
   padding: 1rem;
   margin-bottom: 2.5rem;
   border-left: 0.3125rem solid $primary;
-  background: $gray-tint;
+  background: $gray;
   @include media-breakpoint-up(md) {
     display: block;
   }
@@ -59,7 +59,7 @@ ul.step-list {
     a {
       color:$carbon;
       text-decoration: underline;
-      font-weight: 700;
+      font-weight: 700 !important;
     }
   }
 }
@@ -78,8 +78,7 @@ ul.step-list {
 
   .step-master {
     font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
+    font-weight: 400 !important;
   }
 
   ol.step-list {
@@ -144,6 +143,7 @@ ul.step-list {
             font-size: 14px;
             color: $blue;
             text-decoration: underline;
+            font-weight: 400;
           }
         }
       }
