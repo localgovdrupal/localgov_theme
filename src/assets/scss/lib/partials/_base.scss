@@ -56,13 +56,13 @@ main ol,
 }
 
 // add top margin to header sin the page but not the first h2 as that will be at the top of the block
-.page main h2:not(first-child),
-.page main h3,
-.page main h4,
-.page main h5,
-.page main h6 {
-	margin-top: 3rem;
-}
+// .page main h2:not(first-child),
+// .page main h3,
+// .page main h4,
+// .page main h5,
+// .page main h6 {
+// 	margin-top: 3rem;
+// }
 
 section {
 	margin-bottom: ($spacer * 2.5);
