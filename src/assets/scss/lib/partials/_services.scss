@@ -32,7 +32,7 @@
     }
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     &.col-sm {
       @include make-col(1, 5); // chris's magic columns
     }

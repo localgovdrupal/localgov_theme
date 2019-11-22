@@ -55,10 +55,12 @@ main ol,
 	padding-right: ($spacer * 1.5);
 }
 
-main h3,
-main h4,
-main h5,
-main h6 {
+// add top margin to header sin the page but not the first h2 as that will be at the top of the block
+.page main h2:not(first-child),
+.page main h3,
+.page main h4,
+.page main h5,
+.page main h6 {
 	margin-top: 3rem;
 }
 
@@ -289,6 +291,7 @@ main i {
 	}
 }
 
+
 /*temp styling related to soft launch*/
 
 .beta-notice-sm, .notice {
@@ -299,4 +302,8 @@ main i {
 	h4 {
 		line-height: 2rem;
 	}
+}
+
+* {
+	outline: 1px solid hotpink;
 }

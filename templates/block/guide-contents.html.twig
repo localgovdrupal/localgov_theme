@@ -19,9 +19,9 @@
         {% endif %}
       {% else %}
         {% if link.url.options.attributes.class == 'active' %}
-          <li><span class="progress--step progress--active"></span> {{ link.text }} </li> 
+          <li> {{ link.text }} </li> 
         {% else %}  
-          <li><span class="progress--step"></span> {{ link }} </li> 
+          <li> {{ link }} </li> 
         {% endif %}
       {% endif %}
     {% endfor %}
