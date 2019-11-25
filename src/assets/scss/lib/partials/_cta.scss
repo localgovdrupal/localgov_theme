@@ -1,20 +1,11 @@
 .cta-pull {
-  @include rem(padding, 30, 35);
-
+  @include rem(padding-top, 30);
+  @include rem(padding-bottom, 30);
   background: $gray-tint;
 
-  h2 {
-    display: none;
-  }
-  ul {
-    margin: 0 0 0 25px;
-  }
-  ol {
-    margin: 0 0 0 15px;
-  }
   ul, ol {
-    list-style-position: outside;
-    margin: 0 0 0 15px;
+    @include rem(margin-left, 35); // deals with native lists breaking out of the grid
+    margin-bottom: 0;
     padding:0;
     column-count: 1;
  
@@ -45,6 +36,7 @@
 
       list-style-type: none;
       position: relative;
+      @include rem(margin-left, 15);
 
       li {
         padding-left: 0.75rem;
