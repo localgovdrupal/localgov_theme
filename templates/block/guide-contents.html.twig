@@ -1,6 +1,6 @@
 
-<nav class="col-12 section cta-pull">
-  <h2>Contents</h2>
+<nav class="col-12 section">
+  <div class="cta-pull">
   {% if format == 'ordered' %}
     <ol class="progress">
   {% elseif format == 'unordered' %}
@@ -19,9 +19,9 @@
         {% endif %}
       {% else %}
         {% if link.url.options.attributes.class == 'active' %}
-          <li><span class="progress--step progress--active"></span> {{ link.text }} </li> 
+          <li> {{ link.text }} </li> 
         {% else %}  
-          <li><span class="progress--step"></span> {{ link }} </li> 
+          <li> {{ link }} </li> 
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -34,4 +34,5 @@
   {% else %}
     </ul>
   {% endif %}
+  </div>
 </nav>

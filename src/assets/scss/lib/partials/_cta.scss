@@ -1,45 +1,52 @@
 .cta-pull {
-  @include rem(padding, 30, 35);
-
+  @include rem(padding-top, 30);
+  @include rem(padding-bottom, 30);
   background: $gray-tint;
 
-  h2 {
-    display: none;
-  }
   ul, ol {
-    
-    @include rem(padding-left, 20);
+    @include rem(margin-left, 35); // deals with native lists breaking out of the grid
     margin-bottom: 0;
-    
-    @include media-breakpoint-up(md) {
-      height: 135px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+    padding:0;
+    column-count: 1;
+ 
+    @include media-breakpoint-up(sm) {
+      column-count: 2;
     }
-
-    &.guide-dashes {
-      list-style: none;
-
-      li {
-        @include rem(margin-left, 15);
-        @include rem(margin-right, 20);
-
-        &:before {
-          position: absolute;
-          display: block;
-          content: "-";
-          left: -10px;
-        }
-      }
+    
+    @include media-breakpoint-up(lg) {
+      column-count: 3;
     }
 
     li {
       @include rem(font-size, 18);
-      @include rem(line-height, 33);
+      @include rem(line-height, 23);
       position: relative;
+      margin-bottom: 1rem;
+
       a {
         @include rem(font-size, 18);
+
+        &:focus, &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.guide-dashes {
+
+      list-style-type: none;
+      position: relative;
+      @include rem(margin-left, 15);
+
+      li {
+        padding-left: 0.75rem;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          display: block;
+          content: "-";
+        }
       }
     }
   }
