@@ -145,7 +145,11 @@
         line-height: 1;
         @include rem(margin-top, 15);
         @include rem(margin-bottom, 15);
-        font-size: $h3-font-size;
+        font-size: $h5-font-size;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $h3-font-size;
+        }
     }
 }
 

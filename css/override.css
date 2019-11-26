@@ -44,11 +44,6 @@ body.logged-in {
   margin-bottom: 40px;
 }
 
-#field--body a.cta-button.cta-green {
-  width: 400px;
-  max-width: 100%;
-}
-
 #google-cse-results {
   overflow: hidden;
 }
