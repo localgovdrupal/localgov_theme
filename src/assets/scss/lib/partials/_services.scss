@@ -76,7 +76,8 @@
         display: inline-block;
         margin: 0px;       
         @include rem(line-height, 28);
-        &:not(:last-child):after {
+
+        &:not(:last-child):after { // shown as a comma separated list on mobile
           content: ',';
           color: $blue;
         }
@@ -84,20 +85,25 @@
         @include media-breakpoint-up(sm) {
           display: block;
           width: auto;
-          padding: 0px;
+          padding: 0 0 0 1rem;
+          position: relative;
           
-          &:not(:last-child):after {
+          &:not(:last-child):after { // remove list commas for anything above mobile
             content: '';
           }
         }
         &:before {
           @include media-breakpoint-up(sm) {
             content: "\f054";
+            position: absolute;
+            left: 0;
+            top: 2px;
             font-family: $font-family-icons;
             font-weight: 900;
-            @include rem(font-size, 13);
             color: $green;
+            @include rem(font-size, 13);
             @include rem(margin-right, 5);
+
             &:hover {
               text-decoration: none;
             }

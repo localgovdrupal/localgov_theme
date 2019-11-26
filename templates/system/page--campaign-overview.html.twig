@@ -9,12 +9,12 @@
     {{ page.messages }}
   </div>
 
-    <main {{ content_attributes.addClass('col-md-8 order-1') }}>
+    <main {{ content_attributes.addClass('col-lg-8 order-1') }}>
       {{ page.content }}
     </main>
 
     {% if page.sidebar_second %}
-      <div class="sidebar col-md-4 order-2">
+      <div class="sidebar col-lg-4 order-2">
         {{ page.sidebar_second }}
       </div>
     {% endif %}

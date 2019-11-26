@@ -147,7 +147,6 @@ ul.step-list {
           }
         }
       }
-      .step__summary p { margin-top: 0; margin-bottom: .5rem;}
 
       &.step--active {
         &:before {
@@ -173,6 +172,7 @@ ul.step-list {
       }
     
       .step__summary {
+
         display: none; // hide step summaries that are not active
         position: relative;
         height: calc(100% - 132px);
@@ -181,6 +181,14 @@ ul.step-list {
         margin-left: 41px;
         margin-right: 24px;
         padding-bottom: 15px;
+        p { 
+          margin-top: 0; 
+          margin-bottom: .5rem;
+        }
+        ul {
+          padding-left:0;
+          margin-left: 1.25rem;
+        }
         a {
           text-decoration: underline;
           color: $primary;

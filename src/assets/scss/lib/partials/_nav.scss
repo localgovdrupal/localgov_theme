@@ -303,6 +303,13 @@
 //Footer vanilla nav outer container
 .navbar-light {
     
+    ul {
+        li {
+            a {
+                font-weight: 400;
+            }
+        }
+    }
     &.nav-vanilla {
 
     .nav-item {

@@ -60,3 +60,121 @@ aside .btn .fa,
 	font-size: 1.063rem; //17px
 	line-height: 1.8;
 }
+
+// Links styled to look like buttons
+
+.link-button {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: $white;
+
+  @include rem(padding, 15);
+  @include rem(font-size, 18);
+  @include rem(line-height, 22);
+  
+  &:hover {
+      color: $white;
+      text-decoration: none;
+  }
+  
+  &:focus {
+    @extend .focus-outline;
+
+    span {
+      color: $carbon;
+    }
+      
+    &:after {
+      color: $carbon;
+    }
+  }
+  span {
+    width: 100%;
+    color: $white;
+    text-align: left;
+    /* ie10 fix */
+    @include width(100%, 13px, 0.8125rem);
+    @include rem(padding-right, 5);
+    display: block;
+  }
+  &:after {
+      color: $white;
+      display: flex;
+      align-items: center;
+      font-family: $font-family-icons;
+      content: '\f054';
+      font-weight: 900;
+      @include rem(font-size, 20);
+      @include rem(margin-top, 2);
+  }
+  &:focus {
+      outline: $focus;
+  }
+	&:not(:last-child)  {
+    @include rem(margin-bottom, 20);
+    
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+	}
+}
+
+/* Modifiers */
+
+.link-button-green, .cta-green {
+    background-color: $green;
+    span, &:after {
+      color: $carbon;
+    }
+    &:hover, &:focus {
+        background-color: $teal;
+        
+      span, &:after {
+        color: $white;
+      }
+    }
+}
+
+.link-button-blue, .cta-blue {
+    background-color: $blue;
+    &:hover, &:focus {
+        background-color: $cyan;
+    }
+}
+
+.link-button-orange, .cta-orange {
+    background-color: $orange;
+    &:hover, &:focus {
+        background-color: $yellow;
+    }
+}
+
+.link-button-single, .cta-single {
+    @include rem(margin-top, 30);
+    
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+        @include rem(width, 350);
+    }
+}
+
+.link-button-close, .cta-close {
+    @include rem(margin-top, 30);
+    
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+        @include rem(width, 200);
+    }
+
+    &:after {
+        content: "\f00d";
+    }
+}
+
+.link-button-small, .cta-small {
+	@include rem(width, 140);
+}
