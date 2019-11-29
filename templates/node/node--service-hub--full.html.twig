@@ -42,7 +42,7 @@
           <div class="col-sm-6">
 
             {% if field_address_first_line %}
-              <span class="contact-title"><i class="fa fa-map-marker-alt"></i>{{ field_address_first_line }}</span>
+              <span class="contact-title"><i class="fa fa-map-marker-alt" aria-hidden="true"></i>{{ field_address_first_line }}</span>
             {% endif %}  
 
             {% if content.field_address %}
@@ -62,8 +62,8 @@
         {% if field_facebook or field_twitter %}
         <ul>
           <li>Find us on</li>
-          {% if field_facebook %}<li><i class="fab fa-facebook-square"></i><a href="{{ field_facebook}}">Facebook</a></li>{% endif %}
-          {% if field_twitter %}<li><i class="fab fa-twitter-square"></i><a href="{{ field_twitter }}">Twitter</a></li>{% endif %}
+          {% if field_facebook %}<li><i class="fab fa-facebook-square" aria-hidden="true"></i><a href="{{ field_facebook}}">Facebook</a></li>{% endif %}
+          {% if field_twitter %}<li><i class="fab fa-twitter-square" aria-hidden="true"></i><a href="{{ field_twitter }}">Twitter</a></li>{% endif %}
         </ul>
         {% endif %}
         {% if field_hearing_difficulties_phone %}

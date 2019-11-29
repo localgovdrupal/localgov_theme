@@ -14,7 +14,7 @@ $rem-base: 16px;
     $pxValues: #{$pxValues + $value}px;
 
     @if $i < $max {
-      $pxValues: #{$pxValues + " "};
+      $pxValues: #{$pxValues + ' '};
     }
   } 
 
@@ -23,7 +23,7 @@ $rem-base: 16px;
     $remValues: #{$remValues + $value/strip-unit($rem-base)}rem;
 
     @if $i < $max {
-      $remValues: #{$remValues + " "};
+      $remValues: #{$remValues + ' '};
     }
   } 
   

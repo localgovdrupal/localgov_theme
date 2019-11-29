@@ -48,7 +48,7 @@
     padding-bottom: .4375rem;
     
     &:focus, &:hover {
-        color: $carbon !important;
+        color: $secondary !important;
         background-color: $white !important;
         box-shadow: none !important;
     }
@@ -93,7 +93,7 @@
 }
 .navbar-dark.nav-bigtabs .navbar-nav .nav-link:focus {
     background: $white !important;
-    color: $carbon !important;
+    color: $secondary !important;
 }
 // Main navigation anf and big tabs dropdown menu icon (desktop)
 .navbar-dark.nav-vanilla .nav-link .fa,
@@ -332,7 +332,7 @@
           margin-bottom: 0;
 
           .nav-link {
-              color: $carbon;
+              color: $secondary;
               padding: 0 2rem 0 0;
 
               &:hover {

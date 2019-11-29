@@ -50,7 +50,7 @@ aside .btn .fa,
 //Upload file button
 .custom-file-label::after {
 	color: $white;
-	content: "Browse";
+	content: 'Browse';
 	background-color: $purple;
 	line-height: 1.8;
 	font-weight: bold;
@@ -85,11 +85,11 @@ aside .btn .fa,
     @extend .focus-outline;
 
     span {
-      color: $carbon;
+      color: $secondary;
     }
       
     &:after {
-      color: $carbon;
+      color: $secondary;
     }
   }
   span {
@@ -123,12 +123,12 @@ aside .btn .fa,
 	}
 }
 
-/* Modifiers */
+/* Link Button Modifiers */
 
 .link-button-green, .cta-green {
     background-color: $green;
     span, &:after {
-      color: $carbon;
+      color: $secondary;
     }
     &:hover, &:focus {
         background-color: $teal;
@@ -171,7 +171,7 @@ aside .btn .fa,
     }
 
     &:after {
-        content: "\f00d";
+        content: '\f00d';
     }
 }
 

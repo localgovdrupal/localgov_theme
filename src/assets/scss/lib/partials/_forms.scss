@@ -173,7 +173,7 @@ label span {
 /* Create the checkmark/indicator (hidden when not checked) */
 
 .checkmark:after {
-	content: "";
+	content: '';
 	position: absolute;
 	display: none;
 }
@@ -244,7 +244,7 @@ label span {
 /* Create the indicator (the dot/circle - hidden when not checked) */
 
 .radiomark:after {
-	content: "";
+	content: '';
 	position: absolute;
 	display: none;
 }

@@ -9,11 +9,15 @@ main {
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a  {
-		color: $carbon;
+		color: $secondary;
 		text-decoration: none;
 
 		&:visited {
-			color: $carbon;
+			color: $secondary;
+
+			&:hover {
+				color: $secondary;
+			}
 		}
 	}
 
@@ -33,7 +37,7 @@ main {
 	p a .fa, p a .fa, a .fa {
 		padding-right: .3125rem; //5px
 		padding-left: .3125rem; //5px
-		color: $carbon;
+		color: $secondary;
 	}
 
 	p .fa, p i {

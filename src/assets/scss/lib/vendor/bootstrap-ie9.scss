@@ -86,7 +86,7 @@ aside,
   background-image: none;
   padding-right: .75rem;
 }
-.img-fluid[src$=".svg"] {
+.img-fluid[src$='.svg'] {
   width: 100%;
 }
 .table-responsive {
@@ -168,7 +168,7 @@ aside,
   margin-left: auto;
   text-align: justify;
 }
-[class^="justify-content-"] div {
+[class^='justify-content-'] div {
   display: inline-block;
 }
 /** Carousel - Hide indicators and controls as the carousel doesn't work **/

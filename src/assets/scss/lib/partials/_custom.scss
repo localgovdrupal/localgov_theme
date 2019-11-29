@@ -57,7 +57,7 @@
 .dash-item figcaption a .fa,
 .dash-item figcaption a:visited .fa,
 .dash-item figcaption a:visited:hover .fa {
-	color: $carbon !important;
+	color: $secondary !important;
 }
 
 //Callout box content
@@ -120,7 +120,7 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
 	.row>.col,
-	.row>[class*="col-"] {
+	.row>[class*='col-'] {
 		padding-right: 15px;
 		padding-left: 15px;
 	}

@@ -4,7 +4,7 @@
 }
 .access-background { // use this extendable class for backgrounds
   background-color: $yellow;
-  color: $carbon;
+  color: $secondary;
   text-decoration: none;
   box-shadow: 0 0 0 2px $yellow;
 }
@@ -36,7 +36,7 @@ main a {
 /* External Link */
 
 .external-link {
-	color: $carbon;
+	color: $secondary;
 	&:hover {
 		color: $primary;
 	}
@@ -86,7 +86,7 @@ main a {
     @include rem(font-size, 14);
 
     &:hover, &:focus {
-      color: $carbon;
+      color: $secondary;
     }
   }
 
@@ -109,7 +109,7 @@ main a {
       @include rem(font-size, 14);
 
       &:hover, &:focus {
-       color: $carbon;
+       color: $secondary;
       }
     }
 
@@ -120,7 +120,7 @@ main a {
         outline: none !important;
         
         i {
-          color: $carbon;
+          color: $secondary;
         }
       }
       
