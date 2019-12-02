@@ -1,24 +1,9 @@
 
 //ACCORDION VANILLA 
-.accordionWrapper h3,
-.accordionWrapper h4,
-.accordionWrapper h5 {
-	margin-bottom: 0;
-}
-
-.accordionItemHeading a,
-.accordionItemHeading a:hover,
-.accordionItemHeading a:visited,
-.accordionItemHeading a:visited:hover,
-.accordionItemHeading a:visited .fa
-.accordionItemHeading a:visited:hover .fa {
-	color: $white !important;
-	text-decoration: none !important;
-}
-
-.accordionItem {
-	overflow: hidden;
-	margin-bottom: 0.625rem !important; //10px
+.accordionWrapper {
+	h3, h4, h5 {
+		margin-bottom: 0;
+	}
 }
 
 .accordionItemHeading {
@@ -26,6 +11,31 @@
 	padding: $input-btn-padding-y $input-btn-padding-x;
 	background: $indigo;
 	color: $white;
+
+	a, 
+	a:hover,
+	a:visited,
+	a:visited:hover,
+	a:visited .fa,
+	a:visited:hover .fa,
+	 {
+		color: $white !important;
+		text-decoration: none !important;
+	}
+
+	a {
+		.fa {
+			font-size: $input-btn-font-size-sm;
+			color: $white;
+			padding-left: 0;
+			padding-right: 0.625rem; //10px
+		}
+	}
+}
+
+.accordionItem {
+	overflow: hidden;
+	margin-bottom: 0.625rem !important; //10px
 }
 
 .close .accordionItemContent {
@@ -42,11 +52,4 @@
 	margin: 0px;
 	background-color: $purple;
 	color: $white;
-}
-
-.accordionItemHeading a .fa {
-	font-size: $input-btn-font-size-sm;
-	color: $white;
-	padding-left: 0;
-	padding-right: 0.625rem; //10px
 }

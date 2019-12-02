@@ -6,7 +6,7 @@
   ul, ol {
     @include rem(margin-left, 35); // deals with native lists breaking out of the grid
     margin-bottom: 0;
-    padding:0;
+    padding: 0 15px 0 0;
     column-count: 1;
  
     @include media-breakpoint-up(sm) {
@@ -45,7 +45,7 @@
           position: absolute;
           left: 0;
           display: block;
-          content: "-";
+          content: '-';
         }
       }
     }

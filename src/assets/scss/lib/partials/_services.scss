@@ -18,7 +18,7 @@
 
     .services--feature-title {
       display: block;
-      color: $carbon;
+      color: $secondary;
       @include rem(font-size, 17);
       @include rem(line-height, 24);
       @include rem(margin-top, 5);
@@ -62,8 +62,6 @@
       line-height: 1.1;
       a {
         display: inline-block;
-        text-decoration: underline;
-        color: $carbon;
         @include rem(font-size, 24);
       }
     }
@@ -94,7 +92,7 @@
         }
         &:before {
           @include media-breakpoint-up(sm) {
-            content: "\f054";
+            content: '\f054';
             position: absolute;
             left: 0;
             top: 2px;
@@ -113,9 +111,8 @@
           color: $blue;
           @include rem(font-size, 17);
           
-          &:hover {
-            color: $carbon;
-            text-decoration: underline;
+          &:hover, &:focus {
+            color: $secondary;
           }
         }
       } 

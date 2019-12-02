@@ -57,9 +57,7 @@ $success: #338800 !default;
 $danger: #ae1100 !default;
 $light: #ededed !default;
 $dark: #444444 !default;
-$visited: #ad52ad !default;
-
-
+$visited: $secondary !default;
 
 
 // Site colours
@@ -71,14 +69,10 @@ $secondary: $carbon !default; // used to override the BS and formio colours appl
 // grays
 $gray-primary: $gray;
 $gray-secondary: $gray-dark;
-$gray-tertiary: $carbon;
+$gray-tertiary: $secondary;
 $gray-quaternary: $graphite;
 $gray-quinary: $stonewash;
 $gray-senary: $gray-tint;
-//$gray-septenary:;
-// $gray-octonary: ;
-// $gray-nonary: ;
-// $gray-denary: ;
 
 
 $breadcrumb: $gray-tertiary;
@@ -87,17 +81,19 @@ $focus: 4px solid $yellow;
 
 // Theme colours - SASS Map our varieables above, to 'theme-colours'
 $theme-colors: ( // Bootstrap colours
-"primary": $purple, "secondary": $green, "success": $success, "info": $carbon, "warning": $orange, "danger": $red, "light": $light, "dark": $dark, // Map additional colours to 'theme colours'
-"carbon": $carbon, "graphite": $graphite, "stonewash": $stonewash, "gray-tint": $gray-tint, "purple-tint": $purple-tint, "green-tint": $green-tint, "indigo-tint": $indigo-tint, // Map additional colours to 'theme colours' - can be used for backgrounds for example '.bg-green'
-"blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "gray": $gray, "gray-dark": $gray-dark, "white": $white, "visited": $visited, );
+'primary': $primary, 'secondary': $secondary, 'success': $success, 'info': $carbon, 'warning': $orange, 'danger': $red, 'light': $light, 'dark': $dark, // Map additional colours to 'theme colours'
+'carbon': $carbon, 'graphite': $graphite, 'stonewash': $stonewash, 'gray-tint': $gray-tint, 'purple-tint': $purple-tint, 'green-tint': $green-tint, 'indigo-tint': $indigo-tint, // Map additional colours to 'theme colours' - can be used for backgrounds for example '.bg-green'
+'blue': $blue, 'indigo': $indigo, 'purple': $purple, 'pink': $pink, 'red': $red, 'orange': $orange, 'yellow': $yellow, 'green': $green, 'teal': $teal, 'cyan': $cyan, 'gray': $gray, 'gray-dark': $gray-dark, 'white': $white, 'visited': $visited, );
 
 
 $link-hover-color: $indigo;
 
 // Background colours
-$body-bg: #ffffff !default;
-$body-color: #121212 !default;
-$breadcrumb-bg: #FFF !default;
+$body-bg: $white !default;
+$body-color: $secondary !default;
+$breadcrumb-bg: $white !default;
+
+
 // Set all border radius to 0 by default
 $border-radius: 0 !default;
 $border-radius-lg: 0 !default;
@@ -195,7 +191,7 @@ $alert-color-level: 0 !default;
 $alert-link-font-weight: 700 !default;
 $alert-font-weight: 700 !default;
 //Breadcrumb divider
-$breadcrumb-divider: quote(">") !default;
+$breadcrumb-divider: quote('>') !default;
 // Form validation
 $form-feedback-valid-color: $success !default;
 $form-feedback-invalid-color: $danger !default;

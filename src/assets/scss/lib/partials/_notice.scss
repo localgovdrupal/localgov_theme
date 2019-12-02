@@ -2,7 +2,7 @@
   p {
     @include rem(font-size, 15);
     @include rem(line-height, 15);
-    color: $carbon;
+    color: $secondary;
   }
   a {
     @include rem(font-size, 15);

@@ -1,78 +1,83 @@
 .alert-bar {
-  background: $yellow;
+	background: $yellow;
 
-  DIV > DIV {
+	DIV > DIV {
 
-      > DIV {
+		> DIV {
 
-        p {
-          position: relative;
-          @include rem(padding-left, 40);
+			p {
+			  position: relative;
+			  @include rem(padding-left, 40);
 
-          &:before {
-            position: absolute;
-            left: 0;
-            top: -9px;
-            font-family: $font-family-icons; 
-            font-weight: 900; 
-            content: "\f06a";
-            @include rem(font-size, 30);
-            margin: 0;
-            padding: 0;
-          }
-        }
-      }
+				&:before {
+					position: absolute;
+					left: 0;
+					top: -9px;
+					@include rem(font-size, 30);
+					font-family: $font-family-icons; 
+					font-weight: 900; 
+					content: '\f06a';
+					margin: 0;
+					padding: 0;
+				}
+			}
+	  	}
 
-      > p {
-        margin: 0;
-  		  @include rem(font-size, 17);
-        
-      }
-      a {
-        color: $carbon;
+		> p {
+			margin: 0;
+			@include rem(font-size, 17);
+		}
 
-        &:hover, &:focus {
-          background: $white;
-          color: $carbon;
-        }
-      }
-  }
+	  	a {
+			color: $secondary;
+
+			&:hover, &:focus {
+		  		background: $white;
+		  		color: $secondary;
+			}
+		}
+	}
 }
 
+/* Pseudo icons for wysiwig added alerts */
 
-/*Pseudo icons for wysiwig added alerts*/
 .alert {
-  position: relative;
-  width: 100%; // always go full width 
-  padding-left: 2.75rem; // indent content to allow for absolute icon
+	position: relative;
+	width: 100%; // always go full width 
+	padding-left: 2.75rem; // indent content to allow for absolute icon
 
-  &:before {
-    position: absolute;
-    left: 1rem;
-  }
+	&:before {
+		position: absolute;
+		left: 1rem;
+	}
 }
+
 .alert-success {
-  &:before {
-     font-family: $font-family-icons; font-weight: 900; content: "\f00c";
-  }
+	&:before {
+		font-family: $font-family-icons; font-weight: 900; content: '\f00c';
+	}
 }
+
 .alert-info {
-  &:before {
-     font-family: $font-family-icons; font-weight: 900; content: "\f129";
-  }
+	&:before {
+		font-family: $font-family-icons; font-weight: 900; content: '\f129';
+	}
 }
+
 .alert-primary {
-  &:before {
-     font-family: $font-family-icons; font-weight: 900; content: "\f071";
-  }
+	&:before {
+		font-family: $font-family-icons; font-weight: 900; content: '\f071';
+	}
 }
+
 .alert-danger {
-  &:before {
-     font-family: $font-family-icons; font-weight: 900; content: "\f071";
-  }
+	&:before {
+		font-family: $font-family-icons; font-weight: 900; content: '\f071';
+	}
 }
+
 .alert-fail {
-  &:before {
-     font-family: $font-family-icons; font-weight: 900; content: "\f00d";
-  }
+	&:before {
+		font-family: $font-family-icons; font-weight: 900; content: '\f00d';
+	}
 }

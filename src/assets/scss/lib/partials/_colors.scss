@@ -1,20 +1,5 @@
 /* /// CUSTOM CLASSES USING THEME COLOURS /// */
 
-//Visited links - Indigo at 60% opacity
-// main section a:visited,
-// main section a:visited .fa,
-// .sidebar a:visited,
-// .sidebar a:visited .fa,
-// main section a:visited i,
-// .sidebar a:visited i {
-// 	color: $visited !important;
-// }
-
-main section a:visited:hover,
-.sidebar a:visited:hover {
-	color: $indigo !important;
-}
-
 .success {
 	color: $success;
 }

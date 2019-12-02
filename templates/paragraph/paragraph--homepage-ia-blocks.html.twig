@@ -40,13 +40,17 @@
 #}
 
 {% if promoted %}
-  <div class="services--business services--list-block mb-5 col-12">
-    <h2><a href="{{ field_link }}">{{ content.field_title }}</a></h2>
-    {{ list }}
-  </div>
+<div class="services--business services--list-block mb-5 col-12">
+	<h2>
+		<a href="{{ field_link }}">{{ content.field_title }}</a>
+	</h2>
+	{{ list }}
+</div>
 {% else %}
-<div class="services--list-block mt-sm-4 col-sm-6 col-md-4">
-  <h2><a href="{{ field_link }}">{{ content.field_title }}</a></h2>
-  {{ list }}
+<div class="services--list-block mt-4 col-sm-6 col-md-4">
+	<h2>
+		<a href="{{ field_link }}">{{ content.field_title }}</a>
+	</h2>
+	{{ list }}
 </div>
 {% endif %}

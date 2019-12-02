@@ -113,7 +113,7 @@ h6,
   font-size: 20px;
 }
 .blockquote-footer:before {
-  content: "\2014 \00A0";
+  content: '\2014 \00A0';
 }
 
 .breadcrumb {
@@ -126,7 +126,7 @@ h6,
 .breadcrumb-item + li:before {
   padding: 0 5px;
   color: #ccc;
-  content: "/\00a0";
+  content: '/\00a0';
 }
 .breadcrumb-item + .breadcrumb-item:before {
   display: inline-block;
@@ -339,14 +339,14 @@ fieldset[disabled] .btn {
 .carousel-control-next {
   display: none;
 }
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"],
-.radio input[type="radio"],
-.radio-inline input[type="radio"] {
+.checkbox input[type='checkbox'],
+.checkbox-inline input[type='checkbox'],
+.radio input[type='radio'],
+.radio-inline input[type='radio'] {
   margin-top: 4px;
 }
 .clearfix:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -466,7 +466,7 @@ fieldset[disabled] .btn {
 .dropdown-toggle:after {
   margin-right: 4px;
   margin-left: 4px;
-  content: "▼";
+  content: '▼';
 }
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
@@ -924,7 +924,7 @@ fieldset[disabled] .btn {
 }
 
 .pagnination:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -1120,7 +1120,7 @@ fieldset[disabled] .btn {
 /** embed responsive **/
 .embed-responsive:before {
   display: block;
-  content: "";
+  content: '';
 }
 .embed-responsive-21by9:before {
   padding-top: 42.857143%;

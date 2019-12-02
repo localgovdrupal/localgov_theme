@@ -119,25 +119,6 @@
     }
 }
 
-// .servicehub--link-slice {
-//     width: 100%;
-//     @include rem(margin-bottom, 20);
-
-//     h2 {
-//         font-size: $h3-font-size;
-//     }
-// }
-
-// .servicehub--link-slice [class*="col-"] {
-//   @include rem(padding-top, 0);
-//   @include rem(padding-bottom, 0);
-// }
-
-// .servicehub--link-list {
-//     @include rem(margin-right, 50);
-    
-// }
-
 .servicehub--more {
     border-bottom: $gray-tint;
     @include rem(margin-bottom, 20);
@@ -153,7 +134,7 @@
     }
 }
 
-.servicehub--more [class*="col-"] {
+.servicehub--more [class*='col-'] {
   @include rem(padding-top, 0);
   @include rem(padding-bottom, 0);
 }
@@ -246,7 +227,7 @@
 
 }
 
-.servicehub--contact [class*="col-"], .contact-top [class*="col-"], .cta-pull [class*="col-"] {
+.servicehub--contact [class*='col-'], .contact-top [class*='col-'], .cta-pull [class*='col-'] {
   @include rem(padding-top, 0);
   @include rem(padding-bottom, 0);
 }
