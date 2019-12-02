@@ -32,3 +32,11 @@ table {
 		line-height: 1.9rem;
 	}
 }
+
+/* remove left hand border on google search results causing content to indent on hover */
+.gsc-webResult.gsc-result {
+	border: none !important;
+	&:hover, &:focus {
+		border: none !important;
+	}
+}
