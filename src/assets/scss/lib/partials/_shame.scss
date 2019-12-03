@@ -5,38 +5,48 @@
    of '.table' */
 
 table {
-	@extend .table;
+  @extend .table;
 }
 
 /* The BS '.img-fluid' class alone doesnt set an image to go oversized when responding */
 
 .img-fluid { 
-	width: 100%;
-	
-	@include media-breakpoint-up(md) {
-		max-width: 100%;
-	}
+  width: 100%;
+  
+  @include media-breakpoint-up(md) {
+    max-width: 100%;
+  }
 }
 
 
 /*temp styling related to soft launch*/
 
 .beta-notice-sm, .notice {
-	display: none;
+  display: none;
 }
 
 
 /*remove gap between multi-line news headers background blocks on hover*/
 .news-list {
-	h4 {
-		line-height: 1.9rem;
-	}
+  h4 {
+    line-height: 1.9rem;
+  }
 }
 
 /* remove left hand border on google search results causing content to indent on hover */
 .gsc-webResult.gsc-result {
-	border: none !important;
-	&:hover, &:focus {
-		border: none !important;
-	}
+  border: none !important;
+  
+  &:hover, &:focus {
+    border: none !important;
+  }
+}
+
+/* iframe and video class to be dealt with later on */
+
+iframe.video{
+  width: 100%;
+  height: 350px;
+  border:0;
+  margin-bottom: 2rem; //or equivalent bs spacer class
 }
