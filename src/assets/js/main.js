@@ -162,36 +162,7 @@
 			}
 		  }
 		});
-/*         // accessibility version for tab detection
-        $('body').keyup(function (e) {
-          var code = e.keyCode || e.which;
-          if (code == '9' && $('#services--expand-link:focus').length) {
 
-            if ($(homeExpandServicesLink).hasClass('show')) {
-
-              // replace the icon
-              $(homeExpandServicesLink).find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
-              var $i = $(homeExpandServicesLink).find('i');
-              // replace the text
-              $(homeExpandServicesLink).text('Show fewer services');
-              $(homeExpandServicesLink).prepend($i);
-              $(homeExpandServicesLink).removeClass('show');
-              $(homeExpandServicesContainer).fadeIn();
-              $('#services--expand-container .services--list-block:first-child h3 a').focus();
-
-            }
-            else {
-              // replace the icon
-              $(homeExpandServicesLink).find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
-              var $i = $(homeExpandServicesLink).find('i');
-              // replace the text
-              $(homeExpandServicesLink).text('Show more services');
-              $(homeExpandServicesLink).prepend($i);
-              $(homeExpandServicesLink).addClass('show');
-              $(homeExpandServicesContainer).fadeOut();
-            }
-          }
-        }); */
       });
     }
 

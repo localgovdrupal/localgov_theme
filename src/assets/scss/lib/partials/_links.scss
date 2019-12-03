@@ -20,8 +20,7 @@ a {
     @extend .access-background;
 
     > img {
-      @extend .focus-outline;
-      outline-offset: .1875rem;
+      @include outline(.1875rem, .1875rem, $yellow);
     }
   }
 
@@ -36,28 +35,28 @@ main a {
 /* External Link */
 
 .external-link {
-	color: $secondary;
-	&:hover {
-		color: $primary;
-	}
-	&:focus {
-		color: $primary;
-		@include rem(padding, 5, 5, 10, 0);
-	}
-	&:after {
-		font-family: $font-family-icons;
-		content: '\f35d';
-		font-weight: 900;
-		display: inline-block;
-		@include rem(font-size, 13);
-		@include rem(padding-left, 5);
-		// ie bug fix for removing before/after underline
-		text-decoration: underline;
-	}
-	// ie bug fix for removing before/after underline
-	&:after {
-		text-decoration: none;
-	}
+  color: $secondary;
+  &:hover {
+    color: $primary;
+  }
+  &:focus {
+    color: $primary;
+    @include rem(padding, 5, 5, 10, 0);
+  }
+  &:after {
+    font-family: $font-family-icons;
+    content: '\f35d';
+    font-weight: 900;
+    display: inline-block;
+    @include rem(font-size, 13);
+    @include rem(padding-left, 5);
+    // ie bug fix for removing before/after underline
+    text-decoration: underline;
+  }
+  // ie bug fix for removing before/after underline
+  &:after {
+    text-decoration: none;
+  }
 }
 
 /* Action Link */
@@ -100,7 +99,7 @@ main a {
     cursor: pointer;
     
     &:hover, &:focus {
-      @extend .focus-outline;
+      @include outline(.1875rem, -.1875rem, $yellow);
     }
 
     i  {
@@ -204,5 +203,3 @@ main a {
     line-height: 2rem; // fix for text cutting off on focus
   }
 }
-
-

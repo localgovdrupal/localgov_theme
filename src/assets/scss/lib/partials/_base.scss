@@ -111,7 +111,7 @@ select:focus,
 button:focus,
 .show-outline
  {
- 	@extend .focus-outline;
+ 	@include outline(.1875rem, -.1875rem, $yellow);
 }
 
 b,

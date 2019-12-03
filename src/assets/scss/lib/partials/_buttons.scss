@@ -26,7 +26,7 @@ aside .btn .fa,
 	&:focus {
 		color: $white;
 		background: $indigo;
-		@extend .focus-outline;
+		@include outline(.1875rem, -.1875rem, $yellow);
 	}
 
 	&.btn-secondary {
@@ -82,7 +82,7 @@ aside .btn .fa,
   }
   
   &:focus {
-    @extend .focus-outline;
+    @include outline(.1875rem, -.1875rem, $yellow);
 
     span {
       color: $secondary;

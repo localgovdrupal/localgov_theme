@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var scsslint = require('gulp-scss-lint');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var changed = require('gulp-changed');
@@ -19,6 +20,11 @@ gulp.task('clean', function(){
 	del.sync(['dist/'])
 
 });
+ 
+gulp.task('scss-lint', function() {
+  return gulp.src('/scss/*.scss')
+    .pipe(scsslint());
+});
 
 // compile sass and autoprefix
 gulp.task('sass', function(){
@@ -37,10 +43,7 @@ gulp.task('sass', function(){
 	return gulp.src('./src/assets/scss/**/*.scss')
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
-			cascade: false
-    }))
+		.pipe(autoprefixer())
     // .pipe(cleanCSS())
 		.pipe(gulp.dest('./dist/assets/css/'))
     .pipe(browserSync.stream())

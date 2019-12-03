@@ -39,3 +39,8 @@ $rem-base: 16px;
   width: -webkit-calc($widthVarOne - $widthVarThree);
   width: calc($widthVarOne - $widthVarThree);
 }
+
+@mixin outline($outsize, $outoff, $outcolor) { // use this to visually outline elements
+  outline: $outsize solid $outcolor !important;
+  outline-offset: $outoff;
+}
