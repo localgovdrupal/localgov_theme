@@ -16,7 +16,7 @@
         display: inline-block;
     }
     p {
-        font-weight: bold;
+        font-weight: $font-bold;
         display: inline;
     }
     span {
@@ -52,18 +52,18 @@
             font-weight: 600;
             @include rem(padding-right, 20);
 
-		}
+    }
 
     }
     li {
         display: table-cell;
         &:first-child {
             @include rem(width, 150);
-            font-weight: bold;
+            font-weight: $font-bold;
         }
     }
     .read-more {
-        font-weight: bold;
+        font-weight: $font-bold;
         text-decoration: underline;
         white-space: nowrap;
     }
@@ -92,7 +92,7 @@
     h3 {
         margin: 0;
         @include rem(font-size, 21);
-        font-weight: 700;
+        font-weight: $font-bold;
         line-height: 1.1;
 
     }
@@ -156,7 +156,7 @@
             line-height: 1;
         }
         ul {
-            font-weight: 700;
+            font-weight: $font-bold;
             list-style: none;
             margin-left: 0;
             padding-left: 0;
@@ -193,7 +193,7 @@
         }
         h3 {
             margin: 0;
-            font-weight: 700;
+            font-weight: $font-bold;
             @include rem(font-size, 17);
             @include rem(line-height, 25);
         }
@@ -205,7 +205,7 @@
 
     }
     .contact-title {
-        font-weight: 700;
+        font-weight: $font-bold;
         text-decoration: none;
     }
     .contact-address {

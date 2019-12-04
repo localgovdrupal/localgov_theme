@@ -76,7 +76,7 @@ $gray-senary: $gray-tint;
 
 
 $breadcrumb: $gray-tertiary;
-$focus: 4px solid $yellow; 
+$focus: $yellow; 
 
 
 // Theme colours - SASS Map our varieables above, to 'theme-colours'
@@ -99,6 +99,11 @@ $border-radius: 0 !default;
 $border-radius-lg: 0 !default;
 $border-radius-sm: 0 !default;
 
+// Font weights
+$font-bold: 700;
+$font-normal: 400;
+$font-thin: 300;
+
 // Fonts
 $font-family-base:'Source Sans Pro', Arial, Helvetica, sans-serif !default; // BS font variable
 $font-family-sanserif:'Source Sans Pro', Arial, Helvetica, sans-serif !default; // BS font variable
@@ -107,7 +112,8 @@ $font-family-icons: 'Font Awesome 5 Free' !default;
 $line-height-base: 1.5 !default;
 $headings-font-family: $font-family-secondary;
 $headings-line-height: 1.1 !default;
-$headings-font-weight: bold !default; // for fallbacks only
+$headings-font-weight: $font-bold !default; // for fallbacks only
+
 // Heading sizes
 $h1-font-size: 2.375rem !default; //38px
 $h2-font-size: 2rem !default; //32px
@@ -115,7 +121,7 @@ $h3-font-size: 1.625rem !default; //26px
 $h4-font-size: 1.5rem !default; //24px
 $h5-font-size: 1.375rem !default; //22px
 $h6-font-size: 1.25rem !default; //20px
-$btn-font-weight: bold !default; // for fallbacks only
+$btn-font-weight: $font-bold !default; // for fallbacks only
 
 //STANDARD BUTTONS
 $input-btn-padding-y: .5rem !default; //8px
@@ -188,8 +194,8 @@ $alert-border-width: .1875rem !default; //3px
 $alert-bg-level: 0 !default;
 $alert-border-level: 0 !default;
 $alert-color-level: 0 !default;
-$alert-link-font-weight: 700 !default;
-$alert-font-weight: 700 !default;
+$alert-link-font-weight: $font-bold !default;
+$alert-font-weight: $font-bold !default;
 //Breadcrumb divider
 $breadcrumb-divider: quote('>') !default;
 // Form validation

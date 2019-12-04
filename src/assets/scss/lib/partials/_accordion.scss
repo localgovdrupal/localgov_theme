@@ -1,55 +1,55 @@
 
 //ACCORDION VANILLA 
 .accordionWrapper {
-	h3, h4, h5 {
-		margin-bottom: 0;
-	}
+  h3, h4, h5 {
+    margin-bottom: 0;
+  }
 }
 
 .accordionItemHeading {
-	cursor: pointer;
-	padding: $input-btn-padding-y $input-btn-padding-x;
-	background: $indigo;
-	color: $white;
+  cursor: pointer;
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  background: $indigo;
+  color: $white;
 
-	a, 
-	a:hover,
-	a:visited,
-	a:visited:hover,
-	a:visited .fa,
-	a:visited:hover .fa,
-	 {
-		color: $white !important;
-		text-decoration: none !important;
-	}
+  a, 
+  a:hover,
+  a:visited,
+  a:visited:hover,
+  a:visited .fa,
+  a:visited:hover .fa,
+   {
+    color: $white !important;
+    text-decoration: none !important;
+  }
 
-	a {
-		.fa {
-			font-size: $input-btn-font-size-sm;
-			color: $white;
-			padding-left: 0;
-			padding-right: 0.625rem; //10px
-		}
-	}
+  a {
+    .fa {
+      font-size: $input-btn-font-size-sm;
+      color: $white;
+      padding-left: 0;
+      padding-right: 0.625rem; //10px
+    }
+  }
 }
 
 .accordionItem {
-	overflow: hidden;
-	margin-bottom: 0.625rem !important; //10px
+  overflow: hidden;
+  margin-bottom: 0.625rem !important; //10px
 }
 
 .close .accordionItemContent {
-	float: left;
-	display: none;
+  float: left;
+  display: none;
 }
 
 .open .accordionItemContent,
 .open .accordionItemContent:focus-within {
-	display: block;
+  display: block;
 }
 
 .open .accordionItemHeading {
-	margin: 0px;
-	background-color: $purple;
-	color: $white;
+  margin: 0px;
+  background-color: $purple;
+  color: $white;
 }

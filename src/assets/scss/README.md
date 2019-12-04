@@ -13,19 +13,21 @@ More info in each folder's readme...
 
 Filename          | Purpose
 ----------------- | ----------------------------------------------------------------------
-`base`            | A collection of architecturally high-level styles for basic elements.
-`component`       | Styles for components that make up our designs
-`layout`          | Styles for page layout, how components layout on pages, etc.
-`libraries`       | SASS resources, variables, mixins, etc
-`skin`            | Styles for color schemes (if applicable to project)
+`lib`             | A collection of architecturally high-level styles for basic elements 
+                  | SASS resources, variables, mixins, etc. Styles for color schemes.
+`lib/partials`    | Styles for components and layout that make up the theme design.
+`lib/vendor`      | Styles relating to third party stuff.
 
 ## When creating new `.scss` files
 
-Not all files have to be partials, if a piece of CSS is uncommon, or part of the admin experience it's better to make it a separate file and include it as a library.
+Not all files have to be partials, if a piece of CSS is uncommon, or part of the admin area it's better to make it a separate file and include it as a library.
 
-The build will aggregate partials into `styles.css` and compile non-partial files separately, in an identical folder structure under CSS.
+* As an example, we have an override.css file here `css/override.css`.
 
-Unfortunately, any time a new non-partial file is made you will need to restart the watch script so the build process can find it.
+Dist Process :
+
+* Run 'gulp build'
+* The build will aggregate partials into `dist/assets/css/lib/main.css`.
 
 ## Basics
 
@@ -54,9 +56,6 @@ E.g.:
 
 ### Selector Nesting
 
-Please try to limit the nesting of selectors as much as possible. Nesting tends
-to turn into a spaghetti mess of code and specificity issues.
-
 * A newline should precede and follow a selector being nested.
 * Place nested selectors after the parent's properties/includes/extends/etc...
 
@@ -71,6 +70,58 @@ E.g.:
     text-align: center;
     border-radius: 5px;
     color: #cecece;
+  }
+
+}
+```
+
+### Media Queries and Breakpoints
+
+We use bootstrap media queries, imported into the scss using the following declarations:
+
+```
+Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+
+Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+
+Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+
+Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
+
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+
+```
+
+### Mixins, Nesting, and Breakpoints
+
+* When using mixins that act as containers for style declarations (such as `@include breakpoint()`), never nest a selector within the mixins brackets.
+* `@includes` etc... should be placed (when sensible) at the end of a selector's properties. Specifically, add any breakpoint mixins in order of progressive enhancement.
+
+E.g.:
+
+```scss
+.selector {
+  color: #ffffff;
+  background: #000000;
+  @extend %selector-to-extend;
+  @include element-invisible;
+  @include breakpoint(lima) {
+    color: #eeeeee;
+  }
+  @include breakpoint(papa) {
+    color: #cccccc;
+  }
+
+  .nested-selector {
+    // Nested selector content here.
+    // Notice the newlines.
   }
 
 }
@@ -101,36 +152,6 @@ Multiple selectors require a new line:
   background-color: rgba(0,0,0,.5);
   box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
 }
-
-### Mixins, Nesting, and You
-
-* When using mixins that act as containers for style declarations (such as `@include breakpoint()`), never nest a selector within the mixins brackets.
-* `@includes` etc... should be placed (when sensible) at the end of a selector's properties. Specifically, add any breakpoint mixins in order of progressive enhancement.
-
-E.g.:
-
-```scss
-.selector {
-  color: #ffffff;
-  background: #000000;
-  @extend %selector-to-extend;
-  @include element-invisible;
-  @include breakpoint(lima) {
-    color: #eeeeee;
-  }
-  @include breakpoint(papa) {
-    color: #cccccc;
-  }
-
-  .nested-selector {
-    // Nested selector content here.
-    // Notice the newlines.
-  }
-
-}
-```
-
-See breakpoint names and values in `core/_variables.scss`.
 
 ### Extending
 

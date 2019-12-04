@@ -1,12 +1,9 @@
-.focus-outline { // use this extendable class for outlines
-  outline: .1875rem solid $yellow !important; //3px
-  outline-offset: -.1875rem;
-}
+
 .access-background { // use this extendable class for backgrounds
-  background-color: $yellow;
+  background-color: $focus;
   color: $secondary;
   text-decoration: none;
-  box-shadow: 0 0 0 2px $yellow;
+  box-shadow: 0 0 0 2px $focus;
 }
 
 /*Accessible links*/
@@ -14,13 +11,13 @@
 a {
   color: $primary;
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: $font-bold;
 
   &:hover, &:focus {
     @extend .access-background;
 
     > img {
-      @include outline(.1875rem, .1875rem, $yellow);
+      @include outline(.1875rem, .1875rem, $focus);
     }
   }
 
@@ -67,7 +64,7 @@ main a {
 }
 .action-link {
   display: inline-block;
-  font-weight: bold;
+  font-weight: $font-bold;
   @include rem(font-size, 22);
 
   &:before {

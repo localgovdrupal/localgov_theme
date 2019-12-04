@@ -5,7 +5,7 @@
 
   h2 {
     @include rem(margin, 0, 0, 14, 0);
-    font-weight: 700;
+    font-weight: $font-bold;
     @include rem(font-size, 18);
     @include rem(line-height, 24);
   }
@@ -67,7 +67,7 @@
   }
 
   a {
-    font-weight: bold;
+    font-weight: $font-bold;
     text-decoration: none;
   }
 }
@@ -76,7 +76,7 @@
 
 .directories-results-search-term {
   color: $green;
-  font-weight: bold;
+  font-weight: $font-bold;
 }
 
 .hide-map,

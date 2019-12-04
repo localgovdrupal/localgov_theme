@@ -135,7 +135,7 @@
 
 /*The ACTIVE list item in the pagination progress bar*/
 .page-item.active span {
-    font-weight: 700;
+    font-weight: $font-bold;
     text-decoration: none;
     color: #880088;
 }

@@ -2,36 +2,36 @@
 //Nav links and big tab links mobile 
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
-    font-family: $font-family-secondary;
-    font-weight: bold; // for fallbacks only
-    white-space: nowrap;
-    font-size: 1.25rem; //20px  
+  font-family: $font-family-secondary;
+  font-weight: $font-bold; // for fallbacks only
+  white-space: nowrap;
+  font-size: 1.25rem; //20px  
+}
+
+// Main navigation logo
+.navbar-dark.nav-vanilla .navbar-brand {
+  margin-right: 1.125rem; //18px
+  font-weight: $font-bold; //For fallback
+  font-size: unset; // we have an image here and the bs font size affects the spacing
+  //display: contents; // fix for BS container size bug causing wrapping of the toggler in mobile
+  width: 35%;
+  min-width: 150px;
+
+  @include media-breakpoint-up(sm) {
+    width: 25%;
+  }
+  @include media-breakpoint-up(md) {
+    width: 16%;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 20%;
+  }
 }
 
 // Main navigation logo
 .navbar-dark.nav-vanilla .navbar-brand {
     margin-right: 1.125rem; //18px
-    font-weight: bold; //For fallback
-    font-size: unset; // we have an image here and the bs font size affects the spacing
-    //display: contents; // fix for BS container size bug causing wrapping of the toggler in mobile
-    width: 35%;
-    min-width: 150px;
-
-    @include media-breakpoint-up(sm) {
-        width: 25%;
-    }
-    @include media-breakpoint-up(md) {
-        width: 16%;
-    }
-    @include media-breakpoint-up(lg) {
-        width: 20%;
-    }
-}
-
-// Main navigation logo
-.navbar-dark.nav-vanilla .navbar-brand {
-    margin-right: 1.125rem; //18px
-    font-weight: bold; //For fallback
+    font-weight: $font-bold; //For fallback
 }
 
 //Nav links mobile
