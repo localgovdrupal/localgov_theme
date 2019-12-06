@@ -49,14 +49,14 @@ main ol,
   padding-right: ($spacer * 1.5);
 }
 
-// add top margin to header sin the page but not the first h2 as that will be at the top of the block
-// .page main h2:not(first-child),
-// .page main h3,
-// .page main h4,
-// .page main h5,
-// .page main h6 {
-//  margin-top: 3rem;
-// }
+//add top margin to headers in the page but not the first h2 as that will be at the top of the block
+.page h2:not(first-child),
+.page h3,
+.page h4,
+.page h5,
+.page h6 {
+ margin-top: 3rem;
+}
 
 section {
   margin-bottom: ($spacer * 2.5);
@@ -144,10 +144,9 @@ hr {
 mark {
   background: none;
   color: $success;
-  //color: $teal;
 }
 
-//Icon padding right main and sidebars
+//Icon padding right page and sidebars
 main .fa,
 main li .fa,
 .sidebar li .fa,
@@ -163,11 +162,11 @@ main i {
   font-size: 1.25rem; //20px
 }
 
-.new-tag{
+.new-tag {
   font-size: .9375rem; //15px
   line-height: 0.875rem; //14px
 }
-.new-tag span{
+.new-tag span {
   font-weight: $font-bold;
   background: $primary;
   padding:  0 .1875rem; //2px/3px
@@ -176,7 +175,7 @@ main i {
   color: $white;
 }
 
-.new-tag a{
+.new-tag a {
   text-decoration: underline;
 }
 
@@ -279,9 +278,10 @@ main i {
     opacity: 1;
   }
 }
+
 @include media-breakpoint-up(lg) {
   .sliding-popup-top {
-  text-align: right; // right align the cookies button
+    text-align: right; // right align the cookies button
   }
 }
 

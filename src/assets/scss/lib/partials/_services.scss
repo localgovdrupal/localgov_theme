@@ -15,6 +15,7 @@
     @include rem(padding, 5);
     background: transparent;
     box-shadow: none;
+    font-weight: $font-normal;
 
     .services--feature-title {
       display: block;
@@ -44,7 +45,7 @@
   @include rem(width, 47);
   @include rem(height, 47);
   @include rem(line-height, 47);
-  color: $gray-dark;
+  color: $secondary;
 }
 
 
@@ -63,6 +64,7 @@
       a {
         display: inline-block;
         @include rem(font-size, 24);
+        color: $secondary;
       }
     }
     ul {
@@ -97,8 +99,8 @@
             left: 0;
             top: 2px;
             font-family: $font-family-icons;
-            font-weight: 900;
-            color: $green;
+            font-weight: $fa-font-weight;
+            color: $tertiary;
             @include rem(font-size, 13);
             @include rem(margin-right, 5);
 

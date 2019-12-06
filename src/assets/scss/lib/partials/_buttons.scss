@@ -12,7 +12,7 @@ aside .btn .fa,
 .sidebar .btn .fa,
 .cookiealert .btn .fa {
   font-size: 85%;
-  color: $yellow;
+  color: $button-icons;
 }
 
 //Button hover
@@ -105,7 +105,7 @@ aside .btn .fa,
       align-items: center;
       font-family: $font-family-icons;
       content: '\f054';
-      font-weight: 900;
+      font-weight: $fa-font-weight;
       @include rem(font-size, 20);
       @include rem(margin-top, 2);
   }
@@ -123,13 +123,13 @@ aside .btn .fa,
 
 /* Link Button Modifiers */
 
-.link-button-green, .cta-green {
-    background-color: $green;
+.link-button-green, .link-button-primary, .cta-green {
+    background-color: $link-button-primary;
     span, &:after {
       color: $secondary;
     }
     &:hover, &:focus {
-        background-color: $teal;
+        background-color: $link-button-primary-focus;
         
       span, &:after {
         color: $white;
@@ -137,17 +137,17 @@ aside .btn .fa,
     }
 }
 
-.link-button-blue, .cta-blue {
-    background-color: $blue;
+.link-button-blue, .link-button-secondary, .cta-blue {
+    background-color: $link-button-secondary;
     &:hover, &:focus {
-        background-color: $cyan;
+        background-color: $link-button-secondary-focus;
     }
 }
 
-.link-button-orange, .cta-orange {
-    background-color: $orange;
+.link-button-orange, .link-button-tertiary, .cta-orange {
+    background-color: $link-button-tertiary;
     &:hover, &:focus {
-        background-color: $focus;
+        background-color: $link-button-tertiary-focus;
     }
 }
 
@@ -169,7 +169,9 @@ aside .btn .fa,
     }
 
     &:after {
+        font-family: $font-family-icons;
         content: '\f00d';
+        font-weight: $font-bold;
     }
 }
 

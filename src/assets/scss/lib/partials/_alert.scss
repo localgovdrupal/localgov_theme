@@ -1,5 +1,5 @@
 .alert-bar {
-  background: $yellow;
+  background: $alert-bar-bg;
 
   DIV > DIV {
 
@@ -15,7 +15,7 @@
           top: -9px;
           @include rem(font-size, 30);
           font-family: $font-family-icons; 
-          font-weight: 900; // some font awesome icons require a specific font weight
+          font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
           content: '\f06a';
           margin: 0;
           padding: 0;
@@ -60,7 +60,7 @@
  {
   &:before {
     font-family: $font-family-icons;
-    font-weight: 900; // some font awesome icons require a specific font weight
+    font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
   }
 }
 

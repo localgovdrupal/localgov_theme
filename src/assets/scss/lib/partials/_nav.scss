@@ -58,32 +58,30 @@
 
 //Switch arrows 
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
-    // .fa-chevron-up {
-    //  display: none;
-    // }
-    .fa-chevron-down {
-      transform: rotate( -360deg );            
-      transition: transform 150ms ease;
+  .fa-chevron-down {
+    transform: rotate( -360deg );            
+    transition: transform 150ms ease;
+  }
+  &.show-outline {
+    color: $focus;
+    
+    .dropdown-icon {
+      &.fa-chevron-down {
+        transform: rotate( -180deg );
+        transition: transform 150ms ease;
+      }
     }
-    &.show-outline {
-        color:$yellow;
-        .dropdown-icon {
-            &.fa-chevron-down {
-                transform: rotate( -180deg );            
-                transition: transform 150ms ease;
-            }
-        }
 
-        &:hover {
-            background: transparent;
-            color:$yellow;
-        }
+    &:hover {
+      background: transparent;
+      color: $focus;
     }
+  }
 }
 
 //Bigtabs tab link alignment
 .navbar-dark.nav-bigtabs .navbar-nav .nav-link {
-    text-align: center;
+  text-align: center;
 }
 
 //Bigtabs hover and focus
@@ -153,10 +151,6 @@
 }
 @include media-breakpoint-up(lg) {
 
-    //Set navbar dark padding to accomodate tab design
-    // .navbar-dark.nav-vanilla {
-    //     padding: .5rem 0;
-    // }
     //Set navbar link padding to accomodate tab design
     .navbar-dark.nav-vanilla .navbar-nav .nav-link {
         padding: 1rem 1.125rem; // 16/18px

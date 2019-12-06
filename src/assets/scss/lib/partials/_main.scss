@@ -1,13 +1,5 @@
 main {
 
-  h1, h4, h5, h6 {
-    margin-bottom: ($spacer * 1);
-  }
-
-  h2, h3 {
-    margin-bottom: ($spacer * 1.5);
-  }
-
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a  {
     color: $secondary;
     text-decoration: none;
@@ -20,6 +12,16 @@ main {
       }
     }
   }
+
+  h1, h4, h5, h6 {
+    margin-bottom: ($spacer * 1);
+  }
+
+  h2, h3 {
+    margin-bottom: ($spacer * 1.5);
+  }
+
+
 
   legend {
     margin-bottom: ($spacer * 1.5);

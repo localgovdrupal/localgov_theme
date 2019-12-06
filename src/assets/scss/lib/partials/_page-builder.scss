@@ -50,7 +50,7 @@
             @include rem(-moz-border-radius, 100);
             @include rem(border-radius, 100);
             font-family: $font-family-icons;
-            font-weight: 900;
+            font-weight: $fa-font-weight;
             color: $white;
             @include rem(font-size, 24);
         }
@@ -170,7 +170,7 @@
             &::before {
                 content: '\f054';
                 font-family: $font-family-icons;
-                font-weight: 900;
+                font-weight: $fa-font-weight;
                 @include rem(font-size, 13);
                 color: #F37021;
                 @include rem(margin-right, 5);

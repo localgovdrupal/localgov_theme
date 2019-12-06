@@ -13,26 +13,26 @@
       @include rem(height, 300);
     }
 
-    //.homepage--hero-inner {
-      .homepage--welcome {
-        @include rem(padding-top, 60);
-        h1 {
-          @include rem(letter-spacing, 0);
-          @include rem(font-size, 42);
-          @include media-breakpoint-up(sm) {
-            @include rem(font-size, 52);
-          }
-          color: $white;
-          line-height: 1.1;
-          font-weight: 800;
-          &:before {
-            content: 'Welcome to';
-            display: block;
-            @include rem(font-size, 24);
-            font-weight: 600;  
-          }
+    .homepage--welcome {
+      @include rem(padding-top, 60);
+
+      h1 {
+        @include rem(letter-spacing, 0);
+        @include rem(font-size, 42);
+        @include media-breakpoint-up(sm) {
+          @include rem(font-size, 52);
+        }
+        color: $white;
+        line-height: 1.1;
+        font-weight: $font-bold;
+        
+        &:before {
+          content: 'Welcome to';
+          display: block;
+          @include rem(font-size, 24);
+          font-weight: $font-bold;  
         }
       }
-    //}
+    }
   }
 }

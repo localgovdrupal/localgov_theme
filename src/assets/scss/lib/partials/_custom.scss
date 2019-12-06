@@ -1,196 +1,196 @@
-/* /// GARDEN WASTE /// */
-//Fix for right aligned link - back to dashboard
-.text-right {
-  padding-right: 0;
-}
+// /* /// GARDEN WASTE /// */
+// //Fix for right aligned link - back to dashboard
+// .text-right {
+//   padding-right: 0;
+// }
 
-//Dash items (grid)
-.dash-item {
-  margin-bottom: ($spacer * 2);
-}
+// //Dash items (grid)
+// .dash-item {
+//   margin-bottom: ($spacer * 2);
+// }
 
-.dash-item h3 {
-  font-size: $h5-font-size;
-  background: $primary;
-  color: $white;
-  padding: 0.3125rem 0.5rem; //5/8px
-}
+// .dash-item h3 {
+//   font-size: $h5-font-size;
+//   background: $primary;
+//   color: $white;
+//   padding: 0.3125rem 0.5rem; //5/8px
+// }
 
-//Right aligned image inside dash item
-.dash-item img,
-.gw-item img {
-  width: 100%;
-  height: auto;
-  border: .0625rem solid $gray !important; //1px
-}
+// //Right aligned image inside dash item
+// .dash-item img,
+// .gw-item img {
+//   width: 100%;
+//   height: auto;
+//   border: .0625rem solid $gray !important; //1px
+// }
 
-.dash-item p {
-  padding-right: 0;
-  margin-bottom: 0.3125rem; //5px
-}
+// .dash-item p {
+//   padding-right: 0;
+//   margin-bottom: 0.3125rem; //5px
+// }
 
-.dash-item p a .fa,
-.dash-item p a:visited .fa,
-.dash-item p a:visited:hover .fa {
-  color: $green !important;
-}
+// .dash-item p a .fa,
+// .dash-item p a:visited .fa,
+// .dash-item p a:visited:hover .fa {
+//   color: $tertiary !important;
+// }
 
-// Sections inside garden waste dash items
-.dash-item section {
-  margin-bottom: ($spacer * 1) !important;
-}
+// // Sections inside garden waste dash items
+// .dash-item section {
+//   margin-bottom: ($spacer * 1) !important;
+// }
 
-//Sections within garden waste item (2 col lists)
-.gw-item section {
-  margin-bottom: ($spacer * 3) !important;
-}
+// //Sections within garden waste item (2 col lists)
+// .gw-item section {
+//   margin-bottom: ($spacer * 3) !important;
+// }
 
-// Zoom links   
-.dash-item figcaption {
-  white-space: nowrap;
-}
+// // Zoom links   
+// .dash-item figcaption {
+//   white-space: nowrap;
+// }
 
-.dash-item figcaption .fa {
-  padding-right: 0.1875rem; //3px
-}
+// .dash-item figcaption .fa {
+//   padding-right: 0.1875rem; //3px
+// }
 
-.dash-item figcaption a .fa,
-.dash-item figcaption a:visited .fa,
-.dash-item figcaption a:visited:hover .fa {
-  color: $secondary !important;
-}
+// .dash-item figcaption a .fa,
+// .dash-item figcaption a:visited .fa,
+// .dash-item figcaption a:visited:hover .fa {
+//   color: $secondary !important;
+// }
 
-//Callout box content
-.callout h1,
-.callout h2,
-.callout h3,
-.callout h4,
-.callout h5,
-.callout h6,
-.callout p {
-  margin-bottom: ($spacer * 1);
-  padding-right: 0;
-}
+// //Callout box content
+// .callout h1,
+// .callout h2,
+// .callout h3,
+// .callout h4,
+// .callout h5,
+// .callout h6,
+// .callout p {
+//   margin-bottom: ($spacer * 1);
+//   padding-right: 0;
+// }
 
-.callout p:last-child {
-  margin-bottom: 0;
-}
-
-
-
-/* Other */
-
-.expand-link {
-  font-size: $h4-font-size;
-  color: $purple;
-  text-decoration: underline;
-  font-weight: $font-bold;
-}
-
-.expand-link:visited {
-  color: $purple !important;
-}
-
-.expand-link .fa,
-.expand-link:visited .fa,
-.expand-link:visited:hover .fa {
-  color: $green !important;
-}
-
-//Prevent icon side movement inside expand button
-.expand-link .fa,
-.expand-btn .fa {
-  padding-right: .5rem; //8px
-  padding-left: .5rem; //8px
-}
-
-/* /// Above 576px /// */
-
-@include media-breakpoint-up(sm) {
-  //Sections within garden waste item (2 col lists)
-  .gw-item section:first-child {
-    margin-bottom: 0 !important;
-  }
-  .gw-item section {
-    margin-bottom: 0 !important;
-  }
-}
-
-/* /// Gutter width = 30px Above 768px /// */
-
-@media (min-width: map-get($grid-breakpoints, md)) {
-  .row>.col,
-  .row>[class*='col-'] {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
+// .callout p:last-child {
+//   margin-bottom: 0;
+// }
 
 
-@include media-breakpoint-up(md) {
-  /* /// Global heading sizes/// */
-  h1 {
-    font-size: 2.875rem;
-  } //46px
-  h2 {
-    font-size: 2.125rem;
-  } //34px
-  h3 {
-    font-size: 1.75rem;
-  } //28px
-  //$h4-font-size: 1.5rem; //24px
-  h5 {
-    font-size: 1.375rem;
-  } //22px
-  h6 {
-    font-size: 1.25rem;
-  } //20px
-  // Global font sizes
-  main p,
-  main ul,
-  main ol {
-    font-size: 1.188rem; //19px
-  }
-  //Main header paragraph size
-  main header p {
-    font-size: 1.375rem; //22px
-  }
-  .breadcrumb-item {
-    font-size: 1rem;
-    color: $breadcrumb;
-  } //16px
-  //Sidebar and footer h2 sizes
-  .sidebar h2,
-  .footer h2 {
-    font-size: 1.75rem; //28px
-  }
-  .sidebar p,
-  .sidebar ul,
-  .sidebar ol {
-    font-size: 1.063rem; //17px
-  }
-  //Account bar style
-  .account-bar .fa {
-    padding-left: .625rem; //10px
-  }
-  .account-bar p {
-    font-size: 1.125rem; //18px
-    flex-wrap: nowrap;
-    margin-bottom: 1rem;
-  }
-  .account-bar div:last-child {
-    margin-bottom: 0;
-  }
-  .account-links {
-    justify-content: flex-end;
-  }
-  .account-links a {
-    padding-right: .625rem; //10px
-  }
- }
 
- @include media-breakpoint-up(lg) {
-   .cookiealert p {
-     font-size: 1.063rem; //17px
-   }
- }
+// /* Other */
+
+// .expand-link {
+//   font-size: $h4-font-size;
+//   color: $purple;
+//   text-decoration: underline;
+//   font-weight: $font-bold;
+// }
+
+// .expand-link:visited {
+//   color: $purple !important;
+// }
+
+// .expand-link .fa,
+// .expand-link:visited .fa,
+// .expand-link:visited:hover .fa {
+//   color: $tertiary !important;
+// }
+
+// //Prevent icon side movement inside expand button
+// .expand-link .fa,
+// .expand-btn .fa {
+//   padding-right: .5rem; //8px
+//   padding-left: .5rem; //8px
+// }
+
+// /* /// Above 576px /// */
+
+// @include media-breakpoint-up(sm) {
+//   //Sections within garden waste item (2 col lists)
+//   .gw-item section:first-child {
+//     margin-bottom: 0 !important;
+//   }
+//   .gw-item section {
+//     margin-bottom: 0 !important;
+//   }
+// }
+
+// /* /// Gutter width = 30px Above 768px /// */
+
+// @media (min-width: map-get($grid-breakpoints, md)) {
+//   .row>.col,
+//   .row>[class*='col-'] {
+//     padding-right: 15px;
+//     padding-left: 15px;
+//   }
+// }
+
+
+// @include media-breakpoint-up(md) {
+//   /* /// Global heading sizes/// */
+//   h1 {
+//     font-size: 2.875rem;
+//   } //46px
+//   h2 {
+//     font-size: 2.125rem;
+//   } //34px
+//   h3 {
+//     font-size: 1.75rem;
+//   } //28px
+//   //$h4-font-size: 1.5rem; //24px
+//   h5 {
+//     font-size: 1.375rem;
+//   } //22px
+//   h6 {
+//     font-size: 1.25rem;
+//   } //20px
+//   // Global font sizes
+//   main p,
+//   main ul,
+//   main ol {
+//     font-size: 1.188rem; //19px
+//   }
+//   //Main header paragraph size
+//   header p {
+//     font-size: 1.375rem; //22px
+//   }
+//   .breadcrumb-item {
+//     font-size: 1rem;
+//     color: $breadcrumb;
+//   } //16px
+//   //Sidebar and footer h2 sizes
+//   .sidebar h2,
+//   .footer h2 {
+//     font-size: 1.75rem; //28px
+//   }
+//   .sidebar p,
+//   .sidebar ul,
+//   .sidebar ol {
+//     font-size: 1.063rem; //17px
+//   }
+//   //Account bar style
+//   .account-bar .fa {
+//     padding-left: .625rem; //10px
+//   }
+//   .account-bar p {
+//     font-size: 1.125rem; //18px
+//     flex-wrap: nowrap;
+//     margin-bottom: 1rem;
+//   }
+//   .account-bar div:last-child {
+//     margin-bottom: 0;
+//   }
+//   .account-links {
+//     justify-content: flex-end;
+//   }
+//   .account-links a {
+//     padding-right: .625rem; //10px
+//   }
+//  }
+
+//  @include media-breakpoint-up(lg) {
+//    .cookiealert p {
+//      font-size: 1.063rem; //17px
+//    }
+//  }

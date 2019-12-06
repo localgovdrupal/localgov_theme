@@ -26,6 +26,10 @@
 
     };
 
+    $('.page a').filter(function() {
+       return this.hostname && this.hostname !== location.hostname;
+    }).addClass("external-link");
+
     $('.show-menu').click(function () {
       $('.header--expand').slideToggle();
       $('.show-menu').toggleClass('show-outline');
@@ -82,7 +86,6 @@
       });
 
       //set responsive mobile input field placeholder text
-
       $placeholder_short = "Search our site";
       $placeholder_long = "Search our site";
 

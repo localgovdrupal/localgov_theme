@@ -5,17 +5,16 @@
   background: $indigo;
   color: $white;
   font-size: $btn-font-size-sm;
+
+  &:hover {
+    background: $tertiary !important;
+
+    .fa {
+      color: $navbar-dark-toggler-border-color;
+    }
+  }
 }
 
-// Search icon button hover
-.icon-search:hover {
-  background: $green !important;
-}
-
-// Search icon button icon
-.icon-search:hover .fa {
-  color: $navbar-dark-toggler-border-color;
-}
 
 // Margin below nav and above search (mobile)
 .navbar-dark.nav-vanilla.navbar-nav {
@@ -38,7 +37,7 @@
     @include rem(font-size, 22);
     display: flex;
     align-items: center;
-    font-weight: 900;
+    font-weight: $font-weight-bold;
   }
 
   .input-group-prepend { // adapt bs input group to respond

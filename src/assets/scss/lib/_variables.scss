@@ -64,7 +64,7 @@ $visited: $secondary !default;
 
 $primary: $purple !default;
 $secondary: $carbon !default; // used to override the BS and formio colours applied as secondary
- 
+$tertiary: $green !default;
 
 // grays
 $gray-primary: $gray;
@@ -75,16 +75,19 @@ $gray-quinary: $stonewash;
 $gray-senary: $gray-tint;
 
 
-$breadcrumb: $gray-tertiary;
-$focus: $yellow; 
-
-
 // Theme colours - SASS Map our varieables above, to 'theme-colours'
 $theme-colors: ( // Bootstrap colours
 'primary': $primary, 'secondary': $secondary, 'success': $success, 'info': $carbon, 'warning': $orange, 'danger': $red, 'light': $light, 'dark': $dark, // Map additional colours to 'theme colours'
 'carbon': $carbon, 'graphite': $graphite, 'stonewash': $stonewash, 'gray-tint': $gray-tint, 'purple-tint': $purple-tint, 'green-tint': $green-tint, 'indigo-tint': $indigo-tint, // Map additional colours to 'theme colours' - can be used for backgrounds for example '.bg-green'
 'blue': $blue, 'indigo': $indigo, 'purple': $purple, 'pink': $pink, 'red': $red, 'orange': $orange, 'yellow': $yellow, 'green': $green, 'teal': $teal, 'cyan': $cyan, 'gray': $gray, 'gray-dark': $gray-dark, 'white': $white, 'visited': $visited, );
 
+// Breadcrumb navigation 
+$breadcrumb: $gray-tertiary;
+
+// Focus highlight colour
+$focus: $yellow; 
+
+// Link colours
 
 $link-hover-color: $indigo;
 
@@ -92,6 +95,7 @@ $link-hover-color: $indigo;
 $body-bg: $white !default;
 $body-color: $secondary !default;
 $breadcrumb-bg: $white !default;
+$alert-bar-bg: $yellow !default;
 
 
 // Set all border radius to 0 by default
@@ -140,6 +144,14 @@ $input-btn-padding-y-lg: .75 !default; //12px
 $input-btn-padding-x-lg: .9375rem !default; //15px
 $input-btn-font-size-lg: 1.375rem !default; //22px
 $input-btn-line-height-lg: 1.5 !default; //10px
+
+$button-icons: $yellow !default;
+$link-button-primary: $green !default;
+$link-button-primary-focus: $teal !default;
+$link-button-secondary: $blue !default;
+$link-button-secondary-focus: $cyan !default;
+$link-button-tertiary: $orange !default;
+$link-button-tertiary-focus: $yellow !default;
 
 // Hide default input focus
 $input-btn-focus-width: 0 !default;
@@ -204,5 +216,10 @@ $form-feedback-invalid-color: $danger !default;
 $form-feedback-font-size: 1.063rem !default; //17px
 //Form input
 $input-border-color: $stonewash !important !default;
+
+// Font Awesome Icons
+$fa-font-weight: 900;
+$fa-close: '\f00d';
+$fa-external: '\f35d';
 
 
