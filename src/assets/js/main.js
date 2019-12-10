@@ -22,7 +22,7 @@
       if (parseInt($(window).width()) < 992) {
         $('.header--expand').hide();
         $('.show-menu').removeClass('show-outline');
-      }
+      } 
 
     };
 

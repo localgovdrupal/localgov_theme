@@ -51,15 +51,15 @@ ul.step-list {
     font-size: 19px;
     font-weight: $font-bold;
 
-  @include media-breakpoint-up(md) {
-    font-size: 22px;
-  }
+    @include media-breakpoint-up(md) {
+      font-size: 22px;
+    }
 
-  a {
-    color:$secondary;
-    text-decoration: underline;
-    font-weight: 700 !important;
-  }
+    a {
+      color:$secondary;
+      text-decoration: underline;
+      font-weight: 700 !important;
+    }
   }
 }
 
@@ -209,9 +209,3 @@ ul.step-list {
     }
   }
 }
-
-
-
-
-
-

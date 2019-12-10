@@ -63,10 +63,6 @@ body.logged-in {
   padding: 0 !important;
 }
 
-/*.gsc-webResult.gsc-result.gsc-promotion {*/
-  /*border: none !important;*/
-/*}*/
-
 .gsc-result .gs-title {
   height: auto !important;
 }
@@ -179,25 +175,3 @@ a.pdf-link:after {
   text-align: center;
 }
 
-/* Campaign pages */
-
-.campaign-banner {
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-
-body.node--campaign_page .breadcrumb-block {
-  margin-bottom: 10px;
-}
-
-body.node--campaign_page .breadcrumb-block .breadcrumb-prefix {
-  display: none;
-}
-
-.navigation-stacked {
-  margin-bottom: 50px;
-}
-
-.sidebar .paragraph {
-  margin-bottom: 50px;
-}
