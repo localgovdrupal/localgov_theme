@@ -49,7 +49,7 @@
             @include rem(font-size, 25);
             float: left;
             @include rem(margin, 10, 0);
-            font-weight: 600;
+            font-weight: $font-bold;
             @include rem(padding-right, 20);
 
     }
@@ -86,7 +86,7 @@
         height: 100%;
         @include rem(padding-right, 12);
         color: $orange;
-        @include rem(font-size, 19);
+        font-size: $font-size-lg;
         height: 100%;
     }
     h3 {
@@ -172,10 +172,10 @@
         }
         i {
             @include rem(margin-right, 5);
-            @include rem(font-size, 18);
+            font-size: $font-size-ex-med;
         }
         p {
-            @include rem(font-size, 17);
+            font-size: $font-size-med;
         }
     }
 
@@ -194,13 +194,13 @@
         h3 {
             margin: 0;
             font-weight: $font-bold;
-            @include rem(font-size, 17);
+            font-size: $font-size-med;
             @include rem(line-height, 25);
         }
     }
     
     .opening-times {
-        @include rem(font-size, 17);
+        font-size: $font-size-med;
         @include rem(line-height, 22);
 
     }
@@ -211,14 +211,14 @@
     .contact-address {
         span {
             display: block;
-            font-size: 17px;
+            font-size: $font-size-med;
         }
     }
     .contact-bottom {
         @include rem(padding-top, 15);
         border-top: $gray-tint;
         li {
-            @include rem(font-size, 17);
+            font-size: $font-size-med;
             display: inline;
             @include rem(margin-right, 10);
      

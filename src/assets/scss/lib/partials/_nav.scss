@@ -167,7 +167,7 @@
 .navbar-dark.nav-vanilla .form-inline .form-control {
     width: 100%;
     border: 0;
-    font-size: $input-btn-font-size-sm;
+    font-size: $font-size-ex-med;
 }
 // Main navigation logo & foot navigation logo
 .navbar-dark.nav-vanilla .navbar-brand {
@@ -188,7 +188,7 @@
   border: 2px solid $navbar-dark-toggler-border-color;
   .fa { // Main navigation toggle button
     color: $white;
-    font-size: 1.125rem; //18px
+    font-size: $font-size-ex-med;
   }
 }
 
@@ -212,9 +212,9 @@
 }
 
 .navbar-dark.nav-vanilla .dropdown-item {
-    font-size: 1.125rem; //18px
+    font-size: $font-size-ex-med; //18px
     font-family: $font-family-base;
-    font-weight: 400; // for fallbacks only 
+    font-weight: $font-normal; // for fallbacks only 
 }
 
 .navbar-dark.nav-vanilla .dropdown-item.active {
@@ -240,7 +240,7 @@
 
 .simple-nav li {
     padding: $input-btn-padding-y 0;
-    font-size: $input-btn-font-size-sm;
+    font-size: $font-size-ex-med;
     border-bottom: .0625rem solid $gray !important; //1px
     margin: 0 !important;
 }
@@ -262,7 +262,7 @@
 
 .block-nav li {
     padding: $input-btn-padding-y $input-btn-padding-x;
-    font-size: $input-btn-font-size-sm;
+    font-size: $font-size-ex-med;
     border-bottom: .0625rem solid $white !important; //1px
     background: $purple-tint;
     margin: 0 !important;
@@ -300,7 +300,7 @@
     ul {
         li {
             a {
-                font-weight: 400;
+                font-weight: $font-normal;
             }
         }
     }

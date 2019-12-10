@@ -20,13 +20,13 @@
       margin-bottom: 0px;
 
       a {
-        font-size: 18px;
+        font-size: $font-size-ex-med;
         line-height: 24px;
       }
     }
 
     p, li {
-      font-size: 15px;
+      font-size: $font-size-sm;
       line-height: 26px;
     }
     p, ul {

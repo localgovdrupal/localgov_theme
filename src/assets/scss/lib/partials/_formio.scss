@@ -1,8 +1,8 @@
 /*Form IO Paragraphs*/
 .formio-form-wrapper p,
 .formio-form-wrapper p span {
-    font-size: 1.188rem !important;
-    margin-bottom: 1rem;
+    font-size: $font-size-lg !important;
+    margin-bottom: $spacer;
 }
 
 /*Required asterisk red*/
@@ -11,32 +11,32 @@
 }
 /*Drop select list and search*/
 .choices__list, .choices__input, .choices__list--dropdown .choices__item {
-    font-size: 1.125rem !important;
+    font-size: $font-size-ex-med !important;
     opacity: 1 !important;
-    color: #444444;
+    color: $gray-dark;
 }
 
 /*Placeholder text in dropdowns*/
-.choices__placeholder, .formio-placeholder{
+.choices__placeholder, .formio-placeholder {
     opacity: 1 !important;
-    color: #444444;
+    color: $gray-dark;
 }
 /* Input placeholders - not working*/
 .form-control::-webkit-input-placeholder {
     opacity: 1 !important;
-    color: #444444;
+    color: $gray-dark;
 }
 .form-control::-moz-placeholder {
      opacity: 1 !important;
-    color: #444444;
+    color: $gray-dark;
 }
 .form-control::-ms-placeholder {
      opacity: 1 !important;
-    color: #444444;
+    color: $gray-dark;
 }
 .form-control::placeholder {
      opacity: 1 !important;
-    color: #444444;
+    color: $gray-dark;
 }
 
 
@@ -56,7 +56,7 @@
     height: 90px;
     display: flex;
     flex-wrap: nowrap;
-    border-bottom: 2px solid #DBDFE3;
+    border-bottom: 2px solid $gray;
     padding: 0;
     margin: 0;
     pointer-events: none;
@@ -67,7 +67,7 @@
 .pagination:before {
     position: absolute;
     content: ' ';
-    background: #DBDFE3;
+    background: $gray;
     border-radius: 10px;
     width: 10px;
     height: 10px;
@@ -79,7 +79,7 @@
 .pagination:after {
     position: absolute;
     content: ' ';
-    background: #DBDFE3;
+    background: $gray;
     border-radius: 10px;
     width: 10px;
     height: 10px;
@@ -101,9 +101,9 @@
 }
 /*The DEFAULT dot underneath the list items in the pagination progress bar*/
 .page-item:after {
-    background: #FFF;
+    background: $white;
     content: ' ';
-    border: 2px solid #DBDFE3;
+    border: 2px solid $gray;
     border-radius: 20px;
     width: 20px;
     height: 20px;
@@ -123,7 +123,7 @@
 .page-link {
     color: #121212;
     text-decoration: none;
-    font-size: 1.063rem;
+    font-size: $font-size-med;
     display: flex;
     align-self: flex-end;
     /* text-transform: lowercase; titles all lower case*/
@@ -152,7 +152,7 @@
         height: auto;
         flex-wrap: wrap;
         border-bottom: none;
-        border-left: 2px solid #DBDFE3;
+        border-left: 2px solid $gray;
         padding: 0 0 1rem 0;
     }
     /*Make the LI  for the pagination progress stacked and height auto*/
@@ -176,9 +176,9 @@
         left: -4px;
     }
     .page-item:after {
-        background: #FFF;
+        background: $white;
         content: ' ';
-        border: 2px solid #DBDFE3;
+        border: 2px solid $gray;
         border-radius: 20px;
         width: 20px;
         height: 20px;

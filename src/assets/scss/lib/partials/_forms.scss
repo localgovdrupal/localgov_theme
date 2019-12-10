@@ -10,7 +10,7 @@
 //Form element wrapper
 .page .form-control {
   margin-bottom: ($spacer * 1);
-  font-size: $input-btn-font-size-sm;
+  font-size: $font-size-ex-med;
 }
 
 //Form legend
@@ -20,12 +20,12 @@ legend {
   line-height: 1.2;
 }
 
-//Form label - only sirect child of form group (avoids affecting radios and checkboxes)
+//Form label - only direct child of form group (avoids affecting radios and checkboxes)
 .form-group>label {
   font-family: $headings-font-family;
   font-weight: $font-bold; // for fallbacks only
   line-height: 1.2;
-  font-size: 1.25rem; //20px  
+  font-size: $font-size-ex-lg; 
   margin-bottom: ($spacer * 1);
 }
 
@@ -33,11 +33,11 @@ legend {
 label span {
   display: block;
   width: 100%;
-  font-size: 1.125rem; // 18px
+  font-size: $font-size-ex-med; // 18px
   // margin-top: ($spacer * 1);
   // margin: 10px 0 15px 0;
   font-family: $font-family-base;
-  font-weight: 400;
+  font-weight: $font-normal;
   color: $gray-dark;
 }
 
@@ -59,13 +59,12 @@ label span {
 //Checkbox and radio text size
 .radio label,
 .form-check label {
-  font-size: 1.063rem; //17px
+  font-size: $font-size-med;
 }
 
 //Checkbox and radio text size
 .custom-input {
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif !important;
-  font-size: 1.063rem !important; //17px
+  font-size: $font-size-med !important; 
   font-weight: normal !important;
 }
 
@@ -104,33 +103,27 @@ label span {
   position: relative;
   padding-left: 50px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: $h5-font-size;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   min-height: 40px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  label {
+    display: flex;
+  }
+  span {
+    margin: 0 !important;
+  }
 }
-
-.custom-input label {
-  display: flex;
-}
-
-.custom-input span {
-  margin: 0 !important;
-}
-
-
-/* Hide the browser's default checkbox */
-
-.custom-input input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
 
 /* Create a custom checkbox */
 
@@ -140,7 +133,7 @@ label span {
   left: 0;
   height: 40px;
   width: 40px;
-  background-color: #FFF;
+  background-color: $white;
   border: 1px solid $input-border-color;
   margin: 0 !important;
 }
@@ -149,7 +142,7 @@ label span {
 /* On mouse-over, add a grey background color */
 
 .custom-input:hover input~.checkmark {
-  background-color: #fff;
+  background-color: $white;
   border: 2px solid $focus !important;
 }
 
@@ -157,7 +150,7 @@ label span {
 /* When the checkbox is checked, add a blue background */
 
 .custom-input input:checked~.checkmark {
-  background-color: #FFF;
+  background-color: $white;
 }
 
 

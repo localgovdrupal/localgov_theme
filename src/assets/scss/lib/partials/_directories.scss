@@ -6,7 +6,7 @@
   h2 {
     @include rem(margin, 0, 0, 14, 0);
     font-weight: $font-bold;
-    @include rem(font-size, 18);
+    font-size: $font-size-ex-med;
     @include rem(line-height, 24);
   }
   
@@ -20,7 +20,7 @@
     padding: 0px;
 
     li {
-      @include rem(font-size, 17);
+      font-size: $font-size-med;
       @include rem(line-height, 34);
     }
   }
@@ -36,7 +36,7 @@
   
 .directory-map-results {
   margin-bottom: 0px;
-  @include rem(font-size, 18);
+  font-size: $font-size-ex-med;
   @include rem(line-height, 28);
   
   [class*='col-'] {
@@ -50,7 +50,7 @@
 
   label {
     @include rem(margin-right, 8);
-    @include rem(font-size, 17);
+    font-size: $font-size-med;
   }
 
   select {
@@ -58,7 +58,7 @@
     border-radius: 4px;
     @include rem(width, 197);
     border: 1px solid #dddddd;
-    @include rem(font-size, 19);
+    font-size: $font-size-lg;
   }
 
   .fas, .far {
@@ -174,7 +174,7 @@
 
 .node--directory_listing {
   .directories-search {
-    background-color:#f4f4f4;
+    background-color: #f4f4f4;
 
     form { 
       margin-top:0px;
@@ -183,11 +183,6 @@
     }
     h2 {
       display:none;
-      font-size:30px !important;
-      font-size:1.875rem !important;
-      line-height:1.1;
-      font-family:'Sentinel SSm A','Sentinel SSm B',Georgia,serif !important;
-      font-weight:500;
     }
   }
 
@@ -199,21 +194,18 @@
 
 @media only screen and (max-width:767px) {
   .directories-search h2 {
-    font-size:26px !important;
-    font-size:1.625rem !important;
+    font-size: $h3-font-size;
   }
 }
 
 @media only screen and (max-width:767px) {
   .directories-search-form--search-toggle {
-    font-size:17px;
-    font-size:1.0625rem;
-    font-family:'Source Sans Pro',sans-serif;
-    font-weight:700;
-    color:#000;
+    font-size: $font-size-med;
+    font-weight: $font-bold;
+    color: $secondary;
 
     &:hover {
-      color:#000
+      color: $secondary;
     }
   }
 }
@@ -221,8 +213,7 @@
 @media only screen and (max-width:767px) {
   .directories-search-form--search-toggle {
     span {
-      font-size:15px;
-      font-size:0.9375rem;
+      font-size: $font-size-sm;
     }
   }
 }

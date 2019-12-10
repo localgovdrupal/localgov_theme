@@ -33,12 +33,12 @@ main {
 
   //Main text sizes
   p, ul, ol {
-    font-size: 1.188rem; //19px
+    font-size: $font-size-lg;
   }
 
   p a .fa, p a .fa, a .fa {
-    padding-right: .3125rem; //5px
-    padding-left: .3125rem; //5px
+    padding-right: .3125rem; // 5px
+    padding-left: .3125rem; // 5px
     color: $secondary;
   }
 
@@ -53,7 +53,7 @@ main {
 
   //List items
   ul li, ol li, .sidebar ul li, .sidebar ol li, footer ul li, footer ol li {
-    margin-bottom: .3125rem; //5px
+    margin-bottom: .3125rem; // 5px
   }
 
   //Small textline height to match small text 85% size setting

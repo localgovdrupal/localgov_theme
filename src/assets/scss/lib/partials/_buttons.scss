@@ -55,7 +55,7 @@ aside .btn .fa,
 }
 
 .custom-file-label {
-  font-size: 1.063rem; //17px
+  font-size: $font-size-med;
   line-height: 1.8;
 }
 
@@ -71,7 +71,7 @@ aside .btn .fa,
   color: $white;
 
   @include rem(padding, 15);
-  @include rem(font-size, 18);
+  font-size: $font-size-ex-med;
   @include rem(line-height, 22);
   
   &:hover {
@@ -106,7 +106,7 @@ aside .btn .fa,
       font-family: $font-family-icons;
       content: '\f054';
       font-weight: $fa-font-weight;
-      @include rem(font-size, 20);
+      font-size: $font-size-ex-lg;
       @include rem(margin-top, 2);
   }
   &:focus {
@@ -171,7 +171,7 @@ aside .btn .fa,
     &:after {
         font-family: $font-family-icons;
         content: '\f00d';
-        font-weight: $font-bold;
+        font-weight: $fa-font-weight;
     }
 }
 

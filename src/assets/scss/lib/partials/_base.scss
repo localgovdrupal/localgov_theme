@@ -7,7 +7,7 @@ body {
 }
 
 .text-monospace {
-  font-size: 1rem; //16px
+  font-size: $font-size-base;
   background: $gray-tint;
   color: $gray-dark;
   padding: ($spacer * 1);
@@ -49,13 +49,14 @@ main ol,
   padding-right: ($spacer * 1.5);
 }
 
-//add top margin to headers in the page but not the first h2 as that will be at the top of the block
-.page h2:not(first-child),
-.page h3,
-.page h4,
-.page h5,
-.page h6 {
- margin-top: 3rem;
+// Add top margin to headers in the page but not the first h2
+// as that will be at the top of the section.
+.content h2:not(first-child),
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin-top: ($spacer * 3);
 }
 
 section {
@@ -159,11 +160,11 @@ main .btn i,
 }
 
 main i {
-  font-size: 1.25rem; //20px
+  font-size: $font-size-ex-lg;
 }
 
 .new-tag {
-  font-size: .9375rem; //15px
+  font-size: $font-size-sm;
   line-height: 0.875rem; //14px
 }
 .new-tag span {
@@ -171,7 +172,7 @@ main i {
   background: $primary;
   padding:  0 .1875rem; //2px/3px
   margin-right: .1875rem; //3px
-  font-size: 0.875rem; //14px
+  font-size: $font-size-ex-sm;
   color: $white;
 }
 
@@ -194,7 +195,7 @@ main i {
   margin: 0;
   box-sizing: border-box;
   margin: 0;
-  font-size: .9375rem; //15px
+  font-size: $font-size-sm;
   color: $white;
 }
 
@@ -217,7 +218,7 @@ main i {
 .alert {
   background-color: $white !important;
   font-weight: $font-bold;
-  font-size: 1.125rem; //19px
+  font-size: $font-size-lg;
 }
 
 .breadcrumb {
@@ -225,7 +226,7 @@ main i {
 }
 // Breadcrumb font size
 .breadcrumb-item {
-  font-size: 0.9375rem;
+  font-size: $font-size-sm;
   &:first-child {
     a {
       &:hover {

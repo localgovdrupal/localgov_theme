@@ -290,14 +290,14 @@ color: $secondary;
 
 ### Comments
 
-Sectioning comments should look like so, with bottom borders extending to 80
-characters:
+Comments should look like so, with no new line below:
 
 ```scss
-// This is a section
-// -----------------------------------------------------------------------------
+// This is a comment relating to the below selector
 .selector {
   color: $blue;
 }
 ```
+
+
 

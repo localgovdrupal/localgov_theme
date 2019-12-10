@@ -24,7 +24,7 @@ a {
 }
 
 main a {
-  font-weight: 400 !important; // remove bold for main copy links
+  font-weight: $font-normal !important; // remove bold for main copy links
 }
 
 
@@ -35,9 +35,9 @@ main a {
   &:after {
     font-family: $font-family-icons;
     content: $fa-external;
-    font-weight: 900;
+    font-weight: $fa-font-weight;
     display: inline-block;
-    @include rem(font-size, 13);
+    font-size: $font-size-ex-sm;
     @include rem(padding-left, 5);
     // ie bug fix for removing before/after underline
     text-decoration: underline;
@@ -48,7 +48,7 @@ main a {
 
 .action-link-container {
     @include rem(margin, 30, 0, 40);
-    @include rem(font-size, 17);
+    font-size: $font-size-med;
 }
 .action-link {
   display: inline-block;
@@ -57,8 +57,8 @@ main a {
 
   &:before {
     font-family: $font-family-icons;
-    @include rem(font-size, 19);
-    font-weight: 800;
+    font-size: $font-size-lg;
+    font-weight: $font-bold;
     display: inline-block;
     @include rem(padding-right, 10);
     color: $primary;
@@ -139,7 +139,7 @@ main a {
 /* Skip Link */
 
 .skip-link {
-  font-size: 15px;
+  font-size: $font-size-sm;
   line-height: 30px;
   padding-right: 5px;
   display: inline-block;
@@ -149,7 +149,7 @@ main a {
   float: left;
   display: inline-block;
   line-height: 30px;
-  font-size: 15px;
+  font-size: $font-size-sm;
   color: #555;
   margin: 0 8px 0 15px;
 }

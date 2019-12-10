@@ -1,29 +1,9 @@
-// NOTE: if you came here looking for the media queries we use the ones predefined in bootstrap
-
-// Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) { ... }
-// Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-// Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-// Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-// @include media-breakpoint-up(sm) { ... }
-// @include media-breakpoint-up(md) { ... }
-// @include media-breakpoint-up(lg) { ... }
-// @include media-breakpoint-up(xl) { ... }
-
-// * * * * * * OVERRIDE SASS VARIABLES BEFORE BOOTSTRAP 4 IMPORT  * * * * * * //
-// Colour variables - Setting them first allows usage before Bootstrap import
 // Primary Colours
 $black: #000000 !default;
 $white: #FFFFFF !default;
 $red: #AE1100 !default;
 $yellow: #FFBB00 !default;
 $blue: #0059A4 !default;
-
-
-
 
 // General colours
 $orange: #FF5500 !default;
@@ -121,13 +101,23 @@ $headings-font-family: $font-family-secondary;
 $headings-line-height: 1.1 !default;
 $headings-font-weight: $font-bold !default; // for fallbacks only
 
+// Font base size
+$font-size-base: 1rem !default; // Assumes the browser default, typically 16px
+// Font sizes
+$font-size-ex-lg: $font-size-base * 1.25 !default; // ~20px ~1.25rem
+$font-size-lg: $font-size-base * 1.188 !default; // ~19px ~1.188rem
+$font-size-ex-med: $font-size-base * 1.125 !default; // ~18px ~1.125rem
+$font-size-med: $font-size-base * 1.063 !default; // ~17px ~1.063rem
+$font-size-sm: $font-size-base * .9375 !default; // ~15px ~.9375rem
+$font-size-ex-sm: $font-size-base * .875 !default; // ~14px ~.875rem
 // Heading sizes
-$h1-font-size: 2.375rem !default; //38px
-$h2-font-size: 2rem !default; //32px
-$h3-font-size: 1.625rem !default; //26px
-$h4-font-size: 1.5rem !default; //24px
-$h5-font-size: 1.375rem !default; //22px
-$h6-font-size: 1.25rem !default; //20px
+$h1-font-size: $font-size-base * 2.375 !default; // ~38px ~2.375
+$h2-font-size: $font-size-base * 2 !default; // ~32px ~2rem
+$h3-font-size: $font-size-base * 1.625 !default; // ~26px ~1.625rem
+$h4-font-size: $font-size-base * 1.5 !default; // ~24px ~1.5rem
+$h5-font-size: $font-size-base * 1.375 !default; // ~22px ~1.375rem
+$h6-font-size: $font-size-ex-lg !default; // ~20px ~1.25rem
+
 $btn-font-weight: $font-bold !default; // for fallbacks only
 
 //STANDARD BUTTONS
@@ -135,11 +125,11 @@ $input-btn-padding-y: .5rem !default; //8px
 $input-btn-padding-x: .9375rem !default; //15px
 $input-btn-font-size: 1.25rem !default; //20px
 $input-btn-line-height: 1.5 !default; //10px
-//$btn-border-radius: 0 !default;
+
 //SMALL BUTTONS
 $input-btn-padding-y-sm: .3125rem !default; //5px
 $input-btn-padding-x-sm: .9375rem !default; //15px
-$input-btn-font-size-sm: 1.125rem !default; //18px
+
 $input-btn-line-height-sm: 1.5 !default; //10px
 
 //LARGE BUTTONS
@@ -219,10 +209,13 @@ $form-feedback-invalid-color: $danger !default;
 $form-feedback-font-size: 1.063rem !default; //17px
 //Form input
 $input-border-color: $stonewash !important !default;
-
+// Global Half Margin
+$half-margin: .5rem; // 8px
+// Global Half Padding // 5px
+$half-padding: .3125rem;
 // Font Awesome Icons
 $fa-font-weight: 900;
 $fa-close: '\f00d';
 $fa-external: '\f35d';
-
+$fa-exclaim: '\f06a';
 
