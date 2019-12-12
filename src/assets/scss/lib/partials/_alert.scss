@@ -39,9 +39,11 @@
   }
 }
 
-/* Pseudo icons for wysiwig added alerts */
-
+// Pseudo icons for wysiwig added alerts
 .alert {
+  background-color: $white !important;
+  font-weight: $font-bold;
+  font-size: $font-size-lg;
   position: relative;
   width: 100%; // always go full width 
   padding-left: 2.75rem; // indent content to allow for absolute icon
@@ -66,25 +68,25 @@
 
 .alert-success {
   &:before {
-    content: '\f00c';
+    content: $alert-success;
   }
 }
 
 .alert-info {
   &:before {
-    content: '\f129';
+    content: $alert-info;
   }
 }
 
 .alert-primary,
 .alert-danger {
   &:before {
-    content: '\f071';
+    content: $fa-exclamation-triangle;
   }
 }
 
 .alert-fail {
   &:before {
-    content: '\f00d';
+    content: $alert-fail;
   }
 }

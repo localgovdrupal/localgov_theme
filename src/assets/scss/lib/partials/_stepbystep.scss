@@ -56,7 +56,7 @@ ul.step-list {
     font-weight: $font-bold;
 
     @include media-breakpoint-up(md) {
-      font-size: $h5-font-size;
+      font-size: $font-size-ex-ex-lg;
     }
 
     a {

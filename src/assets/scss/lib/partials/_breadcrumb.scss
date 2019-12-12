@@ -1,0 +1,15 @@
+.breadcrumb {
+  padding: 0.75rem 0;
+
+  .breadcrumb-item {
+    font-size: $font-size-sm;
+
+    &:first-child {
+      a {
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+}

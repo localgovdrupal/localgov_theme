@@ -13,7 +13,7 @@ body {
   padding: ($spacer * 1);
 }
 
-/* /// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING /// */
+// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING 
 
 .site-max {
   max-width: 1170px;
@@ -99,7 +99,7 @@ form .form-group:last-child {
   margin-bottom: ($spacer * 3);
 }
 
-/* /// FOCUS STYLES /// */
+// FOCUS STYLES 
 
 *:focus {
   outline: none;
@@ -120,17 +120,17 @@ strong {
   font-weight: $font-bold;
 }
 
-/* /// HORIZONTAL RULES /// */
+// HORIZONTAL RULES
 
 hr {
-  border-top: .0625rem solid $gray; //1px
+  margin-top: $hr-margin-y;
+  border-top: $hr-border solid $hr-color;
 }
 
-/* /// SITE WIDE CUSTOM CLASSES /// */
+// SITE WIDE CUSTOM CLASSES 
 
-// Add a 1px keyline under element
 .key-under {
-  border-bottom: .0625rem solid $gray; //1px
+  border-bottom: .0625rem solid $gray;
 }
 
 .rotate-180 {
@@ -170,8 +170,8 @@ main i {
 .new-tag span {
   font-weight: $font-bold;
   background: $primary;
-  padding:  0 .1875rem; //2px/3px
-  margin-right: .1875rem; //3px
+  padding:  0 .1875rem; 
+  margin-right: .1875rem;
   font-size: $font-size-ex-sm;
   color: $white;
 }
@@ -180,9 +180,9 @@ main i {
   text-decoration: underline;
 }
 
-/* /// SKIP TO MAIN CONTENT /// */
+// SKIP TO MAIN CONTENT
 
-//Hidden skip to main content link
+// Hidden skip to main content link
 .skip-main {
   position: fixed;
   top: -30px;
@@ -194,70 +194,25 @@ main i {
   line-height: 30px;
   margin: 0;
   box-sizing: border-box;
-  margin: 0;
   font-size: $font-size-sm;
   color: $white;
-}
 
-//Skip to main hover
-.skip-main:hover {
-  color: $white;
-}
+  &:hover {
+    color: $white;
+  }
 
-//Skip to main focus
-.skip-main:focus,
-.skip-main:active {
-  top: 0px;
-  position: relative;
-}
-
-
-/* /// ALERTS /// */
-
-//Alert styles
-.alert {
-  background-color: $white !important;
-  font-weight: $font-bold;
-  font-size: $font-size-lg;
-}
-
-.breadcrumb {
-  padding: 0.75rem 0;
-}
-// Breadcrumb font size
-.breadcrumb-item {
-  font-size: $font-size-sm;
-  &:first-child {
-    a {
-      &:hover {
-        background: transparent;
-      }
-    }
+  &:focus,
+  &:active {
+    top: 0px;
+    position: relative;
   }
 }
 
-/* /// LISTS WITH ICONS REPLACING BULLETS /// */
-
-.iconlist { 
-  padding-left: 0;
-}
-
-.iconlist li {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-}
-
-.iconlist li .fa,
-.iconlist li i {
-  padding-top: .3125rem;
-}
-
 .pull-left {
-  @extend .float-left;
+  @extend .float-left; // bs class
 }
 .pull-right {
-  @extend .float-right;
+  @extend .float-right; // bs class
 }
 
 
@@ -280,11 +235,7 @@ main i {
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .sliding-popup-top {
-    text-align: right; // right align the cookies button
-  }
-}
+
 
 
 

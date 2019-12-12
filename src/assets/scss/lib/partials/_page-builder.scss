@@ -93,7 +93,7 @@
     p.fact-opening,
     p.fact-closing {
         font-weight: $font-bold;
-        @include rem(font-size, 22);
+        font-size: $font-size-ex-ex-lg;
         text-align: center;
         color: #000;
     }
@@ -171,7 +171,7 @@
                 content: '\f054';
                 font-family: $font-family-icons;
                 font-weight: $fa-font-weight;
-                @include rem(font-size, 13);
+                font-size: $font-size-ex-ex-sm;
                 color: #F37021;
                 @include rem(margin-right, 5);
             }

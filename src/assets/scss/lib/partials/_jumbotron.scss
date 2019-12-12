@@ -17,19 +17,20 @@
       @include rem(padding-top, 60);
 
       h1 {
-        @include rem(letter-spacing, 0);
-        @include rem(font-size, 42);
-        @include media-breakpoint-up(sm) {
-          @include rem(font-size, 52);
-        }
         color: $white;
         line-height: 1.1;
         font-weight: $font-bold;
+        @include rem(letter-spacing, 0);
+        font-size: $jumbo-font-regular;
+
+        @include media-breakpoint-up(sm) {
+          font-size: $jumbo-font-large;
+        }
         
         &:before {
-          content: 'Welcome to';
+          content: $jumbo-welcome;
           display: block;
-          @include rem(font-size, 24);
+          font-size: $h4-font-size;
           font-weight: $font-bold;  
         }
       }

@@ -101,7 +101,7 @@
             font-family: $font-family-icons;
             font-weight: $fa-font-weight;
             color: $tertiary;
-            @include rem(font-size, 13);
+            font-size: $font-size-ex-ex-sm;
             @include rem(margin-right, 5);
 
             &:hover {

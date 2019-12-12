@@ -167,7 +167,7 @@
                 @include rem(padding-right, 10);
             }
             .fa {
-                @include rem(font-size, 15);
+                font-size: $font-size-sm;
             }
         }
         i {
