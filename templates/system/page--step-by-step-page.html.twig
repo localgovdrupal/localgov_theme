@@ -91,7 +91,7 @@
 
       <div class="step-by-step-pages__relationship">
         <span class="step-by-step-pages__part-of">Part of </span><br/>
-        <span class="step-by-step-pages__homepage"> <a href="{{ url('entity.node.canonical', {'node': node.field_guide_parent.entity.id()}) }}" title="{{ node.field_guide_parent.entity.label() }}">{{ node.field_guide_parent.entity.label() }}</a></span>
+        <span class="step-by-step-pages__homepage"> <a href="{{ path('entity.node.canonical', {'node': node.field_guide_parent.entity.id()}) }}" title="{{ node.field_guide_parent.entity.label() }}">{{ node.field_guide_parent.entity.label() }}</a></span>
       </div>
 
       {% if page.header %}
