@@ -106,10 +106,14 @@
     @include rem(padding, 30, 0);
     width: 100%;
     h2 {
-        @include rem(margin-bottom, 35);
-    }
-    &:not(:last-child){
-        border-bottom: $gray-tint;
+        line-height: 1;
+        @include rem(margin-top, 15);
+        @include rem(margin-bottom, 15);
+        font-size: $h5-font-size;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $h3-font-size;
+        }
     }
 }
 
@@ -138,6 +142,8 @@
   @include rem(padding-top, 0);
   @include rem(padding-bottom, 0);
 }
+
+
 
 /* Servicehub Contact */
 
