@@ -40,13 +40,12 @@
 
 <section class="servicehub--link-section">
   <div class="servicehub--link-list">
-      {% for row in items|batch(2) %}
-        <div class="servicehub--link-slice row">
-          {% for item in row %}
-            <div class="col-sm-6">{{ item.content }}</div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
+    {% for row in items|batch(2) %}
+      <div class="servicehub--link-slice row">
+        {% for item in row %}
+          <div class="col-sm-6">{{ item.content }}</div>
+        {% endfor %}
+      </div>
+    {% endfor %}
   </div>
 </section>

@@ -1,137 +1,124 @@
 .servicehub--status {
-    overflow: auto;
-    .fa-info-circle {
-        position: absolute;
-        left: 0;
-        @include rem(font-size, 35);
-        vertical-align: middle;
-        @include rem(margin-right, 10);
-    }
-    h2 {
-        @include rem(margin, 25, 0);
-    }
-    h3 {
-        @include rem(margin-top, 5);
-        @include rem(margin-bottom, 10);
-        display: inline-block;
-    }
-    p {
-        font-weight: $font-bold;
-        display: inline;
-    }
-    span {
-        position: relative;
-        @include rem(padding-left, 50);
-        @include rem(margin-bottom, 15);
-        display: inline-block;
-    }
+  overflow: auto;
+  
+  .fa-info-circle {
+    position: absolute;
+    left: 0;
+    @include rem(font-size, 35);
+    vertical-align: middle;
+    @include rem(margin-right, 10);
+  }
+
+  h2 {
+    @include rem(margin, 25, 0);
+  }
+
+  h3 {
+    @include rem(margin-top, 5);
+    @include rem(margin-bottom, 10);
+    display: inline-block;
+  }
+
+  p {
+    font-weight: $font-bold;
+    display: inline;
+  }
+
+  span {
+    position: relative;
+    @include rem(padding-left, 50);
+    @include rem(margin-bottom, 15);
+    display: inline-block;
+  }
 }
 
 .servicehub--update {
-    overflow: auto;
-    @include rem(margin-top, 30);
-    @include rem(margin-bottom, 20);
-    background-color: $indigo-tint;
-    @include rem(padding, 20);
-    &_inner {
-        background: $white;
-        @include rem(padding, 20, 30, 25);
+  overflow: auto;
+  @include rem(margin-top, 30);
+  @include rem(margin-bottom, 20);
+  background-color: $indigo-tint;
+  @include rem(padding, 20);
 
-    }
-    ul {
-        display: table;
-        width: 100%;
-        list-style-type: none;
-        &:not(:last-child){
-            @include rem(margin-bottom, 20);
-        }
-        h2 {
-            @include rem(font-size, 25);
-            float: left;
-            @include rem(margin, 10, 0);
-            font-weight: $font-bold;
-            @include rem(padding-right, 20);
+  &_inner {
+      background: $white;
+      @include rem(padding, 20, 30, 25);
+  }
 
+  ul {
+    display: table;
+    width: 100%;
+    list-style-type: none;
+
+    &:not(:last-child){
+        @include rem(margin-bottom, 20);
     }
 
+    h2 {
+        @include rem(font-size, 25);
+        float: left;
+        @include rem(margin, 10, 0);
+        font-weight: $font-bold;
+        @include rem(padding-right, 20);
     }
+
     li {
-        display: table-cell;
-        &:first-child {
-            @include rem(width, 150);
-            font-weight: $font-bold;
-        }
-    }
-    .read-more {
+      display: table-cell;
+    
+      &:first-child {
+        @include rem(width, 150);
         font-weight: $font-bold;
-        text-decoration: underline;
-        white-space: nowrap;
+      }
     }
-    &.striped ul:not(:last-child) {
-        border-bottom: $gray-tint;
-        @include rem(padding-bottom, 20);
-    }
-}
+  }
+  
+  .read-more {
+    font-weight: $font-bold;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
 
-.servicehub--link-block {
-    position: relative;
-    @include rem(padding-left, 25);
-    display: inline-block;
-
-    i {
-        position: absolute;
-        left: 0;
-        @include rem(top, 2);
-        @include rem(width, 20);
-        height: 100%;
-        @include rem(padding-right, 12);
-        color: $orange;
-        font-size: $font-size-lg;
-        height: 100%;
-    }
-    h3 {
-        margin: 0;
-        @include rem(font-size, 21);
-        font-weight: $font-bold;
-        line-height: 1.1;
-
-    }
-    p {
-        @include rem(padding, 15, 0);
-    }
+  &.striped ul:not(:last-child) {
+    border-bottom: $gray-tint;
+    @include rem(padding-bottom, 20);
+  }
 }
 
 .servicehub--link-section {
-    overflow: auto;
-    @include rem(padding, 30, 0);
-    width: 100%;
-    h2 {
-        @include rem(margin-bottom, 35);
+  overflow: auto;
+  @include rem(padding, 30, 0);
+  width: 100%;
+
+  h2 {
+    line-height: 1;
+    @include rem(margin-top, 15);
+    @include rem(margin-bottom, 15);
+    font-size: $h5-font-size;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $h3-font-size;
     }
-    &:not(:last-child){
-        border-bottom: $gray-tint;
-    }
+  }
 }
 
 #field--field_links {
-    h2 {
-        font-size: $h3-font-size;
-    }
+  h2 {
+      font-size: $h3-font-size;
+  }
 }
 
 .servicehub--more {
-    border-bottom: $gray-tint;
-    @include rem(margin-bottom, 20);
-    h2 {
-        line-height: 1;
-        @include rem(margin-top, 15);
-        @include rem(margin-bottom, 15);
-        font-size: $h5-font-size;
+  border-bottom: $gray-tint;
+  @include rem(margin-bottom, 20);
+  h2 {
+    line-height: 1;
+    @include rem(margin-top, 15);
+    @include rem(margin-bottom, 15);
+    font-size: $h5-font-size;
 
-        @include media-breakpoint-up(lg) {
-            font-size: $h3-font-size;
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: $h3-font-size;
     }
+  }
 }
 
 .servicehub--more [class*='col-'] {
@@ -142,89 +129,99 @@
 /* Servicehub Contact */
 
 .servicehub--contact {
+  overflow: auto;
 
-    overflow: auto;
-
-    .contact-container {
-        background: $gray-tint;
-        border-left: 5px solid $primary;
-        @include rem(padding, 20, 30, 15);
-        @include rem(margin-bottom, 25);
-        h2 {
-            margin: 0;
-            @include rem(padding-bottom, 15);
-            line-height: 1;
-        }
-        ul {
-            font-weight: $font-bold;
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
-            span {
-                @include rem(width, 20);
-                display: inline-block;
-                text-align: center;
-                @include rem(padding-right, 10);
-            }
-            .fa {
-                font-size: $font-size-sm;
-            }
-        }
-        i {
-            @include rem(margin-right, 5);
-            font-size: $font-size-ex-med;
-        }
-        p {
-            font-size: $font-size-med;
-        }
-    }
-
-    .sidebar {
-        @include rem(margin-top, 10);
-
-    }
-    .contact-top {
-        @include rem(padding-bottom, 20);
-        .column-2 {
-            @include rem(padding-right, 30);
-        }
-        ul {
-            @include rem(margin-bottom, 15);
-        }
-        h3 {
-            margin: 0;
-            font-weight: $font-bold;
-            font-size: $font-size-med;
-            @include rem(line-height, 25);
-        }
-    }
+  .contact-container {
+    background: $gray-tint;
+    border-left: 5px solid $primary;
+    @include rem(padding, 20, 30, 15);
+    @include rem(margin-bottom, 25);
     
-    .opening-times {
-        font-size: $font-size-med;
-        @include rem(line-height, 22);
-
-    }
-    .contact-title {
-        font-weight: $font-bold;
-        text-decoration: none;
-    }
-    .contact-address {
-        span {
-            display: block;
-            font-size: $font-size-med;
-        }
-    }
-    .contact-bottom {
-        @include rem(padding-top, 15);
-        border-top: $gray-tint;
-        li {
-            font-size: $font-size-med;
-            display: inline;
-            @include rem(margin-right, 10);
-     
-        }
+    h2 {
+      margin: 0;
+      @include rem(padding-bottom, 15);
+      line-height: 1;
     }
 
+    ul {
+      font-weight: $font-bold;
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      
+      span {
+        @include rem(width, 20);
+        display: inline-block;
+        text-align: center;
+        @include rem(padding-right, 10);
+      }
+
+      .fa {
+        font-size: $font-size-sm;
+      }
+    }
+
+    i {
+      @include rem(margin-right, 5);
+      font-size: $font-size-ex-med;
+    }
+
+    p {
+      font-size: $font-size-med;
+    }
+  }
+
+  .sidebar {
+    @include rem(margin-top, 10);
+  }
+
+  .contact-top {
+    @include rem(padding-bottom, 20);
+
+    .column-2 {
+      @include rem(padding-right, 30);
+    }
+
+    ul {
+      @include rem(margin-bottom, 15);
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: $font-bold;
+      font-size: $font-size-med;
+      @include rem(line-height, 25);
+    }
+  }
+
+  .opening-times {
+    font-size: $font-size-med;
+    @include rem(line-height, 22);
+
+  }
+
+  .contact-title {
+    font-weight: $font-bold;
+    text-decoration: none;
+  }
+
+  .contact-address {
+    span {
+      display: block;
+      font-size: $font-size-med;
+    }
+  }
+
+  .contact-bottom {
+    @include rem(padding-top, 15);
+    border-top: $gray-tint;
+
+    li {
+      font-size: $font-size-med;
+      display: inline;
+      @include rem(margin-right, 10);
+    }
+  }
 }
 
 .servicehub--contact [class*='col-'], .contact-top [class*='col-'], .cta-pull [class*='col-'] {

@@ -6,7 +6,7 @@
           <!-- Navbar content -->
        
             <a class="navbar-brand" href="/" title="Croydon Council homepage">
-              <img class="img-fluid" src="{{ logopath }}" alt="" />
+              <img class="img-fluid" src="{{ logopath }}" alt="Croydon Council Logo" />
             </a>
  
           <!-- Mobile toggle button -->
@@ -16,7 +16,7 @@
           </button>
                 
           <div class="collapse navbar-collapse" id="menu-purejs">
-            <div class="d-lg-none">
+              <div class="d-lg-none">
                 {{ page.search }}
               </div>
               <ul class="navbar-nav mr-auto ml-auto">
@@ -37,7 +37,9 @@
               </ul>
               
               <div class="d-none d-lg-block">
-                {{ page.search }}
+                <div class="form-inline">
+                  {{ page.mobile_search }}
+                </div>
               </div>
               
           </div>
