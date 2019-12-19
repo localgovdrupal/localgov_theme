@@ -18,13 +18,13 @@
     }
 
     li {
-      @include rem(font-size, 18);
+      font-size: $font-size-ex-med;
       @include rem(line-height, 23);
       position: relative;
       margin-bottom: 1rem;
 
       a {
-        @include rem(font-size, 18);
+        font-size: $font-size-ex-med;
 
         &:focus, &:hover {
           box-shadow: none;

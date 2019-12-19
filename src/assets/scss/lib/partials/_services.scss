@@ -15,11 +15,12 @@
     @include rem(padding, 5);
     background: transparent;
     box-shadow: none;
+    font-weight: $font-normal;
 
     .services--feature-title {
       display: block;
       color: $secondary;
-      @include rem(font-size, 17);
+      font-size: $font-size-med;
       @include rem(line-height, 24);
       @include rem(margin-top, 5);
       text-decoration: none;
@@ -44,7 +45,7 @@
   @include rem(width, 47);
   @include rem(height, 47);
   @include rem(line-height, 47);
-  color: $gray-dark;
+  color: $secondary;
 }
 
 
@@ -57,12 +58,13 @@
 
  .services--list-block {
     h2 {
-      font-weight: bold;
+      font-weight: $font-bold;
       @include rem(margin, 10, 0, 20, 0);
       line-height: 1.1;
       a {
         display: inline-block;
         @include rem(font-size, 24);
+        color: $secondary;
       }
     }
     ul {
@@ -97,9 +99,9 @@
             left: 0;
             top: 2px;
             font-family: $font-family-icons;
-            font-weight: 900;
-            color: $green;
-            @include rem(font-size, 13);
+            font-weight: $fa-font-weight;
+            color: $tertiary;
+            font-size: $font-size-ex-ex-sm;
             @include rem(margin-right, 5);
 
             &:hover {
@@ -109,7 +111,7 @@
         }
         a {
           color: $blue;
-          @include rem(font-size, 17);
+          font-size: $font-size-med;
           
           &:hover, &:focus {
             color: $secondary;

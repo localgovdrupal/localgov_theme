@@ -1,24 +1,24 @@
 /* Page builder section */
 
 .builder-section {
-    @include rem(margin-bottom, 20);
+  @include rem(margin-bottom, 20);
 
-    h2 {
-        @include rem(margin-bottom, 10);
-        font-weight: 500;
-    }
+  h2 {
+    @include rem(margin-bottom, 10);
+    font-weight: 500;
+  }
 }
 
 .builder-section [class*='col-'] {
-    padding-top: 0px;
-    padding-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 /* Image with caption */
 
 .image-wrapper {
-    @include rem(margin-bottom, 15);
-    background: #373737;
+  @include rem(margin-bottom, 15);
+  background: #373737;
 }
 
 .image-with-caption {
@@ -50,20 +50,20 @@
             @include rem(-moz-border-radius, 100);
             @include rem(border-radius, 100);
             font-family: $font-family-icons;
-            font-weight: 900;
+            font-weight: $fa-font-weight;
             color: $white;
             @include rem(font-size, 24);
         }
 
         p {
             margin: 0;
-            color: #fff;
-            @include rem(font-size, 18);
+            color: $white;
+            font-size: $font-size-ex-med;
             @include rem(line-height, 25);
 
             &:first-child {
                 @include rem(font-size, 25);
-                font-weight: bold;
+                font-weight: $font-bold;
             }
         }
     }
@@ -92,14 +92,14 @@
     }
     p.fact-opening,
     p.fact-closing {
-        font-weight: bold;
-        @include rem(font-size, 22);
+        font-weight: $font-bold;
+        font-size: $font-size-ex-ex-lg;
         text-align: center;
         color: #000;
     }
 
     p.fact {
-        font-weight: bold;
+        font-weight: $font-bold;
         @include rem(font-size, 70);
         @include rem(line-height, 70);
         text-align: center;
@@ -109,7 +109,7 @@
     &.fact-box-fade-red-blue {
         background: linear-gradient(#A41055, $blue);
         border-color: $orange;
-        p { color: #ffffff; }
+        p { color: $white; }
     }
 }
 
@@ -128,42 +128,24 @@
 
     .call-out-content {
         padding: 30px;
-        // @media only screen and (max-width: $screen-xs-max){
-        //     @include rem(padding, 10, 0, 0, 15);
-        //     @include rem(padding, 20, 15, 30);
-        // }
         
         h2, p {
             width: 50%;
-            // @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max){
-            //     width: 60%;
-            // }
-            // @media only screen and (max-width: $screen-xs-max){
-            //     width: 80%;
-            // }
         }
 
         h2 {
             @include rem(font-size, 42);
             @include rem(line-height, 45);
-            color: #ffffff;
-            // @media only screen and (max-width: $screen-xs-max){
-            //     width: 90%;
-            //     @include rem(margin-bottom, 5);
-            //     @include rem(font-size, 32);
-            // }
-            // @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max){
-            //     font-size: 38px;
-            // }
+            color: $white;
         }
         p {
 
             @include rem(font-size, 20);
             @include rem(line-height, 30);
-            color: #ffffff;          
+            color: $white;          
         }
         .cta-button {
-            @include rem(max-width, 290);
+          @include rem(max-width, 290);
         }
     }
 }
@@ -183,13 +165,13 @@
         }
 
         span {
-            font-weight: bold;
+            font-weight: $font-bold;
 
             &::before {
                 content: '\f054';
                 font-family: $font-family-icons;
-                font-weight: 900;
-                @include rem(font-size, 13);
+                font-weight: $fa-font-weight;
+                font-size: $font-size-ex-ex-sm;
                 color: #F37021;
                 @include rem(margin-right, 5);
             }
@@ -210,7 +192,7 @@
     }
 
     p.quote-footer {
-        font-weight: bold;
+        font-weight: $font-bold;
         color: #000000;
     }
 }

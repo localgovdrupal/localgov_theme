@@ -1,12 +1,9 @@
-.focus-outline { // use this extendable class for outlines
-  outline: .1875rem solid $yellow !important; //3px
-  outline-offset: -.1875rem;
-}
+
 .access-background { // use this extendable class for backgrounds
-  background-color: $yellow;
+  background-color: $focus;
   color: $secondary;
   text-decoration: none;
-  box-shadow: 0 0 0 2px $yellow;
+  box-shadow: 0 0 0 2px $focus;
 }
 
 /*Accessible links*/
@@ -14,21 +11,20 @@
 a {
   color: $primary;
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: $font-bold;
 
   &:hover, &:focus {
     @extend .access-background;
 
     > img {
-      @extend .focus-outline;
-      outline-offset: .1875rem;
+      @include outline(.1875rem, .1875rem, $focus);
     }
   }
 
 }
 
 main a {
-  font-weight: 400 !important; // remove bold for main copy links
+  font-weight: $font-normal !important; // remove bold for main copy links
 }
 
 
@@ -36,54 +32,42 @@ main a {
 /* External Link */
 
 .external-link {
-	color: $secondary;
-	&:hover {
-		color: $primary;
-	}
-	&:focus {
-		color: $primary;
-		@include rem(padding, 5, 5, 10, 0);
-	}
-	&:after {
-		font-family: $font-family-icons;
-		content: '\f35d';
-		font-weight: 900;
-		display: inline-block;
-		@include rem(font-size, 13);
-		@include rem(padding-left, 5);
-		// ie bug fix for removing before/after underline
-		text-decoration: underline;
-	}
-	// ie bug fix for removing before/after underline
-	&:after {
-		text-decoration: none;
-	}
+  &:after {
+    font-family: $font-family-icons;
+    content: $fa-external;
+    font-weight: $fa-font-weight;
+    display: inline-block;
+    font-size: $font-size-ex-sm;
+    @include rem(padding-left, 5);
+    // ie bug fix for removing before/after underline
+    text-decoration: underline;
+  }
 }
 
 /* Action Link */
 
 .action-link-container {
     @include rem(margin, 30, 0, 40);
-    @include rem(font-size, 17);
+    font-size: $font-size-med;
 }
 .action-link {
   display: inline-block;
-  font-weight: bold;
-  @include rem(font-size, 22);
+  font-weight: $font-bold;
+  font-size: $font-size-ex-ex-lg;
 
   &:before {
     font-family: $font-family-icons;
-    @include rem(font-size, 19);
-    font-weight: 800;
+    font-size: $font-size-lg;
+    font-weight: $font-bold;
     display: inline-block;
     @include rem(padding-right, 10);
     color: $primary;
   }
   
   span, i  {
-    color:$green;
+    color: $tertiary;
     @include rem(margin-right, 5);
-    @include rem(font-size, 14);
+    font-size: $font-size-ex-sm;
 
     &:hover, &:focus {
       color: $secondary;
@@ -100,13 +84,13 @@ main a {
     cursor: pointer;
     
     &:hover, &:focus {
-      @extend .focus-outline;
+      @include outline(.1875rem, -.1875rem, $focus);
     }
 
     i  {
-      color:$green;
+      color: $tertiary;
       @include rem(margin-right, 5);
-      @include rem(font-size, 14);
+      font-size: $font-size-ex-sm;
 
       &:hover, &:focus {
        color: $secondary;
@@ -130,7 +114,7 @@ main a {
   }
 
 .action-link--inline {
-    color: $green;
+    color: $tertiary;
     &:hover {
         color: $blue;
     }
@@ -155,7 +139,7 @@ main a {
 /* Skip Link */
 
 .skip-link {
-  font-size: 15px;
+  font-size: $font-size-sm;
   line-height: 30px;
   padding-right: 5px;
   display: inline-block;
@@ -165,7 +149,7 @@ main a {
   float: left;
   display: inline-block;
   line-height: 30px;
-  font-size: 15px;
+  font-size: $font-size-sm;
   color: #555;
   margin: 0 8px 0 15px;
 }
@@ -194,7 +178,7 @@ main a {
 
   span, i {
     font-size: 1rem;
-    color: $green;
+    color: $tertiary;
     position: absolute;
     left: 0;
     top: 0.5rem;
@@ -204,5 +188,3 @@ main a {
     line-height: 2rem; // fix for text cutting off on focus
   }
 }
-
-

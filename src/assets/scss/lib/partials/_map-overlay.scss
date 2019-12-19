@@ -9,7 +9,7 @@
     width: 260px;
     height: 160px;
     padding: 16px;
-    background-color: #fff;
+    background-color: $white;
     position: absolute;
     top: -207px;
     left: -130px;
@@ -20,13 +20,13 @@
       margin-bottom: 0px;
 
       a {
-        font-size: 18px;
+        font-size: $font-size-ex-med;
         line-height: 24px;
       }
     }
 
     p, li {
-      font-size: 15px;
+      font-size: $font-size-sm;
       line-height: 26px;
     }
     p, ul {
@@ -76,14 +76,6 @@
     }
   }
 
-}
-
-  
-@media only screen and (max-width: 767px) {
-  .ol-overlay-container .popup h2 a {
-    font-size: 17px;
-    line-height: 22px;
-  }
 }
   
 .ol-control {

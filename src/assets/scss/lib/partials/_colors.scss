@@ -1,15 +1,15 @@
 /* /// CUSTOM CLASSES USING THEME COLOURS /// */
 
 .success {
-	color: $success;
+  color: $success;
 }
 
 .danger {
-	color: $danger;
+  color: $danger;
 }
 
 .purple {
-	color: $purple !important;
+  color: $purple !important;
 }
 
 // Theme colour backgrounds that must have white text 
@@ -26,5 +26,5 @@
 .bg-red,
 .bg-gray-dark,
 .bg-teal {
-	color: $white;
+  color: $white;
 }

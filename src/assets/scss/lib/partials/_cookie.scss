@@ -1,9 +1,13 @@
 .cookies-notice {
-  
   background: $gray;
-  
+
   p {
     color: $secondary;
   }
-  
+}
+
+@include media-breakpoint-up(lg) {
+  .sliding-popup-top {
+    text-align: right; // right align the cookies button
+  }
 }

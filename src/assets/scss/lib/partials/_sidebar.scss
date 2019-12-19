@@ -1,23 +1,27 @@
 .sidebar {
   nav, section, aside { 
-    margin-bottom: 3rem;
+    margin-bottom: ($spacer * 3);
   }
+
   h2 {
     font-size: $h3-font-size;
     margin-bottom: ($spacer * 1.5);
   }
+
   h3 {
     font-size: $h4-font-size;
   }
+
   h4 {
     font-size: $h5-font-size;
   }
+
   h5 {
     font-size: $h6-font-size;
   }
 
   p, ul, ol {
-    font-size: 1.063rem;
-    margin-bottom: ($spacer * 1);
+    font-size: $font-size-med;
+    margin-bottom: $spacer;
   }
 }

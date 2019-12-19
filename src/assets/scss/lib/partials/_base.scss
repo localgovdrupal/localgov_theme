@@ -1,35 +1,35 @@
 body {
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	text-size-adjust: none;
-	widows: 2;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  widows: 2;
 }
 
 .text-monospace {
-	font-size: 1rem; //16px
-	background: $gray-tint;
-	color: $gray-dark;
-	padding: ($spacer * 1);
+  font-size: $font-size-base;
+  background: $gray-tint;
+  color: $gray-dark;
+  padding: ($spacer * 1);
 }
 
-/* /// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING /// */
+// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING 
 
 .site-max {
-	max-width: 1170px;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main,
 .sidebar {
-	margin-top: ($spacer * 3);
-	margin-bottom: 0;
+  margin-top: ($spacer * 3);
+  margin-bottom: 0;
 }
 
 main form {
-	width: 100%;
-	margin-bottom: ($spacer * 1);
+  width: 100%;
+  margin-bottom: ($spacer * 1);
 }
 
 //Add some extra right padding for content elements to create some whitespace 
@@ -45,63 +45,67 @@ main ol,
 .sidebar p,
 .sidebar ul,
 .sidebar ol {
-	width: 100%;
-	padding-right: ($spacer * 1.5);
+  width: 100%;
+  padding-right: ($spacer * 1.5);
 }
 
-// add top margin to header sin the page but not the first h2 as that will be at the top of the block
-// .page main h2:not(first-child),
-// .page main h3,
-// .page main h4,
-// .page main h5,
-// .page main h6 {
-// 	margin-top: 3rem;
-// }
+// Add top margin to headers in the page but not the first h2
+// as that will be at the top of the section.
+.content h2 {
+  margin-top: 0;
+}
+.content * + h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin-top: ($spacer * 3);
+}
 
 section {
-	margin-bottom: ($spacer * 2.5);
-	padding-bottom: ($spacer * 2.5);
+  margin-bottom: ($spacer * 2.5);
+  padding-bottom: ($spacer * 2.5);
 }
 
 //Tight sections for output data
 section.tight {
-	margin-bottom: ($spacer * 2);
-	padding-bottom: ($spacer * .5);
+  margin-bottom: ($spacer * 2);
+  padding-bottom: ($spacer * .5);
 }
 
 //Tight section last form input for output data
 section.tight .form-group:last-child {
-	margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 //nested section margins
 section section,
 .form-group {
-	margin-bottom: ($spacer * 2.5);
-	padding-bottom: 0;
+  margin-bottom: ($spacer * 2.5);
+  padding-bottom: 0;
 }
 
 //remove bottom margin from last nested section
 section section:last-child,
 form .form-group:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .account-bar,
 .cookiealert-container {
-	padding-top: ($spacer * 1);
+  padding-top: ($spacer * 1);
 }
 
 .sidebar nav,
 .sidebar section,
 .sidebar aside {
-	margin-bottom: ($spacer * 3);
+  margin-bottom: ($spacer * 3);
 }
 
-/* /// FOCUS STYLES /// */
+// FOCUS STYLES 
 
 *:focus {
-	outline: none;
+  outline: none;
 }
 
 input:focus,
@@ -111,43 +115,42 @@ select:focus,
 button:focus,
 .show-outline
  {
- 	@extend .focus-outline;
+  @include outline(.1875rem, -.1875rem, $focus);
 }
 
 b,
 strong {
-	font-weight: 700;
+  font-weight: $font-bold;
 }
 
-/* /// HORIZONTAL RULES /// */
+// HORIZONTAL RULES
 
 hr {
-	border-top: .0625rem solid $gray; //1px
+  margin-top: $hr-margin-y;
+  border-top: $hr-border solid $hr-color;
 }
 
-/* /// SITE WIDE CUSTOM CLASSES /// */
+// SITE WIDE CUSTOM CLASSES 
 
-// Add a 1px keyline under element
 .key-under {
-	border-bottom: .0625rem solid $gray; //1px
+  border-bottom: .0625rem solid $gray;
 }
 
 .rotate-180 {
-	display: inline-block;
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-	-o-transform: rotate(180deg);
-	transform: rotate(180deg);
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 mark {
-	background: none;
-	color: $success;
-	//color: $teal;
+  background: none;
+  color: $success;
 }
 
-//Icon padding right main and sidebars
+//Icon padding right page and sidebars
 main .fa,
 main li .fa,
 .sidebar li .fa,
@@ -156,134 +159,86 @@ main i,
 main li i,
 main .btn i,
 .btn i {
-	padding-right: .5rem; //8px
+  padding-right: .5rem; //8px
 }
 
 main i {
-	font-size: 1.25rem; //20px
+  font-size: $font-size-ex-lg;
 }
 
-.new-tag{
-  font-size: .9375rem; //15px
+.new-tag {
+  font-size: $font-size-sm;
   line-height: 0.875rem; //14px
 }
-.new-tag span{
-  font-weight: bold;
+.new-tag span {
+  font-weight: $font-bold;
   background: $primary;
-  padding: 	0 .1875rem; //2px/3px
-  margin-right: .1875rem; //3px
-  font-size: 0.875rem; //14px
+  padding:  0 .1875rem; 
+  margin-right: .1875rem;
+  font-size: $font-size-ex-sm;
   color: $white;
 }
 
-.new-tag a{
+.new-tag a {
   text-decoration: underline;
 }
 
-/* /// SKIP TO MAIN CONTENT /// */
+// SKIP TO MAIN CONTENT
 
-//Hidden skip to main content link
+// Hidden skip to main content link
 .skip-main {
-	position: fixed;
-	top: -30px;
-	z-index: 999;
-	width: 100%;
-	background: $indigo;
-	padding: 0;
-	height: 30px;
-	line-height: 30px;
-	margin: 0;
-	box-sizing: border-box;
-	margin: 0;
-	font-size: .9375rem; //15px
-	color: $white;
-}
+  position: fixed;
+  top: -30px;
+  z-index: 999;
+  width: 100%;
+  background: $indigo;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: $font-size-sm;
+  color: $white;
 
-//Skip to main hover
-.skip-main:hover {
-	color: $white;
-}
+  &:hover {
+    color: $white;
+  }
 
-//Skip to main focus
-.skip-main:focus,
-.skip-main:active {
-	top: 0px;
-	position: relative;
-}
-
-
-/* /// ALERTS /// */
-
-//Alert styles
-.alert {
-	background-color: $white !important;
-	font-weight: 700;
-	font-size: 1.125rem; //19px
-}
-
-.breadcrumb {
-	padding: 0.75rem 0;
-}
-// Breadcrumb font size
-.breadcrumb-item {
-	font-size: 0.9375rem;
-	&:first-child {
-		a {
-			&:hover {
-				background: transparent;
-			}
-		}
-	}
-}
-
-/* /// LISTS WITH ICONS REPLACING BULLETS /// */
-
-.iconlist { 
-	padding-left: 0;
-}
-
-.iconlist li {
-	display: flex;
-	list-style: none;
-	padding-left: 0;
-}
-
-.iconlist li .fa,
-.iconlist li i {
-	padding-top: .3125rem;
+  &:focus,
+  &:active {
+    top: 0px;
+    position: relative;
+  }
 }
 
 .pull-left {
-	@extend .float-left;
+  @extend .float-left; // bs class
 }
 .pull-right {
-	@extend .float-right;
+  @extend .float-right; // bs class
 }
 
 
 /* css fadein */
 .fade-in {
-	display: flex !important;
-	opacity: 1 !important;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: .3s;
+  display: flex !important;
+  opacity: 1 !important;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .3s;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@include media-breakpoint-up(lg) {
-	.sliding-popup-top {
-	text-align: right; // right align the cookies button
-	}
-}
+
+
 
 
 

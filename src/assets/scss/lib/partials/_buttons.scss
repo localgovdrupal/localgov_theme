@@ -1,11 +1,9 @@
-
-
 //Button styles
 main .btn,
 .sidebar .btn {
-	font-family: $headings-font-family;
-	margin-top: ($spacer * 1);
-	margin-bottom: ($spacer * .5);
+  font-family: $headings-font-family;
+  margin-top: ($spacer * 1);
+  margin-bottom: ($spacer * .5);
 }
 
 //Button icons
@@ -13,52 +11,52 @@ main .btn .fa,
 aside .btn .fa,
 .sidebar .btn .fa,
 .cookiealert .btn .fa {
-	font-size: 85%;
-	color: $yellow;
+  font-size: 85%;
+  color: $button-icons;
 }
 
 //Button hover
 .btn {
-	&:hover {
-		color: $white;
-		background: $indigo;
-	}
-	&:focus {
-		color: $white;
-		background: $indigo;
-		@extend .focus-outline;
-	}
+  &:hover {
+    color: $white;
+    background: $indigo;
+  }
+  &:focus {
+    color: $white;
+    background: $indigo;
+    @include outline(.1875rem, -.1875rem, $focus);
+  }
 
-	&.btn-secondary {
-		background: $secondary;
-		color: $white;
-		border-color: $secondary;
+  &.btn-secondary {
+    background: $secondary;
+    color: $white;
+    border-color: $secondary;
 
-		&:hover, &:focus {
-			color: $white;
-    		background: $indigo;
-		}
-	}
+    &:hover, &:focus {
+      color: $white;
+        background: $indigo;
+    }
+  }
 }
 
 //disabled button
 .btn.disabled,
 .btn:disabled {
-	opacity: .65;
+  opacity: .65;
 }
 
 //Upload file button
 .custom-file-label::after {
-	color: $white;
-	content: 'Browse';
-	background-color: $purple;
-	line-height: 1.8;
-	font-weight: bold;
+  color: $white;
+  content: 'Browse';
+  background-color: $purple;
+  line-height: 1.8;
+  font-weight: $font-bold;
 }
 
 .custom-file-label {
-	font-size: 1.063rem; //17px
-	line-height: 1.8;
+  font-size: $font-size-med;
+  line-height: 1.8;
 }
 
 // Links styled to look like buttons
@@ -68,12 +66,12 @@ aside .btn .fa,
   height: 100%;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: $font-bold;
   text-decoration: none;
   color: $white;
 
   @include rem(padding, 15);
-  @include rem(font-size, 18);
+  font-size: $font-size-ex-med;
   @include rem(line-height, 22);
   
   &:hover {
@@ -82,7 +80,7 @@ aside .btn .fa,
   }
   
   &:focus {
-    @extend .focus-outline;
+    @include outline(.1875rem, -.1875rem, $focus);
 
     span {
       color: $secondary;
@@ -107,31 +105,31 @@ aside .btn .fa,
       align-items: center;
       font-family: $font-family-icons;
       content: '\f054';
-      font-weight: 900;
-      @include rem(font-size, 20);
+      font-weight: $fa-font-weight;
+      font-size: $font-size-ex-lg;
       @include rem(margin-top, 2);
   }
   &:focus {
       outline: $focus;
   }
-	&:not(:last-child)  {
+  &:not(:last-child)  {
     @include rem(margin-bottom, 20);
     
     @include media-breakpoint-up(sm) {
       margin-bottom: 0;
     }
-	}
+  }
 }
 
 /* Link Button Modifiers */
 
-.link-button-green, .cta-green {
-    background-color: $green;
+.link-button-green, .link-button-primary, .cta-green {
+    background-color: $link-button-primary;
     span, &:after {
       color: $secondary;
     }
     &:hover, &:focus {
-        background-color: $teal;
+        background-color: $link-button-primary-focus;
         
       span, &:after {
         color: $white;
@@ -139,17 +137,17 @@ aside .btn .fa,
     }
 }
 
-.link-button-blue, .cta-blue {
-    background-color: $blue;
+.link-button-blue, .link-button-secondary, .cta-blue {
+    background-color: $link-button-secondary;
     &:hover, &:focus {
-        background-color: $cyan;
+        background-color: $link-button-secondary-focus;
     }
 }
 
-.link-button-orange, .cta-orange {
-    background-color: $orange;
+.link-button-orange, .link-button-tertiary, .cta-orange {
+    background-color: $link-button-tertiary;
     &:hover, &:focus {
-        background-color: $yellow;
+        background-color: $link-button-tertiary-focus;
     }
 }
 
@@ -171,10 +169,12 @@ aside .btn .fa,
     }
 
     &:after {
+        font-family: $font-family-icons;
         content: '\f00d';
+        font-weight: $fa-font-weight;
     }
 }
 
 .link-button-small, .cta-small {
-	@include rem(width, 140);
+  @include rem(width, 140);
 }
