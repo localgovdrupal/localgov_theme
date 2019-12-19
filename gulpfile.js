@@ -65,7 +65,7 @@ gulp.task('sass', function(){
 gulp.task('js', function(){
 
   return gulp.src('./src/assets/js/*.js')
-    .pipe(concat('main.js'))
+    //.pipe(concat('main.js'))
     .pipe(gulp.dest('./dist/assets/js/'))
 
 });
