@@ -1,6 +1,6 @@
 # Sass Style Guide
 
-This is a coding standard guide to formatting Sass stylesheets to encourage consistency between developers in this repository. Please take a common sense approach to modifying the sass, adopting a style of 'code what you see' rather than doing your own thing. Our coding standards are inline with those set for Drupal and Bootstrap 4.
+This is a coding standard guide to encourage consistency between developers in this repository. Please take a common sense approach to modifying the sass, adopting a style of `code what you see` rather than doing your own thing. Our coding standards are inline with those set for Drupal and Bootstrap 4.
 
 ## Helper docs
 
@@ -9,7 +9,7 @@ This is a coding standard guide to formatting Sass stylesheets to encourage cons
 
 ## Folder Structure
 
-More info in each folder's readme...
+More info in each folder`s readme...
 
 Filename          | Purpose
 ----------------- | ----------------------------------------------------------------------
@@ -20,14 +20,19 @@ Filename          | Purpose
 
 ## When creating new `.scss` files
 
-Not all files have to be partials, if a piece of CSS is uncommon, or part of the admin area it's better to make it a separate file and include it as a library.
+Not all files have to be partials, if a piece of CSS is uncommon, or part of the admin area it`s better to make it a separate file and include it as a library.
 
 * As an example, we have an override.css file here `css/override.css`.
 
 Dist Process :
 
-* Run 'gulp build'
+* Run `gulp build`
 * The build will aggregate partials into `dist/assets/css/lib/main.css`.
+* Sass Lint will run on build - giving you useful pointers in your console.
+
+## Sass Lint
+
+The build process will run a linter which uses a set of style rules set out in `.stylelintrc` located in the theme root. You can tell it to ignore certain files and folders via `.stylelintignore`.
 
 ## Basics
 
@@ -52,12 +57,10 @@ E.g.:
 }
 ```
 
-## Sass Formatting
-
 ### Selector Nesting
 
 * A newline should precede and follow a selector being nested.
-* Place nested selectors after the parent's properties/includes/extends/etc...
+* Place nested selectors after the parent`s properties/includes/extends/etc...
 
 E.g.:
 
@@ -102,7 +105,7 @@ Extra large devices (large desktops, 1200px and up)
 ### Mixins, Nesting, and Breakpoints
 
 * When using mixins that act as containers for style declarations (such as `@include breakpoint()`), never nest a selector within the mixins brackets.
-* `@includes` etc... should be placed (when sensible) at the end of a selector's properties. Specifically, add any breakpoint mixins in order of progressive enhancement.
+* `@includes` etc... should be placed (when sensible) at the end of a selector`s properties. Specifically, add any breakpoint mixins in order of progressive enhancement.
 
 E.g.:
 
@@ -127,9 +130,9 @@ E.g.:
 }
 ```
 
-### 'Quotes'
+### `Quotes`
 
-Single '' quotes only please.
+Single `` quotes only please.
 
 # Multiple selectors
 
@@ -155,12 +158,11 @@ Multiple selectors require a new line:
 
 ### Extending
 
-While Sass' `@extend` functionality is pretty, it causes a lot of maintenance
-nightmares, so use it sparingly. The one absolute rule is:
+The `@extend` functionality should be used sparingly. The one absolute rule is:
 
 *Do not `@extend` a selector onto a selector in a different file.*
 
-In those cases it's usually best to use a mixin.
+In those cases it`s usually best to use a mixin. Whenever you use `@extend`, try to think `Is there a better way?`
 
 ## Class Naming Conventions
 
@@ -226,34 +228,14 @@ achieve the desired result.
 </div>
 ```
 
-## Modular Scale Typography
+## Typography
 
-We're using what's called [modular scale](https://alistapart.com/article/more-meaningful-typography) for our typography. This means all of our type sizes are based on a ratio. We have a few helper functions.
+All Typography is set using REM values and can be modified via the `_variables.scss` file.
 
-You can use the mixin `font-size()` to declare the font-size you want, if you're looking at a mockup with font-sizes in px you can use [Font Sizes Cheatsheet](FONTSIZES.md).
-
-Here's an example:
-
-```scss
-.component {
-  @include font-size(2); // From the cheatsheet we see 2 will result in 22.5px
-}
-```
-
-## Other Conventions
-
-* Do not add units to 0 values.
-
-   ```scss
-   // No.
-   margin: 0px auto;
-   // Yes.
-   margin: 0 auto;
-   ```
 
 ### CSS Property Declaration Order
 
-This project follows Drupal's CSS declaration order:
+This project follows Drupal`s CSS declaration order:
 
 ```scss
 .selector {
@@ -298,6 +280,3 @@ Comments should look like so, with no new line below:
   color: $blue;
 }
 ```
-
-
-

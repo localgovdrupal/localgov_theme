@@ -51,7 +51,10 @@ main ol,
 
 // Add top margin to headers in the page but not the first h2
 // as that will be at the top of the section.
-.content h2:not(first-child),
+.content h2 {
+  margin-top: 0;
+}
+.content * + h2,
 .content h3,
 .content h4,
 .content h5,
