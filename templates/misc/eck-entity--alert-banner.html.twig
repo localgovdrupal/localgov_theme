@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme template for the alert_banner type ECK entity.
+ *
+ * Available variables:
+ * - eck_entity: The full ECK entity with limited access to object properties
+ *   and methods. Only "getter" methods (method names starting with "get",
+ *   "has", or "is") and a few common methods such as "id" and "label" are
+ *   available. Calling other methods (such as node.delete) will result in an
+ *   exception.
+ * - content: All ECK entity items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *
+ * @see template_preprocess_eck_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('bhcc_alert_banner/alert_banner') }}
+
+{# Possible values for alert_type: minor, major, notable-person #}
+{% set alert_type = eck_entity.get('field_alert_type_of_alert').value %}
+
+{%
+  set classes = [
+    'alert-bar',
+    'alert-banner',
+    'alert-banner--' ~ alert_type|clean_class,
+    is_front ? 'alert-banner--homepage' : '',
+    'js-alert-banner'
+  ]
+%}
+
+<div{{ attributes.addClass(classes).setAttribute('id', 'globalBanner').setAttribute('role', 'contentinfo').setAttribute('aria-label', 'globalalert') }}>
+	<div class="container-fluid site-max">
+		<div class="row">
+			<div class="col-12 col-sm-10 text-left pt-3 pb-3">
+        {{ content.field_alert_short_description }}
+			</div>
+			<div class="col-12 col-sm-2 text-center text-sm-right pt-3 pb-3">
+				<a href="#" id="closeGlobalBanner" class="js-alert-banner-close">Hide <span class="sr-only">Click here to hide this notification</span></a>
+				<i class="fas fa-times-circle" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+</div>
