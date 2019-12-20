@@ -32,6 +32,7 @@
   ],
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^8.0.0",
     "npm-install-all": "^1.1.21",

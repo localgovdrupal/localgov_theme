@@ -113,7 +113,7 @@ ul.step-list {
         text-align: center;
         line-height: 1.55rem;
         font-weight: $font-bold;
-        border: 2px solid $gray;
+        @include border(2, solid, $gray);
       }
 
       &:not(:last-of-type):after {
@@ -124,7 +124,7 @@ ul.step-list {
         width: .0625rem;
         height: calc(100% - 1rem);
         background-color: $white;
-        border: 1px solid $gray;
+        @include border(1, solid, $gray);
         transition: all .4s;
         color: $secondary;
       }
@@ -143,11 +143,11 @@ ul.step-list {
           display: block;
           line-height: 1.5rem;
 
-        &.step-show {
-          font-size: $font-size-ex-sm;
-          color: $blue;
-          text-decoration: underline;
-          font-weight: $font-normal;
+          &.step-show {
+            font-size: $font-size-ex-sm;
+            color: $blue;
+            text-decoration: underline;
+            font-weight: $font-normal;
           }
         }
       }
@@ -155,12 +155,12 @@ ul.step-list {
       &.step--active {
         &:before {
           background-color: $primary;
-          border: 2px solid $primary;
+          @include border(2, solid, $primary);
           color: $white;
         }
 
         &:not(:last-of-type):after {
-          border: 1px solid $primary;
+          @include border(1, solid, $primary);
         }
 
         .step__title {
@@ -175,7 +175,7 @@ ul.step-list {
 
       &:not(:first-child) {
         .step__title {
-          border-top: solid 1px $gray;
+          @include borderdirection(top, 1, solid, $gray);
         }
       }
 
