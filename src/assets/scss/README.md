@@ -230,34 +230,8 @@ achieve the desired result.
 
 ## Typography
 
-All Typography is set using REM values and can be modified via the `_variables.scss` file.
+All Typography is set using REM values and can be modified via the base font size set in the `_variables.scss` file.
 
-
-### CSS Property Declaration Order
-
-This project follows Drupal`s CSS declaration order:
-
-```scss
-.selector {
-  // Positioning declarations
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  // Box model declarations
-  display: inline-block;
-  width: 100px;
-  padding: 10px;
-  border: 1px solid #333333;
-  // Other declarations
-  background: #000000;
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: 10px;
-}
-```
-
-More information can be found here: [drupal.org](https://www.drupal.org/docs/develop/standards/css/css-formatting-guidelines#declaration-order)
 
 ### Declaring Colour
 

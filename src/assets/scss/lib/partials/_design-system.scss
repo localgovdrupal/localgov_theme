@@ -1,0 +1,54 @@
+//DESIGN SYSTEM SPECIFIC STYLES
+
+//CODE SNIPPETS
+
+//Prism code snippets wrapper
+.prism-wrapper {
+  max-width: 100%;
+  position: relative;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+//Prism code snippets remove margins above and below
+pre[class*="language-"] {
+  margin: 0;
+  border-radius: 0;
+}
+
+//DESIGN SYSTEM MENU
+
+//Remove default list styles
+.node--design_system_page .sidebar h3 {
+  margin-bottom: 1.5rem;
+}
+
+//Remove default list styles
+.node--design_system_page .sidebar ul li {
+  list-style-type: none;
+}
+
+//Remove default list padding
+.node--design_system_page .sidebar ul {
+  padding: 0;
+}
+
+//Parent pages
+.node--design_system_page .sidebar ul li a {
+  font-weight: 800;
+  pointer-events: none;
+  text-decoration: none;
+  color: #121212;
+  font-size: 1.188rem;
+  padding: 0 0 2rem 0;
+}
+
+//Child pages
+.node--design_system_page .sidebar ul ul li a {
+  pointer-events: auto;
+  font-weight: 400;
+  color: #880088;
+  text-decoration: underline;
+  font-size: 1.063rem;
+  padding: 0;
+}

@@ -93,7 +93,7 @@ gulp.task('fonts', function () {
 // watch for changes
 gulp.task('watch', function () {
 
-  gulp.watch('src/assets/scss/**/*.scss',['sass'], ['scss-lint']);
+  gulp.watch('src/assets/scss/**/*.scss',['sass']);
   gulp.watch('src/assets/js/**/*.js',['js']);
   gulp.watch('src/assets/img/*',['images']);
   gulp.watch('src/assets/fonts/**/*',['fonts']);

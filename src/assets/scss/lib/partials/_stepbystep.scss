@@ -181,13 +181,8 @@ ul.step-list {
 
       .step__summary {
         display: none; // hide step summaries that are not active
-        position: relative;
-        height: calc(100% - 132px);
-        width: calc(100% - 41px);
-        overflow: visible;
-        margin-left: 41px;
-        margin-right: 24px;
-        padding-bottom: 15px;
+        padding-left: 2.4rem;
+        padding-bottom: .9375rem;
 
         p { 
           margin-top: 0; 

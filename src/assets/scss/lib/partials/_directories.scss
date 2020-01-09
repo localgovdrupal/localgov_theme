@@ -4,9 +4,9 @@
   border-bottom: 1px solid #eee;
 
   h2 {
-    @include rem(margin, 0, 0, 14, 0);
     font-weight: $font-bold;
     font-size: $font-size-ex-med;
+    @include rem(margin, 0, 0, 14, 0);
     @include rem(line-height, 24);
   }
   
@@ -16,8 +16,8 @@
 
   ul {
     list-style: none;
-    @include rem(margin, 12, 0);
     padding: 0px;
+    @include rem(margin, 12, 0);
 
     li {
       font-size: $font-size-med;
@@ -49,16 +49,16 @@
   }
 
   label {
-    @include rem(margin-right, 8);
     font-size: $font-size-med;
+    @include rem(margin-right, 8);
   }
 
   select {
-    @include rem(padding, 7);
     border-radius: 4px;
-    @include rem(width, 197);
-    border: 1px solid #dddddd;
+    border: 1px solid $gray;
     font-size: $font-size-lg;
+    @include rem(width, 197);
+    @include rem(padding, 7);
   }
 
   .fas, .far {
@@ -122,6 +122,7 @@
   margin:26px 0;
   padding-left:0px;
   list-style:none;
+
   li {
     padding-left:5px;
   }
@@ -132,6 +133,7 @@
 }
 
 .directories-search-form {
+
   h2 {
     margin-bottom:0px !important;
     margin-bottom:0rem !important;
@@ -156,25 +158,11 @@
   }
 }
 
-@media only screen and (max-width:767px) {
-  .directories-search-form--search-toggle {
-    text-decoration:none;
-    float:right;
-    
-    span {
-      margin-left:4px;
-      margin-left:0.25rem;
-    }
 
-    &:hover {
-      text-decoration:none;
-    }
-  }
-}
 
 .node--directory_listing {
   .directories-search {
-    background-color: #f4f4f4;
+    background-color: $gray-tint;
 
     form { 
       margin-top:0px;
@@ -193,28 +181,30 @@
 }
 
 @media only screen and (max-width:767px) {
-  .directories-search h2 {
-    font-size: $h3-font-size;
-  }
-}
 
-@media only screen and (max-width:767px) {
+  .directories-search {
+
+    h2 {
+      font-size: $h3-font-size;
+    }
+  }
+
   .directories-search-form--search-toggle {
     font-size: $font-size-med;
     font-weight: $font-bold;
     color: $secondary;
+    text-decoration:none;
+    float:right;
 
     &:hover {
       color: $secondary;
+      text-decoration:none;
     }
-  }
-}
 
-@media only screen and (max-width:767px) {
-  .directories-search-form--search-toggle {
     span {
       font-size: $font-size-sm;
+      margin-left:4px;
+      margin-left:0.25rem;
     }
   }
 }
-

@@ -1,230 +1,111 @@
-/*Form IO Paragraphs*/
-.formio-form-wrapper p,
-.formio-form-wrapper p span {
-    font-size: $font-size-lg !important;
-    margin-bottom: $spacer;
-}
-
-/*Required asterisk red*/
-.field-required:after {
-    color: #ae1100 !important;
-}
-/*Drop select list and search*/
-.choices__list, .choices__input, .choices__list--dropdown .choices__item {
-    font-size: $font-size-ex-med !important;
-    opacity: 1 !important;
-    color: $gray-dark;
-}
-
-/*Placeholder text in dropdowns*/
-.choices__placeholder, .formio-placeholder {
-    opacity: 1 !important;
-    color: $gray-dark;
-}
-/* Input placeholders - not working*/
-.form-control::-webkit-input-placeholder {
-    opacity: 1 !important;
-    color: $gray-dark;
-}
-.form-control::-moz-placeholder {
-     opacity: 1 !important;
-    color: $gray-dark;
-}
-.form-control::-ms-placeholder {
-     opacity: 1 !important;
-    color: $gray-dark;
-}
-.form-control::placeholder {
-     opacity: 1 !important;
-    color: $gray-dark;
-}
-
-
-/*FORM IO PAGINATION BELOW*/
+// FormIO identifier wrapper
 .formio-form-wrapper {
-    width: 100%;
-}
-/*The wrapper for the pagination progress bar*/
-.formio-form-wrapper nav {
-    width: 100% !important;
-    height: 90px;
-    margin: 0 0 3rem 0;
-    position: relative;
-}
-/*The UL container for the pagination progress bar*/
-.pagination {
-    height: 90px;
-    display: flex;
-    flex-wrap: nowrap;
-    border-bottom: 2px solid $gray;
-    padding: 0;
-    margin: 0;
-    pointer-events: none;
-    /* Makes pagination non clickable*/
+  width: 100%;
 }
 
-/*The dot end cap at the left of the pagination progress bar*/
-.pagination:before {
-    position: absolute;
-    content: ' ';
-    background: $gray;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    bottom: -4px;
-    left: -1px;
+// FORMIO HIDE CANCEL BUTTON
+
+/*Hide Cancel button li container*/
+.formio-form-wrapper .list-inline-item:first-child {
+  display: none;
+}
+/*Hide Cancel button*/
+.formio-form-wrapper .btn-wizard-nav-cancel {
+  display: none;
 }
 
-/*The dot end cap at the right of the pagination progress bar*/
-.pagination:after {
-    position: absolute;
-    content: ' ';
-    background: $gray;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    bottom: -4px;
-    right: -1px;
-}
-/*The list item in the pagination progress bar*/
-.page-item {
-    line-height: 1.4rem;
-    height: 90px;
-    max-width: 33%;
-    list-style: none;
-    position: relative;
-    float: left;
-    display: inline-flex;
-    margin: 0 1rem;
-    padding: 0 0 1.8rem 0;
-    text-align: center;
-}
-/*The DEFAULT dot underneath the list items in the pagination progress bar*/
-.page-item:after {
-    background: $white;
-    content: ' ';
-    border: 2px solid $gray;
-    border-radius: 20px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: -9px;
-    left: 50%;
-    margin-left: -.75rem;
-}
-/*The ACTIVE dot underneath the list items in the pagination progress bar*/
-/*li active after*/
-.page-item.active:after {
-    background: #880088;
-    border: 2px solid #880088;
+// FormIO form steps buttons min width
+.formio-form-wrapper .list-inline-item .btn {
+  min-width: 135px;
 }
 
-/*The DEFAULT list items in the pagination progress bar*/
-.page-link {
-    color: #121212;
-    text-decoration: none;
-    font-size: $font-size-med;
-    display: flex;
-    align-self: flex-end;
-    /* text-transform: lowercase; titles all lower case*/
-    display: block;
-}
-.page-link::first-letter {
-        /* text-transform: uppercase; First letter of title upper case*/
+// FIELD DESCRIPTIONS AND PLACEHOLDERS
+
+// Field description and placeholder size
+.formio-form-wrapper .form-text {
+  font-size: 1.125rem;
 }
 
-/*The ACTIVE list item in the pagination progress bar*/
-.page-item.active span {
-    font-weight: $font-bold;
-    text-decoration: none;
-    color: #880088;
+// Text muted colour
+.formio-form-wrapper .text-muted {
+  color: #555 !important;
 }
 
-/*Pagination progress bar below 768*/
-@media (max-width: 992px) {
-    /*Make The wrapper for the pagination progress bar auto height*/
-    .formio-form-wrapper nav {
-        height: auto;
-        margin: 0 0 3rem 1rem !important;
-    }
-    /*Make the UL container for the pagination progress bar have border on left and height auto plus extra padding top and bottom*/
-    .pagination {
-        height: auto;
-        flex-wrap: wrap;
-        border-bottom: none;
-        border-left: 2px solid $gray;
-        padding: 0 0 1rem 0;
-    }
-    /*Make the LI  for the pagination progress stacked and height auto*/
-    .page-item {
-        height: auto;
-        max-width: 100%;
-        width: 100%;
-        position: relative;
-        float: left;
-        display: flex;
-        margin: 0 0 0 1.5rem;
-        padding: 0 0 1rem 0;
-        text-align: left;
-    }
-    /*Reposition the caps on the progress bar to top and bottom*/
-    .pagination:before {
-        display: none;
-    }
-    .pagination:after {
-        bottom: -4px;
-        left: -4px;
-    }
-    .page-item:after {
-        background: $white;
-        content: ' ';
-        border: 2px solid $gray;
-        border-radius: 20px;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        left: 0;
-        margin-left: -2.2rem;
-        bottom: initial;
-    }
+// DROP SELECT
+
+// Hide close button inside drop select
+.formio-form-wrapper .dropdown .choices__button {
+  display: none !important;
 }
 
-// Checkbox Wrapper
-.checkbox-group .form-check {
+// Hide search field inside drop select
+.formio-form-wrapper .choices[data-type*="select-one"] .choices__input {
+  display: none !important;
+}
+
+// SHORT TEXT FIELDS
+
+// Custom class added to container in Form IO to set input width
+.formio-form-wrapper .max-220 input {
+  max-width: 220px;
+  margin-right: auto;
+}
+
+// Custom class added to container in Form IO to set input width
+.formio-form-wrapper .max-160 input {
+  max-width: 160px;
+  margin-right: auto;
+}
+
+// Custom class added to container in Form IO to set input width
+.formio-form-wrapper .max-80 input {
+  max-width: 70px;
+  margin-right: auto;
+}
+
+// CUSTOM ACCESSIBLE CHECKBOXES
+
+// Custom class added to container in Form IO to identify checkbox group
+.formio-form-wrapper .checkbox-group {
+}
+
+// Checkbox wrapper
+.formio-form-wrapper .checkbox-group .form-check {
   padding-left: 0;
   width: 100%;
   margin: 0 0 20px 0;
 }
 
 // Hide the default checkbox
-.checkbox-group .form-check input[type="checkbox"] {
+.formio-form-wrapper .checkbox-group .form-check input[type="checkbox"] {
   opacity: 0;
-  position:absolute;
+  position: absolute;
 }
 
-/*The span after the checkbox*/
-.checkbox-group .form-check span {
+// The span after the checkbox
+.formio-form-wrapper .checkbox-group .form-check span {
   position: relative;
   padding-left: 45px;
 }
 
-/*Insert fake checkbox*/
-.checkbox-group .form-check span::before, .checkbox-group .form-check span::after {
+// Insert fake checkbox
+.formio-form-wrapper .checkbox-group .form-check span::before,
+.formio-form-wrapper .checkbox-group .form-check span::after {
   position: absolute;
   content: "";
   display: inline-block;
 }
 
-/*Outer box of the fake checkbox*/
-.checkbox-group .form-check span::before {
+// Outer box of the fake checkbox
+.formio-form-wrapper .checkbox-group .form-check span::before {
   height: 35px;
   width: 35px;
   border: 1px solid #121212;
   left: 0px;
 }
 
-/*Checkmark of the fake checkbox*/
-.checkbox-group .form-check span::after {
+// Checkmark of the fake checkbox
+.formio-form-wrapper .checkbox-group .form-check span::after {
   position: absolute;
   height: 11px;
   width: 22px;
@@ -234,51 +115,60 @@
   left: 7px;
   top: 9px;
 }
-/*Hide the checkmark by default*/
-.checkbox-group .form-check input[type="checkbox"] + span::after {
+
+// Hide the checkmark by default
+.formio-form-wrapper .checkbox-group .form-check input[type="checkbox"] + span::after {
   content: none;
 }
-/*Unhide on the checked state*/
-.checkbox-group .form-check input[type="checkbox"]:checked + span::after {
+// Unhide on the checked state
+.formio-form-wrapper .checkbox-group .form-check input[type="checkbox"]:checked + span::after {
   content: "";
 }
-/*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox-group .form-check input[type="checkbox"]:focus + span::before {
-  outline:3px solid #FFBB00;
+// Adding focus styles on the outer-box of the fake checkbox
+.formio-form-wrapper .checkbox-group .form-check input[type="checkbox"]:focus + span::before {
+  outline: 3px solid #ffbb00;
 }
 
-// Radio Wrapper
-.radio-group .form-check {
+// CUSTOM ACCESSIBLE RADIOS
+
+// Custom class added to container in Form IO to identify checkbox group
+.formio-form-wrapper .radio-group {
+}
+
+// Checkbox Wrapper
+.formio-form-wrapper .radio-group .form-check {
   padding-left: 0;
   width: 100%;
   margin: 0 0 20px 0;
 }
-/*Hide the radio button*/
-.radio-group .form-check input[type="radio"] {
+
+// Hide the radio button
+.formio-form-wrapper .radio-group .form-check input[type="radio"] {
   opacity: 0;
-  position:absolute;
+  position: absolute;
 }
-/*The span after the radio button*/
-.radio-group .form-check span {
+// The span after the radio button
+.formio-form-wrapper .radio-group .form-check span {
   position: relative;
   padding-left: 45px;
 }
-/*Insert fake radio button*/
-.radio-group .form-check span::before, .radio-group .form-check span::after {
+// Insert fake radio button
+.formio-form-wrapper .radio-group .form-check span::before,
+.radio-group .form-check span::after {
   position: absolute;
   content: "";
   display: inline-block;
 }
-/*Outer box of the fake radio button*/
-.radio-group .form-check span::before{
-  height:35px;
+// Outer box of the fake radio button
+.formio-form-wrapper .radio-group .form-check span::before {
+  height: 35px;
   width: 35px;
   border: 1px solid #121212;
   border-radius: 50%;
   left: 0px;
 }
-/*Radiomark of the fake radio button*/
-.radio-group .form-check span::after {
+// Radiomark of the fake radio button
+.formio-form-wrapper .radio-group .form-check span::after {
   position: absolute;
   height: 15px;
   width: 15px;
@@ -287,63 +177,61 @@
   left: 10px;
   top: 10px;
 }
-/*Hide the radiomark by default*/
-.radio-group .form-check input[type="radio"] + span::after {
+// Hide the radiomark by default
+.formio-form-wrapper .radio-group .form-check input[type="radio"] + span::after {
   content: none;
 }
-/*Unhide radiomark on the checked state*/
-.radio-group .form-check input[type="radio"]:checked + span::after {
+// Unhide radiomark on the checked state
+.formio-form-wrapper .radio-group .form-check input[type="radio"]:checked + span::after {
   content: "";
 }
-/*Adding focus styles on the outer-box of the fake radio*/
-.radio-group .form-check input[type="radio"]:focus + span::before {
-  outline:3px solid #FFBB00;
+// Adding focus styles on the outer-box of the fake radio
+.formio-form-wrapper .radio-group .form-check input[type="radio"]:focus + span::before {
+  outline: 3px solid #ffbb00;
 }
 
-/*Form IO Pagination*/
-.formio-form-wrapper{
-  width: 100%;
-}
-/*The wrapper for the pagination progress bar*/
+// PAGINATION - FORMIO STEPS
+
+// The wrapper for the pagination progress bar
 .formio-form-wrapper nav {
   width: 100% !important;
-  height: 90px;
+  height: auto;
   margin: 0 0 3rem 0;
   position: relative;
 }
-/*The UL container for the pagination progress bar*/
-.pagination {
+// The UL container for the pagination progress bar
+.formio-form-wrapper .pagination {
   height: 90px;
   display: flex;
   flex-wrap: nowrap;
-  border-bottom: 2px solid #DBDFE3;
+  border-bottom: 2px solid #dbdfe3;
   padding: 0;
   margin: 0;
 }
-/*The dot end cap at the left of the pagination progress bar*/
-.pagination:before {
+// The dot end cap at the left of the pagination progress bar
+.formio-form-wrapper .pagination:before {
   position: absolute;
-  content: ' ';
-  background: #DBDFE3;
+  content: " ";
+  background: #dbdfe3;
   border-radius: 10px;
   width: 10px;
   height: 10px;
   bottom: -4px;
   left: -1px;
 }
-/*The dot end cap at the right of the pagination progress bar*/
-.pagination:after {
+// The dot end cap at the right of the pagination progress bar
+.formio-form-wrapper .pagination:after {
   position: absolute;
-  content: ' ';
-  background: #DBDFE3;
+  content: " ";
+  background: #dbdfe3;
   border-radius: 10px;
   width: 10px;
   height: 10px;
   bottom: -4px;
   right: -1px;
 }
-/*The list item in the pagination progress bar*/
-.page-item {
+// The list item in the pagination progress bar
+.formio-form-wrapper .page-item {
   line-height: 1.4rem;
   height: 90px;
   max-width: 33%;
@@ -355,58 +243,61 @@
   padding: 0 0 1.8rem 0;
   text-align: center;
 }
-/*The DEFAULT dot underneath the list items in the pagination progress bar*/
-.page-item:after {
-  background: #FFF;
-  content: ' ';
-  border: 2px solid #DBDFE3;
+// The DEFAULT dot underneath the list items in the pagination progress bar
+.formio-form-wrapper .page-item:after {
+  background: #fff;
+  content: " ";
+  border: 2px solid #dbdfe3;
   border-radius: 20px;
   width: 20px;
   height: 20px;
   position: absolute;
   bottom: -9px;
   left: 50%;
-  margin-left: -.75rem;
+  margin-left: -0.75rem;
 }
-/*The ACTIVE dot underneath the list items in the pagination progress bar*/
-/*li active after*/
-.page-item.active:after {
+
+// The ACTIVE dot underneath the list items in the pagination progress bar
+.formio-form-wrapper .page-item.active:after {
   background: #880088;
   border: 2px solid #880088;
 }
-/*The DEFAULT list items in the pagination progress bar*/
-.page-link {
+
+// The DEFAULT list items in the pagination progress bar
+.formio-form-wrapper .page-link {
   color: #121212;
   text-decoration: none;
   pointer-events: none;
   display: flex;
   align-self: flex-end;
+  border: 0;
+  padding: 0;
+  background: none !important;
 }
-/*The ACTIVE list item in the pagination progress bar*/
-.page-item.active span{
+
+// The ACTIVE list item in the pagination progress bar
+.formio-form-wrapper .page-item.active span {
   font-weight: 700;
   text-decoration: none;
   color: #880088;
 }
-/*Pagination progress bar below 768*/
+
 @media (max-width: 768px) {
-  /*Make The wrapper for the pagination progress bar auto height*/
-  .formio-form-wrapper nav {
-    height: auto;
+  // Wrapper for the pagination progress bar adjust margins
+  .formio-form-wrapper .formio-form-wrapper nav {
     margin: 0 0 3rem 1rem !important;
   }
-  
-  /*Make the UL container for the pagination progress bar have border on left and height auto plus extra padding top and bottom*/
-  .pagination {
+  // UL container for the pagination progress bar, border on left, height auto, extra padding top and bottom
+  .formio-form-wrapper .pagination {
     height: auto;
     flex-wrap: wrap;
     border-bottom: none;
-    border-left: 2px solid #DBDFE3;
+    border-left: 2px solid #dbdfe3;
     padding: 0 0 1rem 0;
   }
 
-  /*Make the LI for the pagination progress stacked and height auto*/
-  .page-item {
+  // LI for the pagination progress stacked and height auto
+  .formio-form-wrapper .page-item {
     height: auto;
     max-width: 100%;
     width: 100%;
@@ -417,21 +308,20 @@
     padding: 0 0 1rem 0;
     text-align: left;
   }
-
-  /*Reposition the caps on the progress bar to top and bottom*/
-  .pagination:before {
+  // Reposition the caps on the progress bar to top and bottom
+  .formio-form-wrapper .pagination:before {
     display: none;
   }
-
-  .pagination:after {
+  // The dot end cap at the bottom of the pagination progress bar
+  .formio-form-wrapper .pagination:after {
     bottom: -4px;
     left: -4px;
   }
-
-  .page-item:after {
-    background: #FFF;
-    content: ' ';
-    border: 2px solid #DBDFE3;
+  // The DEFAULT dot to the left of the list items in the pagination progress bar
+  .formio-form-wrapper .page-item:after {
+    background: #fff;
+    content: " ";
+    border: 2px solid #dbdfe3;
     border-radius: 20px;
     width: 20px;
     height: 20px;

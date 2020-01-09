@@ -1,215 +1,220 @@
-/* Page builder section */
+// Page builder section
 
 .builder-section {
   @include rem(margin-bottom, 20);
 
-  h2 {
-    @include rem(margin-bottom, 10);
+  h2 { 
     font-weight: 500;
+    @include rem(margin-bottom, 10);
   }
 }
 
 .builder-section [class*='col-'] {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Image with caption */
 
 .image-wrapper {
-  @include rem(margin-bottom, 15);
   background: #373737;
+  @include rem(margin-bottom, 15);
 }
 
 .image-with-caption {
+  display: block;
+  margin: 0 auto;
+  @include rem(max-width, 800);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .caption {
+    position: absolute;
+    z-index: 2;
+    @include rem(bottom, 30);
+    @include rem(height, 50);
+    @include rem(padding-left, 85);
+
+    &:before {
+      content: '\f04b';
+      position: absolute;
+      @include rem(left, 15);
+      background: $orange;
+      @include rem(padding, 11, 0, 0, 15);
+      @include rem(height, 50);
+      @include rem(width, 50);
+      @include rem(-webkit-border-radius, 100);
+      @include rem(-moz-border-radius, 100);
+      @include rem(border-radius, 100);
+      font-size: $h4-font-size;
+      font-family: $font-family-icons;
+      font-weight: $fa-font-weight;
+      color: $white;
+    }
+
+    p {
+      margin: 0;
+      color: $white;
+      font-size: $font-size-ex-med;
+      @include rem(line-height, 25);
+
+      &:first-child {
+        @include rem(font-size, 25);
+        font-weight: $font-bold;
+      }
+    }
+  }
+
+  &:after {
     display: block;
-    @include rem(max-width, 800);
-    margin: 0 auto;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .caption {
-        position: absolute;
-        @include rem(bottom, 30);
-        z-index: 2;
-        @include rem(height, 50);
-        @include rem(padding-left, 85);
-
-        &:before {
-            content: '\f04b';
-            position: absolute;
-            @include rem(left, 15);
-            background: $orange;
-            @include rem(padding, 11, 0, 0, 15);
-            @include rem(height, 50);
-            @include rem(width, 50);
-            @include rem(-webkit-border-radius, 100);
-            @include rem(-moz-border-radius, 100);
-            @include rem(border-radius, 100);
-            font-family: $font-family-icons;
-            font-weight: $fa-font-weight;
-            color: $white;
-            @include rem(font-size, 24);
-        }
-
-        p {
-            margin: 0;
-            color: $white;
-            font-size: $font-size-ex-med;
-            @include rem(line-height, 25);
-
-            &:first-child {
-                @include rem(font-size, 25);
-                font-weight: $font-bold;
-            }
-        }
-    }
-
-    &:after {
-        display: block;
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
-        @include rem(margin-top, -150);
-        @include rem(height, 150);
-        width: 100%;
-        content: '';
-    }
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
+    @include rem(margin-top, -150);
+    @include rem(height, 150);
+    width: 100%;
+    content: '';
+  }
 }
 
 /* Fact boxes */
 
 .fact-box {
-    width: 100%;
-    background-color: #f4f4f4;
-    @include rem(margin-bottom, 15);
-    @include rem(padding, 50, 15);
+  width: 100%;
+  background-color: #f4f4f4;
+  @include rem(margin-bottom, 15);
+  @include rem(padding, 50, 15);
+
+  p {
+    @include rem(margin-bottom, 10);
+
+    .fact-opening,
+    .fact-closing {
+      font-weight: $font-bold;
+      font-size: $font-size-ex-ex-lg;
+      text-align: center;
+      color: #000;
+    }
+
+    .fact {
+      font-weight: $font-bold;
+      @include rem(font-size, 70);
+      @include rem(line-height, 70);
+      text-align: center;
+      color: #0059a4;
+    }
+  }
+
+  &.fact-box-fade-red-blue {
+    background: linear-gradient(#A41055, $blue);
+    border-color: $orange;
 
     p {
-        @include rem(margin-bottom, 10);
+      color: $white; 
     }
-    p.fact-opening,
-    p.fact-closing {
-        font-weight: $font-bold;
-        font-size: $font-size-ex-ex-lg;
-        text-align: center;
-        color: #000;
-    }
-
-    p.fact {
-        font-weight: $font-bold;
-        @include rem(font-size, 70);
-        @include rem(line-height, 70);
-        text-align: center;
-        color: #0059a4;
-    }
-
-    &.fact-box-fade-red-blue {
-        background: linear-gradient(#A41055, $blue);
-        border-color: $orange;
-        p { color: $white; }
-    }
+  }
 }
 
 /* Call out boxes */
 
 .call-out-box {
-    position: relative;
-    @include rem(margin-bottom, 15);
-    background-position: 50% 0;
-    background-size: cover;
+  position: relative;
+  @include rem(margin-bottom, 15);
+  background-position: 50% 0;
+  background-size: cover;
 
-    img {
-        height: auto;
-        width: 100%;
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .call-out-content {
+    padding: 30;
+    
+    h2, 
+    p {
+      width: 50%;
     }
 
-    .call-out-content {
-        padding: 30px;
-        
-        h2, p {
-            width: 50%;
-        }
-
-        h2 {
-            @include rem(font-size, 42);
-            @include rem(line-height, 45);
-            color: $white;
-        }
-        p {
-
-            @include rem(font-size, 20);
-            @include rem(line-height, 30);
-            color: $white;          
-        }
-        .cta-button {
-          @include rem(max-width, 290);
-        }
+    h2 {
+      color: $white;
+      @include rem(font-size, 42);
+      @include rem(line-height, 45);
     }
+
+    p {
+      color: $white;
+      @include rem(font-size, 20);
+      @include rem(line-height, 30);         
+    }
+
+    .cta-button {
+      @include rem(max-width, 290);
+    }
+  }
 }
 
 /* Box links */
 
 .box-link {
-    @include rem(margin-bottom, 15);
+  @include rem(margin-bottom, 15);
 
-    a {
-        text-decoration: none;
+  a {
+    text-decoration: none;
 
-        img {
-            width: 100%;
-            height: auto;
-            border-bottom: 5px solid $orange;
-        }
-
-        span {
-            font-weight: $font-bold;
-
-            &::before {
-                content: '\f054';
-                font-family: $font-family-icons;
-                font-weight: $fa-font-weight;
-                font-size: $font-size-ex-ex-sm;
-                color: #F37021;
-                @include rem(margin-right, 5);
-            }
-        }
+    img {
+      width: 100%;
+      height: auto;
+      border-bottom: 0.313rem solid $orange;
     }
+
+    span {
+      font-weight: $font-bold;
+
+      &::before {
+        content: '\f054';
+        font-family: $font-family-icons;
+        font-weight: $fa-font-weight;
+        font-size: $font-size-ex-ex-sm;
+        color: #F37021;
+        @include rem(margin-right, 5);
+      }
+    }
+  }
 }
 
 /* Pull out quotes */
 
 .pull-out-quote {
-    @include rem(margin-bottom, 15);
-    @include rem(padding, 40, 35);
-    background: #f4f4f4;
-    border-left: 5px solid $orange;
+  @include rem(margin-bottom, 15);
+  @include rem(padding, 40, 35);
+  background: #f4f4f4;
+  border-left: 0.313rem solid $orange;
 
-    p {
-        color: #333333;
-    }
+  p {
+    color: #333333;
 
-    p.quote-footer {
-        font-weight: $font-bold;
-        color: #000000;
+    .quote-footer {
+      font-weight: $font-bold;
+      color: $black;
     }
+  }
 }
 
 /* Responsive embed */
 .responsive-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
 
-    .responsive-embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
+  .responsive-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
-

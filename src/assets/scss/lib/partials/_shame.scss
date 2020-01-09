@@ -18,13 +18,11 @@ table {
   }
 }
 
-
 // temp styling related to soft launch
 
 .beta-notice-sm, .notice {
   display: none;
 }
-
 
 // remove gap between multi-line news headers background blocks on hover
 .news-list {
@@ -47,8 +45,13 @@ table {
 iframe {
   &.video {
     width: 100%;
-    height: 350px;
-    border:0;
+    height: 21.875rem; // 350px
+    border: 0;
     margin: 2rem 0; // or equivalent bs spacer class
   }
+}
+
+// important:: fix form.io overriding this specific pseudo in the footer
+.fa-youtube-square:before {
+  content: '\f431' !important;
 }

@@ -1,185 +1,184 @@
 .facet-filter, #edit-field-accessibility--wrapper {
-    // background-color: #e5eef7;
-    padding: 0px 9px;
-    margin-bottom: 11px;
-  }
-  
-  h2.facet-filter-header {
-    margin-top: 39px;
-    margin-bottom: 10px;
-    line-height: 28px;
-  }
-  
-  .facet-filter h3, #edit-field-accessibility--wrapper h3 {
-    font-size: $font-size-ex-lg;
-    line-height: 50px;
-    font-weight: $font-bold;
-    margin: 0px;
-  }
-  
-  .facet-filter h3 a, #edit-field-accessibility--wrapper h3 a,
-  .facet-filter h3 a:visited, #edit-field-accessibility--wrapper h3 a:visited {
-    color: $secondary;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .facet-filter h3 span, #edit-field-accessibility--wrapper h3 span{
-    padding-left: 5px;
-    color: #F37021;
-    font-size: $font-size-lg;
-    width: 20px;
-    margin-right: 10px;
-  }
-  
-  #edit-field-accessibility--wrapper .form-checkboxes {
+  @include rem(padding, 0, 9);
+  @include rem(margin-bottom, 11);
+}
 
-    div {
-      display: flex;
-      width: 100%;
+h2.facet-filter-header {
+  @include rem(margin-top, 39);
+  @include rem(margin-bottom, 10);
+  @include rem(line-height, 28);
+}
 
-      .form-checkbox {
-        width: auto;
-      }
-    }
-  }
-  
-  .facet-filter .checkbox-wrapper, #edit-field-accessibility--wrapper .checkbox-wrapper {
-    display: none;
-  
-  }
-  
-  .facet-filter .checkbox-wrapper.open, #edit-field-accessibility--wrapper .checkbox-wrapper.open {
-    padding-bottom: 9px;
-  }
-  
-  .facet-filter .collapsed, #edit-field-accessibility--wrapper .collapsed {
-    padding-bottom: 0px;
-  }
-  
-  
-  .facet-filter-checkboxes {
-    list-style: none;
-    font-size: $font-size-med;
-    background-color: #fff;
-    padding: 0 12px;
-  }
-  
-  .facet-filter-checkboxes li {
-    border-bottom: 1px solid #eee;
-    padding-top: 5px;
-    position: relative;
-  }
-  
-  .facet-filter-checkboxes li:last-child {
-    border-bottom: 0px;
-  }
-  
-  .facet-filter-checkboxes label {
-    padding-left: 30px;
-  display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: $font-bold;
+.facet-filter h3, #edit-field-accessibility--wrapper h3 {
+  font-size: $font-size-ex-lg;
+  font-weight: $font-bold;
+  margin: 0;
+  @include rem(line-height, 50);
+}
+
+.facet-filter h3 a, #edit-field-accessibility--wrapper h3 a,
+.facet-filter h3 a:visited, #edit-field-accessibility--wrapper h3 a:visited {
+  color: $secondary;
+  text-decoration: none;
+  display: block;
+}
+
+.facet-filter h3 span, #edit-field-accessibility--wrapper h3 span {
+  color: #F37021;
   font-size: $font-size-lg;
-  }
-  
-  .facet-filter-checkboxes label:before {
-    content: '';
-    height: 18px;
-    width: 18px;
-    border: 1px solid #eee;
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    font-family: $font-family-icons;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1.3;
-    text-align: center;
-    font-size: $font-size-sm;
-  }
-  
-  .facet-filter-checkboxes input[type=checkbox] {
-    width: 20px;
-    height: 20px;
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    opacity: 0;
-  }
-  
-  .facet-filter-checkboxes input[type=checkbox]:checked ~ label:before {
-    content: '\f00c';
-    height: 20px;
-    width: 20px;
-    border: 1px solid #34ad5d;
-    color: #34ad5d;
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 0px;
-  }
-  
-  .directories-hide-filters {
-    margin-top: 15px;
-    font-size: $font-size-ex-med;
-    line-height: 28px;
-  }
-  
-  @media only screen and (max-width: 767px) {
-    .directories-hide-filters {
-      font-size: $font-size-med;
+  @include rem(padding-left, 5);
+  @include rem(width, 20);
+  @include rem(margin-right, 10);
+}
+
+#edit-field-accessibility--wrapper .form-checkboxes {
+  div {
+    display: flex;
+    width: 100%;
+
+    .form-checkbox {
+      width: auto;
     }
   }
-  
-  .directories-hide-filters a {
-    font-weight: $font-bold;
-    text-decoration: none;
+}
+
+.facet-filter .checkbox-wrapper, #edit-field-accessibility--wrapper .checkbox-wrapper {
+  display: none;
+
+}
+
+.facet-filter .checkbox-wrapper.open, #edit-field-accessibility--wrapper .checkbox-wrapper.open {
+  @include rem(padding-bottom, 9);
+}
+
+.facet-filter .collapsed, #edit-field-accessibility--wrapper .collapsed {
+  padding-bottom: 0;
+}
+
+.facet-filter-checkboxes {
+  list-style: none;
+  font-size: $font-size-med;
+  background-color: $white;
+  @include rem(padding, 0, 12);
+}
+
+.facet-filter-checkboxes li {
+  border-bottom: 0.063rem solid $indigo-tint;
+  @include rem(padding-top, 5);
+  position: relative;
+}
+
+.facet-filter-checkboxes li:last-child {
+  border-bottom: 0;
+}
+
+.facet-filter-checkboxes label {
+  padding-left: 30px;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: $font-bold;
+  font-size: $font-size-lg;
+}
+
+.facet-filter-checkboxes label:before {
+  content: '';
+  height: 18px;
+  width: 18px;
+  border: 0.063rem solid $indigo-tint;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-family: $font-family-icons;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1.3;
+  text-align: center;
+  font-size: $font-size-sm;
+}
+
+.facet-filter-checkboxes input[type=checkbox] {
+  @include rem(width, 20);
+  @include rem(height, 20);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.facet-filter-checkboxes input[type=checkbox]:checked ~ label:before {
+  content: '\f00c';
+  @include rem(width, 20);
+  @include rem(height, 20);
+  border: 0.063rem solid #34ad5d;
+  color: #34ad5d;
+  display: block;
+  position: absolute;
+  @include rem(top, 10);
+  left: 0;
+}
+
+.directories-hide-filters {
+  font-size: $font-size-ex-med;
+  @include rem(margin-top, 15);
+  @include rem(line-height, 28);
+}
+
+@media only screen and (max-width: 767px) {
+  .directories-hide-filters {
+    font-size: $font-size-med;
   }
-  
-  .directories-hide-filters .fas,
-  .directories-hide-map .fas {
-    color: $secondary;
-    padding-right: 5px;
-  }
-  
-  .directories-hide-filters .hide-filters,
-  .directories-hide-filters .show-filters {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  .directories-filters {
-    margin-top: 18px;
-    padding-bottom: 13px;
-  }
-  
+}
+
+.directories-hide-filters a {
+  font-weight: $font-bold;
+  text-decoration: none;
+}
+
+.directories-hide-filters .fas,
+.directories-hide-map .fas {
+  color: $secondary;
+  @include rem(padding-right, 5);
+}
+
+.directories-hide-filters .hide-filters,
+.directories-hide-filters .show-filters {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.directories-filters {
+  @include rem(margin-top, 18);
+  @include rem(padding-bottom, 13);
+}
+
+.directories-hide-filters .hide-filters {
+  display: inline;
+}
+
+.directories-hide-filters .show-filters {
+  display: none;
+}
+
+.filter-wrapper {
+  display: block;
+}
+
+
+@media only screen and (max-width: 767px) {
   .directories-hide-filters .hide-filters {
+    display: none;
+  }
+
+  .directories-hide-filters .show-filters {
     display: inline;
   }
-  
-  .directories-hide-filters .show-filters {
+
+  .filter-wrapper {
     display: none;
   }
-  
-  .filter-wrapper {
-    display: block;
-  }
-  
-  
-  @media only screen and (max-width: 767px) {
-    .directories-hide-filters .hide-filters {
-      display: none;
-    }
-    .directories-hide-filters .show-filters {
-      display: inline;
-    }
-    .filter-wrapper {
-      display: none;
-    }
 }
