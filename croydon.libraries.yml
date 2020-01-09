@@ -11,8 +11,7 @@ global:
       dist/assets/css/font-face.css: {}
 
   js:
-    # vanilla
-  
+    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
     # council theme
     dist/assets/js/main.js: {}
  
