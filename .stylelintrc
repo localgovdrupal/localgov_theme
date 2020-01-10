@@ -1,4 +1,7 @@
 {
+  "ignoreFiles": [
+    "src/assets/scss/lib/partials/_formio.scss"
+  ],
   "rules": {
     "block-no-empty": null,
     "color-no-invalid-hex": true,
@@ -14,6 +17,6 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["em", "rem", "%", "s"]
+    "unit-whitelist": ["em", "rem", "%", "s", "deg", "ms"]
   }
 }

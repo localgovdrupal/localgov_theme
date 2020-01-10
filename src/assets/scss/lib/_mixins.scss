@@ -11,3 +11,11 @@
   outline: $outsize solid $outcolor !important;
   outline-offset: $outoff;
 }
+
+@mixin border($height, $style, $color) {
+  border: $height + px $style $color;
+}
+
+@mixin borderdirection($direction, $height, $style, $color) {
+  border-#{$direction}: $height + px $style $color;
+}

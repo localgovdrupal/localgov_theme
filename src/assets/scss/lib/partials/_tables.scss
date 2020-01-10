@@ -1,0 +1,57 @@
+// CUSTOMISE THE LOOK AND FEEL OF BOOTSTRAP TABLES
+
+// Custom style for table headings - remove background, set borders, font size
+.table .thead-light th {
+  color: #121212;
+  background-color: #ffffff;
+  border-top: 0;
+  border-bottom: 0.063rem solid #121212;
+  font-size: 1.25rem;
+}
+
+// Base font size for table details
+.table td {
+  font-size: 1.063rem;
+}
+
+// Remove borders from table cells
+.table td {
+  font-size: 1.063rem;
+  padding: 0.75rem;
+  vertical-align: middle;
+  border: 0;
+}
+
+// Margin under any table
+.table {
+  margin-bottom: 2rem;
+}
+
+// '.table-price' CONTENT EDITORS CAN ADD THIS CLASS TO A TABLE, USED FOR LEFT/RIGHT ALIGNED 2 COLUMN TABLE
+
+// Add a minimum width to the last column and align the text right
+.table-price th:last-child,
+.table-price tr td:last-child {
+  min-width: 12.5rem;
+  text-align: right;
+}
+
+// Remove left padding from left table cells
+.table-price tr td:first-child {
+  padding-left: 0;
+}
+
+// Remove right padding from right table cells
+.table-price tr td:last-child {
+  padding-right: 0;
+}
+
+// Remove left padding from left table heading
+.table-price tr th:first-child {
+  padding-left: 0;
+}
+
+// Remove right padding from right table heading
+.table-price tr th:last-child {
+  padding-right: 0;
+}

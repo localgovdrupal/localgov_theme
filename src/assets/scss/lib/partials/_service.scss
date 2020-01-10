@@ -40,8 +40,8 @@
   @include rem(padding, 20);
 
   &_inner {
-      background: $white;
-      @include rem(padding, 20, 30, 25);
+    background: $white;
+    @include rem(padding, 20, 30, 25);
   }
 
   ul {
@@ -50,15 +50,15 @@
     list-style-type: none;
 
     &:not(:last-child){
-        @include rem(margin-bottom, 20);
+      @include rem(margin-bottom, 20);
     }
 
     h2 {
-        @include rem(font-size, 25);
-        float: left;
-        @include rem(margin, 10, 0);
-        font-weight: $font-bold;
-        @include rem(padding-right, 20);
+      @include rem(font-size, 25);
+      float: left;
+      @include rem(margin, 10, 0);
+      font-weight: $font-bold;
+      @include rem(padding-right, 20);
     }
 
     li {
@@ -85,8 +85,8 @@
 
 .servicehub--link-section {
   overflow: auto;
-  @include rem(padding, 30, 0);
   width: 100%;
+  @include rem(padding, 30, 0);
 
   h2 {
     line-height: 1;
@@ -95,28 +95,29 @@
     font-size: $h5-font-size;
 
     @include media-breakpoint-up(lg) {
-        font-size: $h3-font-size;
+      font-size: $h3-font-size;
     }
   }
 }
 
 #field--field_links {
   h2 {
-      font-size: $h3-font-size;
+    font-size: $h3-font-size;
   }
 }
 
 .servicehub--more {
   border-bottom: $gray-tint;
   @include rem(margin-bottom, 20);
+  
   h2 {
     line-height: 1;
+    font-size: $h5-font-size;
     @include rem(margin-top, 15);
     @include rem(margin-bottom, 15);
-    font-size: $h5-font-size;
 
     @include media-breakpoint-up(lg) {
-        font-size: $h3-font-size;
+      font-size: $h3-font-size;
     }
   }
 }
@@ -133,7 +134,7 @@
 
   .contact-container {
     background: $gray-tint;
-    border-left: 5px solid $primary;
+    border-left: 0.313rem solid $primary;
     @include rem(padding, 20, 30, 15);
     @include rem(margin-bottom, 25);
     

@@ -1,5 +1,4 @@
-.services--feature { 
-  //border-bottom: 1px solid $gray;
+.services--feature {
   background: $gray;
   margin-bottom: 0;
 }
@@ -48,77 +47,80 @@
   color: $secondary;
 }
 
-
-
 .services--list {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
- .services--list-block {
-    h2 {
-      font-weight: $font-bold;
-      @include rem(margin, 10, 0, 20, 0);
-      line-height: 1.1;
-      a {
-        display: inline-block;
-        @include rem(font-size, 24);
-        color: $secondary;
+.services--list-block {
+  h2 {
+    font-weight: $font-bold;
+    @include rem(margin, 10, 0, 20, 0);
+    line-height: 1.1;
+
+    a {
+      display: inline-block;
+      @include rem(font-size, 24);
+      color: $secondary;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      @include rem(padding-right, 10);
+      display: inline-block;
+      margin: 0;       
+      @include rem(line-height, 28);
+
+      &:not(:last-child):after { // shown as a comma separated list on mobile
+        content: ',';
+        color: $blue;
       }
-    }
-    ul {
-      list-style: none;
-      margin: 0px;
-      padding: 0px;
-      li {
-        @include rem(padding-right, 10);
-        display: inline-block;
-        margin: 0px;       
-        @include rem(line-height, 28);
 
-        &:not(:last-child):after { // shown as a comma separated list on mobile
-          content: ',';
-          color: $blue;
+      @include media-breakpoint-up(sm) {
+        display: block;
+        width: auto;
+        padding: 0 0 0 1rem;
+        position: relative;
+        
+        &:not(:last-child):after { // remove list commas for anything above mobile
+          content: '';
         }
+      }
 
+      &:before {
         @include media-breakpoint-up(sm) {
-          display: block;
-          width: auto;
-          padding: 0 0 0 1rem;
-          position: relative;
-          
-          &:not(:last-child):after { // remove list commas for anything above mobile
-            content: '';
-          }
-        }
-        &:before {
-          @include media-breakpoint-up(sm) {
-            content: '\f054';
-            position: absolute;
-            left: 0;
-            top: 2px;
-            font-family: $font-family-icons;
-            font-weight: $fa-font-weight;
-            color: $tertiary;
-            font-size: $font-size-ex-ex-sm;
-            @include rem(margin-right, 5);
+          content: '\f054';
+          position: absolute;
+          left: 0;
+          top: 0.125rem;
+          font-family: $font-family-icons;
+          font-weight: $fa-font-weight;
+          color: $tertiary;
+          font-size: $font-size-ex-ex-sm;
+          @include rem(margin-right, 5);
 
-            &:hover {
-              text-decoration: none;
-            }
+          &:hover {
+            text-decoration: none;
           }
         }
-        a {
-          color: $blue;
-          font-size: $font-size-med;
-          
-          &:hover, &:focus {
-            color: $secondary;
-          }
+      }
+
+      a {
+        color: $blue;
+        font-size: $font-size-med;
+        
+        &:hover, &:focus {
+          color: $secondary;
         }
-      } 
-    }
+      }
+    } 
+  }
 }
 
 .services--business {
@@ -130,15 +132,18 @@
   @include rem(padding, 30);
 
   h3 {
-      @include rem(margin, 0, 0, 20, 0);
-   @include rem(font-size, 24);
+    @include rem(margin, 0, 0, 20, 0);
+    @include rem(font-size, 24);
   }
+
   a {
-      color: $primary !important;
+    color: $primary !important;
   }
+
   .column-3:first-child {
-      @include rem(padding-left, 30);
+    @include rem(padding-left, 30);
   }
+
   .business-list {
     column-count: 2;
     @include media-breakpoint-up(md) {
@@ -150,4 +155,3 @@
 #services--expand-container { // Initial hide of 'more services' area 
   display: none;
 }
-

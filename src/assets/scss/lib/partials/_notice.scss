@@ -4,6 +4,7 @@
     @include rem(line-height, 15);
     color: $secondary;
   }
+
   a {
     font-size: $font-size-sm;
   }
@@ -11,6 +12,7 @@
   span, p {
     display: inline;
   }
+
   span {
     background: $primary;
     color: $white;
