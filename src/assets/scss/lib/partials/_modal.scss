@@ -1,0 +1,29 @@
+//MODALS - BOOTSTRAP CSS OVERRIDES
+
+//Remove the .content h tag margin 
+.modal-title {
+  margin-top: 0 !important;
+}
+
+//Remove padding from close icon 
+.modal-header .close {
+  padding: 0;
+  margin: 0;
+}
+
+//Remove the border from the modal header 
+.modal-header {
+  border-bottom: 0;
+}
+
+//Remove the border from the modal footer and justify content left 
+.modal-footer {
+  border-top: 0;
+  justify-content: flex-start;
+}
+
+//Make the close text smaller 
+.modal-close-text {
+  font-size: 1.188rem;
+  padding-right: 0.3rem;
+}

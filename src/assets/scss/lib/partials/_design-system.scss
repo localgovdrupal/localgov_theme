@@ -7,6 +7,7 @@
   max-width: 100%;
   position: relative;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 0.875rem;
 }
 
@@ -17,6 +18,12 @@ pre[class*="language-"] {
 }
 
 //DESIGN SYSTEM MENU
+//Out of the box drupal class for active page
+.node--design_system_page .sidebar .is-active {
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  pointer-events: none !important;
+}
 
 //Remove default list styles
 .node--design_system_page .sidebar h3 {
@@ -51,4 +58,12 @@ pre[class*="language-"] {
   text-decoration: underline;
   font-size: 1.063rem;
   padding: 0;
+}
+
+//Make parent pages in breadcrumb non clickable
+.node--design_system_page .breadcrumb .breadcrumb-item:nth-child(3) a {
+  pointer-events: none;
+  font-weight: 400;
+  color: #121212;
+  text-decoration: none;
 }
