@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Component\Utility\Unicode;
+
 /**
  * Implements hook_preprocess_HOOK().
  */
@@ -143,6 +145,37 @@ function croydon_preprocess_menu(&$variables) {
 
   if ($variables['menu_name'] === 'about-this-website') {
     $variables['attributes']['class'] = ['footer-about'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for hook_preproces_office_hours().
+ *
+ * Reformat grouped day names in the **Office hours** field.
+ * "Monday - Thursday" should become "Monday to Thursday".
+ * "Monday - Tuesday" should become "Monday and Tuesday".
+ */
+function croydon_preprocess_office_hours(&$variables) {
+
+  $slot_num = 0;
+
+  foreach ($variables['office_hours'] as $info) {
+    $number_of_days_in_slot = ($info['endday'] - $info['startday']) + 1;
+
+    $is_two_day_slot = ($number_of_days_in_slot === 2);
+
+    // Saturday = 6, Sunday = 0.
+    $is_weekend = ($number_of_days_in_slot === -5);
+
+    $slot_label = $variables['items'][$slot_num]['label'];
+    if ($is_two_day_slot or $is_weekend) {
+      $updated_slot_label = str_replace(' - ', t(' and '), $slot_label);
+    } else {
+      $updated_slot_label = str_replace(' - ', t(' to '), $slot_label);
+    }
+
+    $variables['items'][$slot_num++]['label'] = $updated_slot_label;
+    $variables['label_length'] = max($variables['label_length'], Unicode::strlen($updated_slot_label));
   }
 }
 
