@@ -163,6 +163,9 @@ button.action-link {
 // link blocks generally used on service pages //
 .link-block { 
   padding-left: 0.5rem;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  outline: 1px solid purple;
 
   span, i {
     font-size: 1rem;
