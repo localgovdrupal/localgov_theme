@@ -39,7 +39,7 @@
     @include rem(padding-left, 85);
 
     &:before {
-      content: '\f04b';
+      content: $fa-play;
       position: absolute;
       @include rem(left, 15);
       background: $orange;
@@ -174,7 +174,7 @@
       font-weight: $font-bold;
 
       &::before {
-        content: '\f054';
+        content: $fa-chevron-right;
         font-family: $font-family-icons;
         font-weight: $fa-font-weight;
         font-size: $font-size-ex-ex-sm;

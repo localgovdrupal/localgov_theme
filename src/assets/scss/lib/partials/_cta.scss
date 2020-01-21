@@ -4,10 +4,10 @@
   background: $gray-tint;
 
   ul, ol {
-    @include rem(margin-left, 35); // deals with native lists breaking out of the grid
     margin-bottom: 0;
-    padding: 0 15px 0 0;
     column-count: 1;
+    @include rem(margin-left, 35); // deals with native lists breaking out of the grid
+    @include rem(padding, 0, 15, 0, 0);
  
     @include media-breakpoint-up(sm) {
       column-count: 2;
@@ -38,7 +38,7 @@
       @include rem(margin-left, 15);
 
       li {
-        padding-left: 0.75rem;
+        @include rem(padding-left, 12);
 
         &:before {
           position: absolute;

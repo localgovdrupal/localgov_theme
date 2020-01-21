@@ -1,14 +1,26 @@
 .breadcrumb {
   padding: 0.75rem 0;
+  outline: 1px solid lime;
 
   .breadcrumb-item {
     font-size: $font-size-sm;
+    outline: 1px solid blue;
 
     &:first-child {
       a {
         &:hover {
           background: transparent;
         }
+      }
+    }
+
+    +.breadcrumb-item { // bs override
+
+      &:before {
+        font-family: $font-family-icons;
+        font-weight: $fa-font-weight;
+        font-size: $font-size-ex-ex-sm;
+        content: $breadcrumb-divider-size !important;
       }
     }
   }

@@ -53,5 +53,13 @@ iframe {
 
 // important:: fix form.io overriding this specific pseudo in the footer
 .fa-youtube-square:before {
-  content: '\f431' !important;
+  content: $fa-youtube-square !important;
+}
+
+// Accessible link background highlights - extend class really needs redoing
+.access-background { 
+  background-color: $focus;
+  color: $secondary;
+  text-decoration: none;
+  box-shadow: 0 0 0 0.125rem $focus;
 }

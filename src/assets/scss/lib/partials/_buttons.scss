@@ -21,6 +21,7 @@ aside .btn .fa,
     color: $white;
     background: $indigo;
   }
+
   &:focus {
     color: $white;
     background: $indigo;
@@ -34,18 +35,18 @@ aside .btn .fa,
 
     &:hover, &:focus {
       color: $white;
-        background: $indigo;
+      background: $indigo;
     }
   }
 }
 
-//disabled button
+// Disabled button
 .btn.disabled,
 .btn:disabled {
   opacity: .65;
 }
 
-//Upload file button
+// Upload file button
 .custom-file-label::after {
   color: $white;
   content: 'Browse';
@@ -66,52 +67,53 @@ aside .btn .fa,
   height: 100%;
   justify-content: center;
   align-items: center;
+  font-size: $font-size-ex-med;
   font-weight: $font-bold;
   text-decoration: none;
   color: $white;
-
   @include rem(padding, 15);
-  font-size: $font-size-ex-med;
   @include rem(line-height, 22);
   
   &:hover {
-      color: $white;
-      text-decoration: none;
+    color: $white;
+    text-decoration: none;
   }
   
   &:focus {
     @include outline(.1875rem, -.1875rem, $focus);
 
-    span {
-      color: $secondary;
-    }
-      
+    span, 
     &:after {
       color: $secondary;
     }
   }
+
   span {
     width: 100%;
     color: $white;
     text-align: left;
-    /* ie10 fix */
-    @include width(100%, 13px, 0.8125rem);
-    @include rem(padding-right, 5);
     display: block;
+
+    // ie10 fix
+    @include width(100%, 0.813rem, 0.8125rem);
+    @include rem(padding-right, 5);
   }
+
   &:after {
-      color: $white;
-      display: flex;
-      align-items: center;
-      font-family: $font-family-icons;
-      content: '\f054';
-      font-weight: $fa-font-weight;
-      font-size: $font-size-ex-lg;
-      @include rem(margin-top, 2);
+    color: $white;
+    display: flex;
+    align-items: center;
+    font-family: $font-family-icons;
+    content: $fa-chevron-right;
+    font-weight: $fa-font-weight;
+    font-size: $font-size-ex-lg;
+    @include rem(margin-top, 2);
   }
+
   &:focus {
-      outline: $focus;
+    outline: $focus;
   }
+
   &:not(:last-child)  {
     @include rem(margin-bottom, 20);
     
@@ -121,60 +123,78 @@ aside .btn .fa,
   }
 }
 
-/* Link Button Modifiers */
+// Link Button Modifiers
 
-.link-button-green, .link-button-primary, .cta-green {
-    background-color: $link-button-primary;
-    span, &:after {
-      color: $secondary;
-    }
-    &:hover, &:focus {
-        background-color: $link-button-primary-focus;
+.link-button-green, 
+.link-button-primary, 
+.cta-green {
+  background-color: $link-button-primary;
+
+  span,
+  &:after {
+    color: $secondary;
+  }
+
+  &:hover, 
+  &:focus {
+    background-color: $link-button-primary-focus;
         
-      span, &:after {
-        color: $white;
-      }
-    }
-}
-
-.link-button-blue, .link-button-secondary, .cta-blue {
-    background-color: $link-button-secondary;
-    &:hover, &:focus {
-        background-color: $link-button-secondary-focus;
-    }
-}
-
-.link-button-orange, .link-button-tertiary, .cta-orange {
-    background-color: $link-button-tertiary;
-    &:hover, &:focus {
-        background-color: $link-button-tertiary-focus;
-    }
-}
-
-.link-button-single, .cta-single {
-    @include rem(margin-top, 30);
-    
-    width: 100%;
-    @include media-breakpoint-up(sm) {
-        @include rem(width, 350);
-    }
-}
-
-.link-button-close, .cta-close {
-    @include rem(margin-top, 30);
-    
-    width: 100%;
-    @include media-breakpoint-up(sm) {
-        @include rem(width, 200);
-    }
-
+    span, 
     &:after {
-        font-family: $font-family-icons;
-        content: '\f00d';
-        font-weight: $fa-font-weight;
+      color: $white;
     }
+  }
 }
 
-.link-button-small, .cta-small {
+.link-button-blue,
+.link-button-secondary,
+.cta-blue {
+  background-color: $link-button-secondary;
+
+  &:hover,
+  &:focus {
+    background-color: $link-button-secondary-focus;
+  }
+}
+
+.link-button-orange,
+.link-button-tertiary,
+.cta-orange {
+  background-color: $link-button-tertiary;
+  
+  &:hover,
+  &:focus {
+    background-color: $link-button-tertiary-focus;
+  }
+}
+
+.link-button-single,
+.cta-single {
+  width: 100%;
+  @include rem(margin-top, 30);
+
+  @include media-breakpoint-up(sm) {
+    @include rem(width, 350);
+  }
+}
+
+.link-button-close,
+.cta-close {
+  width: 100%;
+  @include rem(margin-top, 30);
+
+  @include media-breakpoint-up(sm) {
+    @include rem(width, 200);
+  }
+
+  &:after {
+    font-family: $font-family-icons;
+    content: $fa-times;
+    font-weight: $fa-font-weight;
+  }
+}
+
+.link-button-small,
+.cta-small {
   @include rem(width, 140);
 }

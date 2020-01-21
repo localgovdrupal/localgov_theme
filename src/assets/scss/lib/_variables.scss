@@ -170,7 +170,7 @@ $navbar-dark-toggler-border-color: $white !default;
 // Remove breadcrumb bottom margin
 $breadcrumb-margin-bottom: 0 !default;
 // Dropdown menu
-$dropdown-min-width: 290px !default;
+$dropdown-min-width: 18.125rem !default;
 $dropdown-padding-y: 0 !default;
 $dropdown-margin-y: 0 !default;
 $dropdown-bg: $purple !default;
@@ -210,8 +210,6 @@ $alert-font-weight: $font-bold !default;
 $jumbo-welcome: 'Welcome to';
 $jumbo-font-regular: $font-size-base * 2.625 !default; // ~42px ~2.625rem
 $jumbo-font-large: $font-size-base * 3.25 !default; // ~52px ~3.25rem
-//Breadcrumb divider
-$breadcrumb-divider: quote('>') !default;
 // Form validation
 $form-feedback-valid-color: $success !default;
 $form-feedback-invalid-color: $danger !default;
@@ -219,22 +217,30 @@ $form-feedback-font-size: 1.063rem !default; //17px
 //Form input
 $input-border-color: $stonewash !important !default;
 // Global Half Margin
-$half-margin: .5rem; // 8px
+$half-margin: .5rem !default; // 8px
 // Global Half Padding // 5px
-$half-padding: .3125rem;
+$half-padding: .3125rem !default;
 // Font Awesome Icons
-$fa-font-weight: 900;
-$fa-close: '\f00d';
-$fa-external: '\f35d';
-$fa-exclaim: '\f06a';
-$fa-check: '\f00c';
-$fa-info: '\f129';
-$fa-exclamation-triangle: '\f071';
-$fa-times: '\f00d';
+$fa-times: '\f00d' !default;
+$fa-font-weight: 900 !default;
+$fa-close: $fa-times !default;
+$fa-external: '\f35d' !default;
+$fa-exclaim: '\f06a' !default;
+$fa-check: '\f00c' !default;
+$fa-info: '\f129' !default;
+$fa-exclamation-triangle: '\f071' !default;
+$fa-chevron-right: '\f054' !default;
+$fa-print: '\f02f' !default;
+$fa-save: '\f0c7' !default;
+$fa-share: '\f064' !default;
+$fa-play: '\f04b' !default;
+$fa-youtube-square: '\f431' !default;
 // Alert Icons
-$alert-success: $fa-check;
-$alert-info: $fa-info;
-$alert-primary: $fa-exclamation-triangle;
-$alert-danger: $fa-exclamation-triangle;
-$alert-fail: $fa-times;
-
+$alert-success: $fa-check !default;
+$alert-info: $fa-info !default;
+$alert-primary: $fa-exclamation-triangle !default;
+$alert-danger: $fa-exclamation-triangle !default;
+$alert-fail: $fa-times !default;
+//Breadcrumb divider
+$breadcrumb-divider: $fa-chevron-right !default;
+$breadcrumb-divider-size: 0.75rem;

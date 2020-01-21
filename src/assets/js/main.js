@@ -18,17 +18,15 @@
     var directorySearchFilters = document.querySelector('.directories-hide-filters');
 
     var menuDisplay = function() {
-  
       if (parseInt($(window).width()) < 992) {
         $('.header--expand').hide();
         $('.show-menu').removeClass('show-outline');
-      } 
-
+      }
     };
 
     $('.page a').filter(function() {
        return this.hostname && this.hostname !== location.hostname;
-    }).addClass("external-link");
+    }).addClass('external-link').attr('target', '_blank');
 
     $('.show-menu').click(function () {
       $('.header--expand').slideToggle();

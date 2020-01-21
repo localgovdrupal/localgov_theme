@@ -2,9 +2,7 @@
   background: $alert-bar-bg;
 
   DIV > DIV {
-
     > DIV {
-
       p {
         position: relative;
         @include rem(padding-left, 40);
@@ -12,28 +10,28 @@
         &:before {
           position: absolute;
           left: 0;
-          top: -11px;
           font-size: $h2-font-size;
           font-family: $font-family-icons; 
           font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
           content: $fa-exclaim;
           margin: 0;
           padding: 0;
+          @include rem(top, -11);
         }
       }
-      }
+    }
 
     > p {
       margin: 0;
       font-size: $font-size-med;
     }
 
-      a {
+    a {
       color: $secondary;
 
       &:hover, &:focus {
-          background: $white;
-          color: $secondary;
+        background: $white;
+        color: $secondary;
       }
     }
   }

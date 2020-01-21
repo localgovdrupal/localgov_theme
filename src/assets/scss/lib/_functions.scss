@@ -1,8 +1,8 @@
 $rem-base: 16px;
 
 @function strip-unit($num) {
-    @return $num / ($num * 0 + 1);
-  }
+  @return $num / ($num * 0 + 1);
+}
   
 @mixin rem($property, $values...) {
   $max: length($values);

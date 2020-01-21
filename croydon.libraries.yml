@@ -7,8 +7,8 @@ global:
       # vanilla
       
       # council theme
-      dist/assets/css/lib/main.css: {}
       dist/assets/css/font-face.css: {}
+      dist/assets/css/lib/main.css: {}
 
   js:
     node_modules/bootstrap/dist/js/bootstrap.min.js: {}

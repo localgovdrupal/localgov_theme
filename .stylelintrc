@@ -1,6 +1,8 @@
 {
   "ignoreFiles": [
-    "src/assets/scss/lib/partials/_formio.scss"
+    "src/assets/scss/lib/partials/_formio.scss",
+    "src/assets/scss/lib/_functions.scss",
+    "src/assets/scss/lib/_variables.scss"
   ],
   "rules": {
     "block-no-empty": null,
@@ -12,11 +14,13 @@
     "indentation": [2, {
       "except": ["value"]
     }],
+    "color-no-hex": true,
+    "no-duplicate-selectors": true,
     "max-empty-lines": 2,
     "rule-empty-line-before": [ "always", {
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["em", "rem", "%", "s", "deg", "ms"]
+    "unit-whitelist": ["em", "rem", "%", "s", "deg", "ms", "vh"]
   }
 }

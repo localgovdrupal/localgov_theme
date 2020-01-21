@@ -38,9 +38,9 @@
  */
 #}
 
-<div{{ attributes.addClass('container-fluid site-max') }}>
+<div{{ attributes.addClass('container-fluid') }} style="outline: 1px solid red">
   {% for row in items|batch(2) %}
-  <div class="row">
+  <div class="row" style="outline: 1px solid green">
     {% for item in row %}
     <div class="col-sm-6">
       {{ item.content }}
