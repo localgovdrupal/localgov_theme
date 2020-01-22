@@ -28,13 +28,15 @@ legend {
 }
 
 // Form label - extra description
-label span {
-  display: block;
-  width: 100%;
-  font-size: $font-size-ex-med;
-  font-family: $font-family-base;
-  font-weight: $font-normal;
-  color: $gray-dark;
+label {
+  span {
+    display: block;
+    width: 100%;
+    font-size: $font-size-ex-med;
+    font-family: $font-family-base;
+    font-weight: $font-normal;
+    color: $gray-dark;
+  }
 }
 
 // Add margin bottom to checkbox labels
@@ -43,25 +45,22 @@ label span {
 }
 
 // Add margin right to radios
-.radio input {
-  margin-right: $form-check-inline-margin-x;
-}
+.radio {
+  input {
+    margin-right: $form-check-inline-margin-x;
+  }
 
-// Disabled radio button text
-.radio.disabled label {
-  color: $text-muted;
+  &.disabled {
+    label {
+      color: $text-muted;
+    }
+  }
 }
 
 // Checkbox and radio text size
 .radio label,
 .form-check label {
   font-size: $font-size-med;
-}
-
-// Checkbox and radio text size
-.custom-input {
-  font-size: $font-size-med !important; 
-  font-weight: normal !important;
 }
 
 // Form validation text
@@ -88,20 +87,19 @@ label span {
   background-size: calc(2.875rem / 2) calc(2.875rem / 2);
 }
 
-
 // CHECKBOXES
-
 .custom-input {
   display: flex;
   align-items: center;
   position: relative;
   cursor: pointer;
-  font-size: $font-size-ex-ex-lg;
+  font-size: $font-size-med !important; 
+  font-weight: normal !important;
   user-select: none;
   @include rem(padding-left, 50);
   @include rem(min-height, 40);
 
-  input {
+  input { // Hide the browser's default radio button
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -179,15 +177,6 @@ label span {
 }
 
 //RADIOS
-
-/* Hide the browser's default radio button */
-
-.custom-input input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
 
 /* Create a custom radio button */
 

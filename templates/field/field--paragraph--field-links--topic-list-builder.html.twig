@@ -38,7 +38,7 @@
  */
 #}
 
-<div{{ attributes.addClass('container-fluid') }} style="outline: 1px solid red">
+<div class="container-fluid" style="outline: 1px solid red">
   {% for row in items|batch(2) %}
   <div class="row" style="outline: 1px solid green">
     {% for item in row %}

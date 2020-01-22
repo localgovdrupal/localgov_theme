@@ -25,12 +25,11 @@
   @include media-breakpoint-up(lg) {
     width: 20%;
   }
-}
 
-// Main navigation logo
-.navbar-dark.nav-vanilla .navbar-brand {
-  @include rem(margin-right, 18);
-  font-weight: $font-bold; //For fallback
+  &:hover, &:focus {
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 //Nav links mobile
@@ -41,7 +40,8 @@
   }
 }
 
-//Nav links mobile
+
+//Switch arrows 
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
@@ -51,10 +51,7 @@
     background-color: $white !important;
     box-shadow: none !important;
   }
-}
 
-//Switch arrows 
-.navbar-dark.nav-vanilla .navbar-nav .nav-link {
   .fa-chevron-down {
     transform: rotate( -360deg );            
     transition: transform 150ms ease;
@@ -169,13 +166,7 @@
   border: 0;
   font-size: $font-size-ex-med;
 }
-// Main navigation logo & foot navigation logo
-.navbar-dark.nav-vanilla .navbar-brand {
-  &:hover, &:focus {
-    background: transparent;
-    box-shadow: none;
-  }
-}
+
 
 // Main navigation toggle button
 #js-nav-toggle {
@@ -259,7 +250,7 @@
   }
 }
 
-//NAVIGATION VANILLA - BLOCK NAV - REMOVED, in progress
+// NAVIGATION VANILLA - BLOCK NAV - REMOVED, in progress
 .block-nav {
   ul {
     margin: 0 !important;
@@ -298,9 +289,9 @@
   display: none;
 }
 
-/* /// VANILLA FOOTER NAV BOTTOM  /// */
-//Footer vanilla nav outer container
-.navbar-light {   
+// VANILLA FOOTER NAV BOTTOM
+.navbar-light {
+
   ul {
     li {
       a {
@@ -314,7 +305,7 @@
       font-family: $font-family-base;
       font-weight: normal; // for fallbacks only
       white-space: nowrap;
-      font-size: .9375rem; //15px
+      font-size: .9375rem;
     }
 
     .navbar-brand {

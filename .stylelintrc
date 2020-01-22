@@ -7,6 +7,7 @@
   "rules": {
     "block-no-empty": null,
     "color-no-invalid-hex": true,
+    "selector-list-comma-newline-after": "always",
     "comment-empty-line-before": [ "always", {
       "ignore": ["stylelint-commands", "after-comment"]
     } ],

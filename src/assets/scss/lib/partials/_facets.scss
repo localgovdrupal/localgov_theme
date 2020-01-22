@@ -1,4 +1,5 @@
-.facet-filter, #edit-field-accessibility--wrapper {
+.facet-filter,
+#edit-field-accessibility--wrapper {
   @include rem(padding, 0, 9);
   @include rem(margin-bottom, 11);
 }
@@ -9,22 +10,26 @@ h2.facet-filter-header {
   @include rem(line-height, 28);
 }
 
-.facet-filter h3, #edit-field-accessibility--wrapper h3 {
+.facet-filter h3,
+#edit-field-accessibility--wrapper h3 {
   font-size: $font-size-ex-lg;
   font-weight: $font-bold;
   margin: 0;
   @include rem(line-height, 50);
 }
 
-.facet-filter h3 a, #edit-field-accessibility--wrapper h3 a,
-.facet-filter h3 a:visited, #edit-field-accessibility--wrapper h3 a:visited {
+.facet-filter h3 a,
+#edit-field-accessibility--wrapper h3 a,
+.facet-filter h3 a:visited,
+#edit-field-accessibility--wrapper h3 a:visited {
   color: $secondary;
   text-decoration: none;
   display: block;
 }
 
-.facet-filter h3 span, #edit-field-accessibility--wrapper h3 span {
-  color: #F37021;
+.facet-filter h3 span,
+#edit-field-accessibility--wrapper h3 span {
+  color: $black;
   font-size: $font-size-lg;
   @include rem(padding-left, 5);
   @include rem(width, 20);
@@ -42,16 +47,19 @@ h2.facet-filter-header {
   }
 }
 
-.facet-filter .checkbox-wrapper, #edit-field-accessibility--wrapper .checkbox-wrapper {
+.facet-filter .checkbox-wrapper,
+#edit-field-accessibility--wrapper .checkbox-wrapper {
   display: none;
 
 }
 
-.facet-filter .checkbox-wrapper.open, #edit-field-accessibility--wrapper .checkbox-wrapper.open {
+.facet-filter .checkbox-wrapper.open,
+#edit-field-accessibility--wrapper .checkbox-wrapper.open {
   @include rem(padding-bottom, 9);
 }
 
-.facet-filter .collapsed, #edit-field-accessibility--wrapper .collapsed {
+.facet-filter .collapsed,
+#edit-field-accessibility--wrapper .collapsed {
   padding-bottom: 0;
 }
 
