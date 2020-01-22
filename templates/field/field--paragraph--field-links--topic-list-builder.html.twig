@@ -38,9 +38,9 @@
  */
 #}
 
-<div class="container-fluid" style="outline: 1px solid red">
+<div class="container-fluid">
   {% for row in items|batch(2) %}
-  <div class="row" style="outline: 1px solid green">
+  <div class="row">
     {% for item in row %}
     <div class="col-sm-6">
       {{ item.content }}

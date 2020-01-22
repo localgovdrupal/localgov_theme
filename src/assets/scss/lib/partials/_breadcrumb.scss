@@ -1,10 +1,8 @@
 .breadcrumb {
   padding: 0.75rem 0;
-  outline: 0.063rem solid lime;
 
   .breadcrumb-item {
     font-size: $font-size-sm;
-    outline: 0.063rem solid blue;
 
     &:first-child {
       a {
