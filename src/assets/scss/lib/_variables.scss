@@ -8,7 +8,7 @@ $blue: #0059A4 !default;
 // General colours
 $orange: #FF5500 !default;
 $green: #77BB55 !default;
-$purple: #551A8B !default;
+$purple: #880088 !default;
 // $brown
 // $magenta
 // $tan
@@ -40,14 +40,14 @@ $success: #338800 !default;
 $danger: #ae1100 !default;
 $light: #ededed !default;
 $dark: #444444 !default;
-$visited: $secondary !default;
-
 
 // Site colours
 
 $primary: $purple !default;
 $secondary: $carbon !default; // used to override the BS and formio colours applied as secondary
 $tertiary: $green !default;
+
+$visited: $secondary !default;
 
 // grays
 $gray-primary: $gray;

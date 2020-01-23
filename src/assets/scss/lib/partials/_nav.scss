@@ -26,7 +26,8 @@
     width: 20%;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: transparent;
     box-shadow: none;
   }
@@ -46,7 +47,8 @@
   padding-top: .4375rem;
   padding-bottom: .4375rem;
  
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     color: $secondary !important;
     background-color: $white !important;
     box-shadow: none !important;
@@ -291,7 +293,6 @@
 
 // VANILLA FOOTER NAV BOTTOM
 .navbar-light {
-
   ul {
     li {
       a {
@@ -309,7 +310,8 @@
     }
 
     .navbar-brand {
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: transparent;
         box-shadow: none;
       }

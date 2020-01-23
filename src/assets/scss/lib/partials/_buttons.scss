@@ -33,7 +33,8 @@ aside .btn .fa,
     color: $white;
     border-color: $secondary;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $white;
       background: $indigo;
     }
@@ -82,7 +83,7 @@ aside .btn .fa,
   &:focus {
     @include outline(.1875rem, -.1875rem, $focus);
 
-    span, 
+    span,
     &:after {
       color: $secondary;
     }
@@ -110,10 +111,6 @@ aside .btn .fa,
     @include rem(margin-top, 2);
   }
 
-  &:focus {
-    outline: $focus;
-  }
-
   &:not(:last-child)  {
     @include rem(margin-bottom, 20);
     
@@ -125,8 +122,8 @@ aside .btn .fa,
 
 // Link Button Modifiers
 
-.link-button-green, 
-.link-button-primary, 
+.link-button-green,
+.link-button-primary,
 .cta-green {
   background-color: $link-button-primary;
 
@@ -135,11 +132,11 @@ aside .btn .fa,
     color: $secondary;
   }
 
-  &:hover, 
+  &:hover,
   &:focus {
     background-color: $link-button-primary-focus;
         
-    span, 
+    span,
     &:after {
       color: $white;
     }

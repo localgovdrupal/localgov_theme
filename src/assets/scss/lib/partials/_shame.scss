@@ -9,7 +9,6 @@ table {
 }
 
 // The BS '.img-fluid' class alone doesnt set an image to go oversized when responding
-
 .img-fluid { 
   width: 100%;
   
@@ -19,8 +18,8 @@ table {
 }
 
 // temp styling related to soft launch
-
-.beta-notice-sm, .notice {
+.beta-notice-sm,
+.notice {
   display: none;
 }
 
@@ -35,13 +34,13 @@ table {
 .gsc-webResult.gsc-result {
   border: none !important;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border: none !important;
   }
 }
 
 // iframe and video class to be dealt with later on
-
 iframe {
   &.video {
     width: 100%;

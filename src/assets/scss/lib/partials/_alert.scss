@@ -29,7 +29,8 @@
     a {
       color: $secondary;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: $white;
         color: $secondary;
       }

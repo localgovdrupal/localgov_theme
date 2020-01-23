@@ -72,14 +72,14 @@
 
 
     <div class="page row">
-      <main {{ pageAttributes.addClass('design-system-page col-md-8 order-md-2')}}>
+      <main {{ pageAttributes.addClass('design-system-page content col-md-8 order-md-2')}}>
         {% if page.header %}
           {{ page.header }}
         {% endif %}
 
         {% block content_inner %}
-          {{ page.messages }}
-          {{ page.content }}
+            {{ page.messages }}
+            {{ page.content }}
         {% endblock %}
       </main>
 

@@ -59,7 +59,8 @@
     @include rem(padding, 7);
   }
 
-  .fas, .far {
+  .fas,
+  .far {
     color: $secondary;
     @include rem(padding-right, 5);
   }

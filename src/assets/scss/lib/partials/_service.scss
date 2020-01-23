@@ -100,12 +100,6 @@
   }
 }
 
-#field--field_links {
-  h2 {
-    font-size: $h3-font-size;
-  }
-}
-
 .servicehub--more {
   border-bottom: $gray-tint;
   @include rem(margin-bottom, 20);
@@ -225,7 +219,9 @@
   }
 }
 
-.servicehub--contact [class*='col-'], .contact-top [class*='col-'], .cta-pull [class*='col-'] {
+.servicehub--contact [class*='col-'],
+.contact-top [class*='col-'],
+.cta-pull [class*='col-'] {
   @include rem(padding-top, 0);
   @include rem(padding-bottom, 0);
 }

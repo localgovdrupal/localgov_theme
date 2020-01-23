@@ -5,7 +5,8 @@ a {
   text-decoration: underline;
   font-weight: $font-bold;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @extend .access-background;
 
     > img {
@@ -55,12 +56,14 @@ main a {
     color: $primary;
   }
   
-  span, i  {
+  span,
+  i  {
     color: $tertiary;
     @include rem(margin-right, 5);
     font-size: $font-size-ex-sm;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $secondary;
     }
   }
@@ -73,7 +76,8 @@ button.action-link {
   padding: 0;
   cursor: pointer;
   
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @include outline(.1875rem, -.1875rem, $focus);
   }
 
@@ -82,13 +86,15 @@ button.action-link {
     font-size: $font-size-ex-sm;
     @include rem(margin-right, 5);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $secondary;
     }
   }
 
   &#services--expand-link { 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       outline: none !important;
       @extend .access-background;
       
@@ -151,7 +157,8 @@ button.action-link {
 }
 
 .visually-hidden.focusable {
-  &:active, &:focus {
+  &:active,
+  &:focus {
     position: static !important;
     clip: auto;
     overflow: visible;
@@ -166,7 +173,8 @@ button.action-link {
   -ms-flex: 1 auto;
   flex: 1 auto;
 
-  span, i {
+  span,
+  i {
     font-size: 1rem;
     color: $tertiary;
     position: absolute;
@@ -175,6 +183,10 @@ button.action-link {
   }
 
   a {
-    @include rem(line-height, 32);// fix for text cutting off on focus
+    @include rem(line-height, 32); // fix for text cutting off on focus
+  }
+
+  h2 {
+    font-size: $h3-font-size;
   }
 }

@@ -3,7 +3,8 @@
   @include rem(padding-bottom, 30);
   background: $gray-tint;
 
-  ul, ol {
+  ul,
+  ol {
     margin-bottom: 0;
     column-count: 1;
     @include rem(margin-left, 35); // deals with native lists breaking out of the grid
@@ -26,7 +27,8 @@
       a {
         font-size: $font-size-ex-med;
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           box-shadow: none;
         }
       }

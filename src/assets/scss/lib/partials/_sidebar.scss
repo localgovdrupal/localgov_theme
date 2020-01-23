@@ -1,5 +1,7 @@
 .sidebar {
-  nav, section, aside { 
+  nav,
+  section,
+  aside { 
     margin-bottom: ($spacer * 3);
   }
 
@@ -20,7 +22,9 @@
     font-size: $h6-font-size;
   }
 
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     font-size: $font-size-med;
     margin-bottom: $spacer;
   }

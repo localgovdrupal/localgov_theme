@@ -47,7 +47,8 @@ footer {
       margin-bottom: 1rem !important;
       
       a {
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           background: transparent;
           color: $white !important;
         }
