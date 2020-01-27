@@ -1,6 +1,8 @@
 //ACCORDION VANILLA 
 .accordionWrapper {
-  h3, h4, h5 {
+  h3,
+  h4,
+  h5 {
     margin-bottom: 0;
   }
 }
@@ -11,7 +13,7 @@
   background: $indigo;
   color: $white;
 
-  a, 
+  a,
   a:hover,
   a:visited,
   a:visited:hover,

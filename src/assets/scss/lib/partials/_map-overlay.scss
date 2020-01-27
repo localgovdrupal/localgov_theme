@@ -24,12 +24,14 @@
       }
     }
 
-    p, li {
+    p,
+    li {
       font-size: $font-size-sm;
       @include rem(line-height, 26);
     }
     
-    p, ul {
+    p,
+    ul {
       margin: 0;
     }
 
@@ -71,11 +73,11 @@
     outline: none;
     border: 0;
 
-    &.selected, &:hover {
+    &.selected,
+    &:hover {
       background-position: -1.125rem 0;
     }
   }
-
 }
   
 .ol-control {

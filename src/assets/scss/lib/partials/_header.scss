@@ -1,15 +1,15 @@
 header p {
-	font-size: $font-size-ex-lg;
+  font-size: $font-size-ex-lg;
 }
 
 .headers {
-	padding: ($spacer * 3) 0;
+  padding: ($spacer * 3) 0;
 
-	.subheader {
-		p:last-child {
-			margin-bottom:0;
-		}
-	}
+  .subheader {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .header--toggle {
@@ -75,11 +75,10 @@ header p {
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 6px;
     @include rem(border-radius, 6);
-    border: 2px solid $white;
+    border: 0.125rem solid $white;
     background-color: rgba(0,0,0,.5);
-    box-shadow: 0 0 1px rgba(255,255,255,.5);
+    box-shadow: 0 0 0.063rem rgba(255,255,255,.5);
   }
 
   .services-title {

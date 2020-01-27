@@ -11,5 +11,15 @@
         }
       }
     }
+
+    +.breadcrumb-item { // bs override
+
+      &:before {
+        font-family: $font-family-icons;
+        font-weight: $fa-font-weight;
+        font-size: $font-size-ex-ex-sm;
+        content: $breadcrumb-divider-size !important;
+      }
+    }
   }
 }

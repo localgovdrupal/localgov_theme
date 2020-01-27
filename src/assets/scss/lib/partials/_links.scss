@@ -1,19 +1,12 @@
-
-.access-background { // use this extendable class for backgrounds
-  background-color: $focus;
-  color: $secondary;
-  text-decoration: none;
-  box-shadow: 0 0 0 2px $focus;
-}
-
-/*Accessible links*/
+// Accessible links
 
 a {
   color: $primary;
   text-decoration: underline;
   font-weight: $font-bold;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @extend .access-background;
 
     > img {
@@ -27,9 +20,7 @@ main a {
   font-weight: $font-normal !important; // remove bold for main copy links
 }
 
-
-
-/* External Link */
+// External Link
 
 .external-link {
   &:after {
@@ -47,9 +38,10 @@ main a {
 /* Action Link */
 
 .action-link-container {
-    @include rem(margin, 30, 0, 40);
-    font-size: $font-size-med;
+  @include rem(margin, 30, 0, 40);
+  font-size: $font-size-med;
 }
+
 .action-link {
   display: inline-block;
   font-weight: $font-bold;
@@ -64,119 +56,125 @@ main a {
     color: $primary;
   }
   
-  span, i  {
+  span,
+  i  {
     color: $tertiary;
     @include rem(margin-right, 5);
     font-size: $font-size-ex-sm;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
+      color: $secondary;
+    }
+  }
+}
+
+button.action-link {
+  color: $primary;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  
+  &:hover,
+  &:focus {
+    @include outline(.1875rem, -.1875rem, $focus);
+  }
+
+  i  {
+    color: $tertiary;
+    font-size: $font-size-ex-sm;
+    @include rem(margin-right, 5);
+
+    &:hover,
+    &:focus {
       color: $secondary;
     }
   }
 
-}
-  button.action-link {
-   
-    color: $primary;
-    background: none;
-    border: none;
-    padding: 0px;
-    cursor: pointer;
-    
-    &:hover, &:focus {
-      @include outline(.1875rem, -.1875rem, $focus);
-    }
-
-    i  {
-      color: $tertiary;
-      @include rem(margin-right, 5);
-      font-size: $font-size-ex-sm;
-
-      &:hover, &:focus {
-       color: $secondary;
+  &#services--expand-link { 
+    &:hover,
+    &:focus {
+      outline: none !important;
+      @extend .access-background;
+      
+      i {
+        color: $secondary;
       }
     }
-
-    &#services--expand-link { 
-      
-      &:hover, &:focus {
-        @extend .access-background;
-        outline: none !important;
-        
-        i {
-          color: $secondary;
-        }
-      }
-      
-
-    }
-
   }
+}
 
 .action-link--inline {
-    color: $tertiary;
-    &:hover {
-        color: $blue;
-    }
+  color: $tertiary;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 .action-link--print:before {
-    content: '\f02f';
+  content: $fa-print;
 }
 
 .action-link--save:before {
-    content: '\f0c7';
+  content: $fa-save;
 }
 
 .action-link--share:before {
-    content: '\f064';
+  content: $fa-share;
 }
 
 .action-link--load:before {
-    content: '\f0c7';
+  content: $fa-save;
 }
 
 /* Skip Link */
 
 .skip-link {
   font-size: $font-size-sm;
-  line-height: 30px;
-  padding-right: 5px;
+  @include rem(line-height, 30);
+  @include rem(padding-right, 5);
   display: inline-block;
 }
 
 .skip-link i {
   float: left;
   display: inline-block;
-  line-height: 30px;
+  @include rem(line-height, 30);
   font-size: $font-size-sm;
-  color: #555;
-  margin: 0 8px 0 15px;
+  color: $gray-dark;
+  margin: 0 0.5rem 0 0.938rem;
 }
 
 .visually-hidden {
-    position: absolute !important;
-    clip: rect(1px, 1px, 1px, 1px);
-    overflow: hidden;
-    height: 1px;
-    width: 1px;
-    word-wrap: normal;
+  position: absolute !important;
+  clip: rect(0.063rem, 0.063rem, 0.063rem, 0.063rem);
+  overflow: hidden;
+  height: 0.063rem;
+  width: 0.063rem;
+  word-wrap: normal;
 }
 
-.visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+.visually-hidden.focusable {
+  &:active,
+  &:focus {
     position: static !important;
     clip: auto;
     overflow: visible;
     height: auto;
     width: auto;
+  }
 }
-
 
 // link blocks generally used on service pages //
 .link-block { 
   padding-left: 0.5rem;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
 
-  span, i {
+  span,
+  i {
     font-size: 1rem;
     color: $tertiary;
     position: absolute;
@@ -185,6 +183,10 @@ main a {
   }
 
   a {
-    line-height: 2rem; // fix for text cutting off on focus
+    @include rem(line-height, 32); // fix for text cutting off on focus
+  }
+
+  h2 {
+    font-size: $h3-font-size;
   }
 }

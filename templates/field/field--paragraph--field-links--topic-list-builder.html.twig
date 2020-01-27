@@ -38,7 +38,7 @@
  */
 #}
 
-<div{{ attributes.addClass('container-fluid site-max') }}>
+<div{{ attributes.addClass('container-fluid') }}>
   {% for row in items|batch(2) %}
   <div class="row">
     {% for item in row %}

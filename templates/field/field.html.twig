@@ -45,17 +45,11 @@
 %}
 
 {% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes }}>
-      {% for item in items %}
-        {{ item.content }}
-      {% endfor %}
-    </div>
-  {% else %}
+
     {% for item in items %}
       {{ item.content }}
     {% endfor %}
-  {% endif %}
+ 
 {% else %}
   <div{{ attributes }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>

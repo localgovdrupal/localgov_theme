@@ -1,7 +1,7 @@
 .directory-result {
   @include rem(padding-bottom, 4);
   @include rem(margin-bottom, 25);
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.063rem solid $gray-primary;
 
   h2 {
     font-weight: $font-bold;
@@ -16,7 +16,7 @@
 
   ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
     @include rem(margin, 12, 0);
 
     li {
@@ -31,11 +31,9 @@
   }
 }
 
-
-/* Map Header */
-  
+// Map Header
 .directory-map-results {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: $font-size-ex-med;
   @include rem(line-height, 28);
   
@@ -54,14 +52,15 @@
   }
 
   select {
-    border-radius: 4px;
-    border: 1px solid $gray;
+    @include rem(border-radius, 4);
+    border: 0.063rem solid $gray;
     font-size: $font-size-lg;
     @include rem(width, 197);
     @include rem(padding, 7);
   }
 
-  .fas, .far {
+  .fas,
+  .far {
     color: $secondary;
     @include rem(padding-right, 5);
   }
@@ -72,8 +71,7 @@
   }
 }
   
-/* Map Show/Hide */
-
+// Map Show/Hide 
 .directories-results-search-term {
   color: $tertiary;
   font-weight: $font-bold;
@@ -85,8 +83,8 @@
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
-  border: 0px;
-  padding: 0px;
+  border: 0;
+  padding: 0;
   width: auto;
 }
 
@@ -102,7 +100,7 @@
   @include rem(margin-bottom, 40);
   @include rem(padding-top, 18);
   @include rem(margin-top, 12);
-  border-top: 1px solid #eee;
+  border-top: 0.063rem solid $gray;
   display: block;
 }
 
@@ -112,99 +110,61 @@
   h2 {
     @include rem(margin-bottom, 30);
   }
+
   h3 {
     @include rem(margin, 35, 0, 14, 0);
   }
 }
 
-
 .contact-list {
-  margin:26px 0;
-  padding-left:0px;
-  list-style:none;
+  padding-left: 0;
+  list-style: none;
+  @include rem(margin, 26, 0);
 
   li {
-    padding-left:5px;
+    @include rem(padding-left, 5);
   }
+
   span {
-    margin-right:20px;
-    width:20px;
+    @include rem(margin-right, 20);
+    @include rem(width, 20);
   }
 }
 
 .directories-search-form {
-
   h2 {
-    margin-bottom:0px !important;
-    margin-bottom:0rem !important;
-    display:inline-block;
+    margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    display: inline-block;
   }
 
   .form-select {
     @extend .form-control;
-    padding:20px 18px;
-    padding:1.25rem 1.125rem;
-    background-color:$gray-tint;
+    @include rem(padding, 20);
+    background-color: $gray-tint;
   }
 }
 
 .directories-hide-filters {
-  display:block;
+  display: block;
 }
-
-@media only screen and (min-width:768px) {
-  .directories-search-form--search-toggle {
-    display:none;
-  }
-}
-
-
 
 .node--directory_listing {
   .directories-search {
     background-color: $gray-tint;
 
     form { 
-      margin-top:0px;
-      margin-top:0rem;
-      display:block;
+      margin-top: 0;
+      margin-top: 0;
+      display: block;
     }
+
     h2 {
-      display:none;
+      display: none;
     }
   }
 
   .directories-search-form--search-toggle {
-    display:none;
-  }
-   
-}
-
-@media only screen and (max-width:767px) {
-
-  .directories-search {
-
-    h2 {
-      font-size: $h3-font-size;
-    }
-  }
-
-  .directories-search-form--search-toggle {
-    font-size: $font-size-med;
-    font-weight: $font-bold;
-    color: $secondary;
-    text-decoration:none;
-    float:right;
-
-    &:hover {
-      color: $secondary;
-      text-decoration:none;
-    }
-
-    span {
-      font-size: $font-size-sm;
-      margin-left:4px;
-      margin-left:0.25rem;
-    }
+    display: none;
   }
 }

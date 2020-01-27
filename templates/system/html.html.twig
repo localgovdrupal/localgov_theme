@@ -27,73 +27,75 @@
 #}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
-	<head>
-		<head-placeholder token="{{ placeholder_token }}">
-		<title>{{ head_title|safe_join(' | ') }}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="google-site-verification" content="whpL-pBc0Hexn-Gz9egGV8YJcNMHZxlFSf9CeNr99dc"/>
-		<link rel="apple-touch-icon" sizes="180x180" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/favicon.json">
-		<link rel="mask-icon" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="theme-color" content="#000000">
-		{#<!-- Schema.org for Google -->#}
-		{#<meta itemprop="name" content="Croydon Council">#}
-		{#<meta itemprop="description" content="Delivering 24 hour council services to residents, visitors and businesses in Croydon">#}
-		{#<meta itemprop="image" content="">#}
-		<meta name="fb:admins" content="">
-		<link type="text/css" rel="stylesheet" href="/themes/custom/croydon/dist/assets/css/font-face.css">
-		<css-placeholder token="{{ placeholder_token }}">
-		<js-placeholder token="{{ placeholder_token }}">
-		
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="whpL-pBc0Hexn-Gz9egGV8YJcNMHZxlFSf9CeNr99dc"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/favicon.json">
+    <link rel="mask-icon" href="/{{ base_path ~ directory }}/dist/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#000000">
+    {#<!-- Schema.org for Google -->#}
+    {#<meta itemprop="name" content="Croydon Council">#}
+    {#<meta itemprop="description" content="Delivering 24 hour council services to residents, visitors and businesses in Croydon">#}
+    {#<meta itemprop="image" content="">#}
+    <meta name="fb:admins" content="">
 
-		<!--[if lt IE 9 ]>
-		<script src="/themes/custom/croydon/dist/assets/js/respond.min.js"></script>
-		<![endif]-->
+    <link type="text/css" rel="stylesheet" href="/themes/custom/croydon/dist/assets/css/font-face.css">
+    
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    
 
-		<!--[if lt IE 10]>
-		<style>
-		@media only screen and (min-width: 768px){
-		.services-list--multi li {
-		width: 33.33%;
-		float: left;
-		}
-		}
-		</style>
-		<![endif]-->
+    <!--[if lt IE 9 ]>
+    <script src="/themes/custom/croydon/dist/assets/js/respond.min.js"></script>
+    <![endif]-->
 
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-NPBPXBW');</script>
-		<!-- End Google Tag Manager -->
-	</head>
-	<body{{ attributes }}>
-		{#
-		Keyboard navigation/accessibility link to main content section in
-		page.html.twig.
-		#}
-		<a href="#main-content" class="visually-hidden focusable skip-link">
-			<i class="fas fa-fast-forward" aria-hidden="true"></i>
-			{{ 'Skip to main content'|t }}
-		</a>
-		{{ page_top }}
-		{{ page }}
-		{{ page_bottom }}
+    <!--[if lt IE 10]>
+    <style>
+    @media only screen and (min-width: 768px){
+    .services-list--multi li {
+    width: 33.33%;
+    float: left;
+    }
+    }
+    </style>
+    <![endif]-->
 
-		<!-- flexbox polyfill -->
-		<!--[if lte IE 9 ]>
-		<script src="/themes/custom/croydon/dist/assets/js/flexibility.js"></script>
-		<script type='text/javascript'>
-		window.onload=function(){
-		  flexibility(document.body);
-		}
-		</script>
-		<![endif]-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NPBPXBW');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body{{ attributes }}>
+    {#
+    Keyboard navigation/accessibility link to main content section in
+    page.html.twig.
+    #}
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      <i class="fas fa-fast-forward" aria-hidden="true"></i>
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
 
-		<js-bottom-placeholder token="{{ placeholder_token }}">
-	</body>
+    <!-- flexbox polyfill -->
+    <!--[if lte IE 9 ]>
+    <script src="/themes/custom/croydon/dist/assets/js/flexibility.js"></script>
+    <script type='text/javascript'>
+    window.onload=function(){
+      flexibility(document.body);
+    }
+    </script>
+    <![endif]-->
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
 </html>

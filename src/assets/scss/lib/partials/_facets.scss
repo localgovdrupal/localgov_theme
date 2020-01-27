@@ -1,4 +1,5 @@
-.facet-filter, #edit-field-accessibility--wrapper {
+.facet-filter,
+#edit-field-accessibility--wrapper {
   @include rem(padding, 0, 9);
   @include rem(margin-bottom, 11);
 }
@@ -9,22 +10,26 @@ h2.facet-filter-header {
   @include rem(line-height, 28);
 }
 
-.facet-filter h3, #edit-field-accessibility--wrapper h3 {
+.facet-filter h3,
+#edit-field-accessibility--wrapper h3 {
   font-size: $font-size-ex-lg;
   font-weight: $font-bold;
   margin: 0;
   @include rem(line-height, 50);
 }
 
-.facet-filter h3 a, #edit-field-accessibility--wrapper h3 a,
-.facet-filter h3 a:visited, #edit-field-accessibility--wrapper h3 a:visited {
+.facet-filter h3 a,
+#edit-field-accessibility--wrapper h3 a,
+.facet-filter h3 a:visited,
+#edit-field-accessibility--wrapper h3 a:visited {
   color: $secondary;
   text-decoration: none;
   display: block;
 }
 
-.facet-filter h3 span, #edit-field-accessibility--wrapper h3 span {
-  color: #F37021;
+.facet-filter h3 span,
+#edit-field-accessibility--wrapper h3 span {
+  color: $black;
   font-size: $font-size-lg;
   @include rem(padding-left, 5);
   @include rem(width, 20);
@@ -42,16 +47,19 @@ h2.facet-filter-header {
   }
 }
 
-.facet-filter .checkbox-wrapper, #edit-field-accessibility--wrapper .checkbox-wrapper {
+.facet-filter .checkbox-wrapper,
+#edit-field-accessibility--wrapper .checkbox-wrapper {
   display: none;
 
 }
 
-.facet-filter .checkbox-wrapper.open, #edit-field-accessibility--wrapper .checkbox-wrapper.open {
+.facet-filter .checkbox-wrapper.open,
+#edit-field-accessibility--wrapper .checkbox-wrapper.open {
   @include rem(padding-bottom, 9);
 }
 
-.facet-filter .collapsed, #edit-field-accessibility--wrapper .collapsed {
+.facet-filter .collapsed,
+#edit-field-accessibility--wrapper .collapsed {
   padding-bottom: 0;
 }
 
@@ -73,22 +81,22 @@ h2.facet-filter-header {
 }
 
 .facet-filter-checkboxes label {
-  padding-left: 30px;
+  @include rem(padding-left, 30);
+  @include rem(margin-bottom, 5);
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
   font-weight: $font-bold;
   font-size: $font-size-lg;
 }
 
 .facet-filter-checkboxes label:before {
   content: '';
-  height: 18px;
-  width: 18px;
+  @include rem(width, 18);
+  @include rem(height, 18);
   border: 0.063rem solid $indigo-tint;
   display: block;
   position: absolute;
-  top: 10px;
+  @include rem(top, 10);
   left: 0;
   font-family: $font-family-icons;
   -webkit-font-smoothing: antialiased;
@@ -96,7 +104,7 @@ h2.facet-filter-header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  line-height: 1.3;
+  @include rem(line-height, 21);
   text-align: center;
   font-size: $font-size-sm;
 }
@@ -111,11 +119,11 @@ h2.facet-filter-header {
 }
 
 .facet-filter-checkboxes input[type=checkbox]:checked ~ label:before {
-  content: '\f00c';
+  content: $fa-check;
   @include rem(width, 20);
   @include rem(height, 20);
-  border: 0.063rem solid #34ad5d;
-  color: #34ad5d;
+  border: 0.063rem solid $green;
+  color: $green;
   display: block;
   position: absolute;
   @include rem(top, 10);
@@ -126,12 +134,6 @@ h2.facet-filter-header {
   font-size: $font-size-ex-med;
   @include rem(margin-top, 15);
   @include rem(line-height, 28);
-}
-
-@media only screen and (max-width: 767px) {
-  .directories-hide-filters {
-    font-size: $font-size-med;
-  }
 }
 
 .directories-hide-filters a {
@@ -169,16 +171,16 @@ h2.facet-filter-header {
 }
 
 
-@media only screen and (max-width: 767px) {
-  .directories-hide-filters .hide-filters {
-    display: none;
-  }
+// @media only screen and (max-width: 767px) {
+//   .directories-hide-filters .hide-filters {
+//     display: none;
+//   }
 
-  .directories-hide-filters .show-filters {
-    display: inline;
-  }
+//   .directories-hide-filters .show-filters {
+//     display: inline;
+//   }
 
-  .filter-wrapper {
-    display: none;
-  }
-}
+//   .filter-wrapper {
+//     display: none;
+//   }
+// }
