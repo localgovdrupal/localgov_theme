@@ -13,10 +13,12 @@
       {{ page.content }}
     </main>
 
-    {% if page.sidebar_second %}
-      <div class="sidebar col-lg-4 order-2">
-        {{ page.sidebar_second }}
+    
+    <div class="sidebar col-lg-4 order-2">
+        {% if page.sidebar_second %}
+          {{ page.sidebar_second }}
+        {% endif %}
       </div>
-    {% endif %}
+    
  
 {% endblock %}

@@ -1,0 +1,58 @@
+.node--campaign_overview {
+   .jumbotron {
+    background-color: #fde360;
+    
+    > div {
+      background-size: contain;
+      background-position: right;
+
+      .jumbo-welcome {
+
+        h1 {
+          color: $indigo;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .section-nav {
+    background: $indigo;
+
+    h3 {
+      color: $white;
+      padding: inherit;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        background: $white;
+        font-size: 1.125rem;
+        border-bottom: 0.0625rem solid #DBDFE3 !important;
+
+        a {
+          display: block;
+          width: 100%;
+          border-left: 3px solid $violet;
+
+          &:hover {
+            border-left: 3px solid $purple;
+          }
+        }
+
+        span {
+          display: block;
+        }
+
+        .is-active {
+          border-left: 3px solid $indigo;
+        }
+      }
+    }
+  }
+}

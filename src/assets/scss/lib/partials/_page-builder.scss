@@ -81,38 +81,43 @@
 
 /* Fact boxes */
 
+#field--field_fact_boxes {
+  > div {
+    display: flex; // factbox containers - set to flex for matching heights
+  }
+}
+
 .fact-box {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: $indigo;
   @include rem(margin-bottom, 15);
   @include rem(padding, 50, 15);
+  border-bottom: 3px solid $orange;
 
   p {
     @include rem(margin-bottom, 10);
+    color: $white;
 
-    .fact-opening,
-    .fact-closing {
+    &.fact-opening,
+    &.fact-closing {
       font-weight: $font-bold;
       font-size: $font-size-ex-ex-lg;
       text-align: center;
-      color: #000;
     }
 
-    .fact {
+    &.fact {
       font-weight: $font-bold;
       @include rem(font-size, 70);
       @include rem(line-height, 70);
       text-align: center;
-      color: #0059a4;
     }
   }
 
-  &.fact-box-fade-red-blue {
-    background: linear-gradient(#A41055, $blue);
-    border-color: $orange;
+  &.fact-box-light {
+    background-color: $white;
 
     p {
-      color: $white; 
+      color: $black;
     }
   }
 }
@@ -189,17 +194,14 @@
 
 .pull-out-quote {
   @include rem(margin-bottom, 15);
-  @include rem(padding, 40, 35);
-  background: #f4f4f4;
-  border-left: 0.313rem solid $orange;
-
-  p {
-    color: #333333;
-
-    .quote-footer {
-      font-weight: $font-bold;
-      color: $black;
-    }
+  @include rem(padding, 20);
+  background: $gray-tint;
+  border-left: 0.313rem solid $purple;
+  
+  footer {
+    font-weight: $font-bold;
+    color: $purple;
+    margin: 0;
   }
 }
 

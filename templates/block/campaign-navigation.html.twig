@@ -1,0 +1,24 @@
+<nav class="section-nav" aria-label="Section Navigation">
+  <h3 class="p-4">{{ heading }}</h3>
+  <ul class="p-0">
+    {% for link in links %}
+      {% if link.class == 'is-active' %}
+        <li class="p-0">
+          <span class="{{ link.class }} pl-4 pr-4 pt-2 pb-2">{{ link.title }}</span>
+        </li>
+      {% else %}
+        <li class="p-0">
+          <a href="{{ link.url }}" class="pl-4 pr-4 pt-2 pb-2">{{ link.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    <li class="p-0">
+      <a href="{{ link.url }}" class="pl-4 pr-4 pt-2 pb-2">dummy link 1</a>
+    </li>
+
+    <li class="p-0">
+      <a href="{{ link.url }}" class="pl-4 pr-4 pt-2 pb-2">dummy link 2</a>
+    </li>
+  </ul>
+</nav>
