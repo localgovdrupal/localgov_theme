@@ -10,7 +10,7 @@ a {
     @extend .access-background;
 
     > img {
-      @include outline(.1875rem, .1875rem, $focus);
+      @include outline(.1875rem, 0, $focus);
     }
   }
 
