@@ -39,10 +39,11 @@
  */
 #}
 
-<div class="link-block position-relative">
+<div{{ attributes.addClass('link-block position-relative') }}>
   <span class="fa fa-chevron-right"></span>
-  <h3>
+  <h2 class="pl-2">
     {{ content.field_link }}
-  </h3>
-  <p>{{ paragraph.field_summary.getValue[0].value }}</p>
+  </h2>
+  <p class="pl-2">{{ paragraph.field_summary.getValue[0].value }}</p>
 </div>
+

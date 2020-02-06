@@ -81,38 +81,49 @@
 
 /* Fact boxes */
 
+#field--field_fact_boxes {
+  > div {
+    display: flex; // factbox containers - set to flex for matching heights
+  }
+}
+
 .fact-box {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: $indigo;
   @include rem(margin-bottom, 15);
   @include rem(padding, 50, 15);
+  border-bottom: 0.1875rem solid $tan;
 
   p {
+    padding-right: 0; // override of 'main' para styling
+    color: $white;
     @include rem(margin-bottom, 10);
 
-    .fact-opening,
-    .fact-closing {
+    &.fact-opening,
+    &.fact-closing {
       font-weight: $font-bold;
-      font-size: $font-size-ex-ex-lg;
+      @include rem(font-size, 55);
+      @include rem(line-height, 55);
       text-align: center;
-      color: #000;
     }
 
-    .fact {
+    &.fact {
       font-weight: $font-bold;
-      @include rem(font-size, 70);
-      @include rem(line-height, 70);
+      @include rem(font-size, 22);
       text-align: center;
-      color: #0059a4;
     }
   }
 
-  &.fact-box-fade-red-blue {
-    background: linear-gradient(#A41055, $blue);
-    border-color: $orange;
+  &.fact-box-fact-box-light {
+    background-color: $gray-tint;
+    border-bottom: 0.1875rem solid $purple;
 
     p {
-      color: $white; 
+      color: $purple;
+
+      &.fact {
+        color: $black;
+      }
     }
   }
 }
@@ -121,38 +132,36 @@
 
 .call-out-box {
   position: relative;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
   @include rem(margin-bottom, 15);
-  background-position: 50% 0;
-  background-size: cover;
-
+  padding-bottom: 9rem;
+  
+  @include media-breakpoint-up(md) {
+   background-position: right top;
+   padding-bottom: 0;
+  }
   img {
     height: auto;
     width: 100%;
   }
 
   .call-out-content {
-    padding: 30;
-    
-    h2,
-    p {
-      width: 50%;
-    }
+    @include rem(margin-bottom, 30);
 
     h2 {
-      color: $white;
+      color: $carbon;
       @include rem(font-size, 42);
       @include rem(line-height, 45);
     }
 
     p {
-      color: $white;
+      color: $carbon;
       @include rem(font-size, 20);
       @include rem(line-height, 30);         
     }
 
-    .cta-button {
-      @include rem(max-width, 290);
-    }
   }
 }
 
@@ -162,25 +171,44 @@
   @include rem(margin-bottom, 15);
 
   a {
+    display: inline-block;
     text-decoration: none;
+    width: 100%;
 
     img {
       width: 100%;
       height: auto;
-      border-bottom: 0.313rem solid $orange;
+      border-bottom: 0.313rem solid $yellow;
+      
     }
 
     span {
+      display: inline-block;
       font-weight: $font-bold;
-
-      &::before {
+      width: 100%;
+      position: relative;
+      @include rem(padding-left, 16);
+      @include rem(margin-top, 16);
+      
+      &:before {
         content: $fa-chevron-right;
+        position: absolute;
+        left: 0;
+        top: 0.125rem;
         font-family: $font-family-icons;
         font-weight: $fa-font-weight;
+        color: $tertiary;
         font-size: $font-size-ex-ex-sm;
-        color: #F37021;
         @include rem(margin-right, 5);
+
+        &:hover {
+          text-decoration: none;
+        }
       }
+    }
+
+    &:hover {
+      box-shadow: none;
     }
   }
 }
@@ -189,17 +217,14 @@
 
 .pull-out-quote {
   @include rem(margin-bottom, 15);
-  @include rem(padding, 40, 35);
-  background: #f4f4f4;
-  border-left: 0.313rem solid $orange;
-
-  p {
-    color: #333333;
-
-    .quote-footer {
-      font-weight: $font-bold;
-      color: $black;
-    }
+  @include rem(padding, 20);
+  background: $gray-tint;
+  border-left: 0.313rem solid $purple;
+  
+  footer {
+    font-weight: $font-bold;
+    color: $purple;
+    margin: 0;
   }
 }
 

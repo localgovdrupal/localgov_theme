@@ -1,6 +1,9 @@
 // main content area
 .node--step_by_step_page,
 .node--step_by_step_homepage {
+  main {
+    margin-top: 0;
+  }
   section {
     margin-bottom: 0;
     padding-bottom: 1rem;
@@ -71,7 +74,6 @@ ul.step-list {
 // Step by step navigation
 
 .step-by-step-pages {
-  margin-top: 3rem;
 
   .step-by-step-pages__relationship { // hides 'part of' block in sidebar
     display: block;

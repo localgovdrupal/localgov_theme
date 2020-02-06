@@ -5,18 +5,20 @@
 {% endblock %}
 
 {% block content_inner %}
-  <div class="col-12 clearfix">
-    {{ page.messages }}
-  </div>
 
-    <main {{ content_attributes.addClass('content col-lg-8 order-1') }}>
-      {{ page.content }}
-    </main>
+  {% if page.messages %}
+    <div class="col-12 clearfix">
+      {{ page.messages }}
+    </div>
+  {% endif %}
 
+  <main {{ content_attributes.addClass('content col-lg-8 order-1') }}>
+    {{ page.content }}
+  </main>
+
+  <div class="sidebar col-lg-4 order-2">
     {% if page.sidebar_second %}
-      <div class="sidebar col-lg-4 order-2">
-        {{ page.sidebar_second }}
-      </div>
+      {{ page.sidebar_second }}
     {% endif %}
- 
+  </div>
 {% endblock %}

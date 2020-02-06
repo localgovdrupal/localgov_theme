@@ -40,10 +40,10 @@
 #}
 
 <div class="call-out-box" {% if background_url is defined and background_url %}style="background-image: url('{{ background_url }}')"{% endif %}>
-  <div class="call-out-content">
+  <div class="call-out-content col-12 col-md-6 p-4">
     <h2>{{ paragraph.field_header_text.getValue[0].value }}</h2>
     {{ content.field_body_text }}
-    <a href="{{ button_url }}" class="link-button link-button-orange">
+    <a href="{{ button_url }}" class="btn btn-primary">
       <span>{{ paragraph.field_button.getValue[0].title }}</span>
     </a>
   </div>

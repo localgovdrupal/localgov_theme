@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
 
-  .container-fluid {
+  > div {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     @include rem(height, 330);
 
@@ -13,7 +14,7 @@
       @include rem(height, 300);
     }
 
-    .homepage--welcome {
+    .jumbo-welcome {
       @include rem(padding-top, 60);
 
       h1 {
