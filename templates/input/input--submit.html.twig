@@ -10,9 +10,8 @@
  * @see template_preprocess_input()
  */
 #}
-<button type="submit" class="btn btn-primary btn-sm mt-2 {{attributes.class}}"><span class="fa fa-chevron-right"></span>
+<button type="submit" {{ attributes.addClass(['btn', 'btn-primary', 'btn-sm', 'mt-2']) }}>
+  <span class="fa fa-chevron-right"></span>
   <span>{{ attributes.value }}</span>
 </button>
 {{ children }}
-
-
