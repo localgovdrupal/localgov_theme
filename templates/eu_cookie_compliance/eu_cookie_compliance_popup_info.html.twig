@@ -78,9 +78,19 @@
     {% endif %}
 
     <div id="popup-buttons" class="eu-cookie-compliance-buttons{% if cookie_categories %} eu-cookie-compliance-has-categories{% endif %} col-md-3 col-12 py-2 text-right">
-      <a href="#" class="{{ primary_button_class }}">{{ agree_button }} <i class="fa fa-check" aria-hidden="true"></i></a>
+      <div>
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <a href="#" class="{{ primary_button_class }}">{{ agree_button }}</a>
+      </div>
       {% if secondary_button_label %}
-      <a href="#" class="{{ secondary_button_class }}">{{ secondary_button_label }} <i class="fa fa-cog" aria-hidden="true"></i></a>
+      <div class="row">
+        <div class="col-6 text-right">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
+      <div class="col-6 text-left">
+        <a href="#" class="{{ secondary_button_class }}">{{ secondary_button_label }}</a>
+      </div>
+      </div>
       {% endif %}
     </div>
   </div></div>
