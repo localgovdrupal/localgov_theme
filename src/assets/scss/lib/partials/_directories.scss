@@ -172,6 +172,10 @@
 .filter-wrapper {
   background: $indigo-tint;
   @include rem(padding, 10);
+
+  legend {
+    margin-bottom: 0;
+  }
 }
 
 .fieldset-wrapper {
@@ -223,13 +227,12 @@
     &:before {
       content: '';
       position: absolute;
-      @include rem(top, 10);
+      @include rem(top, 3);
       left: 0;
       display: inline-block;
       @include rem(height, 18);
       @include rem(width, 18);
       @include rem(font-size, 15);
-      top: 0.3rem;
       font-family: $font-family-icons;
       font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
       -webkit-font-smoothing: antialiased;
@@ -272,4 +275,36 @@
   .directories-search-form--search-toggle {
     display: none;
   }
+}
+
+.directory-listing-content {filter-wrapper
+  .pager {
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        @include rem(padding, 10);
+        
+        a {
+          color:$blue;
+        }
+
+
+        &.is-active {
+          a {
+            color: $carbon;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.directories-hide-filters .hide-filters,
+.directories-hide-filters .show-filters {
+  background: none;
+  border: none;
+  @include rem(font-size, 16);
+  color: $blue;
 }

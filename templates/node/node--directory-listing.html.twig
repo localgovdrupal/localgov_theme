@@ -71,14 +71,22 @@
 
 <div class="row">
   <aside class="col-sm-4" role="complementary">
-    {{ content.bhcc_directories_search_box }}
-    {{ content.directories_v2_entity_view_1_form }}
-    {% if content.directories_v2_entity_view_1_form.facet_container %}
-      <div class="directories-hide-filters">
-        <button class="hide-filters"><span class="fas fa-eye-slash"></span>Hide search filters</button>
-        <button class="show-filters"><span class="fas fa-eye"></span>Show search filters</button>
-      </div>
-    {% endif %}
+  
+  {{ content.bhcc_directories_search_box }}
+  
+  {% if content.directories_v2_entity_view_1_form.facet_container %}
+    <div class="directories-hide-filters pb-2">
+      <button class="hide-filters">
+        <span class="fas fa-eye-slash"></span>Hide search filters
+      </button>
+      <button class="show-filters">
+        <span class="fas fa-eye"></span>Show search filters
+      </button>
+    </div>
+  {% endif %}
+    
+  {{ content.directories_v2_entity_view_1_form }}
+    
   </aside>
 
   <section class="col-sm-8 directory-listing-content">

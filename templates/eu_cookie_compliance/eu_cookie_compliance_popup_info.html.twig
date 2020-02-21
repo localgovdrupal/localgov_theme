@@ -47,7 +47,7 @@
 <div class="container-fluid site-max popup-content">
 	<div class="row">
 
-    <div id="popup-text" class="eu-cookie-compliance-message col-md-9 col-12 py-2">
+    <div id="popup-text" class="eu-cookie-compliance-message col-12 col-sm-8 col-md-9 py-2 pt-3">
       {{ message }}
       <!-- {% if disagree_button %}
         <button type="button" class="find-more-button eu-cookie-compliance-more-button">{{ disagree_button }}</button>
@@ -77,19 +77,21 @@
       </div>
     {% endif %}
 
-    <div id="popup-buttons" class="eu-cookie-compliance-buttons{% if cookie_categories %} eu-cookie-compliance-has-categories{% endif %} col-md-3 col-12 py-2 text-right">
-      <div>
-        <i class="fa fa-check" aria-hidden="true"></i>
-        <a href="#" class="{{ primary_button_class }}">{{ agree_button }}</a>
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons{% if cookie_categories %} eu-cookie-compliance-has-categories{% endif %} col-12 col-sm-4 col-md-3 py-2 pb-3 pb-sm-0 pt-sm-3 text-right">
+      <div class="row">
+        <div class="col-12 col-lg-4 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-8 text-left">
+          <i class="fa fa-check pr-1" aria-hidden="true"></i>
+          <a href="#" class="{{ primary_button_class }}">{{ agree_button }}</a>
+        </div>
       </div>
       {% if secondary_button_label %}
       <div class="row">
-        <div class="col-6 text-right">
-        <i class="fa fa-cog" aria-hidden="true"></i>
-      </div>
-      <div class="col-6 text-left">
-        <a href="#" class="{{ secondary_button_class }}">{{ secondary_button_label }}</a>
-      </div>
+        <div class="col-12 col-lg-4 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-8 text-left">
+          <i class="fa fa-cog pr-1" aria-hidden="true"></i>
+          <a href="#" class="{{ secondary_button_class }}">{{ secondary_button_label }}</a>
+        </div>
       </div>
       {% endif %}
     </div>
