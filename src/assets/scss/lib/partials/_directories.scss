@@ -174,7 +174,7 @@
   @include rem(padding, 10);
 
   legend {
-    margin-bottom: 0;
+    @include rem(margin-bottom, 9);
   }
 }
 
@@ -277,7 +277,7 @@
   }
 }
 
-.directory-listing-content {filter-wrapper
+.directory-listing-content {
   .pager {
     ul {
       list-style-type: none;
