@@ -42,6 +42,8 @@ This file provides the HTML structure for local offer pages.
     {% endif %}
   </ul>
 
+  {{ content.field_geofield }}
+
   {% if content.field_date_and_time_text|render %}
     <hr>
     <h3>Date and time</h3>
