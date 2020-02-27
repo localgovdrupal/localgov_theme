@@ -1,6 +1,7 @@
 .directory-result {
   @include rem(padding-bottom, 4);
   @include rem(margin-bottom, 25);
+  @include rem(margin-top, 16);
   border-bottom: 0.063rem solid $gray-primary;
 
   h2 {
