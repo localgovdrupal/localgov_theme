@@ -12,11 +12,11 @@
     </div>
   {% endif %}
 
-  <main {{ content_attributes.addClass('content col-lg-8 order-1') }}>
+  <main {{ content_attributes.addClass('content col-lg-8 order-1 mt-5') }}>
     {{ page.content }}
   </main>
 
-  <div class="sidebar col-lg-4 order-2">
+  <div class="sidebar col-lg-4 order-2 mt-5">
     {% if page.sidebar_second %}
       {{ page.sidebar_second }}
     {% endif %}

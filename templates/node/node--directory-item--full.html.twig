@@ -1,6 +1,7 @@
 {#
 This file provides the HTML structure for local offer pages.
 #}
+{% set has_contact_info = node.field_addressfield.getValue() or node.field_phone.getValue() or node.field_email_address.getValue() or node.field_website_plain.getValue() or node.field_facebook.getValue() or node.field_twitter.getValue() or node.field_inspection_reports.getValue() %}
 
 <article{{ content_attributes.addClass('directory-listing-content') }}>
   <h2>{{ label }}</h2>
@@ -10,9 +11,11 @@ This file provides the HTML structure for local offer pages.
   {% endif %}
 
   {{ content.body }}
-
+  {% if has_contact_info %}
   <h3>Contact information</h3>
-  <ul class="contact-list">
+    
+    <ul class="contact-list">
+  
     {% if content.field_addressfield|render %}
       <li><span class="fas fa-map-marker-alt"></span>{{ content.field_addressfield|render }}</li>
     {% endif %}
@@ -41,7 +44,8 @@ This file provides the HTML structure for local offer pages.
       <li class="directory-contact"><span class="fas fa-external-link-alt"></span><a class="external-link" href="{{ content.field_inspection_reports|render }}">Inspection report</a></li>
     {% endif %}
   </ul>
-
+  {% endif %}
+  
   {{ content.field_geofield }}
 
   {% if content.field_date_and_time_text|render %}
@@ -74,10 +78,6 @@ This file provides the HTML structure for local offer pages.
     <h3>Other information</h3>
     {{ content.field_other_text|render }}
   {% endif %}
-
-  <hr>
-  <h3>Disclaimer</h3>
-  <p>All of the factual data in our directory is provided by internal services and external organisations that we work with. We cannot accept any responsibility or liability for any false claims, errors or out of date information.</p>
 
   <div class="row">
   {% if back_to_directory_link %}
