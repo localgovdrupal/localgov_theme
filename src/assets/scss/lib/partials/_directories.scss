@@ -150,6 +150,7 @@
       width: 100%;
       text-align: left;
       position: relative;
+      font-size: $h5-font-size;
 
       .fa-chevron-right {
         display: none;
@@ -159,6 +160,7 @@
         font-family: $font-family-icons;
         font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
         content: $fa-search;
+        font-size: $h5-font-size;
         display: block;
         position: absolute;
         right: 1rem;

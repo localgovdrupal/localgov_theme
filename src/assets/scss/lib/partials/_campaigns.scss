@@ -12,65 +12,63 @@
   }
 
   .jumbotron,
-  .campaign-banner-wrapper {
+  .campaign-banner {
     background-color: #fde360;
+  
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(sm) {
+      background-size: 60%;
+    }
     
-    > div {
-      background-size: 100%;
-      background-position: bottom;
-      background-repeat: no-repeat;
+    @include media-breakpoint-up(lg) {
+      background-size: contain;
+    }
+
+    .jumbo-welcome,
+    .campaign-banner--inner {
+      position: relative;
+      @include rem(padding-top, 45);
 
       @include media-breakpoint-up(sm) {
-        background-size: 60%;
+        @include rem(padding-top, 25);
       }
-      
-      @include media-breakpoint-up(lg) {
-        background-size: contain;
+      @include media-breakpoint-up(md) {
+        @include rem(padding-top, 60);
       }
 
-      .jumbo-welcome,
-      .campaign-banner--inner {
-        position: relative;
-        @include rem(padding-top, 45);
+
+      h1 {
+        color: $indigo;
+        @include rem(font-size, 50);
+        width: 100%;
+        text-align: center;
+        padding: 0;
 
         @include media-breakpoint-up(sm) {
-          @include rem(padding-top, 25);
-        }
-        @include media-breakpoint-up(md) {
-          @include rem(padding-top, 60);
+          position: absolute;
+          top: 1.7rem;
         }
 
+        @include media-breakpoint-up(lg) {
+          position: relative;
+          top: auto;
+          width: 50% !important;
+          @include rem(font-size, 58);
+          text-align: left;
+        }
 
-        h1 {
-          color: $indigo;
-          @include rem(font-size, 50);
-          width: 100%;
-          text-align: center;
-          padding: 0;
-
-          @include media-breakpoint-up(sm) {
-            position: absolute;
-            top: 1.7rem;
-          }
-
-          @include media-breakpoint-up(lg) {
-            position: relative;
-            top: auto;
-            width: 50% !important;
-            @include rem(font-size, 58);
-            text-align: left;
-          }
-
-          &:before {
-            display: none;
-          }
+        &:before {
+          display: none;
         }
       }
-      
-      @include media-breakpoint-up(lg) {
-        background-size: contain;
-        background-position: right;
-      }
+    }
+    
+    @include media-breakpoint-up(lg) {
+      background-size: contain;
+      background-position: right;
     }
   }
 
