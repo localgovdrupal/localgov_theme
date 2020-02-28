@@ -138,16 +138,20 @@ ul.step-list {
         display: block;
         font-weight: $font-bold;
         font-size: $h6-font-size;
-        color: $secondary;
+        color: $blue;
 
         a {
-          color: $secondary;
+          color: $blue;
           display: block;
           line-height: 1.5rem;
+          
+          &:hover {
+            color: $secondary;
+          }
 
           &.step-show {
             font-size: $font-size-ex-sm;
-            color: $blue;
+            color: $secondary;
             text-decoration: underline;
             font-weight: $font-normal;
           }
@@ -171,6 +175,10 @@ ul.step-list {
           
           a {
             color: $primary;
+
+            &:hover {
+              color: $secondary;
+            }
           }
         }
       }
@@ -235,7 +243,6 @@ main {
 
           a {
             @include rem(font-size, 28);
-            color: $blue;
             font-weight: $font-bold !important;
             margin: 0.4rem 0;
 
@@ -245,7 +252,6 @@ main {
 
             &.step-show {
               @include rem(font-size, 17);
-              color: $secondary;
               font-weight: $font-thin !important;
             }
           }
