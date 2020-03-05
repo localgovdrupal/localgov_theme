@@ -41,7 +41,7 @@
   ['eu-cookie-compliance-banner--', method|replace('_', '-')]|join,
 ] %}
 
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes, 'order-1', 'col-lg-8') }}>
 
   <div class="popup-content info eu-cookie-compliance-content">
 
@@ -65,16 +65,16 @@
                 <div class="eu-cookie-compliance-categories--on inline mt-2">
 
                 <label class="custom-input" for="cookie-category-{{ key }}--on"> <span>On</span>
-                  <input type="radio" name="cookie-categories-radio--{{ key }}" checked="radio" id="cookie-category-{{ key }}--on"
+                  <input type="radio" name="cookie-categories-radio--{{ key }}" id="cookie-category-{{ key }}--on"
                      value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
                   <span class="radiomark"></span> </label>
 
                 </div>
                 
                 <div class="eu-cookie-compliance-categories--off inline mt-2">
-                  <label class="custom-input" for="cookie-category-{{ key }}--off">Off
-                    <input type="radio" name="cookie-categories-radio--{{ key }} radio" id="cookie-category-{{ key }}--off"
-                     value="{{ key }}" {% if fix_first_cookie_category and loop.first %} disabled{% endif %}>
+                  <label class="custom-input" for="cookie-category-{{ key }}--off"><span>Off</span>
+                    <input type="radio" name="cookie-categories-radio--{{ key }}" id="cookie-category-{{ key }}--off"
+                     value="{{ key }}" {% if fix_first_cookie_category and loop.first %} disabled{% endif %} checked="radio">
                     <span class="radiomark"></span>
                   </label>
                 </div>
@@ -88,7 +88,7 @@
         {% if save_preferences_button_label %}
           <div class="eu-cookie-compliance-categories-buttons">
             <button type="button"
-                    class="btn btn-primary eu-cookie-compliance-save-preferences-button">{{ save_preferences_button_label }}</button>
+                    class="btn btn-primary eu-cookie-compliance-save-preferences-button">{{ save_preferences_button_label }} <i class="fas fa-check p-0 ml-3"></i></button>
           </div>
         {% endif %}
       </div>

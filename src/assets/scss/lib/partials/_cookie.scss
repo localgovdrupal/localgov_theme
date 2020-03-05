@@ -16,6 +16,7 @@
 	}
 
 	.form-group {
+		width: 100%;
 		display: inline-block;
 	}
 
@@ -25,11 +26,44 @@
 	}
 
 	.custom-input {
-		font-weight: $font-bold;
+		span {
+			font-weight: $font-bold;
+		}
 
 		.radiomark:after,
 		input:hover ~ .radiomark:after {
 			background: $green;
 		}
 	}
+}
+
+.cookie-usage {
+	font-size: $font-size-med;
+	font-weight: $font-bold;
+
+	&.collapsed {
+	
+		&:before {
+			content: $fa-chevron-down !important;
+		}
+	}
+
+	&:before {
+		font-size: $font-size-ex-med;
+    font-family: $font-family-icons; 
+    font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
+		content: $fa-chevron-right;
+		color: $green;
+		text-decoration: underline;
+		text-decoration: none;
+		margin-right: 0.3rem;
+		display: inline-block;
+	}
+}
+
+main {
+	.cookie-usage {
+		font-weight: $font-bold !important;
+	}
+
 }
