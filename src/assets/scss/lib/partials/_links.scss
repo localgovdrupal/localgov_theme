@@ -23,7 +23,7 @@ main a {
 // External Link
 
 .external-link {
-  white-space: no-wrap; // stops instances where the icon is the only thing to drop to a new line
+  white-space: nowrap; // stops instances where the icon is the only thing to drop to a new line
   
   &:after {
     font-family: $font-family-icons;

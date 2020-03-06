@@ -60,16 +60,16 @@
 
     <div id="popup-buttons" class="eu-cookie-compliance-buttons{% if cookie_categories %} eu-cookie-compliance-has-categories{% endif %} col-12 col-sm-4 col-md-3 py-2 pb-3 pb-sm-0 pt-sm-3 text-right">
       <div class="row">
-        <div class="col-12 col-lg-4 d-none d-lg-block"></div>
-        <div class="col-12 col-lg-8 text-left">
+        <div class="col-12 col-lg-2 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-10 text-left">
           <i class="fa fa-check pr-1" aria-hidden="true"></i>
           <a href="#" class="{{ primary_button_class }}">{{ agree_button }}</a>
         </div>
       </div>
       {% if disagree_button %}
       <div class="row">
-        <div class="col-12 col-lg-4 d-none d-lg-block"></div>
-        <div class="col-12 col-lg-8 text-left">
+        <div class="col-12 col-lg-2 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-10 text-left">
           <i class="fa fa-cog pr-1" aria-hidden="true"></i>
           {{ link(disagree_button, cookie_settings_page_url) }}
         </div>
