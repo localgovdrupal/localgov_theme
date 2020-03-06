@@ -4,6 +4,11 @@
  * This is a template file for a banner prompting user to give their consent for
  * the website to set cookies.
  *
+ * This template overrides the default template for the
+ * eu_cookie_compliance_popup_info theme.  It removes the category settings form
+ * fields.  Those fields are only made available as part of the Cookie settings
+ * block. @see eu-cookie-compliance-popup-info--cookie-settings-block.html.twig
+ *
  * When overriding this template it is important to note that jQuery will use
  * the following classes to assign actions to buttons:
  *
@@ -32,6 +37,8 @@
  * - privacy_settings_tab_label: Label text for the Privacy settings tab.
  * - withdraw_button_on_info_popup: Show the withdraw button on this popup.
  * - method: Chosen consent method.
+ * - cookie_settings_page_url: Drupal\Core\Url object.  Site users can update
+ *   their Cookie settings in this page.
  */
 #}
 {% if privacy_settings_tab_label %}
@@ -49,33 +56,7 @@
 
     <div id="popup-text" class="eu-cookie-compliance-message col-12 col-sm-8 col-md-9 py-2 pt-3">
       {{ message }}
-      <!-- {% if disagree_button %}
-        <button type="button" class="find-more-button eu-cookie-compliance-more-button">{{ disagree_button }}</button>
-      {% endif %} -->
     </div>
-
-    {% if cookie_categories %}
-      <div id="eu-cookie-compliance-categories" class="eu-cookie-compliance-categories">
-        {% for key, category in cookie_categories %}
-          <div class="eu-cookie-compliance-category">
-            <div>
-              <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}"
-                     value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
-              <label for="cookie-category-{{ key }}">{{ category.label }}</label>
-            </div>
-            {% if category.description %}
-              <div class="eu-cookie-compliance-category-description">{{ category.description }}</div>
-            {% endif %}
-          </div>
-        {% endfor %}
-        {% if save_preferences_button_label %}
-          <div class="eu-cookie-compliance-categories-buttons">
-            <button type="button"
-                    class="eu-cookie-compliance-save-preferences-button">{{ save_preferences_button_label }}</button>
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
 
     <div id="popup-buttons" class="eu-cookie-compliance-buttons{% if cookie_categories %} eu-cookie-compliance-has-categories{% endif %} col-12 col-sm-4 col-md-3 py-2 pb-3 pb-sm-0 pt-sm-3 text-right">
       <div class="row">
@@ -85,12 +66,12 @@
           <a href="#" class="{{ primary_button_class }}">{{ agree_button }}</a>
         </div>
       </div>
-      {% if secondary_button_label %}
+      {% if disagree_button %}
       <div class="row">
         <div class="col-12 col-lg-4 d-none d-lg-block"></div>
         <div class="col-12 col-lg-8 text-left">
           <i class="fa fa-cog pr-1" aria-hidden="true"></i>
-          <a href="#" class="{{ secondary_button_class }}">{{ secondary_button_label }}</a>
+          {{ link(disagree_button, cookie_settings_page_url) }}
         </div>
       </div>
       {% endif %}
