@@ -58,7 +58,7 @@
               {% if category.description %}
                 <div class="eu-cookie-compliance-category-description mt-4 mb-4">{{ category.description }}</div>
               {% endif %}
-
+              <label class="hidden" for="cookie-category-{{ key }}">Cookie Categories</label>
               <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}"
                  value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
 
