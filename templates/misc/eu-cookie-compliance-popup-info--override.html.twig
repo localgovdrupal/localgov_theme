@@ -76,5 +76,15 @@
       </div>
       {% endif %}
     </div>
-  </div></div>
+  </div>
 </div>
+
+
+{# This hidden markup is needed by Drupal.eu_cookie_compliance.setPreferenceCheckboxes() #}
+{% if cookie_categories %}
+  <div id="eu-cookie-compliance-categories" class="visually-hidden">
+    {% for key, category in cookie_categories %}
+      <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}" value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
+    {% endfor %}
+  </div>
+{% endif %}
