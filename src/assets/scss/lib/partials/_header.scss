@@ -48,8 +48,9 @@ header p {
   }
 
   .services-title {
-    font-weight: $font-normal;
+    font-weight: $font-bold;
     color: $secondary;
+    font-size: $h3-font-size;
     @include rem(line-height, 32);
     margin: 0;
     @include rem(padding-bottom, 20);
@@ -82,7 +83,7 @@ header p {
   }
 
   .services-title {
-    font-weight: $font-normal;
+    font-weight: $font-bold;
     color: $secondary;
     margin: 0;
     @include rem(padding, 10);

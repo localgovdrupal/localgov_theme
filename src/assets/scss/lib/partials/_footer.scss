@@ -7,8 +7,7 @@ footer {
   }
 
   h2 {
-    font-size: $h3-font-size;
-    margin-bottom: ($spacer * 1.5);
+    font-size: $h5-font-size;
   }
 
   .flex-break {
@@ -80,7 +79,7 @@ footer {
         }
       }
 
-      h5 {
+      h2 {
         width: 100%;
         @include media-breakpoint-up(lg) {
           width: auto;

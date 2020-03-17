@@ -126,7 +126,7 @@ ul.step-list {
         content: '';
         position: absolute;
         top: 2.4rem;
-        left: .8438rem;
+        left: .8rem;
         width: .0625rem;
         height: calc(100% - 1rem);
         background-color: $white;
@@ -136,6 +136,7 @@ ul.step-list {
       }
 
       .step__title {
+        float: left;
         margin: 0 0 0 2.5rem;
         cursor: pointer;
         padding: .6rem 0 .8rem 0;
@@ -145,8 +146,10 @@ ul.step-list {
         color: $blue;
 
         a {
+          display: inline-block;
+          float: left;
+          clear: both;
           color: $blue;
-          display: block;
           line-height: 1.5rem;
           
           &:hover {
@@ -195,8 +198,8 @@ ul.step-list {
 
       .step__summary {
         display: none; // hide step summaries that are not active
-        padding-left: 2.4rem;
-        padding-bottom: .9375rem;
+        float: left;
+        padding: 0 .9375rem .9375rem 2.4rem;
 
         p { 
           margin-top: 0; 
@@ -260,10 +263,12 @@ main {
             @include rem(font-size, 22);
             @include rem(line-height, 30.4);
           }
+
         }
 
         &:not(:last-of-type):after {
           left: 1rem;
+          top: 2.6rem;
 
           @include media-breakpoint-up(sm) {
             left: 1.1rem;

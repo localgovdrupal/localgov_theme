@@ -84,6 +84,7 @@
 {% if cookie_categories %}
   <div id="eu-cookie-compliance-categories" class="visually-hidden">
     {% for key, category in cookie_categories %}
+      <label for="cookie-category-{{ key }}">{{ key }}</label>
       <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}" value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
     {% endfor %}
   </div>
