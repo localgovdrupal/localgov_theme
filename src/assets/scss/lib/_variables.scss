@@ -78,8 +78,9 @@ $link-hover-color: $indigo;
 $body-bg: $white !default;
 $body-color: $secondary !default;
 $breadcrumb-bg: $white !default;
-$alert-bar-bg: $yellow !default;
-
+$alert-bar-minor: $yellow !default;
+$alert-bar-major: $red !default;
+$alert-bar-notable: $carbon !default;
 
 // Set all border radius to 0 by default
 $border-radius: 0 !default;

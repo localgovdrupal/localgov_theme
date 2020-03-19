@@ -1,5 +1,22 @@
 .alert-bar {
-  background: $alert-bar-bg;
+  
+  &.alert-banner--notable-person {
+    background: $alert-bar-notable;
+    p, a, i {
+      color: $white;
+    }
+  }
+
+  &.alert-banner--major {
+    background: $alert-bar-major;
+    p, a, i {
+      color: $white;
+    }
+  }
+  
+  &.alert-banner--minor {
+    background: $alert-bar-minor;
+  }
 
   DIV > DIV {
     > DIV {
