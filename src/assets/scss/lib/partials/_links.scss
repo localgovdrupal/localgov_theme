@@ -23,19 +23,19 @@ main a {
 // External Link
 
 .external-link {
-  white-space: nowrap; // stops instances where the icon is the only thing to drop to a new line
-  
+
   &:after {
     font-family: $font-family-icons;
     content: $fa-external;
     font-weight: $fa-font-weight;
-    display: inline-block;
+    display: inline; // inline prevents icon from wrapping to newline
     font-size: $font-size-ex-sm;
     @include rem(padding-left, 5);
     // ie bug fix for removing before/after underline
     text-decoration: underline;
   }
 }
+
 
 /* Action Link */
 
