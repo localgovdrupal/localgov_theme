@@ -45,8 +45,17 @@ main {
   p,
   ul,
   ol {
-    font-size: $font-size-lg;
+    font-size: $font-size-base * 1.125;
   }
+
+  @include media-breakpoint-up(lg) {
+    p,
+    ul,
+    ol {
+      font-size: $font-size-lg;
+    }
+  }
+
 
   p a .fa,
   a .fa {

@@ -46,6 +46,27 @@ main ol,
   padding-right: ($spacer * 1.5);
 }
 
+// Increase base font sizes for larger screens
+
+summary {
+  font-size: $font-size-base * 1.25;
+}
+
+@include media-breakpoint-up(lg) {
+  h1 {
+    font-size: $font-size-base * 2.875;
+  }
+  h2 {
+    font-size: $font-size-base * 2.125;
+  }
+  h3 {
+    font-size: $font-size-base * 1.75;
+  }
+  summary {
+    font-size: $font-size-ex-ex-lg;
+  }
+}
+
 // Add top margin to headers in the page but not the first h2
 // as that will be at the top of the section.
 .content h2 {
