@@ -74,7 +74,7 @@ footer {
           @include rem(margin-right, 5);
         }
 
-        &.fa-sign-in-alt {
+        &.fa-user {
           font-size: $font-size-base;
         }
       }
@@ -96,6 +96,7 @@ footer {
 
           a {
             padding-right: 0;
+            color: $yellow;
           }
         }
       }

@@ -12,6 +12,68 @@ header p {
   }
 }
 
+.navbar {
+  position: relative;
+  .my-account {
+    position: absolute;
+    @include rem(right, 50);
+
+    @include media-breakpoint-up(lg) {
+      position: unset;
+      right: initial;
+    }
+  }
+  button {
+    position: absolute;
+    @include rem(right, 16);
+
+    @include media-breakpoint-up(lg) {
+      position: unset;
+      right: initial;
+    }
+  }
+}
+
+.navbar-brand { // fix width of logo for mobiles
+  min-width: 100px !important;
+
+  @include media-breakpoint-up(sm) {
+    min-width: initial;
+  }
+
+  img {
+    width: 100px;
+
+    @include media-breakpoint-up(sm) {
+      width: initial;
+    }
+  }
+}
+
+.my-account {
+  a {
+    color: $yellow;
+    font-family: $font-family-secondary;
+    font-weight: $font-bold; // for fallbacks only
+    white-space: nowrap;
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-lg;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1090px) {
+      @include rem(margin-right, 16);
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1090px) {
+    i {
+      display: none;
+    }
+  }
+}
+
 .header--toggle {
   display: block;
   background: $white;
