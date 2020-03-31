@@ -51,26 +51,14 @@ header p {
 }
 
 .my-account {
+  white-space: nowrap;
   a {
     color: $yellow;
     font-family: $font-family-secondary;
     font-weight: $font-bold; // for fallbacks only
     white-space: nowrap;
-    font-size: $font-size-sm;
-
-    @include media-breakpoint-up(sm) {
-      font-size: $font-size-lg;
-    }
-
-    @media screen and (min-width: 992px) and (max-width: 1090px) {
-      @include rem(margin-right, 16);
-    }
-  }
-
-  @media screen and (min-width: 992px) and (max-width: 1090px) {
-    i {
-      display: none;
-    }
+    font-size: $font-size-base;
+    margin: 0;
   }
 }
 
