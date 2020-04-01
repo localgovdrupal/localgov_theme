@@ -97,6 +97,10 @@ footer {
           a {
             padding-right: 0;
             color: $yellow;
+
+            &:hover {
+              color: $carbon;
+            }
           }
         }
       }
