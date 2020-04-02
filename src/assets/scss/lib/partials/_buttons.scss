@@ -195,3 +195,40 @@ aside .btn .fa,
 .cta-small {
   @include rem(width, 140);
 }
+
+// Start Button
+
+.btn-start {
+  color: $carbon;
+  background-color: $green;
+  border-color: none;
+  font-weight: $font-bold;
+  text-decoration: none;
+  display: flex;
+  align-items: stretch;
+
+  &:after {
+    display: flex;
+    align-self: flex-end;
+    color: $carbon;
+    text-decoration: none;
+    @include rem(margin-top, 2);
+    margin-left: auto;
+    font-family: $font-family-icons;
+    content: $fa-chevron-right;
+    font-weight: $fa-font-weight;
+    font-size: $font-size-ex-lg;
+  }
+
+  &:hover,
+  &:focus {
+    background: $teal; 
+    color: $white;
+  }
+
+  &:hover {
+    &:after {
+      color: $white;
+    }
+  }
+}
