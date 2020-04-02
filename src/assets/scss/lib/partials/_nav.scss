@@ -371,3 +371,9 @@
 .navbar {
   min-height: 65px;
 }
+
+.navbar-collapse {
+  .form-inline {
+    flex-flow: nowrap; // position button next to search field
+  }
+}
