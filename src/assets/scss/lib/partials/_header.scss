@@ -12,28 +12,6 @@ header p {
   }
 }
 
-// .navbar {
-//   position: relative;
-//   .my-account {
-//     position: absolute;
-//     @include rem(right, 50);
-
-//     @include media-breakpoint-up(lg) {
-//       position: unset;
-//       right: initial;
-//     }
-//   }
-//   .navbar-toggler {
-//     position: absolute;
-//     @include rem(right, 16);
-
-//     @include media-breakpoint-up(lg) {
-//       position: unset;
-//       right: initial;
-//     }
-//   }
-// }
-
 .navbar-brand { // fix width of logo for mobiles
   min-width: 100px !important;
 
