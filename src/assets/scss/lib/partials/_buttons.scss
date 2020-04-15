@@ -220,6 +220,19 @@ aside .btn .fa,
     font-size: $font-size-ex-lg;
   }
 
+  &.external-link { // control change of icon due to external link on the button
+    position: relative;
+
+    &:after {
+      font-size: 1rem;
+      text-decoration: none;
+      margin-top: 0;
+      top: 11px;
+      position: absolute;
+      right: 15px;
+    }
+  }
+
   &:hover,
   &:focus {
     background: $teal; 
