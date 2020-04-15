@@ -48,7 +48,8 @@ main ol,
 
 // Increase base font sizes for larger screens
 
-summary {
+summary,
+header p {
   font-size: $font-size-base * 1.25;
 }
 
@@ -62,7 +63,8 @@ summary {
   h3 {
     font-size: $font-size-base * 1.75;
   }
-  summary {
+  summary,
+  header p {
     font-size: $font-size-ex-ex-lg;
   }
 }
