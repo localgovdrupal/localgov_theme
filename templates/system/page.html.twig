@@ -90,7 +90,9 @@
     <div {{ pageAttributes.addClass('row') }}>
       
       {% if page.header %}
+      <div class="col-12">
         {{ page.header }}
+      </div>
       {% endif %}
 
       {% block content_inner %}

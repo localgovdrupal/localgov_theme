@@ -124,7 +124,8 @@ aside .btn .fa,
 
 .link-button-green,
 .link-button-primary,
-.cta-green {
+.cta-green,
+.cta-action {
   background-color: $link-button-primary;
 
   span,
@@ -145,7 +146,8 @@ aside .btn .fa,
 
 .link-button-blue,
 .link-button-secondary,
-.cta-blue {
+.cta-blue,
+.cta-info {
   background-color: $link-button-secondary;
 
   &:hover,
@@ -218,6 +220,19 @@ aside .btn .fa,
     content: $fa-chevron-right;
     font-weight: $fa-font-weight;
     font-size: $font-size-ex-lg;
+  }
+
+  &.external-link { // control change of icon due to external link on the button
+    position: relative;
+
+    &:after {
+      font-size: 1rem;
+      text-decoration: none;
+      margin-top: 0;
+      top: 11px;
+      position: absolute;
+      right: 15px;
+    }
   }
 
   &:hover,

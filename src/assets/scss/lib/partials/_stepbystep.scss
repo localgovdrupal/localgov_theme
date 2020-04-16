@@ -13,21 +13,33 @@
     margin-bottom: 1.4rem;
   }
 
-  header {
-    padding-left: 0;
-  }
 }
 
 // Buttons used to navigate between steps
 
 ul.step-list {
   list-style-type: none;
-  margin: 0 0 2.5rem 0;
+  margin: 0;
   padding: 0;
 
   li {
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
+    
+    &.step--next {
+
+      .btn {
+        position: relative;
+        text-align: right;
+        padding-right: 34px;
+      }
+
+      span {
+        position: absolute;
+        right: 7px;
+        top: 15px;
+      }
+    }
 
     &:first-child {
       margin-right: 1rem;
@@ -35,6 +47,7 @@ ul.step-list {
 
     .btn {
       margin: 0;
+      @include rem(min-width, 175);
     }
   }
 }
@@ -98,7 +111,7 @@ ul.step-list {
     overflow-y: auto;
     overflow-x: hidden;
     margin: 0;
-    padding: 1.5rem 1.5rem 0 0;
+    padding: 1.5rem 0 0 0;
 
     .step {
       width: 100%;
@@ -109,6 +122,7 @@ ul.step-list {
         z-index: 10;
         position: absolute;
         top: .75rem;
+        left: 0;
         counter-increment: section;
         content: counter(section);
         height: 1.75rem;
@@ -126,7 +140,7 @@ ul.step-list {
         content: '';
         position: absolute;
         top: 2.4rem;
-        left: .8rem;
+        left: .85rem;
         width: .0625rem;
         height: calc(100% - 1rem);
         background-color: $white;
@@ -136,7 +150,6 @@ ul.step-list {
       }
 
       .step__title {
-        float: left;
         margin: 0 0 0 2.5rem;
         cursor: pointer;
         padding: .6rem 0 .8rem 0;
@@ -146,11 +159,10 @@ ul.step-list {
         color: $blue;
 
         a {
-          display: inline-block;
-          float: left;
-          clear: both;
+          display: inline;
           color: $blue;
           line-height: 1.5rem;
+          margin-right: 2.5rem;
           
           &:hover {
             color: $secondary;
@@ -162,6 +174,11 @@ ul.step-list {
             text-decoration: underline;
             font-weight: $font-normal;
           }
+        }
+
+        .step-summary-container {
+          display: inline-block;
+          width: 100%;
         }
       }
 
@@ -271,12 +288,13 @@ main {
           top: 2.6rem;
 
           @include media-breakpoint-up(sm) {
-            left: 1.1rem;
+            left: 1.15rem;
           }
         }
 
         .step__title {
           margin: 0 0 0 3.5rem;
+          padding: 1rem 0;
 
           a {
             @include rem(font-size, 26);
