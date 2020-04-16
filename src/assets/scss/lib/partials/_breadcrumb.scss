@@ -4,6 +4,10 @@
   .breadcrumb-item {
     font-size: $font-size-sm;
 
+    a {
+      font-weight: normal;
+    }
+
     &:first-child {
       a {
         &:hover {
