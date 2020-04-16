@@ -124,7 +124,8 @@ aside .btn .fa,
 
 .link-button-green,
 .link-button-primary,
-.cta-green {
+.cta-green,
+.cta-action {
   background-color: $link-button-primary;
 
   span,
@@ -145,7 +146,8 @@ aside .btn .fa,
 
 .link-button-blue,
 .link-button-secondary,
-.cta-blue {
+.cta-blue,
+.cta-info {
   background-color: $link-button-secondary;
 
   &:hover,
