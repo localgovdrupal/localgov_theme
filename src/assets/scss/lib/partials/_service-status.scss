@@ -4,15 +4,19 @@
   }
 }
 
-
 .tab-content {
   width: 100%;
 }
-/*.service-status .nav-tabs {
+
+.service-status .nav-tabs {
   display: none;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
+
+.service-status  {
+  outline: 1px solid $gray-mid;
+}
   .service-status > .nav-tabs {
     display: flex;
     flex-flow: column nowrap;
@@ -50,9 +54,9 @@
 
   .service-status .card {
     border: none;
-  }*/
+  }
 
-/*  .service-status .card .card-header {
+  .service-status .card .card-header {
     display: none;
   }
 
@@ -66,4 +70,4 @@
     display: block !important;
     opacity: 1;
   }
-}*/
+}
