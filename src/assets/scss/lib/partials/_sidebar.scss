@@ -28,4 +28,10 @@
     font-size: $font-size-med;
     margin-bottom: $spacer;
   }
+
+  .list-unstyled {
+    a {
+      font-weight: normal;
+    }
+  }
 }
