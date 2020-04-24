@@ -40,7 +40,7 @@ footer {
 
   .socials {
     list-style-type: none;
-    margin: 0;
+    margin: 1.5rem 0 0 0;
     padding: 0;
     
     li {
@@ -51,22 +51,20 @@ footer {
         display: block;
         text-decoration: none;
         padding: 0;
+        line-height: 0.9;
         
         i {
           display: block;
           @include rem(font-size, 35);
-          //font-size: 2.24rem;
-          //font-size: 2rem;
-          // &:before {
-          //   @include rem(width, 35);
-          //   @include rem(height, 35);
-          // }
+          line-height: 0.9;
         }
         
         &:hover,
         &:focus {
           background: transparent;
           color: $white !important;
+          box-shadow: 0 0 0 0.2rem $yellow;
+          border-radius: 3px;
         }
       }
     }
