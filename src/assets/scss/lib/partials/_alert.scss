@@ -74,7 +74,8 @@
 .alert-info,
 .alert-primary,
 .alert-danger,
-.alert-fail
+.alert-fail,
+.alert-warning
  {
   &:before {
     font-family: $font-family-icons;
@@ -104,5 +105,11 @@
 .alert-fail {
   &:before {
     content: $alert-fail;
+  }
+}
+
+.alert-warning {
+  &:before {
+    content: $alert-warning;
   }
 }
