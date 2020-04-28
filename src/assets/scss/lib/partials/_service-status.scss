@@ -37,10 +37,6 @@
       border-top: 1px solid $gray-mid;
     }
 
-    .alert {
-      margin-top: 1rem;
-    }
-
     .card-header {
       background: none;
       border: none;
@@ -306,7 +302,6 @@
     .card {
       border: none;
 
-
       &:first-child {
         border-top: none;
       }
@@ -317,6 +312,10 @@
 
       .collapse {
         display: block;
+      }
+
+      .alert {
+        margin-top: 1rem;
       }
     }
   }
