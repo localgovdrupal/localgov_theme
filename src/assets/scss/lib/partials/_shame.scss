@@ -60,5 +60,10 @@ iframe {
   background-color: $focus;
   color: $secondary;
   text-decoration: none;
-  box-shadow: 0 0 0 0.17rem $focus;
+  box-shadow: 0 0 0 0.125rem $focus;
+}
+
+// This is a wrapper that appears on the service status page and needs to be 100% but may be used elsewhere
+.views-element-container {
+  width: 100%;
 }

@@ -38,71 +38,34 @@ footer {
     padding-top: ($spacer * 3);
   }
 
-  .footer-bottom {
-    padding-top: ($spacer * 3);
-    padding-bottom: ($spacer * 3);
+  .socials {
+    list-style-type: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    
+    li {
+      display: inline-block;
+      @include rem(margin-right, 10);
 
-    .socials {
-      margin-bottom: 1rem !important;
-      
       a {
+        display: block;
+        text-decoration: none;
+        padding: 0;
+        line-height: 0.9;
+        
+        i {
+          display: block;
+          @include rem(font-size, 35);
+          line-height: 0.9;
+        }
+        
         &:hover,
         &:focus {
           background: transparent;
           color: $white !important;
+          box-shadow: 0 0 0 0.2rem $yellow;
+          border-radius: 3px;
         }
-      }
-    }
-
-    section {
-      display: flex;
-      flex-wrap: wrap;
-      padding-bottom: 0;
-      margin-bottom: ($spacer * 3);
-
-      &:last-child {
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
-
-      i {
-        display: inline-flex;
-        font-size: $h3-font-size;
-
-        &:before {
-          margin-left: 0;
-          @include rem(margin-right, 5);
-        }
-
-        &.fa-user {
-          font-size: $font-size-base;
-        }
-      }
-
-      h2 {
-        width: 100%;
-        @include media-breakpoint-up(lg) {
-          width: auto;
-        }
-      }
-
-      p {
-        margin-bottom: 0;
-        margin-right: ($spacer * 1);
-        align-self: flex-end;
-
-        &.account-links {
-          margin-right: 0;
-
-          a {
-            padding-right: 0;
-            color: $yellow;
-
-            &:hover {
-              color: $carbon;
-            }
-          }
-        } 
       }
     }
   }

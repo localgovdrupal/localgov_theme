@@ -33,13 +33,16 @@ $graphite: #282828 !default;
 $stonewash: #A0A0A0 !default;
 $gray-tint: #EDEDED !default;
 $gray-bs: #6C757D !default;
+$gray-mid: #ABB4B6 !default;
 $purple-tint: #F8EEF8 !default;
 $green-tint: #EAF5E5 !default;
+$green-alert: #338800 !default;
 $indigo-tint: #EEE5EE !default;
 $success: #338800 !default;
 $danger: #ae1100 !default;
 $light: #ededed !default;
 $dark: #444444 !default;
+$offwhite: #FAFAFA !default;
 
 // Site colours
 
@@ -239,6 +242,9 @@ $fa-share: '\f064' !default;
 $fa-play: '\f04b' !default;
 $fa-youtube-square: '\f431' !default;
 $fa-search: '\f002' !default;
+$fa-info-circle: '\f05a' !default;
+$fa-plus: '\f067' !default;
+$fa-minus: '\f068' !default;
 
 // Alert Icons
 $alert-success: $fa-check !default;
@@ -246,6 +252,7 @@ $alert-info: $fa-info !default;
 $alert-primary: $fa-exclamation-triangle !default;
 $alert-danger: $fa-exclamation-triangle !default;
 $alert-fail: $fa-times !default;
+$alert-warning: $fa-info-circle !default;
 //Breadcrumb divider
 $breadcrumb-divider: $fa-chevron-right !default;
 $breadcrumb-divider-size: 0.75rem;
