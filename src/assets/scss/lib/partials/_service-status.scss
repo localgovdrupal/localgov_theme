@@ -1,6 +1,6 @@
 .service-status-overview {
   header {
-    @extend .page-headers;
+    outline: 1px solid lime;
     @extend .key-under;
   }
 }
