@@ -1,5 +1,6 @@
 
 .service-status {
+  padding: 0;
 
   .nav-tabs {
     display: none;
@@ -19,6 +20,7 @@
     .card-header {
       background: none;
       border: none;
+      @include rem(padding, 25, 20);
 
       .status-accordion-header {
         @include rem(font-size, 26);
@@ -80,11 +82,15 @@
 
   .service-status__has-issues {
     a {
-      &.active,
-      &.collapsed {
+      &.active {
         .service-status-info {
           color: $orange;
           font-weight: $font-bold;
+        }
+      }
+      &[aria-expanded="true"] {
+        .service-status-info {
+          display: none;
         }
       }
       .service-status-info {
@@ -104,11 +110,15 @@
 
   .service-status__no-issues {
     a {
-      &.active, {
-      &.collapsed
+      &.active {
         .service-status-ok {
           color: $green-alert;
           font-weight: $font-bold;
+        }
+      }
+      &[aria-expanded="true"] {
+        .service-status-ok {
+          display: none;
         }
       }
       .service-status-info {
@@ -129,11 +139,15 @@
 
   .service-status__severe-impact {
     a {
-      &.active,
-      &.collapsed {
+      &.active {
         .service-status-warning {
           color: $red;
           font-weight: $font-bold;
+        }
+      }
+      &[aria-expanded="true"] {
+        .service-status-warning {
+          display: none;
         }
       }
       .service-status-info {
@@ -166,18 +180,21 @@
 
   .service-status  {
     outline: 1px solid $gray-mid;
+    padding: inherit;
 
     .nav-tabs {
       display: inline-block;
       background: $offwhite;
       margin: 0;
       padding: 0;
+      border-bottom: 0;
       
       .nav-item {
         display: inline-block;
         margin: 0;
         padding: 0;
         border-bottom: 1px solid $gray-mid;
+        border-right: 1px solid $gray-mid;
         width: 100%;
 
         .nav-link {
@@ -189,6 +206,7 @@
           font-size: $font-size-lg;
           white-space: normal;
           line-height: 1.5rem;
+          transition: none;
 
           &:hover,
           &:focus {
@@ -219,6 +237,7 @@
             > span {
               margin-left: -1px;
             }
+
           }
 
           .service-status-title {
@@ -240,6 +259,10 @@
 
     .card {
       border: none;
+
+      &:first-child {
+        border-top: none;
+      }
 
       .card-header {
         display: none;
