@@ -1,5 +1,6 @@
 .service-status-overview {
   header {
+    margin: 2rem 0;
     @extend .key-under;
   }
 }
@@ -15,6 +16,10 @@
 
   main {
     margin-top: 0;
+
+    i {
+      padding-right: 0;
+    }
   }
 
   .nav-tabs {
