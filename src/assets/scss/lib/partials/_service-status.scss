@@ -336,3 +336,7 @@
     opacity: 1;
   }
 }
+
+.fade:not(.show) { // fix weird BS inherited fade in 
+    opacity: 1;
+}
