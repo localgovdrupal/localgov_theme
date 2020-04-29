@@ -10,6 +10,14 @@
     margin: 0;
     font-size: $font-size-ex-med;
   }
+
+  #toggleAccordions-show,
+  #toggleAccordions-hide {
+    a {
+      color: $blue;
+      font-weight: $font-normal;
+    }
+  } 
 }
 .service-status {
   padding: 0;
@@ -62,7 +70,7 @@
         width: 100%;
         text-decoration: none;
         position: relative;
-        padding-right: 1.5rem;
+        padding-right: 1.8rem;
         
         &:hover,
         &:focus {
