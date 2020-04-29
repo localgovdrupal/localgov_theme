@@ -34,6 +34,23 @@
     });
 
     menuDisplay(); // call when the page loads
+
+
+    $('#toggleAccordions-show').on('click', function(e) {
+      $('.tab-content .collapse').removeAttr("data-parent");
+      $('.tab-content .collapse').collapse('show');
+      $(this).hide();
+      $('#toggleAccordions-hide').show();
+      e.preventDefault();
+    })
+
+    $('#toggleAccordions-hide').on('click', function(e) {
+      $('.tab-content .collapse').attr("data-parent","#accordion");
+      $('.tab-content .collapse').collapse('hide');
+      $(this).hide();
+      $('#toggleAccordions-show').show();
+      e.preventDefault();
+    })
   
     $(window).on('resize',menuDisplay); // call when the window resizes
 
