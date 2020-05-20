@@ -1,0 +1,4 @@
+# Ignore compiled assets
+/dist
+# Ignore node files
+/node_modules

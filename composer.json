@@ -1,0 +1,7 @@
+{
+    "name": "localgovdrupal/localgov_theme",
+    "description": "Base theme for LocalGovDrupal sites.",
+    "type": "drupal-theme",
+    "homepage": "https://github.com/localgovdrupal/localgov_theme",
+    "license": "GPL-2.0-or-later"
+}

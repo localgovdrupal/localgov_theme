@@ -1,2 +1,3 @@
-# localgov_theme
+# LocalGovDrupal Theme
+
 Base theme for LocalGovDrupal sites.
