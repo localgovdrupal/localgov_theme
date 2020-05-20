@@ -1,10 +1,10 @@
-name: "Croydon Council Theme"
-description: "Drupal 8 theme for Croydon Council"
+name: "LocalGovDrupal Theme"
+description: "tBase theme for LocalGocDrupal sites."
 core: 8.x
 type: theme
 
 libraries:
-  - croydon/global
+  - localgov_theme/global
 
 regions:
   tasks: "Tasks"
