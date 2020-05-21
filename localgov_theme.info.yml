@@ -1,7 +1,7 @@
 name: "LocalGovDrupal Theme"
-description: "tBase theme for LocalGocDrupal sites."
-core: 8.x
+description: "Base theme for LocalGocDrupal sites."
 type: theme
+core_version_requirement: ^8.8 || ^9
 
 libraries:
   - localgov_theme/global
