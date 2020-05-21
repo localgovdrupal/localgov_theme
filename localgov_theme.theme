@@ -1,28 +1,39 @@
 <?php
 
+/**
+ * @file
+ * LocalGovDrupal theme file.
+ */
+
 use Drupal\Component\Utility\Unicode;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_preprocess_HOOK().
  */
 function localgov_theme_preprocess_html(&$variables) {
-  /** @var \Drupal\bhcc_helper\CurrentPage $current_page */
-  $current_page = \Drupal::service('bhcc_helper.current_page');
-
-  if ($current_page->isNode() && $current_page->getNode() instanceof \Drupal\node\NodeInterface) {
-    $node = $current_page->getNode();
+  if (\Drupal::routeMatch()->getParameter('node')) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if (!$node instanceof NodeInterface) {
+      $node = Node::load($node);
+    }
 
     if (!$variables['attributes']) {
-      $variables['attributes'] = new \Drupal\Core\Template\Attribute();
+      $variables['attributes'] = new Attribute();
     }
 
     // Add content type to body class.
     if (is_object($variables['attributes'])) {
       $variables['attributes']->addClass('node');
-      $variables['attributes']->addClass('node--' . $current_page->getNode()->bundle());
-    } else {
+      $variables['attributes']->addClass('node--' . $node->bundle());
+    }
+    else {
       $variables['attributes']['class'][] = 'node';
-      $variables['attributes']['class'][] = 'node--' . $current_page->getNode()->bundle();
+      $variables['attributes']['class'][] = 'node--' . $node->bundle();
     }
   }
 }
@@ -31,18 +42,19 @@ function localgov_theme_preprocess_html(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function localgov_theme_preprocess_page(&$variables) {
-  /** @var \Drupal\bhcc_helper\CurrentPage $current_page */
-  $current_page = \Drupal::service('bhcc_helper.current_page');
-
   // Initiate a pageAttibutes variables so we can add classes to the main page
   // element.
-  $variables['pageAttributes'] = new \Drupal\Core\Template\Attribute(['class' => 'page']);
+  $variables['pageAttributes'] = new Attribute(['class' => 'page']);
   $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
 
-  if ($current_page->isNode()) {
+  if (\Drupal::routeMatch()->getParameter('node')) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if (!$node instanceof NodeInterface) {
+      $node = Node::load($node);
+    }
 
     // Add page-raised class to page builder pages.
-    if ($current_page->getNode()->bundle() == 'page_builder') {
+    if ($node->bundle() == 'page_builder') {
       $variables['pageAttributes']->addClass('page-raised');
     }
   }
@@ -54,9 +66,6 @@ function localgov_theme_preprocess_page(&$variables) {
 function localgov_theme_preprocess_node(&$variables) {
   global $base_root;
   $variables['base_root'] = $base_root;
-
-  /** @var \Drupal\node\NodeInterface $node */
-  $node = $variables['node'];
 
   // For search index nodes, we want to direct the user to the website the
   // content was imported from. To do that, we update the url field in the
@@ -77,7 +86,7 @@ function localgov_theme_preprocess_paragraph(&$variables) {
     if (!$paragraph->get('field_link')->isEmpty()) {
       $link = $paragraph->get('field_link')->first()->getValue();
       $variables['field_link']['title'] = $link['title'];
-      $variables['field_link']['url'] = \Drupal\Core\Url::fromUri($link['uri']);
+      $variables['field_link']['url'] = Url::fromUri($link['uri']);
     }
   }
 
@@ -91,19 +100,19 @@ function localgov_theme_preprocess_paragraph(&$variables) {
   if ($paragraph->bundle() === 'call_out_box') {
     if (!$paragraph->get('field_button')->isEmpty()) {
       $button = $paragraph->get('field_button')->first()->getValue();
-      $variables['button_url'] = \Drupal\Core\Url::fromUri($button['uri']);
+      $variables['button_url'] = Url::fromUri($button['uri']);
     }
 
     if (!$paragraph->get('field_background_image')->isEmpty()) {
       $image_uri = $paragraph->get('field_background_image')->entity->getFileUri();
-      $variables['background_url'] = \Drupal\image\Entity\ImageStyle::load('full_width_banner')->buildUrl($image_uri);
+      $variables['background_url'] = ImageStyle::load('full_width_banner')->buildUrl($image_uri);
     }
   }
 
   if ($paragraph->bundle() === 'newsroom_teasers') {
     if (!$paragraph->get('field_link')->isEmpty()) {
       $link = $paragraph->get('field_link')->first()->getValue();
-      $variables['link'] = \Drupal\Core\Url::fromUri($link['uri']);
+      $variables['link'] = Url::fromUri($link['uri']);
     }
   }
 }
@@ -134,14 +143,13 @@ function localgov_theme_preprocess_menu(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for hook_preproces_office_hours().
+ * Implements hook_preprocess_HOOK() for hook_preprocess_office_hours().
  *
  * Reformat grouped day names in the **Office hours** field.
  * "Monday - Thursday" should become "Monday to Thursday".
  * "Monday - Tuesday" should become "Monday and Tuesday".
  */
 function localgov_theme_preprocess_office_hours(&$variables) {
-
   $slot_num = 0;
 
   foreach ($variables['office_hours'] as $info) {
@@ -154,9 +162,10 @@ function localgov_theme_preprocess_office_hours(&$variables) {
 
     $slot_label = $variables['items'][$slot_num]['label'];
     if ($is_two_day_slot or $is_weekend) {
-      $updated_slot_label = str_replace(' - ', t(' and '), $slot_label);
-    } else {
-      $updated_slot_label = str_replace(' - ', t(' to '), $slot_label);
+      $updated_slot_label = str_replace(' - ', ' ' . t('and') . ' ', $slot_label);
+    }
+    else {
+      $updated_slot_label = str_replace(' - ', ' ' . t('to') . ' ', $slot_label);
     }
 
     $variables['items'][$slot_num++]['label'] = $updated_slot_label;
@@ -170,11 +179,13 @@ function localgov_theme_preprocess_office_hours(&$variables) {
 function localgov_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   // Create a new page suggestion for each content type.
   if ($hook === 'page') {
-    /** @var \Drupal\bhcc_helper\CurrentPage $current_page */
-    $current_page = Drupal::service('bhcc_helper.current_page');
+    if (\Drupal::routeMatch()->getParameter('node')) {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if (!$node instanceof NodeInterface) {
+        $node = Node::load($node);
+      }
 
-    if ($current_page->isNode()) {
-      $suggestions[] = 'page__' . $current_page->getNode()->bundle();
+      $suggestions[] = 'page__' . $node->bundle();
     }
   }
 
