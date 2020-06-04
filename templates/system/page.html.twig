@@ -86,31 +86,44 @@
 {% endblock %}
 
 <div class="container-fluid site-max bg-white">
-    <a id="main-content"></a>
     <div {{ pageAttributes.addClass('row') }}>
 
-      {% if page.header %}
+      {{ page.messages }}
+
+      {% if page.content_top %}
       <div class="col-12">
-        {{ page.header }}
+        {{ page.content_top }}
       </div>
       {% endif %}
 
       {% block content_inner %}
-        {{ page.messages }}
-        {{ page.content }}
-
+        <main id="content" class="column main-content" role="main">
+          <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+            {{ page.content }}
+          </section>
+        </main>
         {% if page.sidebar_first %}
-          <aside class="layout-sidebar-first" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
+          <div id="sidebar-first" class="column sidebar">
+            <aside class="section" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+          </div>
         {% endif %}
-
         {% if page.sidebar_second %}
-          <aside class="layout-sidebar-second" role="complementary">
-            {{ page.sidebar_second }}
-          </aside>
+          <div id="sidebar-second" class="column sidebar">
+            <aside class="section" role="complementary">
+              {{ page.sidebar_second }}
+            </aside>
+          </div>
         {% endif %}
       {% endblock %}
+
+      {% if page.content_bottom %}
+      <div class="col-12">
+        {{ page.content_bottom }}
+      </div>
+      {% endif %}
   </div>
 
 </div>
