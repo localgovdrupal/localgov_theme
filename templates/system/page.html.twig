@@ -88,7 +88,7 @@
 <div class="container-fluid site-max bg-white">
     <a id="main-content"></a>
     <div {{ pageAttributes.addClass('row') }}>
-      
+
       {% if page.header %}
       <div class="col-12">
         {{ page.header }}
@@ -98,10 +98,25 @@
       {% block content_inner %}
         {{ page.messages }}
         {{ page.content }}
+
+        {% if page.sidebar_first %}
+          <aside class="layout-sidebar-first" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+
+        {% if page.sidebar_second %}
+          <aside class="layout-sidebar-second" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
       {% endblock %}
   </div>
+
 </div>
 {% endblock %}
+
+
 
 
 {% block footer %}

@@ -9,15 +9,14 @@ libraries:
   - localgov_theme/global
 
 regions:
-  tasks: "Tasks"
-  primary_menu: "Primary menu"
-  secondary_menu: "Secondary menu"
   search: "Search"
   mobile_search: "Mobile search"
+  primary_menu: "Primary menu"
+  secondary_menu: "Secondary menu"
   banner: "Banner"
   breadcrumb: "Breadcrumb"
-  messages: "Messages"
   header: "Header"
+  messages: "Messages"
   content: "Content"
   content_bottom: "Content bottom"
   sidebar_first: "Sidebar First"
