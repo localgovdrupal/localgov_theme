@@ -3,7 +3,7 @@ description: "Base theme for LocalGovDrupal sites."
 type: theme
 core_version_requirement: ^8.8 || ^9
 
-base theme: stable
+base theme: classy
 
 libraries:
   - localgov_theme/global
