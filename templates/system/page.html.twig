@@ -50,6 +50,16 @@
 * @ingroup themeable
 */
 #}
+{%
+  set content_classes = [
+    page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+    page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+    page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+    page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12',
+    'column',
+    'main-content',
+  ]
+%}
 
 {% block header %}
   {% include '@localgov_theme/system/header.html.twig' with {'page': page, 'border': true} %}
@@ -78,8 +88,6 @@
   {% endif %}
 {% endblock %}
 
-{% block content %}
-
 {% block breadcrumbs %}
   {% if page.breadcrumb %}
   <div class="container-fluid site-max">
@@ -91,47 +99,49 @@
 {% endblock %}
 
 <div class="container-fluid site-max bg-white">
-    <div {{ pageAttributes.addClass('row') }}>
+    <div{{ pageAttributes.addClass('row') }}>
 
       {{ page.messages }}
 
-      {% if page.content_top %}
-      <div class="col-12">
-        {{ page.content_top }}
-      </div>
-      {% endif %}
+      {% block content %}
+        {% if page.content_top %}
+        <div class="col-sm-12">
+          {{ page.content_top }}
+        </div>
+        {% endif %}
 
-      {% block content_inner %}
-        <main id="content" class="column main-content" role="main">
-          <section class="section">
-            <a id="main-content" tabindex="-1"></a>
-            {{ page.content }}
-          </section>
-        </main>
         {% if page.sidebar_first %}
-          <div id="sidebar-first" class="column sidebar">
+          <div id="sidebar-first" class="column sidebar col-sm-3">
             <aside class="section" role="complementary">
               {{ page.sidebar_first }}
             </aside>
           </div>
         {% endif %}
+
+        <main id="content" role="main"{{ content_attributes.addClass(content_classes) }}>
+          <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+            {{ page.content }}
+          </section>
+        </main>
+
         {% if page.sidebar_second %}
-          <div id="sidebar-second" class="column sidebar">
+          <div id="sidebar-second" class="column sidebar col-sm-3">
             <aside class="section" role="complementary">
               {{ page.sidebar_second }}
             </aside>
           </div>
         {% endif %}
+
+        {% if page.content_bottom %}
+        <div class="col-sm-12">
+          {{ page.content_bottom }}
+        </div>
+        {% endif %}
       {% endblock %}
 
-      {% if page.content_bottom %}
-      <div class="col-12">
-        {{ page.content_bottom }}
-      </div>
-      {% endif %}
   </div>
 </div>
-{% endblock %}
 
 {% block footer %}
   {% include '@localgov_theme/system/footer.html.twig' with {'page': page, 'border': true} %}
