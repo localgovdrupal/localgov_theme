@@ -50,12 +50,14 @@
 * @ingroup themeable
 */
 #}
+{% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
+{% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
 {%
   set content_classes = [
-    page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-    page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-    page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-    page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12',
+    has_sidebar_first and page.sidebar_second ? 'col-sm-6',
+    has_sidebar_first and not has_sidebar_second ? 'col-sm-9',
+    not has_sidebar_first and has_sidebar_second ? 'col-sm-9',
+    not has_sidebar_first and not has_sidebar_second ? 'col-sm-12',
     'column',
     'main-content',
   ]
@@ -110,7 +112,7 @@
         </div>
         {% endif %}
 
-        {% if page.sidebar_first %}
+        {% if has_sidebar_first %}
           <div id="sidebar-first" class="column sidebar col-sm-3">
             <aside class="section" role="complementary">
               {{ page.sidebar_first }}
@@ -125,7 +127,7 @@
           </section>
         </main>
 
-        {% if page.sidebar_second %}
+        {% if has_sidebar_second %}
           <div id="sidebar-second" class="column sidebar col-sm-3">
             <aside class="section" role="complementary">
               {{ page.sidebar_second }}
