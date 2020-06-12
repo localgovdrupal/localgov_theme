@@ -41,7 +41,7 @@
 
 
       h1 {
-        color: $indigo;
+        color: $campaign-header;
         @include rem(font-size, 50);
         width: 100%;
         text-align: center;
@@ -82,7 +82,7 @@
   }
 
   .section-nav {
-    background: $indigo;
+    background: $section-nav-background;
 
     h3 {
       color: $white;
