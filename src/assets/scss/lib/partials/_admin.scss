@@ -1,0 +1,71 @@
+// Admin area styling
+
+body.logged-in {
+  margin-bottom: 40px;
+}
+
+#block-localgov-theme-local-tasks {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #DDD;
+  background: #CCC;
+  z-index: 10;
+  
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      width: auto;
+      float: left;
+
+      a {
+        display: block;
+        padding: 10px;
+
+        &:focus {
+          background: transparent;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.entity-moderation-form {
+  margin-top: 0;
+
+  .entity-moderation-form__item {
+    float: left;
+    width: 30%;
+    margin: 0;
+
+    select {
+      width: 80%;
+    }
+  }
+}
+
+/* Unpublished bar */
+
+.temp-alert-bar {
+  background-color: #FFCC33;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 79px;
+
+  &--inner {
+    margin: 0 auto;
+
+    p {
+      margin: 0;
+      padding: 15px 0;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
