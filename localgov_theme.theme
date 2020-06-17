@@ -57,6 +57,12 @@ function localgov_theme_preprocess_page(&$variables) {
       $variables['pageAttributes']->addClass('page-raised');
     }
   }
+
+  // Add Font Awesome library if the module isn't installed.
+  $module_handler = \Drupal::service('module_handler');
+  if (!$module_handler->moduleExists('fontawesome')) {
+    $variables['#attached']['library'][] = 'localgov_theme/fontawesome';
+  }
 }
 
 /**
