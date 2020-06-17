@@ -10,12 +10,6 @@ var stylelint = require('stylelint');
 var scss = require("postcss-scss");
 var browser_sync = require('browser-sync').create();
 
-// Clean the SASS dir.
-gulp.task('clean', function () {
-  return gulp.src('./assets/sass', { read: false })
-    .pipe(clean());
-});
-
 // Lint SASS.
 gulp.task('lint:sass', function () {
   return gulp.src('./assets/scss/**/*.scss')
