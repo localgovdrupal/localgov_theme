@@ -1,42 +1,45 @@
 {
-  "name": "croydon-bootstrap-4",
+  "name": "localgov_theme",
   "version": "1.0.0",
-  "description": "Customising bootstrap 4",
-  "main": "index.js",
+  "description": "LocalGovDrupal base theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/localgovdrupal/localgov_theme"
+  },
   "scripts": {},
   "author": "",
-  "license": "ISC",
+  "license": "GPL-2.0",
   "dependencies": {
     "bootstrap": "4.2.1",
-    "browser-sync": "^2.26.7",
-    "del": "^4.1.1",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-changed": "^3.2.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-version-append": "^0.2.0",
     "jquery": "^1.9.1",
-    "popper.js": "^1.16.0",
-    "postcss-scss": "^2.0.0",
-    "ruby": "^0.6.1"
+    "popper.js": "^1.16.0"
   },
   "browserslist": [
     "last 2 version",
     "> 2%"
   ],
   "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-changed": "^3.2.0",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-version-append": "^0.2.0",
     "npm-install-all": "^1.1.21",
     "postcss-reporter": "^6.0.1",
+    "postcss-scss": "^2.0.0",
+    "ruby": "^0.6.1",
     "stylelint": "^12.0.0"
   }
 }

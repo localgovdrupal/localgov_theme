@@ -1,21 +1,14 @@
 global:
   css:
     base:
-      https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i: { type: external }
+      https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i:
+        type: external
     theme:
-      # vanilla
-
-      # council theme
-      dist/assets/css/font-face.css: {}
-      dist/assets/css/lib/main.css: {}
-
+      assets/css/font-face.css: {}
+      assets/css/lib/main.css: {}
   js:
-    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
-    # council theme
-    dist/assets/js/main.js: {}
-
-
-
+    assets/js/bootstrap.min.js: {}
+    assets/js/main.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
