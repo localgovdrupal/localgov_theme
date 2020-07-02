@@ -1,8 +1,9 @@
 {
   "ignoreFiles": [
-    "src/assets/scss/lib/partials/_formio.scss",
-    "src/assets/scss/lib/_functions.scss",
-    "src/assets/scss/lib/_variables.scss"
+    "assets/scss/lib/partials/_formio.scss",
+    "assets/scss/lib/_functions.scss",
+    "assets/scss/lib/_variables.scss",
+    "assets/scss/lib/vendor/*"
   ],
   "rules": {
     "block-no-empty": null,
