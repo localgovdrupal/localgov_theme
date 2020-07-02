@@ -10,7 +10,7 @@
 .accordionItemHeading {
   cursor: pointer;
   padding: $input-btn-padding-y $input-btn-padding-x;
-  background: $indigo;
+  background: $accordion-background-highlight;
   color: $white;
 
   a,
@@ -51,6 +51,6 @@
 
 .open .accordionItemHeading {
   margin: 0;
-  background-color: $purple;
+  background-color: $accordion-background;
   color: $white;
 }

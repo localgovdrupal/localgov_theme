@@ -19,12 +19,12 @@ aside .btn .fa,
 .btn {
   &:hover {
     color: $white;
-    background: $indigo;
+    background: $btn-hover-background;
   }
 
   &:focus {
     color: $white;
-    background: $indigo;
+    background: $btn-hover-background;
     @include outline(.1875rem, -.1875rem, $focus);
   }
 
@@ -36,7 +36,7 @@ aside .btn .fa,
     &:hover,
     &:focus {
       color: $white;
-      background: $indigo;
+      background: $btn-hover-background;
     }
   }
 }
@@ -51,7 +51,7 @@ aside .btn .fa,
 .custom-file-label::after {
   color: $white;
   content: 'Browse';
-  background-color: $purple;
+  background-color: $btn-background;
   line-height: 1.8;
   font-weight: $font-bold;
 }
