@@ -7,7 +7,6 @@
 
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Url;
-use Drupal\image\Entity\ImageStyle;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 
@@ -86,33 +85,6 @@ function localgov_theme_preprocess_node(&$variables) {
 function localgov_theme_preprocess_paragraph(&$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
-
-  if ($paragraph->bundle() === 'box_link') {
-    if (!$paragraph->get('field_link')->isEmpty()) {
-      $link = $paragraph->get('field_link')->first()->getValue();
-      $variables['field_link']['title'] = $link['title'];
-      $variables['field_link']['url'] = Url::fromUri($link['uri']);
-    }
-  }
-
-  if ($paragraph->bundle() === 'video_page_builder_') {
-    if (!$paragraph->get('field_video_url')->isEmpty()) {
-      $video = $paragraph->get('field_video_url')->first()->getValue();
-      $variables['field_video_url'] = $video['uri'];
-    }
-  }
-
-  if ($paragraph->bundle() === 'call_out_box') {
-    if (!$paragraph->get('field_button')->isEmpty()) {
-      $button = $paragraph->get('field_button')->first()->getValue();
-      $variables['button_url'] = Url::fromUri($button['uri']);
-    }
-
-    if (!$paragraph->get('field_background_image')->isEmpty()) {
-      $image_uri = $paragraph->get('field_background_image')->entity->getFileUri();
-      $variables['background_url'] = ImageStyle::load('full_width_banner')->buildUrl($image_uri);
-    }
-  }
 
   if ($paragraph->bundle() === 'newsroom_teasers') {
     if (!$paragraph->get('field_link')->isEmpty()) {
