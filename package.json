@@ -10,7 +10,7 @@
   "author": "",
   "license": "GPL-2.0",
   "dependencies": {
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.0"
   },
