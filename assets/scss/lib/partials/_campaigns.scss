@@ -13,8 +13,8 @@
 
   .jumbotron,
   .campaign-banner {
-    background-color: #fde360;
-  
+    background-color: $yellow;
+
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
     @include media-breakpoint-up(sm) {
       background-size: 60%;
     }
-    
+
     @include media-breakpoint-up(lg) {
       background-size: contain;
     }
@@ -65,7 +65,7 @@
         }
       }
     }
-    
+
     @include media-breakpoint-up(lg) {
       background-size: contain;
       background-position: right;
@@ -78,7 +78,7 @@
   }
 
   .breadcrumb {
-    margin-left:-15px;
+    margin-left: -0.9375rem;
   }
 
   .section-nav {
@@ -95,15 +95,15 @@
       li {
         background: $white;
         font-size: 1.125rem;
-        border-bottom: 0.0625rem solid #DBDFE3 !important;
+        border-bottom: 0.0625rem solid $gray !important;
 
         a {
           display: block;
           width: 100%;
-          border-left: 3px solid $violet;
+          border-left: 0.1875rem solid $violet;
 
           &:hover {
-            border-left: 3px solid $purple;
+            border-left: 0.1875rem solid $purple;
           }
         }
 
@@ -112,7 +112,7 @@
         }
 
         .is-active {
-          border-left: 3px solid $indigo;
+          border-left: 0.1875rem solid $indigo;
         }
       }
     }
@@ -125,15 +125,17 @@
       }
 
     }
-        
+
   }
 
   .call-out-box {
-    background-color: #fde360;
+    background-color: $yellow;
   }
+
   .author {
-    color: #a41055;
+    color: $red;
   }
+
   .socials {
     span {
       width: 100%;
@@ -146,6 +148,7 @@
       }
     }
   }
+
   .social-btn {
     position: relative;
     z-index: 1;
@@ -170,47 +173,51 @@
     }
 
     &.btn-li {
-      background-color: #0082ca !important;
+      background-color: $blue !important;
     }
+
     &.btn-fb {
-      background-color: #3b5998 !important;
+      background-color: $facebook !important;
     }
+
     &.btn-tw {
-      background-color: #55acee !important;
+      background-color: $twitter !important;
     }
   }
 
   .video-container {
-    position: relative;
+    height: 0;
+    margin-bottom: 0.9375rem;
+    overflow: hidden;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-    margin-bottom: 15px;
-    }
-     
-    .video-container iframe,
-    .video-container object,
-    .video-container embed {
+    padding-top: 1.875rem;
+    position: relative;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    }
+  }
 
-    // tmp remove erroneous text
+  // tmp remove erroneous text
 
-    #field--field_left_column_of_text,
-    #field--field_right_column_of_text {
-      > DIV:first-child {
-        display: none;
-      }
+  #field--field_left_column_of_text,
+  #field--field_right_column_of_text {
+    > DIV:first-child {
+      display: none;
     }
+  }
 
-    #field--field_left_column_of_text {
-      h2 {
-        margin-top: 0 !important;
-      }
+  #field--field_left_column_of_text {
+    h2 {
+      margin-top: 0 !important;
     }
+  }
 
   .link-block {
     a {

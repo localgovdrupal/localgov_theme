@@ -1,7 +1,7 @@
 // Admin area styling
 
 body.logged-in {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 #block-localgov-theme-local-tasks {
@@ -9,10 +9,10 @@ body.logged-in {
   left: 0;
   bottom: 0;
   width: 100%;
-  border-top: 1px solid #DDD;
-  background: #CCC;
+  border-top: 0.0625rem solid $gray-tint;
+  background: $gray;
   z-index: 10;
-  
+
   ul {
     margin: 0;
     list-style-type: none;
@@ -23,7 +23,7 @@ body.logged-in {
 
       a {
         display: block;
-        padding: 10px;
+        padding: 0.625rem;
 
         &:focus {
           background: transparent;
@@ -51,19 +51,19 @@ body.logged-in {
 /* Unpublished bar */
 
 .temp-alert-bar {
-  background-color: #FFCC33;
+  background-color: $yellow;
   position: fixed;
   z-index: 2;
   width: 100%;
-  top: 79px;
+  @include rem(top, 79);
 
   &--inner {
     margin: 0 auto;
 
     p {
       margin: 0;
-      padding: 15px 0;
-      font-size: 18px;
+      padding: 0.9375rem 0;
+      font-size: 1.125rem;
       text-align: center;
     }
   }

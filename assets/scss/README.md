@@ -13,7 +13,7 @@ More info in each folder`s readme...
 
 Filename          | Purpose
 ----------------- | ----------------------------------------------------------------------
-`lib`             | A collection of architecturally high-level styles for basic elements 
+`lib`             | A collection of architecturally high-level styles for basic elements
                   | SASS resources, variables, mixins, etc. Styles for color schemes.
 `lib/partials`    | Styles for components and layout that make up the theme design.
 `lib/vendor`      | Styles relating to third party stuff.
@@ -138,6 +138,7 @@ Single `` quotes only please.
 
 Multiple selectors require a new line:
 
+```scss
 /* Bad CSS */
 .selector, .selector-secondary, .selector[type=text] {
   padding:15px;
@@ -155,6 +156,7 @@ Multiple selectors require a new line:
   background-color: rgba(0,0,0,.5);
   box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
 }
+```
 
 ### Extending
 

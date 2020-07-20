@@ -33,7 +33,7 @@
   margin: 0 !important;
 }
 
-// remove left border on results which caused content to indent on hover 
+// remove left border on results which caused content to indent on hover
 .gsc-result,
 .gsc-result:hover,
 .gsc-result:focus {
@@ -49,7 +49,7 @@
 
 //Results info - number of matches (hidden by above class)
 .gsc-result-info {
-  color: #444444 !important;
+  color: $gray-dark !important;
   font-size: 1rem !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -61,30 +61,25 @@
 .gs-title {
   display: inline-block;
   font-size: 1.5rem !important;
-  color: #880088 !important;
+  color: $magenta !important;
   margin: 0 !important;
 }
 
-//Non visited link title - The matching keyword
-a.gs-title:link b {
-  font-size: 1.5rem !important;
-  color: #121212 !important;
-}
-
-//Visited link title 
+//Visited link title
 a.gs-title:visited {
-  color: #444444 !important;
+  color: $gray-dark !important;
 }
 
 //Visited link title - The matching keyword )
 a.gs-title:visited b {
-  color: #121212 !important;
+  color: $carbon !important;
 }
 
 //Non visited link - Matching keyword
 a.gs-title:link b {
-  color: #121212 !important;
-  background: #ffbb00 !important;
+  background: $yellow !important;
+  color: $carbon !important;
+  font-size: 1.5rem !important;
   padding: 0.1rem 0.3rem !important;
 }
 
@@ -92,7 +87,7 @@ a.gs-title:link b {
 a.gs-visibleUrl,
 .gs-visibleUrl,
 .gs-visibleUrl-long {
-  color: #0059a4 !important;
+  color: $blue !important;
   font-size: 1rem !important;
   margin: 0 0 0.5rem 0 !important;
   padding: 0 !important;
@@ -106,7 +101,7 @@ a.gs-visibleUrl,
 //File format label
 span.gs-fileFormat {
   font-size: 1rem !important;
-  color: #444444 !important;
+  color: $gray-dark !important;
   font-weight: 700 !important;
 }
 
@@ -114,12 +109,12 @@ span.gs-fileFormat {
 span.gs-fileFormatType {
   font-size: 1rem !important;
   display: inline-block !important;
-  color: #444444 !important;
+  color: $gray-dark !important;
 }
 
 //Description
 .gs-snippet {
-  color: #121212 !important;
+  color: $carbon !important;
   font-size: 1.125rem !important;
   margin: 0 0 0.1rem 0 !important;
 }
@@ -128,8 +123,8 @@ span.gs-fileFormatType {
 
 //Button navigation container
 .gsc-refinementsArea {
-  background-color: #ffffff !important;
-  margin: -3px 0 2rem 0 !important;
+  background-color: $white !important;
+  margin: -0.1875rem 0 2rem 0 !important;
   padding: 0 !important;
   border-radius: 0 !important;
   border-radius: 0 !important;
@@ -156,9 +151,9 @@ span.gs-fileFormatType {
 
 //Inactive button
 .gsc-refinementhInactive {
-  color: #880088 !important;
+  color: $magenta !important;
   border: none !important;
-  background-color: #eee5ee !important;
+  background-color: $indigo-tint !important;
   margin: 0 0.5rem 0.5rem 0 !important;
   white-space: nowrap !important;
 }
@@ -166,9 +161,9 @@ span.gs-fileFormatType {
 //Active button
 .gsc-tabhActive,
 .gsc-refinementhActive {
-  color: #ffffff !important;
+  color: $white !important;
   border: none !important;
-  background-color: #880088 !important;
+  background-color: $magenta !important;
   margin: 0 0.5rem 0.5rem 0 !important;
   white-space: nowrap !important;
 }
@@ -183,8 +178,8 @@ span.gs-fileFormatType {
 //Pagination number boxes
 .gsc-cursor-page {
   border: none !important;
-  background-color: #eee5ee !important;
-  color: #880088 !important;
+  background-color: $indigo-tint !important;
+  color: $magenta !important;
   text-decoration: none !important;
   font-size: 1rem !important;
   margin-right: 0.5rem !important;
@@ -197,8 +192,8 @@ span.gs-fileFormatType {
 //Pagination current page
 .gsc-cursor-current-page {
   border: none !important;
-  background-color: #880088 !important;
-  color: #ffffff !important;
+  background-color: $magenta !important;
+  color: $white !important;
 }
 
 //GOOGLE CTAS
@@ -214,7 +209,7 @@ span.gs-fileFormatType {
 
 //BELOW 768
 
-@media (max-width: 768px) {
+@include media-breakpoint-up(md) {
   //Make results content / promotion content 100% width on mobile
   .gsc-expansionArea,
   .gsc-promotion {
@@ -222,8 +217,8 @@ span.gs-fileFormatType {
   }
 }
 
-// remove 
+// remove
 
 .gs-per-result-labels {
-  display: none; 
+  display: none;
 }

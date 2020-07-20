@@ -1,4 +1,4 @@
-//Nav links and big tab links mobile 
+//Nav links and big tab links mobile
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
   font-family: $font-family-secondary;
@@ -42,11 +42,11 @@
 }
 
 
-//Switch arrows 
+//Switch arrows
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
- 
+
   &:focus,
   &:hover {
     color: $secondary !important;
@@ -55,13 +55,13 @@
   }
 
   .fa-chevron-down {
-    transform: rotate( -360deg );            
+    transform: rotate( -360deg );
     transition: transform 150ms ease;
   }
 
   &.show-outline {
     color: $focus;
-    
+
     .dropdown-icon {
       &.fa-chevron-down {
         transform: rotate( -180deg );
@@ -141,7 +141,7 @@
   background: none;
 }
 // Set search form padding to accomodate tab design
-.navbar-dark.nav-vanilla form { 
+.navbar-dark.nav-vanilla form {
   padding: 0;
 
   @include media-breakpoint-up(lg) {
@@ -203,13 +203,13 @@
 
 // Mobile menu container
 .navbar-dark.nav-vanilla .dropdown-menu {
-  margin: 0 0 .625rem 0; //10px; 
+  margin: 0 0 .625rem 0; //10px;
 }
 
 .navbar-dark.nav-vanilla .dropdown-item {
   font-size: $font-size-ex-med; //18px
   font-family: $font-family-base;
-  font-weight: $font-normal; // for fallbacks only 
+  font-weight: $font-normal; // for fallbacks only
 }
 
 .navbar-dark.nav-vanilla .dropdown-item.active {
@@ -218,7 +218,7 @@
 }
 
 
-// SIMPLE NAV 
+// SIMPLE NAV
 .simple-nav {
   margin: 0 !important;
   padding: 0;
@@ -273,7 +273,7 @@
   }
 }
 
-//EXPANDABLE VANILLA 
+//EXPANDABLE VANILLA
 //Expandable panel
 .expandable {
   margin-top: ($spacer * 1);
@@ -320,7 +320,7 @@
     .navbar-nav {
       padding: 0;
       margin-bottom: 0;
-      
+
       .nav-link {
         color: $secondary;
         padding: 0 2rem 0 0;
@@ -361,7 +361,7 @@
 .progress {
   li {
     font-size: $font-size-ex-lg;
-    
+
     a {
       font-size: $font-size-ex-lg;
     }
@@ -369,7 +369,7 @@
 }
 
 .navbar {
-  min-height: 65px;
+  @include rem(min-height, 65);
 }
 
 .navbar-collapse {

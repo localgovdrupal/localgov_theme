@@ -10,7 +10,7 @@ body {
   padding: ($spacer * 1);
 }
 
-// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING 
+// THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING
 
 .site-max {
   @include rem(max-width, 1170);
@@ -29,7 +29,7 @@ main form {
   margin-bottom: ($spacer * 1);
 }
 
-//Add some extra right padding for content elements to create some whitespace 
+//Add some extra right padding for content elements to create some whitespace
 h1,
 h2,
 h3,
@@ -52,9 +52,11 @@ main ol,
   h1 {
     font-size: $font-size-base * 2.875;
   }
+
   h2 {
     font-size: $font-size-base * 2.125;
   }
+
   h3 {
     font-size: $font-size-base * 1.75;
   }
@@ -114,7 +116,7 @@ form .form-group:last-child {
   margin-bottom: ($spacer * 3);
 }
 
-// FOCUS STYLES 
+// FOCUS STYLES
 
 *:focus {
   outline: none;
@@ -141,7 +143,7 @@ hr {
   border-top: $hr-border solid $hr-color;
 }
 
-// SITE WIDE CUSTOM CLASSES 
+// SITE WIDE CUSTOM CLASSES
 
 .key-under {
   border-bottom: .0625rem solid $gray;
@@ -180,7 +182,7 @@ main i {
   span {
     font-weight: $font-bold;
     background: $primary;
-    padding: 0 .1875rem; 
+    padding: 0 .1875rem;
     margin-right: .1875rem;
     font-size: $font-size-ex-sm;
     color: $white;

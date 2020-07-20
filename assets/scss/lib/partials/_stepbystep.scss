@@ -4,6 +4,7 @@
   main {
     margin-top: 0;
   }
+
   section {
     margin-bottom: 0;
     padding-bottom: 1rem;
@@ -25,19 +26,18 @@ ul.step-list {
   li {
     display: inline-block;
     margin-bottom: 0.5rem;
-    
-    &.step--next {
 
+    &.step--next {
       .btn {
         position: relative;
         text-align: right;
-        padding-right: 34px;
+        @include rem(padding-right, 34);
       }
 
       span {
         position: absolute;
-        right: 7px;
-        top: 15px;
+        @include rem(right, 7);
+        @include rem (top, 15);
       }
     }
 
@@ -60,7 +60,7 @@ ul.step-list {
   margin-bottom: 2.5rem;
   border-left: 0.3125rem solid $primary;
   background: $gray;
-  
+
   .step-by-step-pages__part-of {
     color: $primary;
     font-weight: $font-bold;
@@ -87,10 +87,9 @@ ul.step-list {
 // Step by step navigation
 
 .step-by-step-pages {
-
   .step-by-step-pages__relationship { // hides 'part of' block in sidebar
     display: block;
-    
+
     @include media-breakpoint-up(md) {
       display: none;
     }
@@ -163,7 +162,7 @@ ul.step-list {
           color: $blue;
           line-height: 1.5rem;
           margin-right: 2.5rem;
-          
+
           &:hover {
             color: $secondary;
           }
@@ -194,9 +193,9 @@ ul.step-list {
         }
 
         .step__title {
-          
+
           color: $primary;
-          
+
           a {
             color: $primary;
 
@@ -218,8 +217,8 @@ ul.step-list {
         float: left;
         padding: 0 .9375rem .9375rem 2.4rem;
 
-        p { 
-          margin-top: 0; 
+        p {
+          margin-top: 0;
           margin-bottom: .5rem;
         }
 
@@ -241,19 +240,16 @@ ul.step-list {
   }
 }
 
-// Modify Step by step navigation when displayed within the 'main' content area 
+// Modify Step by step navigation when displayed within the 'main' content area
 
 main {
-
   .step-by-step-pages {
-
     .summaries-control {
       @include borderdirection(bottom, 1, solid, $gray);
       @include rem(padding-bottom, 15);
       text-align: right;
 
       i {
-
         &:before {
           font-size: $font-size-base;
         }
@@ -265,9 +261,7 @@ main {
     }
 
     ol.step-list {
-
       .step {
-
         &:before {
           @include rem(width, 33);
           @include rem(height, 33);
