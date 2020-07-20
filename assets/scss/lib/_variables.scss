@@ -10,7 +10,7 @@ $orange: #FF5500 !default;
 $green: #77BB55 !default;
 // $purple
 // $brown
-// $magenta
+$magenta: #880088 !default;
 $tan: #f2ba41 !default;
 $cyan: #17A2B8 !default;
 // $olive
@@ -43,6 +43,8 @@ $danger: #ae1100 !default;
 $light: #ededed !default;
 $dark: #444444 !default;
 $offwhite: #FAFAFA !default;
+$facebook: #3b5998 !default;
+$twitter: #1DA1F2 !default;
 
 // Site colours
 
@@ -60,21 +62,19 @@ $gray-quaternary: $graphite;
 $gray-quinary: $stonewash;
 $gray-senary: $gray-tint;
 
-
-// Theme colours - SASS Map our varieables above, to 'theme-colours'
+// Theme colours - SASS Map our variables above, to 'theme-colours'
 $theme-colors: ( // Bootstrap colours
 'primary': $primary, 'secondary': $secondary, 'success': $success, 'info': $carbon, 'warning': $orange, 'danger': $red, 'light': $light, 'dark': $dark, // Map additional colours to 'theme colours'
 'carbon': $carbon, 'graphite': $graphite, 'stonewash': $stonewash, 'gray-tint': $gray-tint, 'purple-tint': $purple-tint, 'green-tint': $green-tint, 'indigo-tint': $indigo-tint, // Map additional colours to 'theme colours' - can be used for backgrounds for example '.bg-green'
 'blue': $blue, 'indigo': $indigo, 'pink': $pink, 'red': $red, 'orange': $orange, 'yellow': $yellow, 'green': $green, 'teal': $teal, 'cyan': $cyan, 'gray': $gray, 'gray-dark': $gray-dark, 'white': $white, 'visited': $visited, );
 
-// Breadcrumb navigation 
+// Breadcrumb navigation
 $breadcrumb: $gray-tertiary;
 
 // Focus highlight colour
-$focus: $yellow; 
+$focus: $yellow;
 
 // Link colours
-
 $link-hover-color: $blue;
 
 // Background colours
@@ -107,6 +107,7 @@ $headings-font-weight: $font-bold !default; // for fallbacks only
 
 // Font base size
 $font-size-base: 1rem !default; // Assumes the browser default, typically 16px
+
 // Font sizes
 $font-size-ex-ex-lg: $font-size-base * 1.375 !default; // ~22px ~1.375rem
 $font-size-ex-lg: $font-size-base * 1.25 !default; // ~20px ~1.25rem
@@ -170,7 +171,6 @@ $input-btn-focus-width: 0 !default;
 $component-active-bg: $yellow !default;
 $input-btn-focus-color: rgba($component-active-bg, 1) !default;
 
-
 // Main navigation links
 $navbar-nav-link-padding-x: 0 !default;
 $navbar-nav-link-padding-y: .5rem !default; //8px
@@ -183,20 +183,24 @@ $navbar-dark-active-color: $gray !default;
 $navbar-dark-disabled-color: rgba($white, .8) !default;
 $navbar-dark-toggler-icon-bg: $gray !default;
 $navbar-dark-toggler-border-color: $white !default;
+
 // Remove breadcrumb bottom margin
 $breadcrumb-margin-bottom: 0 !default;
+
 // Dropdown menu
 $dropdown-min-width: 18.125rem !default;
 $dropdown-padding-y: 0 !default;
 $dropdown-margin-y: 0 !default;
 $dropdown-bg: $gray !default;
 $dropdown-border-width: 0 !default;
+
 // $dropdown-border-color:  !default;
 $dropdown-border-radius: 0 !default;
 $dropdown-box-shadow: none !default;
 $nav-divider-color: $white !default;
 $nav-divider-margin-y: 0 !default;
-// Dropdown hovers 
+
+// Dropdown hovers
 $dropdown-link-color: $white !default;
 $dropdown-link-hover-color: $yellow !default;
 $dropdown-link-hover-bg: $gray !default;
@@ -204,17 +208,21 @@ $dropdown-link-active-color: $white !default;
 $dropdown-link-active-bg: $blue !default;
 $dropdown-item-padding-y: .625rem !default;
 $dropdown-item-padding-x: 0 !default;
+
 //Horizontal rule
 $hr-margin-y: 1.25rem !default; // 20px
 $hr-border: .0625rem;
 $hr-color: $gray;
+
 //Small tags
 $small-font-size: 85% !default;
+
 //Form input remove rounded corners
 $input-border-radius: 0 !default;
 $input-border-radius-sm: 0 !default;
 $input-border-radius-lg: 0 !default;
 $input-color: $gray-dark !default;
+
 //Alert styles
 $alert-border-width: .1875rem !default; //3px
 $alert-bg-level: 0 !default;
@@ -222,20 +230,26 @@ $alert-border-level: 0 !default;
 $alert-color-level: 0 !default;
 $alert-link-font-weight: $font-bold !default;
 $alert-font-weight: $font-bold !default;
+
 //Jumbotron
 $jumbo-welcome: 'Welcome to';
 $jumbo-font-regular: $font-size-base * 2.625 !default; // ~42px ~2.625rem
 $jumbo-font-large: $font-size-base * 3.25 !default; // ~52px ~3.25rem
+
 // Form validation
 $form-feedback-valid-color: $success !default;
 $form-feedback-invalid-color: $danger !default;
 $form-feedback-font-size: 1.063rem !default; //17px
+
 //Form input
 $input-border-color: $stonewash !important !default;
+
 // Global Half Margin
 $half-margin: .5rem !default; // 8px
+
 // Global Half Padding // 5px
 $half-padding: .3125rem !default;
+
 // Font Awesome Icons
 $fa-times: '\f00d' !default;
 $fa-font-weight: 900 !default;
@@ -265,6 +279,7 @@ $alert-primary: $fa-exclamation-triangle !default;
 $alert-danger: $fa-exclamation-triangle !default;
 $alert-fail: $fa-times !default;
 $alert-warning: $fa-info-circle !default;
+
 //Breadcrumb divider
 $breadcrumb-divider: $fa-chevron-right !default;
 $breadcrumb-divider-size: 0.75rem;

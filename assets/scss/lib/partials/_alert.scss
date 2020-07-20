@@ -1,19 +1,24 @@
 .alert-bar {
-  
   &.alert-banner--notable-person {
     background: $alert-bar-notable;
-    p, a, i {
+
+    p,
+    a,
+    i {
       color: $white;
     }
   }
 
   &.alert-banner--major {
     background: $alert-bar-major;
-    p, a, i {
+
+    p,
+    a,
+    i {
       color: $white;
     }
   }
-  
+
   &.alert-banner--minor {
     background: $alert-bar-minor;
   }
@@ -28,7 +33,7 @@
           position: absolute;
           left: 0;
           font-size: $h2-font-size;
-          font-family: $font-family-icons; 
+          font-family: $font-family-icons;
           font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
           content: $fa-exclaim;
           margin: 0;
@@ -61,7 +66,7 @@
   font-weight: $font-bold;
   font-size: $font-size-lg;
   position: relative;
-  width: 100%; // always go full width 
+  width: 100%; // always go full width
   padding-left: 2.75rem; // indent content to allow for absolute icon
 
   &:before {

@@ -9,25 +9,25 @@
   bottom: 0;
   left: 0;
   right: 0;
-  color: #ffffff;
+  color: $white;
 }
 
-//Fixed feedback - link 
+//Fixed feedback - link
 .feedback-trigger-fixed a {
-  color: #ffffff;
+  color: $white;
 }
 
 //Fixed feedback - link hover and focus
 .feedback-trigger-fixed a:hover,
 .feedback-trigger-fixed a:focus {
-  color: #121212;
+  color: $carbon;
 }
 
 //ABOVE FOOTER FEEDBACK TRIGGER
 //Feedback bar above footer
 .feedback-trigger-page,
 .feedback-trigger-page a {
-  color: #ffffff;
+  color: $white;
 }
 
 //Feedback bar above footer - Paragraph inside bar remove margin
@@ -38,10 +38,10 @@
 //Feedback bar above footer - link hover and focus
 .feedback-trigger-page a:hover,
 .feedback-trigger-page a:focus {
-  color: #121212;
+  color: $carbon;
 }
 
 //Feedback bar above footer - form container
 .feedback-form-page {
-  color: #121212;
+  color: $carbon;
 }

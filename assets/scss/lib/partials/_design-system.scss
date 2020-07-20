@@ -45,7 +45,7 @@ pre[class*="language-"] {
   font-weight: 800;
   pointer-events: none;
   text-decoration: none;
-  color: #121212;
+  color: $carbon;
   font-size: 1.188rem;
   padding: 0 0 2rem 0;
 }
@@ -54,7 +54,7 @@ pre[class*="language-"] {
 .node--design_system_page .sidebar ul ul li a {
   pointer-events: auto;
   font-weight: 400;
-  color: #880088;
+  color: $magenta;
   text-decoration: underline;
   font-size: 1.063rem;
   padding: 0;
@@ -64,6 +64,6 @@ pre[class*="language-"] {
 .node--design_system_page .breadcrumb .breadcrumb-item:nth-child(3) a {
   pointer-events: none;
   font-weight: 400;
-  color: #121212;
+  color: $carbon;
   text-decoration: none;
 }

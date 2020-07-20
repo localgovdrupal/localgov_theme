@@ -1,6 +1,6 @@
 header > p {
   font-size: $font-size-base * 1.25;
-  
+
   @include media-breakpoint-up(lg) {
     font-size: $font-size-ex-ex-lg;
   }
@@ -17,14 +17,14 @@ header > p {
 }
 
 .navbar-brand { // fix width of logo for mobiles
-  min-width: 100px !important;
+  min-width: 6.25rem !important;
 
   @include media-breakpoint-up(sm) {
     min-width: initial !important;
   }
 
   img {
-    min-width: 100px;
+    min-width: 6.25rem;
 
     @include media-breakpoint-up(sm) {
       width: initial;
@@ -34,6 +34,7 @@ header > p {
 
 .my-account {
   white-space: nowrap;
+
   a {
     color: $yellow;
     font-family: $font-family-secondary;
@@ -135,7 +136,7 @@ header > p {
 
       ul {
         padding: 0;
-        
+
         li {
           a {
             font-size: $font-size-base;

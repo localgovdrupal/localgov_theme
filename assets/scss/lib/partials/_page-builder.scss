@@ -17,7 +17,7 @@
 /* Image with caption */
 
 .image-wrapper {
-  background: #373737;
+  background: $graphite;
   @include rem(margin-bottom, 15);
 }
 
@@ -71,7 +71,7 @@
   &:after {
     display: block;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, $black 100%);
     @include rem(margin-top, -150);
     @include rem(height, 150);
     width: 100%;
@@ -139,8 +139,9 @@
   padding-bottom: 9rem;
 
   @include media-breakpoint-up(md) {
-   padding-bottom: 0;
+    padding-bottom: 0;
   }
+
   img {
     height: auto;
     width: 100%;

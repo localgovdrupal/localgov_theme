@@ -74,12 +74,12 @@ aside .btn .fa,
   color: $white;
   @include rem(padding, 15);
   @include rem(line-height, 22);
-  
+
   &:hover {
     color: $white;
     text-decoration: none;
   }
-  
+
   &:focus {
     @include outline(.1875rem, -.1875rem, $focus);
 
@@ -113,7 +113,7 @@ aside .btn .fa,
 
   &:not(:last-child)  {
     @include rem(margin-bottom, 20);
-    
+
     @include media-breakpoint-up(sm) {
       margin-bottom: 0;
     }
@@ -136,7 +136,7 @@ aside .btn .fa,
   &:hover,
   &:focus {
     background-color: $link-button-primary-focus;
-        
+
     span,
     &:after {
       color: $white;
@@ -160,7 +160,7 @@ aside .btn .fa,
 .link-button-tertiary,
 .cta-orange {
   background-color: $link-button-tertiary;
-  
+
   &:hover,
   &:focus {
     background-color: $link-button-tertiary-focus;
@@ -229,15 +229,15 @@ aside .btn .fa,
       font-size: 1rem;
       text-decoration: none;
       margin-top: 0;
-      top: 11px;
+      top: 0.6875rem;
       position: absolute;
-      right: 15px;
+      right: 0.9375rem;
     }
   }
 
   &:hover,
   &:focus {
-    background: $teal; 
+    background: $teal;
     color: $white;
   }
 
