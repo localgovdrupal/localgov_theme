@@ -1,4 +1,4 @@
-// main content area
+// Main content area
 .node--step_by_step_page,
 .node--step_by_step_homepage {
   main {
@@ -16,7 +16,7 @@
 
 }
 
-// Buttons used to navigate between steps
+// Links used to navigate between steps
 
 ul.step-list {
   list-style-type: none;
@@ -27,27 +27,42 @@ ul.step-list {
     display: inline-block;
     margin-bottom: 0.5rem;
 
+    &.step--prev {
+      .btn {
+        text-align: left;
+        @include rem(padding-left, 34);
+
+        span {
+          @include rem(left, 7);
+        }
+      }
+    }
+
     &.step--next {
       .btn {
-        position: relative;
         text-align: right;
         @include rem(padding-right, 34);
+
+        span {
+          @include rem(right, 7);
+        }
       }
+    }
+
+    .btn {
+      margin: 0;
+      @include rem(min-width, 175);
+      position: relative;
+      text-decoration: none;
 
       span {
         position: absolute;
-        @include rem(right, 7);
         @include rem (top, 15);
       }
     }
 
     &:first-child {
       margin-right: 1rem;
-    }
-
-    .btn {
-      margin: 0;
-      @include rem(min-width, 175);
     }
   }
 }
