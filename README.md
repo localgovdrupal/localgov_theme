@@ -1,3 +1,3 @@
-# LocalGovDrupal Theme
+# LocalGov Drupal Theme
 
-Base theme for LocalGovDrupal sites.
+Feature rich base theme for LocalGov Drupal sites.

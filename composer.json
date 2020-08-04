@@ -1,6 +1,6 @@
 {
     "name": "localgovdrupal/localgov_theme",
-    "description": "Base theme for LocalGovDrupal sites.",
+    "description": "Feature rich base theme for LocalGov Drupal sites.",
     "type": "drupal-theme",
     "homepage": "https://github.com/localgovdrupal/localgov_theme",
     "license": "GPL-2.0-or-later",
