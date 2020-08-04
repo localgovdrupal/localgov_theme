@@ -1,37 +1,25 @@
 @charset 'UTF-8';
 
 @font-face {
-  font-family: 'Open Sans Light';
-  src: url('../fonts/opensans-light/f1d3f6561ba6b843f618e9d5f0399e4e.eot'); // IE9
-  src: url('../fonts/opensans-light/f1d3f6561ba6b843f618e9d5f0399e4e.eot?#iefix') format('embedded-opentype'), // IE6-IE8   
-  url('../fonts/opensans-light/f1d3f6561ba6b843f618e9d5f0399e4e.woff2') format('woff2'), // chrome,firefox   
-  url('../fonts/opensans-light/f1d3f6561ba6b843f618e9d5f0399e4e.woff') format('woff'), // chrome,firefox   
-  url('../fonts/opensans-light/f1d3f6561ba6b843f618e9d5f0399e4e.ttf') format('truetype'), // chrome,firefox,opera,Safari, Android, iOS 4.2+  
-  url('../fonts/opensans-light/f1d3f6561ba6b843f618e9d5f0399e4e.svg#Open Sans Light') format('svg'); // iOS 4.1- 
+  font-family: 'Roboto Regular';
+  src: url('../fonts/roboto-regular/4fb585f7f5a2d493cd85baeba22cc983.eot'); // IE9
+  src: url('../fonts/roboto-regular/4fb585f7f5a2d493cd85baeba22cc983.eot?#iefix') format('embedded-opentype'), // IE6-IE8   
+  url('../fonts/roboto-regular/4fb585f7f5a2d493cd85baeba22cc983.woff2') format('woff2'), // chrome,firefox   
+  url('../fonts/roboto-regular/4fb585f7f5a2d493cd85baeba22cc983.woff') format('woff'), // chrome,firefox   
+  url('../fonts/roboto-regular/4fb585f7f5a2d493cd85baeba22cc983.ttf') format('truetype'), // chrome,firefox,opera,Safari, Android, iOS 4.2+  
+  url('../fonts/roboto-regular/4fb585f7f5a2d493cd85baeba22cc983.svg#Open Sans Regular') format('svg'); // iOS 4.1- 
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans Regular';
-  src: url('../fonts/opensans-regular/4fb585f7f5a2d493cd85baeba22cc983.eot'); // IE9
-  src: url('../fonts/opensans-regular/4fb585f7f5a2d493cd85baeba22cc983.eot?#iefix') format('embedded-opentype'), // IE6-IE8   
-  url('../fonts/opensans-regular/4fb585f7f5a2d493cd85baeba22cc983.woff2') format('woff2'), // chrome,firefox   
-  url('../fonts/opensans-regular/4fb585f7f5a2d493cd85baeba22cc983.woff') format('woff'), // chrome,firefox   
-  url('../fonts/opensans-regular/4fb585f7f5a2d493cd85baeba22cc983.ttf') format('truetype'), // chrome,firefox,opera,Safari, Android, iOS 4.2+  
-  url('../fonts/opensans-regular/4fb585f7f5a2d493cd85baeba22cc983.svg#Open Sans Regular') format('svg'); // iOS 4.1- 
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans Bold';
-  src: url('../fonts/opensans-bold/9280a336215bd036e843a066d1dc1bd2.eot'); // IE9
-  src: url('../fonts/opensans-bold/9280a336215bd036e843a066d1dc1bd2.eot?#iefix') format('embedded-opentype'), // IE6-IE8   
-  url('../fonts/opensans-bold/9280a336215bd036e843a066d1dc1bd2.woff2') format('woff2'), // chrome,firefox   
-  url('../fonts/opensans-bold/9280a336215bd036e843a066d1dc1bd2.woff') format('woff'), // chrome,firefox   
-  url('../fonts/opensans-bold/9280a336215bd036e843a066d1dc1bd2.ttf') format('truetype'), // chrome,firefox,opera,Safari, Android, iOS 4.2+  
-  url('../fonts/opensans-bold/9280a336215bd036e843a066d1dc1bd2.svg#Open Sans Bold') format('svg'); // iOS 4.1- 
+  font-family: 'Maven Pro Bold';
+  src: url('../fonts/maven-pro-bold/9280a336215bd036e843a066d1dc1bd2.eot'); // IE9
+  src: url('../fonts/maven-pro-bold/9280a336215bd036e843a066d1dc1bd2.eot?#iefix') format('embedded-opentype'), // IE6-IE8   
+  url('../fonts/maven-pro-bold/9280a336215bd036e843a066d1dc1bd2.woff2') format('woff2'), // chrome,firefox   
+  url('../fonts/maven-pro-bold/9280a336215bd036e843a066d1dc1bd2.woff') format('woff'), // chrome,firefox   
+  url('../fonts/maven-pro-bold/9280a336215bd036e843a066d1dc1bd2.ttf') format('truetype'), // chrome,firefox,opera,Safari, Android, iOS 4.2+  
+  url('../fonts/maven-pro-bold/9280a336215bd036e843a066d1dc1bd2.svg#Open Sans Bold') format('svg'); // iOS 4.1- 
   font-weight: bold;
   font-style: normal;
 }
