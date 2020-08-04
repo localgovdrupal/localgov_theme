@@ -5,6 +5,6 @@
     "homepage": "https://github.com/localgovdrupal/localgov_theme",
     "license": "GPL-2.0-or-later",
     "require": {
-        "localgovdrupa/localgov_skeleton": "dev-master"
+        "localgovdrupal/localgov_skeleton": "dev-master"
     }
 }
