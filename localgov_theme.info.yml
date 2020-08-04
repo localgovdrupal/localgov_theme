@@ -1,9 +1,9 @@
-name: "LocalGovDrupal Theme"
-description: "Base theme for LocalGovDrupal sites."
+name: "LocalGov Drupal Default Theme"
+description: "Feature rich base theme for LocalGov Drupal sites."
 type: theme
 core_version_requirement: ^8.8 || ^9
 
-base theme: classy
+base theme: localgov_skeleton
 
 libraries:
   - localgov_theme/global
