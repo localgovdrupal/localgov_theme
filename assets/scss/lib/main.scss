@@ -7,7 +7,7 @@
 
 // Import council theme settings
 @import 'theme'; // replace with '_variables-REPLACEWITHYOURCOUNCILNAME'
-@import 'variables';
+
 
 // Functions
 @import 'functions';
@@ -23,6 +23,8 @@
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/mixins';
 @import '../../../node_modules/bootstrap/scss/variables';
+
+@import 'variables';
 
 // Optional
 @import '../../../node_modules/bootstrap/scss/alert';

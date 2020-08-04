@@ -42,6 +42,26 @@
   &_inner {
     background: $white;
     @include rem(padding, 20, 30, 25);
+
+    ul {
+      li {
+        color: $carbon !important;
+      }
+    }
+  }
+
+  .action-link,
+  .read-more {
+    color: $white;
+
+    i {
+      color: $carbon;
+    }
+
+    &:hover,
+    &:focus {
+      color: $carbon;
+    }
   }
 
   ul {
@@ -62,6 +82,7 @@
     }
 
     li {
+      color: $white;
       display: table-cell;
     
       &:first-child {
