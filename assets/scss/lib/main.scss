@@ -7,7 +7,7 @@
 
 // Import council theme settings
 @import 'theme'; // replace with '_variables-REPLACEWITHYOURCOUNCILNAME'
-@import 'variables';
+
 
 // Functions
 @import 'functions';
@@ -23,6 +23,8 @@
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/mixins';
 @import '../../../node_modules/bootstrap/scss/variables';
+
+@import 'variables';
 
 // Optional
 @import '../../../node_modules/bootstrap/scss/alert';
@@ -75,14 +77,10 @@
 @import 'partials/colors';
 @import 'partials/callout';
 @import 'partials/cta';
-@import 'partials/design-system';
 @import 'partials/directories';
 @import 'partials/facets';
-@import 'partials/feedback';
 @import 'partials/footer';
 @import 'partials/forms';
-@import 'partials/formio';
-@import 'partials/google-search';
 @import 'partials/guides';
 @import 'partials/header';
 @import 'partials/iconlist';
