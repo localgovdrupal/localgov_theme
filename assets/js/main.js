@@ -33,6 +33,11 @@
       $('.show-menu').toggleClass('show-outline');
     });
 
+    $(".service-status .nav-link").click(function() { // service status scroll to functionality
+      $('html, body').animate({
+        scrollTop: $("#content").offset().top -100 }, 'slow');
+    });
+
     menuDisplay(); // call when the page loads
 
 
