@@ -46,7 +46,7 @@ header > p {
 }
 
 .header--toggle {
-  display: block;
+  display: none; // hide initially or it flashes on load in mobile
   background: $white;
   border-bottom: 2rem solid $primary;
 
