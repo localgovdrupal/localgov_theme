@@ -67,3 +67,10 @@ iframe {
 .views-element-container {
   width: 100%;
 }
+
+// Remove animations from collapsing events
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+} 

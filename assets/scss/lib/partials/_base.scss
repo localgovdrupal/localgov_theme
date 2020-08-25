@@ -229,22 +229,9 @@ main i {
   @extend .float-right; // bs class
 }
 
-/* css fadein */
-.fade-in {
+/* reveal using flex rather than block */
+.flex-reveal {
   display: flex !important;
   opacity: 1 !important;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: .3s;
 }
 
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
