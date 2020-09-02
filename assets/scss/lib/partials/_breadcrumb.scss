@@ -1,28 +1,33 @@
-.breadcrumb {
-  padding: 0.75rem 0;
+.region-breadcrumb {
+  width: 100%;
 
-  .breadcrumb-item {
-    font-size: $font-size-sm;
+  .breadcrumb {
+    padding: 0.75rem 0;
+    border-radius: 0; // bs override
 
-    a {
-      font-weight: normal;
-    }
+    .breadcrumb-item {
+      font-size: $font-size-sm;
 
-    &:first-child {
       a {
-        &:hover {
-          background: transparent;
+        font-weight: normal;
+      }
+
+      &:first-child {
+        a {
+          &:hover {
+            background: transparent;
+          }
         }
       }
-    }
 
-    +.breadcrumb-item { // bs override
+      +.breadcrumb-item { // bs override
 
-      &:before {
-        font-family: $font-family-icons;
-        font-weight: $fa-font-weight;
-        font-size: $font-size-ex-ex-sm;
-        content: $breadcrumb-divider-size !important;
+        &:before {
+          font-family: $font-family-icons;
+          font-weight: $fa-font-weight;
+          font-size: $font-size-ex-ex-sm;
+          content: $breadcrumb-divider-size !important;
+        }
       }
     }
   }

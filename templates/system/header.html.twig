@@ -1,23 +1,55 @@
 <header class="bg-primary">
+
+<!-- Main navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
 
-    <!-- Navbar content -->
-    {{ page.header }}
+  <!-- Navbar content -->
+   
+      <a class="navbar-brand" href="/" title="LocalGov homepage">
+        <!-- uncomment to use system added logo // <img class="img-fluid" src="{{ logopath }}" alt="LocalGov Logo" /> -->
+        <img class="img-fluid" src="https://place-hold.it/180x100&fontsize=23" alt="LocalGov Logo" /> 
+      </a>
 
-    <div class="d-lg-none">
-      <!-- Mobile toggle button -->
-      <button id="js-nav-toggle" class="btn navbar-toggler" type="button" aria-label="Toggle navigation">
-        <span class="fa fa-times d-none"></span>
-        <span class="fa fa-bars fa-1x"></span>
-      </button>
-    </div>
+      <div class="my-account d-lg-none">
+        <a href="#">Account</a><i class="fas fa-user ml-2 mr-3" aria-hidden="true"></i>
+        <!-- Mobile toggle button -->
+        <button id="js-nav-toggle" class="btn navbar-toggler" type="button" aria-label="Toggle navigation">
+          <span class="fa fa-times d-none"></span>
+          <span class="fa fa-bars fa-1x"></span>
+        </button>
+      </div>
 
     <div class="collapse navbar-collapse" id="menu-purejs">
       <div class="d-lg-none">
       {{ page.search }}
       </div>
-      {{ page.primary_menu }}
-      {{ page.secondary_menu }}
+
+      <ul class="navbar-nav mr-auto ml-auto">
+        <li class="nav-item d-none d-lg-block" id="js-drop-toggle">
+          <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>Option 1</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>         
+        </li>
+        <li class="d-block d-lg-none responsive-services my-2">
+          {{ page.primary_menu }}
+          {{ page.secondary_menu }}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 px-lg-3" href="#">Option 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 px-lg-3" href="#">Option 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 px-lg-3" href="#">Option 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 px-lg-3" href="#">Option 5</a>
+        </li>
+      </ul>
+
+      <div class="d-none d-lg-block my-account">
+        <a href="#">Account</a><i class="fas fa-user ml-2 mr-3" aria-hidden="true"></i>
+      </div>
+
       <div class="d-none d-lg-block">
         <div class="form-inline">
         {{ page.mobile_search }}
@@ -32,7 +64,9 @@
       <div class="col-md-12 p-4">
       {{ page.primary_menu }}
       </div>
+      <!-- uncomment if required // <div class="col-sm-4 p-4">
       {{ page.secondary_menu }}
+      </div> -->
     </div>
   </nav>
 </header>

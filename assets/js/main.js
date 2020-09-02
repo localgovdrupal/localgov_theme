@@ -163,7 +163,7 @@
             $(this).text('Show fewer services');
             $(this).prepend($i);
             $(this).removeClass('show');
-            $(homeExpandServicesContainer).addClass('fade-in');
+            $(homeExpandServicesContainer).addClass('flex-reveal');
 
           }
           else {
@@ -174,7 +174,7 @@
             $(this).text('Show more services');
             $(this).prepend($i);
             $(this).addClass('show');
-            $(homeExpandServicesContainer).removeClass('fade-in');
+            $(homeExpandServicesContainer).removeClass('flex-reveal');
           }
         });
 		$(homeExpandServicesLink).keyup(function(e) {

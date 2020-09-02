@@ -3,13 +3,12 @@
 .localgov_guides--navigation {
   a {
     display: inline-block;
-    @include rem(min-width, 175);
     position: relative;
     text-decoration: none;
 
     span {
       position: absolute;
-      @include rem (top, 15);
+      @include rem (top, 11);
     }
 
     &.localgov_guides--next {
