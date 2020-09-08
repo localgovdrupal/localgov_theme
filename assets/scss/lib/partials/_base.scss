@@ -235,3 +235,30 @@ main i {
   opacity: 1 !important;
 }
 
+.reveal { // used in various places for reveal links
+  display: block;
+  min-width: 67px;
+
+  span {
+    &.in { // show
+      display: none;
+    }
+
+    &.out { // hide
+      display: block;
+    }
+  }
+
+  &.collapsed {
+    span {
+      &.in { // show
+        display: block !important;
+      }
+
+      &.out { // hide
+        display: none !important;
+      }
+    }
+  }
+}
+
