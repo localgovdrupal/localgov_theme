@@ -3,7 +3,7 @@
 
   main,
   .sidebar {
-    margin-top: 0; // remove generic spacing for the overview page as there's no breadcrumb
+    @include rem(margin-top, 10);
   }
 
   .sidebar {
