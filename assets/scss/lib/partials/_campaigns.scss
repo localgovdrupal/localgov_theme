@@ -22,7 +22,7 @@
     .jumbo-welcome {
 
       h1 {
-        color: $white;
+        color: $campaign-header;
         @include rem(font-size, 50);
         text-align: left;
         padding: 0;
@@ -53,7 +53,7 @@
   }
 
   .section-nav {
-    background: $indigo;
+    background: $section-nav-background;
 
     h3 {
       color: $white;
@@ -67,15 +67,15 @@
       li {
         background: $white;
         font-size: 1.125rem;
-        border-bottom: 0.0625rem solid #DBDFE3 !important;
+        border-bottom: 0.0625rem solid $gray !important;
 
         a {
           display: block;
           width: 100%;
-          border-left: 3px solid $violet;
+          border-left: 0.1875rem solid $violet;
 
           &:hover {
-            border-left: 3px solid $purple;
+            border-left: 0.1875rem solid $purple;
           }
         }
 
@@ -84,7 +84,7 @@
         }
 
         .is-active {
-          border-left: 3px solid $indigo;
+          border-left: 0.1875rem solid $indigo;
         }
       }
     }
