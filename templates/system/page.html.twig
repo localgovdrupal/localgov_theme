@@ -15,6 +15,8 @@
 * - logged_in: A flag indicating if the user is registered and signed in.
 * - is_admin: A flag indicating if the user has permission to access
 *   administration pages.
+* - has_sidebar_first: Can we expect any content in the first sidebar?
+* - has_sidebar_second: See above.
 *
 * Site identity:
 * - front_page: The URL of the front page. Use this instead of base_path when
@@ -50,8 +52,6 @@
 * @ingroup themeable
 */
 #}
-{% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
-{% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
 {%
   set content_classes = [
     has_sidebar_first and page.sidebar_second ? 'col-sm-6',
