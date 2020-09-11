@@ -1,6 +1,5 @@
 .node--localgov_campaigns_overview,
 .node--localgov_campaigns_page {
-
   main,
   .sidebar {
     @include rem(margin-top, 10);
@@ -20,7 +19,6 @@
     background-color: $blue;
 
     .jumbo-welcome {
-
       h1 {
         color: $campaign-header;
         @include rem(font-size, 50);
@@ -103,7 +101,7 @@
 
   main {
     .breadcrumb {
-      margin-left:-15px;
+      @include rem(margin-left, -15);
     }
 
     .fact-box {
@@ -111,7 +109,6 @@
         &.fact-closing {
           display: none;
         }
-
       }      
     }
 
@@ -120,7 +117,7 @@
     }
 
     .author {
-      color: #a41055;
+      color: $carbon;
     }
 
     .socials {
@@ -162,9 +159,11 @@
       &.btn-li {
         background-color: $blue !important;
       }
+
       &.btn-fb {
         background-color: $facebook !important;
       }
+
       &.btn-tw {
         background-color: $twitter !important;
       }
@@ -172,9 +171,11 @@
 
     .video-container {
       position: relative;
-      padding-bottom: 56.25%;
-      padding-top: 30px; height: 0; overflow: hidden;
-      margin-bottom: 15px;
+      padding-bottom: 56.25%; // fixes collapsing bug
+      height: 0; 
+      overflow: hidden;
+      @include rem(padding-top, 30);
+      @include rem(margin-bottom, 15);
     }
      
     .video-container iframe,
@@ -203,7 +204,6 @@
     }
 
     .link-block {
-
       h2 {
         margin-top: 0 !important; // stop link block headers inheriting the top margin of generic .content H2s
       }
@@ -215,7 +215,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
   .collapse.dont-collapse-sm {
     display: block;
     height: auto !important;

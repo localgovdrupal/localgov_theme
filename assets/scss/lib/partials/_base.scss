@@ -237,8 +237,8 @@ main i {
 
 .reveal { // used in various places for reveal links
   display: block;
-  min-width: 67px;
-
+  @include rem(min-width, 67);
+  
   span {
     &.in { // show
       display: none;
