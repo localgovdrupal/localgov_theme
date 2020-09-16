@@ -1,7 +1,7 @@
 <header class="bg-primary">
 
 <!-- Main navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark site-max nav-vanilla">
+  <nav class="navbar navbar-expand-lg navbar-dark site-max">
 
   <!-- Navbar content -->
    
@@ -13,19 +13,19 @@
       <div class="my-account d-lg-none">
         <a href="#">Account</a><i class="fas fa-user ml-2 mr-3" aria-hidden="true"></i>
         <!-- Mobile toggle button -->
-        <button id="js-nav-toggle" class="btn navbar-toggler" type="button" aria-label="Toggle navigation">
+        <button id="js-nav-toggle" class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileToggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-times d-none"></span>
           <span class="fa fa-bars fa-1x"></span>
         </button>
       </div>
 
-    <div class="collapse navbar-collapse" id="menu-purejs">
+    <div class="navbar-menu collapse navbar-collapse" id="mobileToggle">
       <div class="d-lg-none">
       {{ page.search }}
       </div>
 
       <ul class="navbar-nav mr-auto ml-auto">
-        <li class="nav-item d-none d-lg-block" id="js-drop-toggle">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>Option 1</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>         
         </li>
         <li class="d-block d-lg-none responsive-services my-2">
@@ -59,7 +59,7 @@
   </nav>
 
   <!-- Toggle Menu -->
-  <nav class="header--expand site-max header--toggle mt-2">
+  <nav class="header--expand site-max header--toggle mt-2 px-3">
     <div class="row">
       <div class="col-md-12 p-4">
       {{ page.primary_menu }}

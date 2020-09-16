@@ -95,16 +95,14 @@ footer {
   }
 
   .navbar-dark {
-    &.nav-vanilla {
-      .nav-item.active {
-        border-bottom: 0.313rem solid $white;
-        padding-left: 0;
-        padding-right: 0;
-      }
+    .nav-item.active {
+      border-bottom: 0.313rem solid $white;
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-      .navbar-nav {
-        margin-bottom: 0;
-      }
+    .navbar-nav {
+      margin-bottom: 0;
     }
 
     &.nav-bigtabs {
