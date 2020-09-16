@@ -60,8 +60,10 @@ function localgov_theme_preprocess_page(&$variables) {
   // **Twig templates** if they will eventually produce empty content or not.
   // @see https://www.drupal.org/node/953034
   // @see https://www.drupal.org/forum/support/module-development-and-code-questions/2016-04-07/drupal-8-regions-with-and-empty#comment-12149518
-  $rendered_sidebar_first = Drupal::service('renderer')->renderPlain($variables['page']['sidebar_first']);
-  $rendered_sidebar_second = Drupal::service('renderer')->renderPlain($variables['page']['sidebar_second']);
+  $sidebar_first_copy = $variables['page']['sidebar_first'];
+  $sidebar_second_copy = $variables['page']['sidebar_second'];
+  $rendered_sidebar_first = Drupal::service('renderer')->renderPlain($sidebar_first_copy);
+  $rendered_sidebar_second = Drupal::service('renderer')->renderPlain($sidebar_second_copy);
   $variables['has_sidebar_first'] = trim(strip_tags($rendered_sidebar_first));
   $variables['has_sidebar_second'] = trim(strip_tags($rendered_sidebar_second));
 }
