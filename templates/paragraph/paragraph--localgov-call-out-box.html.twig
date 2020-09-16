@@ -1,0 +1,16 @@
+
+<div class="call-out-box row mx-1">
+  <div class="col-12 col-md-6 order-md-2 p-0" />
+    {% if background_url is defined and background_url %}
+      <img src="{{ background_url }}" />
+    {% endif %}
+  </div>
+  <div class="col-12 col-md-6 order-md-1 p-4">
+    <h2>{{ content.localgov_header_text }}</h2>
+    {{ content.localgov_body_text }}
+    <a href="{{ button_url }}" class="btn btn-primary">
+      <span>{{ paragraph.localgov_button.getValue[0].title }}</span>
+    </a>
+  </div>
+</div>
+
