@@ -33,6 +33,11 @@ function localgov_theme_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'node--' . $node->bundle();
     }
   }
+
+  $has_eu_cookie_compliance_module = Drupal::service('module_handler')->moduleExists('eu_cookie_compliance');
+  if ($has_eu_cookie_compliance_module) {
+    $variables['#attached']['library'][] = 'localgov_theme/skip-link-relocation';
+  }
 }
 
 /**
@@ -111,6 +116,10 @@ function localgov_theme_preprocess_office_hours(&$variables) {
  * Implements hook_theme_suggestions_alter().
  */
 function localgov_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  // Allow page template to be overridden by content type.
+  if ($hook == 'page' && $node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
   // Fields to be rendered through the field--clean.html.twig template.
   $clean_fields = [
     'field_addressfield',
