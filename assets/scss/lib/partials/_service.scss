@@ -125,10 +125,10 @@
   border-bottom: $gray-tint;
   @include rem(margin-bottom, 20);
   
-  h2 {
+  h3 {
     line-height: 1;
     font-size: $h5-font-size;
-    @include rem(margin-top, 15);
+    @include rem(margin-top, 0);
     @include rem(margin-bottom, 15);
 
     @include media-breakpoint-up(lg) {
