@@ -47,7 +47,6 @@ header > p {
 
 .header--toggle {
   display: none; // hide initially or it flashes on load in mobile
-  background: $white;
   border-bottom: 2rem solid $primary;
 
   @include media-breakpoint-up(sm) {
@@ -95,6 +94,12 @@ header > p {
 
   li {
     @include rem(line-height, 20);
+  }
+
+  div {
+    div {
+      background: $white;
+    }
   }
 }
 

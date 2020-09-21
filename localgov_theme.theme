@@ -33,6 +33,11 @@ function localgov_theme_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'node--' . $node->bundle();
     }
   }
+
+  $has_eu_cookie_compliance_module = Drupal::service('module_handler')->moduleExists('eu_cookie_compliance');
+  if ($has_eu_cookie_compliance_module) {
+    $variables['#attached']['library'][] = 'localgov_theme/skip-link-relocation';
+  }
 }
 
 /**

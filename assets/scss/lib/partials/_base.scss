@@ -62,18 +62,38 @@ main ol,
   }
 }
 
-// Add top margin to headers in the page but not the first h2
-// as that will be at the top of the section.
-.content h2 {
-  margin-top: 0;
-}
+.main-content {
+  // Add top margin to headers in the page but not the first h2
+  // as that will be at the top of the section.
+  h2 {
+    margin-top: 0;
+  }
 
-.content * + h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  margin-top: ($spacer * 3);
+  * + h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: ($spacer * 3);
+  }
+  
+  // Display all headers inline block to prevent margin overlap
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: inline-block;
+  }
+  
+  // Control the top margin of anything immediately proceeding a header
+  h2 + *,
+  h3 + *,
+  h4 + *,
+  h5 + *,
+  h6 + * {
+    margin-top: 0;
+  }
 }
 
 section {
@@ -233,5 +253,32 @@ main i {
 .flex-reveal {
   display: flex !important;
   opacity: 1 !important;
+}
+
+.reveal { // used in various places for reveal links
+  display: block;
+  @include rem(min-width, 67);
+  
+  span {
+    &.in { // show
+      display: none;
+    }
+
+    &.out { // hide
+      display: block;
+    }
+  }
+
+  &.collapsed {
+    span {
+      &.in { // show
+        display: block !important;
+      }
+
+      &.out { // hide
+        display: none !important;
+      }
+    }
+  }
 }
 

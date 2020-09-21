@@ -146,9 +146,9 @@ $accordion-background-highlight: $blue;
 
 $skip-main: $primary;
 
-$campaign-header: $blue;
+$campaign-header: $white;
 
-$section-nav-background: $blue;
+$section-nav-background: $indigo;
 
 //STANDARD BUTTONS
 $input-btn-padding-y: .5rem; //8px
@@ -242,7 +242,6 @@ $alert-link-font-weight: $font-bold;
 $alert-font-weight: $font-bold;
 
 //Jumbotron
-$jumbo-welcome: 'Welcome to';
 $jumbo-font-regular: $font-size-base * 2.625; // ~42px ~2.625rem
 $jumbo-font-large: $font-size-base * 3.25; // ~52px ~3.25rem
 
@@ -281,6 +280,7 @@ $fa-search: '\f002';
 $fa-info-circle: '\f05a'; 
 $fa-plus: '\f067';
 $fa-minus: '\f068';
+$fa-arrow-up: '\f30c';
 
 // Alert Icons
 $alert-success: $fa-check;

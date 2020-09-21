@@ -27,3 +27,10 @@ fontawesome:
       https://use.fontawesome.com/releases/v5.13.0/css/all.css:
         type: external
         minified: true
+
+# Move skip-link above EU cookie compliance popup.
+skip-link-relocation:
+  js:
+    assets/js/skip-link-relocation.js: {}
+  dependencies:
+    - eu_cookie_compliance/eu_cookie_compliance_bare

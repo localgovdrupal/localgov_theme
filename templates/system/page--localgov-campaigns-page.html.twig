@@ -55,8 +55,8 @@
 {%
   set content_classes = [
     has_sidebar_first and page.sidebar_second ? 'col-sm-6',
-    has_sidebar_first and not has_sidebar_second ? 'col-sm-8',
-    not has_sidebar_first and has_sidebar_second ? 'col-sm-8',
+    has_sidebar_first and not has_sidebar_second ? 'col-sm-9',
+    not has_sidebar_first and has_sidebar_second ? 'col-sm-9',
     not has_sidebar_first and not has_sidebar_second ? 'col-sm-12',
     'column',
     'main-content',
@@ -113,22 +113,24 @@
       {% endif %}
 
       {% if has_sidebar_first %}
-        <div id="sidebar-first" class="column sidebar col-sm-3">
+        <div id="sidebar-first" class="sidebar col col-md-4 order-1 order-md-2 mt-sm-5">
           <aside class="section" role="complementary">
             {{ page.sidebar_first }}
           </aside>
         </div>
       {% endif %}
 
-      <main id="content" role="main"{{ content_attributes.addClass(content_classes) }}>
+
+      <main id="content" role="main"{{ content_attributes.addClass('content col-md-8 order-2 order-md-1 mt-sm-5') }}>
         <section class="section">
           <a id="main-content" tabindex="-1"></a>
           {{ page.content }}
         </section>
+        <a href="#main-content" class="action-link focus-top">Back to top</a>
       </main>
 
       {% if has_sidebar_second %}
-        <div id="sidebar-second" class="column sidebar col-sm-4">
+        <div id="sidebar-second" class="sidebar col col-md-4 order-1 order-md-2 mt-sm-5">
           <aside class="section" role="complementary">
             {{ page.sidebar_second }}
           </aside>
