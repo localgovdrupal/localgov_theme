@@ -169,12 +169,21 @@ $input-btn-font-size-lg: 1.375rem; //22px
 $input-btn-line-height-lg: 1.5; //10px
 
 $button-icons: $yellow;
+
 $link-button-primary: $green;
 $link-button-primary-focus: $teal;
+$link-button-primary-text: $white;
+$link-button-primary-text-focus: $carbon;
+
 $link-button-secondary: $blue;
 $link-button-secondary-focus: $cyan;
+$link-button-secondary-text: $white;
+$link-button-secondary-text-focus: $white;
+
 $link-button-tertiary: $orange;
 $link-button-tertiary-focus: $yellow;
+$link-button-tertiary-text: $white;
+$link-button-tertiary-text-focus: $carbon;
 
 // Hide default input focus
 $input-btn-focus-width: 0;
