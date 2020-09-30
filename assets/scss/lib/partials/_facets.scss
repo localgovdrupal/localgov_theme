@@ -171,16 +171,15 @@ h2.facet-filter-header {
 }
 
 
-// @media only screen and (max-width: 767px) {
-//   .directories-hide-filters .hide-filters {
-//     display: none;
-//   }
+.facets-widget-checkbox {
+  > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    @include rem(padding, 16);
 
-//   .directories-hide-filters .show-filters {
-//     display: inline;
-//   }
-
-//   .filter-wrapper {
-//     display: none;
-//   }
-// }
+    > ul {
+      padding: 0;
+    }
+  }
+}
