@@ -71,27 +71,13 @@ aside .btn .fa,
   font-size: $font-size-ex-med;
   font-weight: $font-bold;
   text-decoration: none;
-  color: $white;
+  color: $link-button-text;
+  background-color: $link-button;
   @include rem(padding, 15);
   @include rem(line-height, 22);
 
-  &:hover {
-    color: $white;
-    text-decoration: none;
-  }
-
-  &:focus {
-    @include outline(.1875rem, -.1875rem, $focus);
-
-    span,
-    &:after {
-      color: $secondary;
-    }
-  }
-
   span {
     width: 100%;
-    color: $white;
     text-align: left;
     display: block;
 
@@ -101,7 +87,6 @@ aside .btn .fa,
   }
 
   &:after {
-    color: $white;
     display: flex;
     align-items: center;
     font-family: $font-family-icons;
@@ -109,6 +94,20 @@ aside .btn .fa,
     font-weight: $fa-font-weight;
     font-size: $font-size-ex-lg;
     @include rem(margin-top, 2);
+  }
+
+  &:hover {
+    color: $link-button-text-focus;
+    text-decoration: none;
+  }
+
+  &:focus {
+    @include outline(.1875rem, -.1875rem, $focus);
+
+    span,
+    &:after {
+      color: $link-button-text-focus;
+    }
   }
 
   &:not(:last-child)  {
@@ -122,14 +121,13 @@ aside .btn .fa,
 
 // Link Button Modifiers
 
-.link-button-green,
 .link-button-primary,
 .cta-action {
   background-color: $link-button-primary;
 
   span,
   &:after {
-    color: $secondary;
+    color: $link-button-primary-text;
   }
 
   &:hover,
@@ -138,30 +136,48 @@ aside .btn .fa,
 
     span,
     &:after {
-      color: $white;
+      color: $link-button-primary-text-focus;
     }
   }
 }
 
-.link-button-blue,
 .link-button-secondary,
 .cta-info {
   background-color: $link-button-secondary;
 
+  span,
+  &:after {
+    color: $link-button-secondary-text;
+  }
+
   &:hover,
   &:focus {
     background-color: $link-button-secondary-focus;
+
+    span,
+    &:after {
+      color: $link-button-secondary-text-focus;
+    }
   }
 }
 
-.link-button-orange,
 .link-button-tertiary,
 .cta-orange {
   background-color: $link-button-tertiary;
 
+  span,
+  &:after {
+    color: $link-button-tertiary-text;
+  }
+
   &:hover,
   &:focus {
     background-color: $link-button-tertiary-focus;
+
+    span,
+    &:after {
+      color: $link-button-tertiary-text-focus;
+    }
   }
 }
 
