@@ -10,4 +10,9 @@
  * @see template_preprocess_input()
  */
 #}
-<input{{ attributes.addClass(['btn-search', 'btn', 'btn-primary', 'btn-sm', 'mt-2']) }} />{{ children }}
+
+<button type="submit" {{ attributes.addClass(['btn', 'btn-primary', 'btn-sm', 'mt-2']) }}>
+  <span class="fa fa-chevron-right"></span>
+  <span>{{ attributes.value }}</span>
+</button>
+{{ children }}
