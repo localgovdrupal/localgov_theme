@@ -132,43 +132,35 @@
   }
 }
 
-.directories-search-form {
+.views-exposed-form {
   background-color: $gray-tint;
   @include rem(padding, 20);
-
-  h2 {
-    margin-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    display: inline-block;
-  }
 
   label {
     font-size: $h4-font-size;
     font-weight: $font-bold;
   }
+ 
+  .button {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    font-size: $h5-font-size;
 
-  .btn-search-wrapper {
-    button {
-      width: 100%;
-      text-align: left;
-      position: relative;
+    &:after {
+      @include rem(top, 6);
+      font-family: $font-family-icons;
+      font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
+      content: $fa-search;
       font-size: $h5-font-size;
-
-      .fa-chevron-right {
-        display: none;
-      }
-
-      &:after {
-        @include rem(top, 6);
-        font-family: $font-family-icons;
-        font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
-        content: $fa-search;
-        font-size: $h5-font-size;
-        display: block;
-        position: absolute;
-        right: 1rem;
-      }
+      display: block;
+      position: absolute;
+      right: 1rem;
     }
+  }
+
+  .form-text {
+    @extend .form-control;
   }
 }
 
