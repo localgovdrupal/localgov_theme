@@ -141,11 +141,15 @@
     font-weight: $font-bold;
   }
  
-  .button {
+  button {
     width: 100%;
     text-align: left;
     position: relative;
     font-size: $h5-font-size;
+
+    .fa-chevron-right {
+      display: none;
+    }
 
     &:after {
       @include rem(top, 6);
@@ -159,7 +163,8 @@
     }
   }
 
-  .form-text {
+  .form-text,
+  select {
     @extend .form-control;
   }
 }
