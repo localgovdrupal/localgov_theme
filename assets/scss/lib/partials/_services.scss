@@ -29,7 +29,10 @@
     &:hover,
     &:focus {
       .services--feature-title {
-        @extend .access-background;
+        background-color: $focus;
+        color: $link-hover-color;
+        text-decoration: none;
+        box-shadow: 0 0 0 0.125rem $focus;
       }
     }
   }

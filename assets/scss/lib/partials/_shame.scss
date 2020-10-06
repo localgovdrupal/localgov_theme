@@ -30,16 +30,6 @@ table {
   }
 }
 
-// // remove left hand border on google search results causing content to indent on hover
-// .gsc-webResult.gsc-result {
-//   border: none !important;
-
-//   &:hover,
-//   &:focus {
-//     border: none !important;
-//   }
-// }
-
 // iframe and video class to be dealt with later on
 iframe {
   &.video {
@@ -48,19 +38,6 @@ iframe {
     border: 0;
     margin: 2rem 0; // or equivalent bs spacer class
   }
-}
-
-// important:: fix form.io overriding this specific pseudo in the footer
-.fa-youtube-square:before {
-  content: $fa-youtube-square !important;
-}
-
-// Accessible link background highlights - extend class really needs redoing
-.access-background { 
-  background-color: $focus;
-  color: $secondary;
-  text-decoration: none;
-  box-shadow: 0 0 0 0.125rem $focus;
 }
 
 // This is a wrapper that appears on the service status page and needs to be 100% but may be used elsewhere
