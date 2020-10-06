@@ -21,6 +21,11 @@ jobs:
       - name: Create LocalGov Drupal project
         run: composer create-project --stability dev localgovdrupal/localgov-project html
 
+      - name: Setup package source for the test target
+        run: |
+          composer --working-dir=html config repositories.1 vcs git@github.com:${{ github.repository }}.git
+          composer global config github-oauth.github.com ${{ github.token }}
+
       - name: Extract Git branch name outside of a pull request
         if: github.event_name != 'pull_request'
         run: echo "::set-env name=GIT_BRANCH::${GITHUB_REF#refs/heads/}"
@@ -30,7 +35,7 @@ jobs:
         run: echo "::set-env name=GIT_BRANCH::${GITHUB_HEAD_REF}"
 
       - name: Grab test target
-        run: composer --working-dir=html require --prefer-source ${{ github.repository }}:"dev-${GIT_BRANCH} as dev-master"
+        run: composer --working-dir=html require ${{ github.repository }}:"dev-${GIT_BRANCH} as dev-master"
 
       - name: Start Docker environment
         run: docker-compose up -d
