@@ -7,7 +7,10 @@ a {
 
   &:hover,
   &:focus {
-    @extend .access-background;
+    background-color: $focus;
+    color: $link-hover-color;
+    text-decoration: none;
+    box-shadow: 0 0 0 0.125rem $focus;
 
     > img {
       @include outline(.1875rem, 0, $focus);
@@ -97,7 +100,10 @@ button.action-link {
     &:hover,
     &:focus {
       outline: none !important;
-      @extend .access-background;
+      background-color: $focus;
+      color: $link-hover-color;
+      text-decoration: none;
+      box-shadow: 0 0 0 0.125rem $focus;
 
       i {
         color: $secondary;
