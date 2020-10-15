@@ -25,6 +25,7 @@ header > p {
 
   img {
     min-width: 6.25rem;
+    max-height: 6.25rem;
 
     @include media-breakpoint-up(sm) {
       width: initial;
