@@ -6,7 +6,10 @@
     "type": "git",
     "url": "https://github.com/localgovdrupal/localgov_theme"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "NODE_ENV=production gulp dev",
+    "dev": "NODE_ENV=development gulp dev"
+  },
   "author": "",
   "license": "GPL-2.0",
   "dependencies": {
@@ -21,7 +24,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-changed": "^3.2.0",
     "gulp-clean": "^0.4.0",
@@ -34,6 +37,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-version-append": "^0.2.0",
     "npm-install-all": "^1.1.21",
@@ -42,5 +46,8 @@
     "ruby": "^0.6.1",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.6.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
