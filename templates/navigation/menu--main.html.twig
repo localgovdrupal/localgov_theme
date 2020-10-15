@@ -33,7 +33,7 @@
       {% set menu_classes = ['navbar-nav mr-auto ml-auto'] %}
       <ul{{ attributes.addClass(menu_classes) }}>
     {% else %}
-      <ul{{ attributes.addClass(['dropdown-menu', 'site-max', 'mt-2', 'px-3']) }}>
+      <ul{{ attributes.addClass(['dropdown-menu', 'site-max']) }}>
     {% endif %}
     {% for item in items %}
       {% set item_classes = ['nav-item'] %}

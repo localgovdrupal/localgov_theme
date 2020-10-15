@@ -45,15 +45,42 @@
 
 
 //Switch arrows
-.navbar-dark .navbar-nav .nav-link {
-  padding-top: .4375rem;
-  padding-bottom: .4375rem;
+.navbar-dark .navbar-nav {
+  .nav-link {
+    padding-top: .4375rem;
+    padding-bottom: .4375rem;
 
-  &:focus,
-  &:hover {
-    color: $secondary !important;
-    background-color: $white !important;
-    box-shadow: none !important;
+    &:focus,
+    &:hover {
+      color: $secondary;
+      background-color: $white;
+      box-shadow: none;
+    }
+
+    .fa-chevron-down {
+      transform: rotate( -360deg );
+      transition: transform 150ms ease;
+    }
+
+    &.show-outline,
+    &[aria-expanded="true"] {
+      color: $focus;
+      background-color: unset;
+      outline: 0.1875rem solid #a2e796 !important;
+      outline-offset: -0.1875rem;
+
+      .dropdown-icon {
+        &.fa-chevron-down {
+          transform: rotate( -180deg );
+          transition: transform 150ms ease;
+        }
+      }
+
+      &:hover {
+        background: transparent;
+        color: $focus;
+      }
+    }
   }
 
   .fa-chevron-down {
@@ -61,19 +88,43 @@
     transition: transform 150ms ease;
   }
 
-  &.show-outline {
-    color: $focus;
+  .dropdown-toggle:after {
+    content: '';
+    border: none;
+  }
+
+  // Dropdown navigation
+  .dropdown > .dropdown-menu {
+    background: $white;
+    padding: 0;
+
+    > .nav-item.dropdown-item {
+      padding: 0;
+    }
 
     .dropdown-icon {
       &.fa-chevron-down {
         transform: rotate(-180deg);
         transition: transform 150ms ease;
       }
+      &:hover,
+      &:focus {
+        background-color: inherit;
+      }
     }
 
-    &:hover {
-      background: transparent;
-      color: $focus;
+    .nav-link {
+      font-size: $font-size-med;
+      font-weight: $font-bold;
+      text-decoration: none;
+      @include rem(line-height, 28);
+      color: $link-color;
+
+      &:hover,
+      &:focus {
+        background-color: $focus;
+        color: $link-hover-color;
+      }
     }
   }
 }
