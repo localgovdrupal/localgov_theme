@@ -37,7 +37,7 @@ const sass = require('gulp-sass'), // Sass plugin for gulp See https://yarnpkg.c
 const postcssPlugins = [
   autoprefixer(),
   stylelint({ /* options see .stylelintrc */ }),
-  //reporter({ clearMessages: true }),
+  reporter({ clearReportedMessages: true, clearMessages: true }),
 ];
 
 /**
@@ -53,39 +53,6 @@ const postCSSnano = [
     }]
   })
 ];
-
-// Lint SASS.
-/* gulp.task('lint:sass', function () {
-  return gulp.src('')
-    .pipe(postcss(
-      [
-        stylelint({  }),
-        reporter({ clearMessages: true })
-      ],
-      { syntax: scss }
-  ));
-}); */
-
-// Compile SASS, autoprefix, minify and pipe CSS.
-/* gulp.task('sass', function () {
-
-  var onError = function (err) {
-    notify.onError({
-      title:    "Gulp",
-      subtitle: "Sass compiler error",
-      message:  "Error: <%= error.message %>",
-      sound: "Hero"
-    })(err);
-    this.emit('end');
-  };
-
-  return gulp.src('./')
-    .pipe(plumber({errorHandler: onError}))
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./assets/css/'))
-}); */
-
 
 /**
  *

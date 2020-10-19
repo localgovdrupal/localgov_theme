@@ -10,6 +10,7 @@
     "stylelint-scss"
   ],
   "rules": {
+    "block-closing-brace-newline-before": null,
     "block-no-empty": null,
     "color-no-invalid-hex": true,
     "selector-list-comma-newline-after": "always",
