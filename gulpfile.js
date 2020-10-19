@@ -5,9 +5,7 @@
  */
 
 // Scaffold requirements
-const gulp = require('gulp'), // This taskrunner,
-      rename = require('gulp-rename'), // Allows to rename files for destination See https://yarnpkg.com/package/gulp-rename
-      config = require('./config/gulpconfig.js'); // Import config
+const gulp = require('gulp'); // This taskrunner,
 
 // CSS requirements
 const sass = require('gulp-sass'), // Sass plugin for gulp See https://yarnpkg.com/package/gulp-sass
@@ -37,8 +35,9 @@ const sass = require('gulp-sass'), // Sass plugin for gulp See https://yarnpkg.c
  * PostCSS plugins and configuration mapped to gulpconfig.js
  */
 const postcssPlugins = [
-  stylelint({ /* options see .stylelintrc */ }),
   autoprefixer(),
+  stylelint({ /* options see .stylelintrc */ }),
+  //reporter({ clearMessages: true }),
 ];
 
 /**
@@ -48,9 +47,9 @@ const postCSSnano = [
   cssnano({
     preset: ['default', {
       discardComments: {
-        removeAll: config.css.cssnano.removeAllComments,
+        removeAll: true,
       },
-      reduceTransforms: config.css.cssnano.reduceTransforms,
+      reduceTransforms: false,
     }]
   })
 ];
@@ -115,14 +114,13 @@ function generateStyle() {
       .pipe(sassGlob())
       .pipe(sass())
       .on('error', sass.logError)
-      .pipe(rename('style.css')) // Rename the file to style.css
       .pipe(postcss(postcssPlugins)) // Run postCSS
       .pipe(postcss(postCSSnano)) // Run postCSS, CSSnano has to run last
       .pipe(sourcemaps.mapSources(function(sourcePath, file) {
         return '../source/' + sourcePath;
       }))
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('css/'))
+      .pipe(gulp.dest('assets/css/'))
   );
 }
 
@@ -132,7 +130,7 @@ function generateStyle() {
 function watchStyle() {
   return (
     gulp
-      .watch('./source/components/**/*.scss')
+      .watch('./assets/scss/**/*.scss')
       .on('change', generateStyle)
   );
 }

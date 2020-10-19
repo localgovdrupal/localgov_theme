@@ -5,6 +5,10 @@
     "assets/scss/lib/_variables.scss",
     "assets/scss/lib/vendor/*"
   ],
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     "block-no-empty": null,
     "color-no-invalid-hex": true,

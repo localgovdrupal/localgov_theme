@@ -13,4 +13,6 @@ Feature rich base theme for LocalGov Drupal sites.
 
 ## Usage
 
-...
+`lando npm run dev` for development build
+
+`lando npm run build` for production build
