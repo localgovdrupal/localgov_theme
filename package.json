@@ -8,7 +8,10 @@
   },
   "scripts": {
     "build": "NODE_ENV=production gulp dev",
-    "dev": "NODE_ENV=development gulp dev"
+    "dev": "NODE_ENV=development gulp dev",
+    "health-check": "mocha --file=tests/health-check.js",
+    "test": "echo \"\nTry running yarn health-check or yarn postinstall to run automated tests.\n\" && exit 0",
+    "postinstall": "mocha --file=tests/health-check.js"
   },
   "author": "",
   "license": "GPL-2.0",
@@ -22,7 +25,9 @@
     "> 2%"
   ],
   "devDependencies": {
+    "@jsdevtools/chai-exec": "^2.1.1",
     "browser-sync": "^2.26.7",
+    "chai": "^4.2.0",
     "cssnano": "^4.1.10",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
@@ -41,6 +46,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-version-append": "^0.2.0",
+    "mocha": "^8.2.0",
     "npm-install-all": "^1.1.21",
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.1.1",
