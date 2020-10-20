@@ -5,7 +5,12 @@
     "assets/scss/lib/_variables.scss",
     "assets/scss/lib/vendor/*"
   ],
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
+    "block-closing-brace-newline-before": null,
     "block-no-empty": null,
     "color-no-invalid-hex": true,
     "selector-list-comma-newline-after": "always",
