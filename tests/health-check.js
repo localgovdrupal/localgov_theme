@@ -2,11 +2,12 @@
 
 const chai = require('chai'),
       chaiExec = require("@jsdevtools/chai-exec"), // Allows us to assert CLI commands
-      assert = chai.assert;
+      assert = chai.assert,
+      expect = chai.expect;
 const fs = require('fs'), // Node file system
       { exec } = require("child_process"); // Node exec function that allows us to run other commands
 
-
+// Register @jsdevtools/chai-exec
 chai.use(chaiExec);
 
 /* Returns true or false depending if a directory exists or not */
@@ -128,16 +129,12 @@ describe('Health check: General theme structure', function () {
 
 describe('Health check: Gulp tasks', function () {
   describe('Testing NPM commands ', function () {
-    it('\'npm run dev\'', function(done) {
-      assert(exec('npm run dev'))
-      done()
-    });
+    it('\'npm run generate\'', function(done) {
+      this.timeout(15000);
+      let npm = chaiExec('npm run generate');
 
-    it('\'npm run build\'', function(done) {
-      let npm = chaiExec('npm run dev');
-
-      assert.stdout(npm, 'Finished \'generateStyle\'');
-      assert.notExitCode(npm, 1);
+      expect(npm).to.have.output.that.contains('Finished \'generateStyle\'');
+      assert.exitCode(npm, 0);
       done()
     });
   });
