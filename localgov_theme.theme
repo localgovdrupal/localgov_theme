@@ -49,6 +49,10 @@ function localgov_theme_preprocess_page(&$variables) {
   $variables['pageAttributes'] = new Attribute(['class' => 'page']);
   $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
 
+  // Site name and slogan.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+
   // Add Font Awesome library if the module isn't installed.
   $module_handler = \Drupal::service('module_handler');
   if (!$module_handler->moduleExists('fontawesome')) {
