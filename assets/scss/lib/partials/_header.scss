@@ -102,6 +102,7 @@ header > p {
   div {
     div {
       background: $white;
+      color: $body-color;
     }
   }
 }
@@ -109,6 +110,7 @@ header > p {
 .responsive-services {
   background: $white;
   height: 75vh;
+  color: $body-color;
   overflow: auto;
 
   &::-webkit-scrollbar {

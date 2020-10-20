@@ -26,14 +26,16 @@
         {{ page.primary_menu }}
       {% endif %}
 
-      <ul class="navbar-nav mr-auto ml-auto">
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>More</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>
-        </li>
-        <li class="d-block d-lg-none responsive-services my-2">
-          {{ page.secondary_menu }}
-        </li>
-      </ul>
+      {% if page.services_menu %}
+        <ul class="navbar-nav mr-auto ml-auto">
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>Services</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>
+          </li>
+          <li class="d-block d-lg-none responsive-services my-2 p-4">
+            {{ page.services_menu }}
+          </li>
+        </ul>
+      {% endif %}
 
       <div class="d-none d-lg-block">
         <div class="form-inline">
@@ -43,15 +45,14 @@
     </div>
   </nav>
 
-  <!-- Toggle Menu -->
-  <nav class="header--expand site-max header--toggle mt-2 px-3">
-    <div class="row">
-      <div class="col-md-12 p-4">
-      {{ page.primary_menu }}
+  {% if page.services_menu %}
+    <!-- Toggle Menu -->
+    <nav class="header--expand site-max header--toggle mt-2 px-3">
+      <div class="row">
+        <div class="col-md-12 p-4">
+          {{ page.services_menu }}
+        </div>
       </div>
-      <!-- uncomment if required // <div class="col-sm-4 p-4">
-      {{ page.secondary_menu }}
-      </div> -->
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
+{% endif %}

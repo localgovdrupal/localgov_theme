@@ -13,7 +13,7 @@ regions:
   search: "Search"
   mobile_search: "Mobile search"
   primary_menu: "Primary menu"
-  secondary_menu: "Secondary menu"
+  services_menu: "Services menu"
   banner: "Banner"
   breadcrumb: "Breadcrumb"
   messages: "Messages"
