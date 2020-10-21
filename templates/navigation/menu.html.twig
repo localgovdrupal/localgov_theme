@@ -30,7 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      {% set menu_classes = ['navbar-nav'] %}
+      {% set menu_classes = ['nav'] %}
       <ul{{ attributes.addClass(menu_classes) }}>
     {% else %}
       <ul{{ attributes.addClass(['dropdown-menu']) }}>
