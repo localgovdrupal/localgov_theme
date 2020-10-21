@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
+  DrupalUnitTests:
 
     runs-on: ubuntu-latest
 
@@ -43,3 +43,19 @@ jobs:
       - name: Run tests
         run: ./run-tests.sh
         shell: bash
+
+  MochaThemeTests:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 10.x, 12.x]
+
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run health-check

@@ -128,14 +128,77 @@ describe('Health check: General theme structure', function () {
 
 
 describe('Health check: Gulp tasks', function () {
+  /* Commands */
+  const npmGenerate = 'npm run generate';
+
+  /* File paths we will use */
+  const scssFile = './assets/scss/mocha-test-file.scss';
+  const cssFile = './assets/css/mocha-test-file.css';
+  const cssMapFile = './assets/css/mocha-test-file.css.map';
+
+  /* File strings we need */
+  const mochaScssString = `
+      $mocha-test-hidden-variable: #ccc;
+      $mocha-test-variable: bold;
+      .mocha-test-string {
+        font-weight: $mocha-test-variable;
+      }`;
+
   describe('Testing NPM commands ', function () {
+    this.timeout(15000);
+
     it('\'npm run generate\'', function(done) {
-      this.timeout(15000);
-      let npm = chaiExec('npm run generate');
+      let npm = chaiExec(npmGenerate);
 
       expect(npm).to.have.output.that.contains('Finished \'generateStyle\'');
       assert.exitCode(npm, 0);
       done()
+    });
+  });
+
+  describe('Testing SCSS file compilation ', function () {
+
+    it('Creating a new SCSS file and compiling it', function(done) {
+      this.timeout(20000);
+      fs.writeFile(scssFile, mochaScssString, function(err) {
+        return err ? console.log(err) : null;
+      });
+
+      try {
+        exec(npmGenerate, (err) => {
+          if (err) {
+            return;
+          }
+        });
+
+        assert(checkFileExists(cssFile));
+        done();
+      }
+      catch (e) {
+        done(e);
+      }
+      //done();
+    });
+
+    it('New CSS file exists with correct selectors', function(done) {
+
+      assert(checkFileExists(cssFile));
+      assert(fileContains(cssFile, 'mocha-test-string{font-weight:700}'));
+      assert(!fileContains(cssFile, '$mocha-test-hidden-variable'));
+      done();
+    });
+
+    it('CSS map file exists', function(done) {
+      assert(checkFileExists(cssMapFile));
+      done();
+    });
+
+    after(function() {
+      console.log('cleanup')
+      // runs once after the last test in this block
+      fs.unlinkSync(scssFile);
+      fs.unlinkSync(cssFile);
+      fs.unlinkSync(cssMapFile);
     });
   });
 });
