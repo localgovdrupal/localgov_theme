@@ -5,7 +5,7 @@ const chai = require('chai'),
       assert = chai.assert,
       expect = chai.expect;
 const fs = require('fs'), // Node file system
-      { exec } = require("child_process"); // Node exec function that allows us to run other commands
+      { exec, execSync } = require("child_process"); // Node exec function that allows us to run other commands
 
 // Register @jsdevtools/chai-exec
 chai.use(chaiExec);
@@ -38,6 +38,20 @@ function fileContains(file, text) {
   } catch (error) {
     return false
   }
+}
+
+/* Creates a file using the fs object */
+function writeToFile(file, text) {
+  fs.writeFile(file, text, function(error) {
+    if (error) {
+      return error;
+    }
+  });
+}
+
+
+function runCommand(command) {
+  execSync(command);
 }
 
 
@@ -158,31 +172,26 @@ describe('Health check: Gulp tasks', function () {
 
   describe('Testing SCSS file compilation ', function () {
 
-    it('Creating a new SCSS file and compiling it', function(done) {
-      this.timeout(20000);
-      fs.writeFile(scssFile, mochaScssString, function(error) {
-        if (error) {
-          return error;
-        } else {
-          try {
-            exec(npmGenerate, (err) => {
-              if(err) {return; }
-            });
-            //assert(checkFileExists(cssFile));
-            done();
-          }
-          catch(e) {
-            done(e);
-          }
-        }
-      });
-
-
-      //done();
+    before(function() {
+      writeToFile(scssFile, mochaScssString);
     });
 
-    it('New CSS file exists with correct selectors', function(done) {
 
+    it('Creating a new SCSS file', function(done) {
+      this.timeout(5000);
+
+      assert(checkFileExists(scssFile));
+      done();
+    });
+
+    it('Compile SCSS to CSS', async function(done) {
+      this.timeout(15000);
+
+      runCommand(npmGenerate);
+      done();
+    })
+
+    it('New CSS file exists with correct selectors', function(done) {
       assert(checkFileExists(cssFile));
       assert(fileContains(cssFile, 'mocha-test-string{font-weight:700}'));
       assert(!fileContains(cssFile, '$mocha-test-hidden-variable'));
@@ -195,8 +204,6 @@ describe('Health check: Gulp tasks', function () {
     });
 
     after(function() {
-      console.log('cleanup')
-      // runs once after the last test in this block
       fs.unlinkSync(scssFile);
       fs.unlinkSync(cssFile);
       fs.unlinkSync(cssMapFile);
