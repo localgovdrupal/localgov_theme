@@ -95,6 +95,7 @@ function localgov_theme_preprocess_menu(&$variables) {
   if ($variables['menu_name'] === 'about-this-website') {
     $variables['attributes']['class'] = ['footer-about'];
   }
+
 }
 
 /**
