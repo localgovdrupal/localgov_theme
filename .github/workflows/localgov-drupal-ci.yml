@@ -59,9 +59,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - run: npm install
-        shell: bash
-        working-directory: client
+          working-directory: client
 
       - run: npm run health-check
-        shell: bash
-        working-directory: client
+          working-directory: client
