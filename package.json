@@ -9,9 +9,8 @@
   "scripts": {
     "build": "NODE_ENV=production gulp dev",
     "dev": "NODE_ENV=development gulp dev",
-    "health-check": "mocha --file=tests/health-check.js",
-    "test": "echo \"\nTry running yarn health-check or yarn postinstall to run automated tests.\n\" && exit 0",
-    "postinstall": "mocha --file=tests/health-check.js",
+    "health-check": "mocha --file=tests/health-check.test.js",
+    "test": "mocha --file=tests/health-check.test.js",
     "generate": "NODE_ENV=production gulp generate"
   },
   "author": "",

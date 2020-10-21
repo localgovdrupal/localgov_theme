@@ -147,7 +147,7 @@ describe('Health check: Gulp tasks', function () {
   describe('Testing NPM commands ', function () {
     this.timeout(15000);
 
-    it('\'npm run generate\'', function(done) {
+    it(`${npmGenerate}`, function(done) {
       let npm = chaiExec(npmGenerate);
 
       expect(npm).to.have.output.that.contains('Finished \'generateStyle\'');
@@ -160,23 +160,24 @@ describe('Health check: Gulp tasks', function () {
 
     it('Creating a new SCSS file and compiling it', function(done) {
       this.timeout(20000);
-      fs.writeFile(scssFile, mochaScssString, function(err) {
-        return err ? console.log(err) : null;
+      fs.writeFile(scssFile, mochaScssString, function(error) {
+        if (error) {
+          return error;
+        } else {
+          try {
+            exec(npmGenerate, (err) => {
+              if(err) {return; }
+            });
+            //assert(checkFileExists(cssFile));
+            done();
+          }
+          catch(e) {
+            done(e);
+          }
+        }
       });
 
-      try {
-        exec(npmGenerate, (err) => {
-          if (err) {
-            return;
-          }
-        });
 
-        assert(checkFileExists(cssFile));
-        done();
-      }
-      catch (e) {
-        done(e);
-      }
       //done();
     });
 
