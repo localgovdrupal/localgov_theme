@@ -58,8 +58,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: npm install
-          working-directory: client
+      - name: Install Node dependencies
+        run: npm ci
 
       - run: npm run health-check
-          working-directory: client
