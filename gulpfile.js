@@ -5,7 +5,8 @@
  */
 
 // Scaffold requirements
-const gulp = require('gulp'); // This taskrunner,
+const gulp = require('gulp'), // This taskrunner,
+      { resolve } = require("path");
 
 // CSS requirements
 const sass = require('gulp-sass'), // Sass plugin for gulp See https://yarnpkg.com/package/gulp-sass
@@ -31,20 +32,21 @@ const sass = require('gulp-sass'), // Sass plugin for gulp See https://yarnpkg.c
  *
  */
 
+// Resolve our source sass folder dynamically
+const sourceSassFolder = resolve('./assets/scss/');
+
+
 /**
  * PostCSS plugins and configuration mapped to gulpconfig.js
  */
-const postcssPlugins = [
-  autoprefixer(),
+const postcssPluginsPreSass = [
   stylelint({ /* options see .stylelintrc */ }),
   reporter({ clearReportedMessages: true, clearMessages: true }),
 ];
 
-/**
- * CSSnano configuration mapped to gulpconfig.js
- */
-const postCSSnano = [
-  cssnano({
+const postcssPluginsPostSass = [
+  autoprefixer(),
+  cssnano({ // CSS Nano should always run last
     preset: ['default', {
       discardComments: {
         removeAll: true,
@@ -78,13 +80,13 @@ function generateStyle() {
     gulp
       .src('./assets/scss/**/*.scss', { base: './assets/scss' })
       .pipe(sourcemaps.init())
+      .pipe(postcss(postcssPluginsPreSass, {syntax: scss})) // Run postCSS before SASS
       .pipe(sassGlob())
       .pipe(sass())
       .on('error', sass.logError)
-      .pipe(postcss(postcssPlugins)) // Run postCSS
-      .pipe(postcss(postCSSnano)) // Run postCSS, CSSnano has to run last
+      .pipe(postcss(postcssPluginsPostSass, {syntax: scss})) // Run postCSS after SASS
       .pipe(sourcemaps.mapSources(function(sourcePath, file) {
-        return '../source/' + sourcePath;
+        return sourceSassFolder + '/' + sourcePath;
       }))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('assets/css/'))
