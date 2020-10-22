@@ -44,16 +44,32 @@
 }
 
 
-//Switch arrows
-.navbar-dark .navbar-nav .nav-link {
-  padding-top: .4375rem;
-  padding-bottom: .4375rem;
+// Navbar dropdown menu
+.navbar-dark .navbar-nav,
+.header--expand {
 
-  &:focus,
-  &:hover {
-    color: $secondary !important;
-    background-color: $white !important;
-    box-shadow: none !important;
+  .nav-link {
+    padding-top: .4375rem;
+    padding-bottom: .4375rem;
+
+    .fa-chevron-down {
+      transform: rotate( -360deg );
+      transition: transform 150ms ease;
+    }
+
+    &.show-outline,
+    &[aria-expanded="true"] {
+      background-color: unset;
+      outline: 0.1875rem solid #a2e796 !important;
+      outline-offset: -0.0875rem;
+
+      .dropdown-icon {
+        &.fa-chevron-down {
+          transform: rotate( -180deg );
+          transition: transform 150ms ease;
+        }
+      }
+    }
   }
 
   .fa-chevron-down {
@@ -61,19 +77,74 @@
     transition: transform 150ms ease;
   }
 
-  &.show-outline {
-    color: $focus;
+  .dropdown-toggle:after {
+    content: '';
+    border: none;
+  }
+
+  // Dropdown navigation
+  .dropdown > .dropdown-menu,
+  .responsive-services {
+    background: $white;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 0 0.125rem #a2e796;
+    transform: translateX(0.125rem);
+    min-width: 100%;
+
+    > .nav-item.dropdown-item {
+      padding: 0;
+    }
 
     .dropdown-icon {
       &.fa-chevron-down {
         transform: rotate(-180deg);
         transition: transform 150ms ease;
       }
+      &:hover,
+      &:focus {
+        background-color: inherit;
+      }
     }
 
+    .nav-link {
+      font-size: $font-size-med;
+      font-weight: $font-bold;
+      text-decoration: none;
+      @include rem(line-height, 28);
+      color: $link-color;
+
+      &:hover,
+      &:focus {
+        background-color: $focus;
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+// Top navbar dropdown colours
+.navbar-dark .navbar-nav {
+  .nav-link {
+
+    &:focus,
     &:hover {
-      background: transparent;
+      color: $secondary;
+      background-color: $white;
+      box-shadow: none;
+    }
+
+    &.show-outline,
+    &[aria-expanded="true"] {
       color: $focus;
+      background-color: unset;
+      outline-offset: -0.1875rem;
+
+      &:hover {
+        background: transparent;
+        color: $focus;
+      }
     }
   }
 }
