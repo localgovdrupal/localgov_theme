@@ -1,6 +1,7 @@
 .service-status-overview {
   header {
     margin: 2rem 0;
+
     @extend .key-under;
   }
 }
@@ -49,13 +50,15 @@
     .card-header {
       background: none;
       border: none;
+
       @include rem(padding, 25, 20);
 
       .status-accordion-header {
-        @include rem(font-size, 26);
         text-decoration: underline;
         display: inline;
         padding: 0;
+
+        @include rem(font-size, 26);
 
         &:hover,
         &:focus {
@@ -89,6 +92,7 @@
           right: 0;
           top: 0;
           color: $carbon;
+
           @include rem(font-size, 26);
         }
 
@@ -104,7 +108,6 @@
         }
       }
     }
-
   }
 
   .service-status-info,
@@ -113,6 +116,7 @@
     font-weight: $font-normal;
     color: $carbon;
     font-size: $font-size-base;
+
     @include rem(margin-top, 5);
 
     &:hover,
@@ -224,12 +228,12 @@
 
 @include media-breakpoint-up(md) {
   .tab-content {
-    @include rem (min-height, 600);
     border: 0.0625rem solid $gray-mid;
 
+    @include rem (min-height, 600);
   }
 
-  .service-status  {
+  .service-status {
     padding: inherit;
 
     .nav-tabs {
@@ -299,6 +303,7 @@
               top: 0;
               height: 100%;
               background: $white;
+
               @include rem(width, 5);
             }
           }
@@ -340,7 +345,6 @@
       }
     }
   }
-
 }
 
 .fade:not(.show) { // fix weird BS inherited fade in

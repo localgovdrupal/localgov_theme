@@ -1,5 +1,4 @@
 // Accessible links
-
 a {
   color: $link-color;
   text-decoration: underline;
@@ -16,7 +15,6 @@ a {
       @include outline(.1875rem, 0, $focus);
     }
   }
-
 }
 
 main a {
@@ -32,9 +30,10 @@ main a {
     font-weight: $fa-font-weight;
     display: inline; // inline prevents icon from wrapping to newline
     font-size: $font-size-ex-sm;
-    @include rem(padding-left, 5);
     // ie bug fix for removing before/after underline
     text-decoration: underline;
+
+    @include rem(padding-left, 5);
   }
 }
 
@@ -42,8 +41,9 @@ main a {
 /* Action Link */
 
 .action-link-container {
-  @include rem(margin, 30, 0, 40);
   font-size: $font-size-med;
+
+  @include rem(margin, 30, 0, 40);
 }
 
 .action-link {
@@ -56,15 +56,17 @@ main a {
     font-size: $font-size-lg;
     font-weight: $font-bold;
     display: inline-block;
-    @include rem(padding-right, 10);
     color: $primary;
+
+    @include rem(padding-right, 10);
   }
 
   span,
-  i  {
+  i {
     color: $tertiary;
-    @include rem(margin-right, 5);
     font-size: $font-size-ex-sm;
+
+    @include rem(margin-right, 5);
 
     &:hover,
     &:focus {
@@ -85,9 +87,10 @@ button.action-link {
     @include outline(.1875rem, -.1875rem, $focus);
   }
 
-  i  {
+  i {
     color: $tertiary;
     font-size: $font-size-ex-sm;
+
     @include rem(margin-right, 5);
 
     &:hover,
@@ -140,18 +143,20 @@ button.action-link {
 
 .skip-link {
   font-size: $font-size-sm;
+  display: inline-block;
+
   @include rem(line-height, 30);
   @include rem(padding-right, 5);
-  display: inline-block;
 }
 
 .skip-link i {
   float: left;
   display: inline-block;
-  @include rem(line-height, 30);
   font-size: $font-size-sm;
   color: $gray-dark;
   margin: 0 0.5rem 0 0.938rem;
+
+  @include rem(line-height, 30);
 }
 
 .visually-hidden {
@@ -204,8 +209,9 @@ button.action-link {
     content: $fa-arrow-up;
     font-weight: $fa-font-weight;
     display: inline-block; // inline-block prevents icon from wrapping to newline and removes erroneous underline
-    @include rem(padding-left, 5);
     color: $green;
+
+    @include rem(padding-left, 5);
   }
 }
 

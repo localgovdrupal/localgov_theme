@@ -12,7 +12,7 @@
   color: $purple !important;
 }
 
-// Theme colour backgrounds that must have white text 
+// Theme colour backgrounds that must have white text
 .bg-primary,
 .bg-success,
 .bg-info,
@@ -24,6 +24,7 @@
 .bg-purple,
 .bg-red,
 .bg-gray-dark,
-.bg-teal {
+.bg-teal,
+.bg-carbon {
   color: $white;
 }

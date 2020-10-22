@@ -58,6 +58,7 @@ header > p {
     font-size: $font-size-med;
     font-weight: $font-bold;
     text-decoration: none;
+
     @include rem(line-height, 28);
   }
 
@@ -84,8 +85,9 @@ header > p {
     font-weight: $font-bold;
     color: $secondary;
     font-size: $h3-font-size;
-    @include rem(line-height, 32);
     margin: 0;
+
+    @include rem(line-height, 32);
     @include rem(padding-bottom, 20);
   }
 
@@ -111,20 +113,23 @@ header > p {
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
+
     @include rem(width, 12);
   }
 
   &::-webkit-scrollbar-thumb {
-    @include rem(border-radius, 6);
     border: 0.125rem solid $white;
-    background-color: rgba(0,0,0,.5);
-    box-shadow: 0 0 0.063rem rgba(255,255,255,.5);
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0.063rem rgba(255, 255, 255, .5);
+
+    @include rem(border-radius, 6);
   }
 
   .services-title {
     font-weight: $font-bold;
     color: $secondary;
     margin: 0;
+
     @include rem(padding, 10);
   }
 

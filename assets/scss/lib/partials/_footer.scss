@@ -45,6 +45,7 @@ footer {
 
     li {
       display: inline-block;
+
       @include rem(margin-right, 10);
 
       a {
@@ -55,8 +56,9 @@ footer {
 
         i {
           display: block;
-          @include rem(font-size, 35);
           line-height: 0.9;
+
+          @include rem(font-size, 35);
         }
 
         &:hover,

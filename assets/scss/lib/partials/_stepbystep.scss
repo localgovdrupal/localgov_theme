@@ -13,7 +13,6 @@
   .key-under {
     margin-bottom: 1.4rem;
   }
-
 }
 
 // Links used to navigate between steps
@@ -27,9 +26,22 @@ ul.step-list {
     display: inline-block;
     margin-bottom: 0.5rem;
 
+    .btn {
+      margin: 0;
+      position: relative;
+      text-decoration: none;
+
+      span {
+        position: absolute;
+
+        @include rem (top, 11);
+      }
+    }
+
     &.step--prev {
       .btn {
         text-align: left;
+
         @include rem(padding-left, 34);
 
         span {
@@ -41,22 +53,12 @@ ul.step-list {
     &.step--next {
       .btn {
         text-align: right;
+
         @include rem(padding-right, 34);
 
         span {
           @include rem(right, 7);
         }
-      }
-    }
-
-    .btn {
-      margin: 0;
-      position: relative;
-      text-decoration: none;
-
-      span {
-        position: absolute;
-        @include rem (top, 11);
       }
     }
 
@@ -146,6 +148,7 @@ ul.step-list {
         text-align: center;
         line-height: 1.55rem;
         font-weight: $font-bold;
+
         @include border(2, solid, $gray);
       }
 
@@ -157,9 +160,10 @@ ul.step-list {
         width: .0625rem;
         height: calc(100% - 1rem);
         background-color: $white;
-        @include border(1, solid, $gray);
         transition: all .4s;
         color: $secondary;
+
+        @include border(1, solid, $gray);
       }
 
       .step__title {
@@ -198,8 +202,9 @@ ul.step-list {
       &.step--active {
         &:before {
           background-color: $primary;
-          @include border(2, solid, $primary);
           color: $white;
+
+          @include border(2, solid, $primary);
         }
 
         &:not(:last-of-type):after {
@@ -207,7 +212,6 @@ ul.step-list {
         }
 
         .step__title {
-
           color: $primary;
 
           a {
@@ -259,9 +263,10 @@ ul.step-list {
 main {
   .step-by-step-pages {
     .summaries-control {
+      text-align: right;
+
       @include borderdirection(bottom, 1, solid, $gray);
       @include rem(padding-bottom, 15);
-      text-align: right;
 
       i {
         &:before {
@@ -288,7 +293,6 @@ main {
             @include rem(font-size, 22);
             @include rem(line-height, 30.4);
           }
-
         }
 
         &:not(:last-of-type):after {
@@ -305,9 +309,10 @@ main {
           padding: 1rem 0;
 
           a {
-            @include rem(font-size, 26);
             font-weight: $font-bold !important;
             margin: 0.4rem 0;
+
+            @include rem(font-size, 26);
 
             @include media-breakpoint-up(sm) {
               @include rem(font-size, 28);
@@ -318,8 +323,9 @@ main {
             }
 
             &.step-show {
-              @include rem(font-size, 16);
               font-weight: $font-thin !important;
+
+              @include rem(font-size, 16);
 
               @include media-breakpoint-up(sm) {
                 @include rem(font-size, 17);
