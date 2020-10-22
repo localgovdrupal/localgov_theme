@@ -1,4 +1,4 @@
-# LocalGov Drupal Theme
+# LocalGov Drupal Theme - Starter Kit
 
 Feature rich base theme for LocalGov Drupal sites.
 
@@ -9,7 +9,13 @@ Feature rich base theme for LocalGov Drupal sites.
 
 ## Setup
 
-....
+Copy this folder 'localgov_theme_starterkit' into the 'themes/contrib' folder so it appears in the same folder as 'localgov_theme'.
+
+Rename the starterkit to suit your requirements. I.E. 'localgov_theme_YOUR-COUNCIL-NAME'
+
+Via the command line cd into the folder 'localgov_theme_YOUR-COUNCIL-NAME'
+
+Run 'npm install' to install dependencies
 
 ## Usage
 
