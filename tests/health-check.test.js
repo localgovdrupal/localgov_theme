@@ -5,7 +5,7 @@ const chai = require('chai'),
       assert = chai.assert,
       expect = chai.expect;
 const fs = require('fs'), // Node file system
-      { exec, execSync } = require("child_process"); // Node exec function that allows us to run other commands
+      { execSync } = require("child_process"); // Node exec function that allows us to run other commands
 
 // Register @jsdevtools/chai-exec
 chai.use(chaiExec);
@@ -45,6 +45,11 @@ function writeToFile(file, text) {
 /* Runs a command synchronously using execSync */
 function runCommand(command) {
   execSync(command);
+}
+
+/* Removes a file using fs.unlinkSync */
+function removeFile(file) {
+  fs.unlinkSync(file);
 }
 
 
@@ -197,9 +202,9 @@ describe('Health check: Gulp tasks', function () {
     });
 
     after(function() {
-      fs.unlinkSync(scssFile);
-      fs.unlinkSync(cssFile);
-      fs.unlinkSync(cssMapFile);
+      removeFile(scssFile);
+      removeFile(cssFile);
+      removeFile(cssMapFile);
     });
   });
 });
