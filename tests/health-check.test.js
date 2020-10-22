@@ -13,9 +13,7 @@ chai.use(chaiExec);
 /* Returns true or false depending if a directory exists or not */
 function checkDirectoryExists(directory) {
   try {
-    if (fs.existsSync(directory)) {
-      return true
-    }
+    return fs.existsSync(directory)
   } catch(err) {
     return false
   }
@@ -29,12 +27,7 @@ function checkFileExists(file) {
 /* Returns true if a file contains string */
 function fileContains(file, text) {
   try {
-    const data = fs.readFileSync(file, {encoding: 'utf8'})
-    if(data.includes(text)) {
-      return true
-    } else {
-      return false
-    }
+    return fs.readFileSync(file, {encoding: 'utf8'}).includes(text)
   } catch (error) {
     return false
   }
@@ -49,7 +42,7 @@ function writeToFile(file, text) {
   });
 }
 
-
+/* Runs a command synchronously using execSync */
 function runCommand(command) {
   execSync(command);
 }
