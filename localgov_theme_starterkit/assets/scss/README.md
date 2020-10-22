@@ -27,7 +27,7 @@ Not all files have to be partials, if a piece of CSS is uncommon, or part of the
 Dist Process :
 
 * Run `gulp dev`
-* The build will aggregate partials into `dist/assets/css/lib/main.css`.
+* The build will aggregate partials into `assets/css/lib/main.css`.
 * Sass Lint will run on build - giving you useful pointers in your console.
 
 ## Sass Lint
