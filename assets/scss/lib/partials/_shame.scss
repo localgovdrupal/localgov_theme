@@ -1,7 +1,7 @@
 // Shame file - home for hacks, rule breakers and overrides for BS
 
-// Apply BS '.table' class to all tables. This is here because 
-// we cant yet guarantee a table added as content will have a class 
+// Apply BS '.table' class to all tables. This is here because
+// we cant yet guarantee a table added as content will have a class
 // of '.table'
 
 table {
@@ -9,9 +9,9 @@ table {
 }
 
 // The BS '.img-fluid' class alone doesnt set an image to go oversized when responding
-.img-fluid { 
+.img-fluid {
   width: 100%;
-  
+
   @include media-breakpoint-up(md) {
     max-width: 100%;
   }
@@ -50,4 +50,4 @@ iframe {
   -webkit-transition: none;
   transition: none;
   display: none;
-} 
+}

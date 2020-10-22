@@ -1,12 +1,14 @@
 .directory-result {
+  border-bottom: 0.063rem solid $gray-primary;
+
   @include rem(padding-bottom, 4);
   @include rem(margin-bottom, 25);
   @include rem(margin-top, 16);
-  border-bottom: 0.063rem solid $gray-primary;
 
   h2 {
     font-weight: $font-bold;
     font-size: $font-size-ex-med;
+
     @include rem(margin, 0, 0, 14, 0);
     @include rem(line-height, 24);
   }
@@ -18,10 +20,12 @@
   ul {
     list-style: none;
     padding: 0;
+
     @include rem(margin, 12, 0);
 
     li {
       font-size: $font-size-med;
+
       @include rem(line-height, 34);
     }
   }
@@ -36,6 +40,7 @@
 .directory-map-results {
   margin-bottom: 0;
   font-size: $font-size-ex-med;
+
   @include rem(line-height, 28);
 
   [class*='col-'] {
@@ -49,13 +54,15 @@
 
   label {
     font-size: $font-size-med;
+
     @include rem(margin-right, 8);
   }
 
   select {
-    @include rem(border-radius, 4);
     border: 0.063rem solid $gray;
     font-size: $font-size-lg;
+
+    @include rem(border-radius, 4);
     @include rem(width, 197);
     @include rem(padding, 7);
   }
@@ -63,6 +70,7 @@
   .fas,
   .far {
     color: $secondary;
+
     @include rem(padding-right, 5);
   }
 
@@ -98,11 +106,12 @@
 }
 
 .directories-map {
+  border-top: 0.063rem solid $gray;
+  display: block;
+
   @include rem(margin-bottom, 40);
   @include rem(padding-top, 18);
   @include rem(margin-top, 12);
-  border-top: 0.063rem solid $gray;
-  display: block;
 }
 
 /* Directory Listing */
@@ -120,6 +129,7 @@
 .contact-list {
   padding-left: 0;
   list-style: none;
+
   @include rem(margin, 26, 0);
 
   li {
@@ -134,13 +144,14 @@
 
 .views-exposed-form {
   background-color: $gray-tint;
+
   @include rem(padding, 20);
 
   label {
     font-size: $h4-font-size;
     font-weight: $font-bold;
   }
- 
+
   button {
     width: 100%;
     text-align: left;
@@ -152,7 +163,6 @@
     }
 
     &:after {
-      @include rem(top, 6);
       font-family: $font-family-icons;
       font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
       content: $fa-search;
@@ -160,6 +170,8 @@
       display: block;
       position: absolute;
       right: 1rem;
+
+      @include rem(top, 6);
     }
   }
 
@@ -171,6 +183,7 @@
 
 .filter-wrapper {
   background: $indigo-tint;
+
   @include rem(padding, 10);
 
   legend {
@@ -180,6 +193,7 @@
 
 .fieldset-wrapper {
   background: $white;
+
   @include rem(padding, 10);
 }
 
@@ -188,7 +202,7 @@
 }
 
 .form-checkboxes {
-  > DIV {
+  > div {
     position: relative;
   }
 
@@ -205,9 +219,10 @@
   label {
     width: 100%;
     display: inline-block;
+    max-width: 100%;
+
     @include rem(margin-bottom, 5);
     @include rem(padding-left, 30);
-    max-width: 100%;
 
     > span {
       display: inline-block;
@@ -226,12 +241,8 @@
     &:before {
       content: '';
       position: absolute;
-      @include rem(top, 3);
       left: 0;
       display: inline-block;
-      @include rem(height, 18);
-      @include rem(width, 18);
-      @include rem(font-size, 15);
       font-family: $font-family-icons;
       font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
       -webkit-font-smoothing: antialiased;
@@ -241,6 +252,11 @@
       line-height: 1.3;
       text-align: center;
       border: 0.0625rem solid $gray-tint;
+
+      @include rem(top, 3);
+      @include rem(height, 18);
+      @include rem(width, 18);
+      @include rem(font-size, 15);
     }
   }
 }
@@ -262,7 +278,6 @@
 
     form {
       margin-top: 0;
-      margin-top: 0;
       display: block;
     }
 
@@ -283,12 +298,12 @@
 
       li {
         display: inline-block;
+
         @include rem(padding, 10);
 
         a {
           color: $blue;
         }
-
 
         &.is-active {
           a {
@@ -305,6 +320,7 @@
 .directories-hide-filters .show-filters {
   background: none;
   border: none;
-  @include rem(font-size, 16);
   color: $blue;
+
+  @include rem(font-size, 16);
 }

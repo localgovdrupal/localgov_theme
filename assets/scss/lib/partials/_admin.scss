@@ -55,6 +55,7 @@ body.logged-in {
   position: fixed;
   z-index: 2;
   width: 100%;
+
   @include rem(top, 79);
 
   &--inner {

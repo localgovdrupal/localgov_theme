@@ -1,14 +1,15 @@
 // Base style for call out paragraphs / advanced callout div container
 .callout {
   text-align: center;
-  @include rem(padding, 19);
   font-weight: $font-bold;
   font-size: $font-size-ex-med;
+
+  @include rem(padding, 19);
 
   @include media-breakpoint-up(md) {
     font-size: $font-size-ex-ex-lg;
   }
-  
+
   a {
     font-weight: $font-bold !important;
 

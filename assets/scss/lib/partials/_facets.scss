@@ -15,6 +15,7 @@ h2.facet-filter-header {
   font-size: $font-size-ex-lg;
   font-weight: $font-bold;
   margin: 0;
+
   @include rem(line-height, 50);
 }
 
@@ -31,6 +32,7 @@ h2.facet-filter-header {
 #edit-field-accessibility--wrapper h3 span {
   color: $black;
   font-size: $font-size-lg;
+
   @include rem(padding-left, 5);
   @include rem(width, 20);
   @include rem(margin-right, 10);
@@ -50,7 +52,6 @@ h2.facet-filter-header {
 .facet-filter .checkbox-wrapper,
 #edit-field-accessibility--wrapper .checkbox-wrapper {
   display: none;
-
 }
 
 .facet-filter .checkbox-wrapper.open,
@@ -67,13 +68,15 @@ h2.facet-filter-header {
   list-style: none;
   font-size: $font-size-med;
   background-color: $white;
+
   @include rem(padding, 0, 12);
 }
 
 .facet-filter-checkboxes li {
   border-bottom: 0.063rem solid $indigo-tint;
-  @include rem(padding-top, 5);
   position: relative;
+
+  @include rem(padding-top, 5);
 }
 
 .facet-filter-checkboxes li:last-child {
@@ -81,22 +84,19 @@ h2.facet-filter-header {
 }
 
 .facet-filter-checkboxes label {
-  @include rem(padding-left, 30);
-  @include rem(margin-bottom, 5);
   display: inline-block;
   max-width: 100%;
   font-weight: $font-bold;
   font-size: $font-size-lg;
+
+  @include rem(padding-left, 30);
+  @include rem(margin-bottom, 5);
 }
 
 .facet-filter-checkboxes label:before {
   content: '';
-  @include rem(width, 18);
-  @include rem(height, 18);
   border: 0.063rem solid $indigo-tint;
-  display: block;
   position: absolute;
-  @include rem(top, 10);
   left: 0;
   font-family: $font-family-icons;
   -webkit-font-smoothing: antialiased;
@@ -104,34 +104,41 @@ h2.facet-filter-header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  @include rem(line-height, 21);
   text-align: center;
   font-size: $font-size-sm;
+
+  @include rem(width, 18);
+  @include rem(height, 18);
+  @include rem(line-height, 21);
+  @include rem(top, 10);
 }
 
 .facet-filter-checkboxes input[type=checkbox] {
-  @include rem(width, 20);
-  @include rem(height, 20);
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
+
+  @include rem(width, 20);
+  @include rem(height, 20);
 }
 
 .facet-filter-checkboxes input[type=checkbox]:checked ~ label:before {
   content: $fa-check;
-  @include rem(width, 20);
-  @include rem(height, 20);
   border: 0.063rem solid $green;
   color: $green;
   display: block;
   position: absolute;
-  @include rem(top, 10);
   left: 0;
+
+  @include rem(width, 20);
+  @include rem(height, 20);
+  @include rem(top, 10);
 }
 
 .directories-hide-filters {
   font-size: $font-size-ex-med;
+
   @include rem(margin-top, 15);
   @include rem(line-height, 28);
 }
@@ -144,6 +151,7 @@ h2.facet-filter-header {
 .directories-hide-filters .fas,
 .directories-hide-map .fas {
   color: $secondary;
+
   @include rem(padding-right, 5);
 }
 
@@ -176,6 +184,7 @@ h2.facet-filter-header {
     list-style-type: none;
     padding: 0;
     margin: 0;
+
     @include rem(padding, 16);
 
     > ul {
