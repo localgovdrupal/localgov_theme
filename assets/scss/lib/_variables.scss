@@ -154,9 +154,14 @@ $accordion-background-highlight: $blue;
 
 $skip-main: $primary;
 
-$campaign-header: $white;
+// Campaigns
 
+$campaign-header: $white;
+$campaign-jumbotron: $blue-tint;
 $section-nav-background: $indigo;
+$calloutbg: $blue-tint;
+$socialdefault: $blue;
+$linkblock: $blue;
 
 //STANDARD BUTTONS
 $input-btn-padding-y: .5rem; //8px
@@ -177,6 +182,10 @@ $input-btn-font-size-lg: 1.375rem; //22px
 $input-btn-line-height-lg: 1.5; //10px
 
 $button-icons: $yellow;
+
+$button: $primary;
+$button-text: $white;
+$button-text-focus: $carbon;
 
 $link-button: $primary;
 $link-button-text: $white;

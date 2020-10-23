@@ -56,9 +56,9 @@ footer {
 
         i {
           display: block;
-          line-height: 0.9;
 
-          @include rem(font-size, 35);
+          @include rem(line-height, 26);
+          @include rem(padding-top, 3);
         }
 
         &:hover,
