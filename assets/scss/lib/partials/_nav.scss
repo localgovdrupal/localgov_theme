@@ -118,8 +118,8 @@
 
       &:hover,
       &:focus {
-        color: $secondary;
-        background-color: $white;
+        color: $focus;
+        background-color: $link-hover-color;
         box-shadow: none;
       }
 
