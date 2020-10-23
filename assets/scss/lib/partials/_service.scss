@@ -265,3 +265,11 @@
   @include rem(padding-top, 0);
   @include rem(padding-bottom, 0);
 }
+
+.block-system-main-block {
+  .node--type-localgov-services-sublanding {
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
