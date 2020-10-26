@@ -72,8 +72,9 @@ header > p {
     list-style-type: none;
     height: 100%;
     color: $secondary;
-    @include rem(margin, 0, -20);
     padding: 0;
+
+    @include rem(margin, 0, -20);
   }
 
   .services-list--multi,
@@ -146,15 +147,17 @@ header > p {
   ul.nav {
     flex-direction: column;
     padding: 0 0 0 1rem;
-    @include rem(margin, 0, -20);
     color: $secondary;
     list-style-type: none;
+
+    @include rem(margin, 0, -20);
 
     li {
       padding: 0.4rem;
 
       a.nav-link {
         font-size: $font-size-med;
+
         @include rem(padding-left, 20);
         @include rem(padding-right, 20);
       }
