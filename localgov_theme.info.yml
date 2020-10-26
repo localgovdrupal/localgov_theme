@@ -8,6 +8,11 @@ base theme: localgov_skeleton
 libraries:
   - localgov_theme/global
 
+# Stylesheets specifically for CK editor iframes
+ckeditor_stylesheets:
+  - assets/css/font-face.css
+  - assets/css/lib/ck_style.css
+
 regions:
   header: "Header"
   search: "Search"
