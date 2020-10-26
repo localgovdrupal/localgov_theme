@@ -132,8 +132,14 @@ const dev = gulp.series(
   gulp.parallel(browserSyncStart, watchStyle, serve)
 );
 
+/** Generates style without any listeners or browserSync */
+const generate = gulp.series(
+  generateStyle,
+);
+
 // Expose the task by exporting it, this allows you to run it from the commandline
 exports.dev = dev;
+exports.generate = generate;
 
 
 /*
