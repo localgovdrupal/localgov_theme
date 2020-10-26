@@ -29,4 +29,8 @@ regions:
   sidebar_second: "Sidebar second"
   footer_first: "Footer first"
   footer_second: "Footer second"
+  footer_third: "Footer third"
+  lower_footer_first: "Lower footer first"
+  lower_footer_second: "Lower footer second"
+  lower_footer_third: "Lower footer third"
   disabled: "Disabled"

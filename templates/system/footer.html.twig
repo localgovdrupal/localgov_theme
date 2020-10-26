@@ -1,120 +1,54 @@
 <!-- FOOTER -->
 <footer>
-  {% if page.footer %}
-  {{ page.footer }}
+
+  {% if page.footer_first or page.footer_second or page.footer_third %}
+    <!-- Start upper footer row wrapper -->
+    <div class="container-fluid bg-gray-dark footer-top">
+      <div class="row site-max">
+        {% if page.footer_first %}
+          <div class="col-md-4 px-0 px-md-3">
+            {{ page.footer_first }}
+          </div>
+        {% endif %}
+
+        {% if page.footer_second %}
+          <div class="col-md-4 px-0 px-md-3">
+            {{ page.footer_second }}
+          </div>
+        {% endif %}
+
+        {% if page.footer_third %}
+          <div class="col-md-4 px-0 px-md-3">
+            {{ page.footer_third }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
   {% endif %}
 
-  <!-- Start footer top row wrapper -->
-  <div class="container-fluid bg-gray-dark footer-top">
-    <div class="row site-max">
-      <div class="col-md-4 px-0 px-md-3">
-        <section>
-          <h2>Contact us</h2>
-          <ul class="iconlist">
-            <li>
-              <p>Fastest way to get help is online</p>
-            </li>
-            <li class="mb-2">
-              <i class="fas fa-envelope fa-fw" aria-hidden="true"></i>
-              <a href="#">Send us a message</a>
-            </li>
-            <li>
-              <i class="fas fa-laptop fa-fw" aria-hidden="true"></i>
-              <a href="#">Other ways to contact us</a>
-            </li>
-          </ul>
-          
-          <ul class="socials">
-            <li>
-              <a href="#">
-              <i class="fab fa-twitter-square" aria-hidden="true"></i>
-              <span class="visually-hidden">Follow us on Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-              <i class="fab fa-facebook-square" aria-hidden="true"></i>
-              <span class="visually-hidden">Follow us on Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-              <i class="fab fa-flickr" aria-hidden="true"></i>
-              <span class="visually-hidden">Follow us on Flickr</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-              <i class="fab fa-youtube-square" aria-hidden="true"></i>
-              <span class="visually-hidden">Follow us on Youtube</span>
-              </a>
-            </li>
-          </ul>
-
-        </section>
-      </div>
-      <div class="col-md-4 px-0 px-md-3">
-        <section>
-          <h2>Visit us</h2>
-          <ul class="iconlist">
-            <li>
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-              <span class="flex-break">
-                <strong>LocalGov</strong>
-                <span class="flex-break">Anywhere House</span>
-                <span class="flex-break">Anywhere Street</span>
-                <span class="flex-break">Anywhere</span>
-                <span class="flex-break">AN33 WHE</span>
-              </span>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div class="col-md-4 px-0 px-md-3">
-        <section>
-          <h2>Accessibility and feedback</h2>
-          <p>We are committed to making our website accessible to all visitors.</p>
-          <p>Read our <a href="#">accessibility statement</a> or <a href="#">give feedback</a></p>
-        </section>
+  <!-- Start lower footer row wrapper -->
+  <div class="navbar-light bg-light">
+    <div class="container-fluid site-max">
+      <div class="row justify-content-between">
+        {% if page.lower_footer_first %}
+          <div class="col-12 col-lg-3 d-flex justify-content-start align-items-center">
+            {{ page.lower_footer_first }}
+          </div>
+        {% endif %}
+        {% if page.lower_footer_second %}
+          <div class="col-12 col-lg-6 d-flex justify-content-start align-items-center">
+            {{ page.lower_footer_second }}
+          </div>
+        {% endif %}
+        <div class="col-12 col-md-3 pt-3 pb-3 ml-auto mr-0 copyright d-flex justify-content-start justify-content-lg-end align-items-center">
+          {% if page.lower_footer_third %}
+            {{ page.lower_footer_third }}
+          {% else %}
+            <p>&copy; {{ site_name }} {{ "now"|date("Y") }}</p>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
-  <!-- End footer top row wrapper -->
+
 </footer>
-
-<nav class="navbar-light bg-light">
-  <div class="container-fluid site-max">
-    <div class="row">
-      <div class="col-12 col-lg-3 d-flex justify-content-start align-items-center">
-        <a class="navbar-brand pt-3 pb-3" href="/" title="Go to LocalGov Homepage"><img class="img-fluid" src="https://place-hold.it/140x60&fontsize=16" alt="LocalGov Footer Logo" /></a>
-      </div>
-      <div class="col-12 col-lg-6 d-flex justify-content-start align-items-center">
-        <nav aria-label="Footer Navigation">
-          <ul class="d-inline-block d-md-flex flex-wrap flex-md-nowrap list-unstyled mb-0">
-            <li class="mr-4 mb-1 mb-sm-0">
-              <a href="#">Option 1</a>
-            </li>
-            <li class="mr-4 mb-1 mb-sm-0">
-              <a href="#">Option 2</a>
-            </li>
-            <li class="mr-4 mb-1 mb-sm-0">
-              <a href="#">Option 3</a>
-            </li>
-            <li class="mr-4 mb-1 mb-sm-0">
-              <a href="#">Option 4</a>
-            </li>
-            <li class="mr-4 mb-1 mb-sm-0">
-              <a href="#">Option 5</a>
-            </li>
-            <li class="mr-4 mb-1 mb-sm-0">
-              <a href="#">Option 6</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="col-12 col-md-3 pt-3 pb-3 copyright d-flex justify-content-start justify-content-lg-end align-items-center">
-        <p>&copy; LocalGov {{ "now"|date("Y") }}</p>
-      </div>
-    </div>
-  </div>
-</nav>
