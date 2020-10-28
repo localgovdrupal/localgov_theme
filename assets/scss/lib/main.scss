@@ -1,13 +1,4 @@
-/*-------------------------------------------*\
-	Main.scss - This file imports all sass components
-	To customise this theme, duplicate the 'partials/_variables.scss' file
-	rename it to '_variables-REPLACEWITHYOURCOUNCILNAME' remove all references
-	to '!default' and include it first .. ABOVE '@import 'variables''
-\*-------------------------------------------*/
-
-// Import council theme settings
-@import 'theme'; // replace with '_variables-REPLACEWITHYOURCOUNCILNAME'
-
+// Main.scss - This file imports all sass components
 
 // Functions
 @import 'functions';
@@ -15,15 +6,11 @@
 // Mixins
 @import 'mixins';
 
-// Placeholders
-@import 'placeholders';
-
 // Import Bootstrap css
 // Required
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/mixins';
 @import '../../../node_modules/bootstrap/scss/variables';
-
 @import 'variables';
 
 // Optional

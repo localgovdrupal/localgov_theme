@@ -30,18 +30,30 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-<ul{{ attributes }}>
-  {% else %}
-  <ul>
+      {% set menu_classes = ['nav'] %}
+      <ul{{ attributes.addClass(menu_classes) }}>
+    {% else %}
+      <ul{{ attributes.addClass(['dropdown-menu']) }}>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes }}>
-        {{ link(item.title, item.url) }}
+      {% set item_classes = ['nav-item'] %}
+      {% if item.below %}
+        {% set item_classes = item_classes|merge(['dropdown']) %}
+      {% endif %}
+      {% if menu_level > 0 %}
+        {% set item_classes = item_classes|merge(['dropdown-item']) %}
+      {% endif %}
+      <li{{ item.attributes.addClass(item_classes) }}>
         {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% set dropdown_id = 'menu-' ~ item.title|clean_id %}
+          <a class="nav-link dropdown-toggle" href="#" id="{{ dropdown_id }}" data-toggle="dropdown" role="button"><span>{{ item.title }}</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>
+          {% set child_menu_attributes = create_attribute().setAttribute('aria-labelledby', dropdown_id) %}
+          {{ menus.menu_links(item.below, child_menu_attributes, menu_level + 1) }}
+        {% else %}
+          {{ link(item.title, item.url, { 'class':['nav-link']}) }}
         {% endif %}
       </li>
     {% endfor %}
   </ul>
   {% endif %}
-  {% endmacro %}
+{% endmacro %}

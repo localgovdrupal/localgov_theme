@@ -23,10 +23,11 @@
     background: $alert-bar-minor;
   }
 
-  DIV > DIV {
-    > DIV {
+  div > div {
+    > div {
       p {
         position: relative;
+
         @include rem(padding-left, 40);
 
         &:before {
@@ -38,6 +39,7 @@
           content: $fa-exclaim;
           margin: 0;
           padding: 0;
+
           @include rem(top, -11);
         }
       }
@@ -80,8 +82,7 @@
 .alert-primary,
 .alert-danger,
 .alert-fail,
-.alert-warning
- {
+.alert-warning {
   &:before {
     font-family: $font-family-icons;
     font-weight: $fa-font-weight; // some font awesome icons require a specific font weight

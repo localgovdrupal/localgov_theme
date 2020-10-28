@@ -1,65 +1,147 @@
-var gulp = require('gulp');
-var clean = require('gulp-clean');
-var autoprefixer = require('gulp-autoprefixer');
-var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var reporter = require('postcss-reporter');
-var stylelint = require('stylelint');
-var scss = require("postcss-scss");
-var browser_sync = require('browser-sync').create();
+'use strict';
 
-// Lint SASS.
-gulp.task('lint:sass', function () {
-  return gulp.src('./assets/scss/**/*.scss')
-    .pipe(postcss(
-      [
-        stylelint({ /* options see .stylelintrc */ }),
-        reporter({ clearMessages: true })
-      ],
-      { syntax: scss }
-  ));
-});
+/**
+ * gulpfile.js requirements
+ */
 
-// Compile SASS, autoprefix, minify and pipe CSS.
-gulp.task('sass', function () {
+// Scaffold requirements
+const gulp = require('gulp'), // This taskrunner,
+      { resolve } = require("path");
 
-  var onError = function (err) {
-    notify.onError({
-      title:    "Gulp",
-      subtitle: "Sass compiler error",
-      message:  "Error: <%= error.message %>",
-      sound: "Hero"
-    })(err);
-    this.emit('end');
-  };
+// CSS requirements
+const sass = require('gulp-sass'), // Sass plugin for gulp See https://yarnpkg.com/package/gulp-sass
+      sassGlob = require('gulp-sass-glob'), // Allows the import of patterns through '/**/*.scss' See https://yarnpkg.com/package/gulp-sass-glob
+      postcss = require('gulp-postcss'), // PostCSS processor https://github.com/postcss/postcss
+      reporter = require('postcss-reporter'),
+      scss = require("postcss-scss"),
+      plumber = require('gulp-plumber'),
+      notify = require('gulp-notify'),
+      browserSync = require('browser-sync').create(), // Create BrowserSync instance See https://www.browsersync.io/docs/gulp
+      autoprefixer = require('autoprefixer'), // Automatically add vendor rules https://github.com/postcss/autoprefixer
+      cssnano = require('cssnano'), // Minify CSS stylsheets https://cssnano.co/
+      sourcemaps = require('gulp-sourcemaps'), // Enables sourcemap generation https://yarnpkg.com/package/gulp-sourcemaps
+      stylelint = require('stylelint'); // SASS and CSS style linting https://stylelint.io/
 
-  return gulp.src('./assets/scss/**/*.scss')
-    .pipe(plumber({errorHandler: onError}))
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./assets/css/'))
-});
+// JS requirements
+// to be added...
 
-// Watch for changes.
-gulp.task('watch', function () {
-  gulp.watch('./assets/scss/**/*.scss', ['sass']);
-});
+/**
+ *
+ * Base Utilities start
+ * Here we set up some configuration and functions that we may reuse
+ *
+ */
 
-// Sets up browser sync.
-gulp.task('browser-sync', function() {
-  browser_sync.init({
+// Resolve our source sass folder dynamically
+const sourceSassFolder = resolve('./assets/scss/');
+
+
+/**
+ * PostCSS plugins and configuration mapped to gulpconfig.js
+ */
+const postcssPluginsPreSass = [
+  stylelint({ /* options see .stylelintrc */ }),
+  reporter({ clearReportedMessages: true, clearMessages: true }),
+];
+
+const postcssPluginsPostSass = [
+  autoprefixer(),
+  cssnano({ // CSS Nano should always run last
+    preset: ['default', {
+      discardComments: {
+        removeAll: true,
+      },
+      reduceTransforms: false,
+    }]
+  })
+];
+
+/**
+ *
+ * Functions start
+ *
+ */
+
+/**
+ * Start browserync with gulpconfig.js configuration
+ */
+function browserSyncStart() {
+  browserSync.init({
     proxy: 'appserver',
     open: false
   });
-});
+}
 
-// Build and lint SASS.
-gulp.task('build', function () {
-  gulp.start('lint:sass', 'sass');
-});
+/**
+ * Generates the drupal stylesheet from patterns
+ */
+function generateStyle() {
+  return (
+    gulp
+      .src('./assets/scss/**/*.scss', { base: './assets/scss' })
+      .pipe(sourcemaps.init())
+      .pipe(postcss(postcssPluginsPreSass, {syntax: scss})) // Run postCSS before SASS
+      .pipe(sassGlob())
+      .pipe(sass())
+      .on('error', sass.logError)
+      .pipe(postcss(postcssPluginsPostSass, {syntax: scss})) // Run postCSS after SASS
+      .pipe(sourcemaps.mapSources(function(sourcePath, file) {
+        return sourceSassFolder + '/' + sourcePath;
+      }))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('assets/css/'))
+  );
+}
 
-// Default task which compiles Sass and watches for changes.
-gulp.task('default', ['browser-sync', 'sass', 'watch']);
+/**
+ * Watches SASS files in source/components and re-compiles them on change
+ */
+function watchStyle() {
+  return (
+    gulp
+      .watch('./assets/scss/**/*.scss')
+      .on('change', generateStyle)
+  );
+}
 
+/**
+ * Serve files by streaming them into browserSync
+ */
+function serve() {
+  return (
+    gulp
+      .watch(['./assets/js/*.js', './assets/css/*.css', './**/*.twig'])
+      .on('change', browserSync.reload)
+  );
+}
+/**
+ * Functions end
+ */
+
+
+
+
+
+/**
+ * Gulp tasks exports start
+ */
+
+/** Default development task */
+const dev = gulp.series(
+  generateStyle,
+  gulp.parallel(browserSyncStart, watchStyle, serve)
+);
+
+/** Generates style without any listeners or browserSync */
+const generate = gulp.series(
+  generateStyle,
+);
+
+// Expose the task by exporting it, this allows you to run it from the commandline
+exports.dev = dev;
+exports.generate = generate;
+
+
+/*
+* Gulp tasks exports end
+*/

@@ -8,19 +8,21 @@
 
 // Main navigation logo
 .navbar-dark .navbar-brand {
-  @include rem(margin-right, 18);
   font-weight: $font-bold; //For fallback
   font-size: unset; // we have an image here and the bs font size affects the spacing
-  //display: contents; // fix for BS container size bug causing wrapping of the toggler in mobile
   width: 35%;
   min-width: 9.375rem;
+
+  @include rem(margin-right, 18);
 
   @include media-breakpoint-up(sm) {
     width: 25%;
   }
+
   @include media-breakpoint-up(md) {
     width: 16%;
   }
+
   @include media-breakpoint-up(lg) {
     width: 20%;
   }
@@ -35,42 +37,103 @@
 //Nav links mobile
 .navbar-dark .navbar-nav {
   @include rem(margin-bottom, 20);
+
   @include media-breakpoint-up(lg) {
     margin-bottom: 0;
   }
 }
 
 
-//Switch arrows
-.navbar-dark .navbar-nav .nav-link {
-  padding-top: .4375rem;
-  padding-bottom: .4375rem;
+// Navbar dropdown menu
+.navbar-dark .navbar-nav,
+.header--expand {
+  .nav-link {
+    padding-top: .4375rem;
+    padding-bottom: .4375rem;
 
-  &:focus,
-  &:hover {
-    color: $secondary !important;
-    background-color: $white !important;
-    box-shadow: none !important;
+    .fa-chevron-down {
+      transform: rotate(-360deg);
+      transition: transform 150ms ease;
+    }
+
+    &.show-outline,
+    &[aria-expanded="true"] {
+      background-color: unset;
+      outline: 0.1875rem solid $highlight !important;
+      outline-offset: -0.0875rem;
+
+      .dropdown-icon {
+        &.fa-chevron-down {
+          transform: rotate(-180deg);
+          transition: transform 150ms ease;
+        }
+      }
+    }
   }
 
   .fa-chevron-down {
-    transform: rotate( -360deg );
+    transform: rotate(-360deg);
     transition: transform 150ms ease;
   }
 
-  &.show-outline {
-    color: $focus;
+  .dropdown-toggle:after {
+    content: '';
+    border: none;
+  }
+
+  // Dropdown navigation
+  .dropdown > .dropdown-menu,
+  .responsive-services {
+    background: $white;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 0 0.125rem $highlight;
+    transform: translateX(0.125rem);
+    min-width: 100%;
+
+    > .nav-item.dropdown-item {
+      padding: 0;
+    }
 
     .dropdown-icon {
       &.fa-chevron-down {
-        transform: rotate( -180deg );
+        transform: rotate(-180deg);
         transition: transform 150ms ease;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: inherit;
       }
     }
 
-    &:hover {
-      background: transparent;
-      color: $focus;
+    .nav-link {
+      font-size: $font-size-med;
+      font-weight: $font-bold;
+      text-decoration: none;
+      color: $link-color;
+
+      @include rem(line-height, 28);
+
+      &:hover,
+      &:focus {
+        color: $focus;
+        background-color: $link-hover-color;
+        box-shadow: none;
+      }
+
+      &.show-outline,
+      &[aria-expanded="true"] {
+        color: $focus;
+        background-color: unset;
+        outline-offset: -0.1875rem;
+
+        &:hover {
+          background: transparent;
+          color: $focus;
+        }
+      }
     }
   }
 }
@@ -146,6 +209,7 @@
     flex-wrap: nowrap;
   }
 }
+
 @include media-breakpoint-up(lg) {
 
   //Set navbar link padding to accomodate tab design
@@ -166,17 +230,15 @@
   border: 0;
   font-size: $font-size-ex-med;
 }
-
-
 // Main navigation toggle button
 #js-nav-toggle {
   padding: 0;
   background-color: transparent;
-  border: 0.063rem solid transparent;
   border-radius: 0;
+  border: 0.125rem solid $navbar-dark-toggler-border-color;
+
   @include rem(width, 38);
   @include rem(height, 38);
-  border: 0.125rem solid $navbar-dark-toggler-border-color;
 
   .fa { // Main navigation toggle button
     color: $white;
@@ -340,7 +402,7 @@
         color: $indigo !important;
       }
 
-      >.nav-link {
+      > .nav-link {
         color: $purple;
       }
     }

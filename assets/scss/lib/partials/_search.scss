@@ -22,15 +22,15 @@
 
 .homepage--search {
   background: $secondary;
-  @include media-breakpoint-up(sm) {
-    background: rgba($secondary, 0.6);
-  }
-  
+  color: $white;
+
   @include rem(padding-top, 30);
   @include rem(padding-bottom, 30);
   @include rem(margin-top, -108);
-  color: $white;
-  
+
+  @include media-breakpoint-up(sm) {
+    background: rgba($secondary, 0.6);
+  }
 
   label {
     font-size: $font-size-ex-ex-lg;
@@ -41,6 +41,7 @@
 
   .input-group-prepend { // adapt bs input group to respond
     flex-basis: 100%;
+
     @include rem(padding, 0, 0, 10, 0);
 
     @include media-breakpoint-up(sm) {

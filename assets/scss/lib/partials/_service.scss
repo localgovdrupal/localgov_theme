@@ -1,11 +1,12 @@
 .servicehub--status {
   overflow: auto;
-  
+
   .fa-info-circle {
     position: absolute;
     left: 0;
-    @include rem(font-size, 35);
     vertical-align: middle;
+
+    @include rem(font-size, 35);
     @include rem(margin-right, 10);
   }
 
@@ -14,9 +15,10 @@
   }
 
   h3 {
+    display: inline-block;
+
     @include rem(margin-top, 5);
     @include rem(margin-bottom, 10);
-    display: inline-block;
   }
 
   p {
@@ -26,21 +28,24 @@
 
   span {
     position: relative;
+    display: inline-block;
+
     @include rem(padding-left, 50);
     @include rem(margin-bottom, 15);
-    display: inline-block;
   }
 }
 
 .servicehub--update {
   overflow: auto;
+  background-color: $indigo-tint;
+
   @include rem(margin-top, 30);
   @include rem(margin-bottom, 20);
-  background-color: $indigo-tint;
   @include rem(padding, 20);
 
   &_inner {
     background: $white;
+
     @include rem(padding, 20, 30, 25);
 
     ul {
@@ -69,29 +74,31 @@
     width: 100%;
     list-style-type: none;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       @include rem(margin-bottom, 20);
     }
 
     h2 {
-      @include rem(font-size, 25);
       float: left;
-      @include rem(margin, 10, 0);
       font-weight: $font-bold;
+
+      @include rem(font-size, 25);
+      @include rem(margin, 10, 0);
       @include rem(padding-right, 20);
     }
 
     li {
       color: $white;
       display: table-cell;
-    
+
       &:first-child {
-        @include rem(width, 150);
         font-weight: $font-bold;
+
+        @include rem(width, 150);
       }
     }
   }
-  
+
   .read-more {
     font-weight: $font-bold;
     text-decoration: underline;
@@ -100,6 +107,7 @@
 
   &.striped ul:not(:last-child) {
     border-bottom: $gray-tint;
+
     @include rem(padding-bottom, 20);
   }
 }
@@ -107,13 +115,15 @@
 .servicehub--link-section {
   overflow: auto;
   width: 100%;
+
   @include rem(padding, 30, 0);
 
   h2 {
     line-height: 1;
+    font-size: $h5-font-size;
+
     @include rem(margin-top, 15);
     @include rem(margin-bottom, 15);
-    font-size: $h5-font-size;
 
     @include media-breakpoint-up(lg) {
       font-size: $h3-font-size;
@@ -123,11 +133,13 @@
 
 .servicehub--more {
   border-bottom: $gray-tint;
+
   @include rem(margin-bottom, 20);
-  
+
   h3 {
     line-height: 1;
     font-size: $h5-font-size;
+
     @include rem(margin-top, 0);
     @include rem(margin-bottom, 15);
 
@@ -150,13 +162,15 @@
   .contact-container {
     background: $gray-tint;
     border-left: 0.313rem solid $primary;
+
     @include rem(padding, 20, 30, 15);
     @include rem(margin-bottom, 25);
-    
+
     h2 {
       margin: 0;
-      @include rem(padding-bottom, 15);
       line-height: 1;
+
+      @include rem(padding-bottom, 15);
     }
 
     ul {
@@ -164,11 +178,12 @@
       list-style: none;
       margin-left: 0;
       padding-left: 0;
-      
+
       span {
-        @include rem(width, 20);
         display: inline-block;
         text-align: center;
+
+        @include rem(width, 20);
         @include rem(padding-right, 10);
       }
 
@@ -178,8 +193,9 @@
     }
 
     i {
-      @include rem(margin-right, 5);
       font-size: $font-size-ex-med;
+
+      @include rem(margin-right, 5);
     }
 
     p {
@@ -206,14 +222,15 @@
       margin: 0;
       font-weight: $font-bold;
       font-size: $font-size-med;
+
       @include rem(line-height, 25);
     }
   }
 
   .opening-times {
     font-size: $font-size-med;
-    @include rem(line-height, 22);
 
+    @include rem(line-height, 22);
   }
 
   .contact-title {
@@ -229,12 +246,14 @@
   }
 
   .contact-bottom {
-    @include rem(padding-top, 15);
     border-top: $gray-tint;
+
+    @include rem(padding-top, 15);
 
     li {
       font-size: $font-size-med;
       display: inline;
+
       @include rem(margin-right, 10);
     }
   }
@@ -245,4 +264,12 @@
 .cta-pull [class*='col-'] {
   @include rem(padding-top, 0);
   @include rem(padding-bottom, 0);
+}
+
+.block-system-main-block {
+  .node--type-localgov-services-sublanding {
+    h3 {
+      margin-top: 0;
+    }
+  }
 }

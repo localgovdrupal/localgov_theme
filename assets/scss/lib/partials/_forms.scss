@@ -19,11 +19,11 @@ legend {
 }
 
 // Form label - only direct child of form group (avoids affecting radios and checkboxes)
-.form-group>label {
+.form-group > label {
   font-family: $headings-font-family;
   font-weight: $font-bold; // for fallbacks only
   line-height: 1.2;
-  font-size: $font-size-ex-lg; 
+  font-size: $font-size-ex-lg;
   margin-bottom: ($spacer * 1);
 }
 
@@ -93,9 +93,10 @@ label {
   align-items: center;
   position: relative;
   cursor: pointer;
-  font-size: $font-size-med !important; 
+  font-size: $font-size-med !important;
   font-weight: normal !important;
   user-select: none;
+
   @include rem(padding-left, 50);
   @include rem(min-height, 40);
 
@@ -125,27 +126,28 @@ label {
   background-color: $white;
   border: 0.063rem solid $input-border-color;
   margin: 0 !important;
+
   @include rem(width, 40);
   @include rem(height, 40);
 }
 
 // On mouse-over, add a grey background color
 
-.custom-input:hover input~.checkmark {
+.custom-input:hover input ~ .checkmark {
   background-color: $white;
   border: 0.125rem solid $focus !important;
 }
 
 // When the checkbox is checked, add a blue background
 
-.custom-input input:checked~.checkmark {
+.custom-input input:checked ~ .checkmark {
   background-color: $white;
 }
 
 // Radio and checkbox focus
 
-.custom-input input:focus+.checkmark,
-.custom-input input:focus+.radiomark {
+.custom-input input:focus + .checkmark,
+.custom-input input:focus + .radiomark {
   outline: 0.188rem solid $yellow !important;
   z-index: 999;
 }
@@ -160,20 +162,21 @@ label {
 
 // Show the checkmark when checked
 
-.custom-input input:checked~.checkmark:after {
+.custom-input input:checked ~ .checkmark:after {
   display: block;
 }
 
 // Style the checkmark/indicator
 
 .custom-input .checkmark:after {
+  border: 0.063rem solid $green;
+  border-width: 0 0.313rem 0.313rem 0;
+  transform: rotate(45deg);
+
   @include rem(left, 13);
   @include rem(top, 6);
   @include rem(width, 12);
   @include rem(height, 20);
-  border: 0.063rem solid $green;
-  border-width: 0 0.313rem 0.313rem 0;
-  transform: rotate(45deg);
 }
 
 //RADIOS
@@ -188,6 +191,7 @@ label {
   border-radius: 50%;
   border: 0.063rem solid $input-border-color;
   margin: 0 !important;
+
   @include rem(width, 40);
   @include rem(height, 40);
 }
@@ -195,14 +199,14 @@ label {
 
 /* On mouse-over, add a grey background color */
 
-.custom-input:hover input~.radiomark {
+.custom-input:hover input ~ .radiomark {
   background-color: $white;
   border: 0.063rem solid $focus !important;
 }
 
 /* When the radio button is checked, add a blue background */
 
-.custom-input input:checked~.radiomark {
+.custom-input input:checked ~ .radiomark {
   background-color: $white;
 }
 
@@ -215,20 +219,19 @@ label {
   display: none;
 }
 
-
 /* Show the indicator (dot/circle) when checked */
 
-.custom-input input:checked~.radiomark:after {
+.custom-input input:checked ~ .radiomark:after {
   display: block !important;
 }
-
 
 /* Style the indicator (dot/circle) */
 
 .custom-input .radiomark:after,
-.custom-input input:hover~.radiomark:after {
+.custom-input input:hover ~ .radiomark:after {
   border-radius: 50%;
   background: $black;
+
   @include rem(top, 12);
   @include rem(left, 12);
   @include rem(width, 14);

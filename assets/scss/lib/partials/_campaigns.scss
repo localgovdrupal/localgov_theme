@@ -16,16 +16,17 @@
   .jumbotron {
     margin: 0;
     padding: 0;
-    background-color: $blue;
+    background-color: $campaign-jumbotron;
 
     .jumbo-welcome {
       h1 {
         color: $campaign-header;
-        @include rem(font-size, 50);
         text-align: left;
         padding: 0;
         line-height: 1.1;
         font-weight: $font-bold;
+
+        @include rem(font-size, 50);
         @include rem(letter-spacing, 0);
 
         @include media-breakpoint-up(sm) {
@@ -33,17 +34,17 @@
         }
 
         @include media-breakpoint-up(lg) {
-          @include rem(font-size, 58);
           text-align: left;
+
+          @include rem(font-size, 58);
         }
 
         &:before {
           display: none;
         }
       }
-
     }
-    
+
     @include media-breakpoint-up(lg) {
       background-size: contain;
       background-position: right;
@@ -109,11 +110,11 @@
         &.fact-closing {
           display: none;
         }
-      }      
+      }
     }
 
     .call-out-box {
-      background-color: $blue-tint;
+      background-color: $calloutbg;
     }
 
     .author {
@@ -138,26 +139,28 @@
       z-index: 1;
       display: inline-block;
       padding: 0;
-      @include rem(margin, 10);
       overflow: hidden;
       vertical-align: middle;
       cursor: pointer;
       border-radius: 50%;
+
+      @include rem(margin, 10);
       @include rem(width, 47);
       @include rem(height, 47);
 
       i {
-        @include rem(font-size, 26);
-        @include rem(line-height, 48);
         display: inline-block;
         width: inherit;
         color: $white;
         text-align: center;
         padding-right: 0;
+
+        @include rem(font-size, 26);
+        @include rem(line-height, 48);
       }
 
       &.btn-li {
-        background-color: $blue !important;
+        background-color: $socialdefault !important;
       }
 
       &.btn-fb {
@@ -172,12 +175,13 @@
     .video-container {
       position: relative;
       padding-bottom: 56.25%; // fixes collapsing bug
-      height: 0; 
+      height: 0;
       overflow: hidden;
+
       @include rem(padding-top, 30);
       @include rem(margin-bottom, 15);
     }
-     
+
     .video-container iframe,
     .video-container object,
     .video-container embed {
@@ -209,7 +213,7 @@
       }
 
       a {
-        color: $blue;
+        color: $linkblock;
       }
     }
   }

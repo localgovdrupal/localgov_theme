@@ -4,14 +4,12 @@
   <nav class="navbar navbar-expand-lg navbar-dark site-max">
 
   <!-- Navbar content -->
-   
-      <a class="navbar-brand" href="/" title="LocalGov homepage">
-        <!-- uncomment to use system added logo // <img class="img-fluid" src="{{ logopath }}" alt="LocalGov Logo" /> -->
-        <img class="img-fluid" src="https://place-hold.it/180x100&fontsize=23" alt="LocalGov Logo" /> 
+
+      <a class="navbar-brand" href="/" title="{{ site_name }} homepage">
+        <img class="img-fluid" src="{{ logopath }}" alt="{{ site_name }} Logo" />
       </a>
 
-      <div class="my-account d-lg-none">
-        <a href="#">Account</a><i class="fas fa-user ml-2 mr-3" aria-hidden="true"></i>
+      <div class="mobile-nav d-lg-none">
         <!-- Mobile toggle button -->
         <button id="js-nav-toggle" class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileToggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-times d-none"></span>
@@ -24,31 +22,20 @@
       {{ page.search }}
       </div>
 
-      <ul class="navbar-nav mr-auto ml-auto">
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>Option 1</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>         
-        </li>
-        <li class="d-block d-lg-none responsive-services my-2">
-          {{ page.primary_menu }}
-          {{ page.secondary_menu }}
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2 px-lg-3" href="#">Option 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2 px-lg-3" href="#">Option 3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2 px-lg-3" href="#">Option 4</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-2 px-lg-3" href="#">Option 5</a>
-        </li>
-      </ul>
+      {% if page.primary_menu %}
+        {{ page.primary_menu }}
+      {% endif %}
 
-      <div class="d-none d-lg-block my-account">
-        <a href="#">Account</a><i class="fas fa-user ml-2 mr-3" aria-hidden="true"></i>
-      </div>
+      {% if page.secondary_menu %}
+        <ul class="navbar-nav mr-0 ml-auto">
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link show-menu px-2 px-lg-3" href="#" id="navbarDropdown" role="button"><span>Services</span><span class="fa fa-chevron-down dropdown-icon ml-2"></span></a>
+          </li>
+          <li class="d-block d-lg-none responsive-services my-2 p-4">
+            {{ page.secondary_menu }}
+          </li>
+        </ul>
+      {% endif %}
 
       <div class="d-none d-lg-block">
         <div class="form-inline">
@@ -58,15 +45,14 @@
     </div>
   </nav>
 
-  <!-- Toggle Menu -->
-  <nav class="header--expand site-max header--toggle mt-2 px-3">
-    <div class="row">
-      <div class="col-md-12 p-4">
-      {{ page.primary_menu }}
+  {% if page.secondary_menu %}
+    <!-- Toggle Menu -->
+    <nav class="header--expand site-max header--toggle mt-2 px-3">
+      <div class="row">
+        <div class="col-md-12 p-4">
+          {{ page.secondary_menu }}
+        </div>
       </div>
-      <!-- uncomment if required // <div class="col-sm-4 p-4">
-      {{ page.secondary_menu }}
-      </div> -->
-    </div>
-  </nav>
+    </nav>
+  {% endif %}
 </header>

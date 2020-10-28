@@ -8,6 +8,11 @@ base theme: localgov_skeleton
 libraries:
   - localgov_theme/global
 
+# Stylesheets specifically for CK editor iframes
+ckeditor_stylesheets:
+  - assets/css/font-face.css
+  - assets/css/lib/ck_style.css
+
 regions:
   header: "Header"
   search: "Search"
@@ -24,4 +29,8 @@ regions:
   sidebar_second: "Sidebar second"
   footer_first: "Footer first"
   footer_second: "Footer second"
+  footer_third: "Footer third"
+  lower_footer_first: "Lower footer first"
+  lower_footer_second: "Lower footer second"
+  lower_footer_third: "Lower footer third"
   disabled: "Disabled"

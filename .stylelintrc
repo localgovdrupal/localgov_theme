@@ -5,7 +5,17 @@
     "assets/scss/lib/_variables.scss",
     "assets/scss/lib/vendor/*"
   ],
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
+    "declaration-colon-newline-after": null,
+    "no-descending-specificity": null,
+    "number-leading-zero": null,
+    "selector-pseudo-element-colon-notation": null,
+    "at-rule-no-unknown": null,
+    "block-closing-brace-newline-before": null,
     "block-no-empty": null,
     "color-no-invalid-hex": true,
     "selector-list-comma-newline-after": "always",

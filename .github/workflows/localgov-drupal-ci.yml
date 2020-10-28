@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
+  DrupalUnitTests:
 
     runs-on: ubuntu-latest
 
@@ -35,7 +35,7 @@ jobs:
         run: echo "::set-env name=GIT_BRANCH::${GITHUB_HEAD_REF}"
 
       - name: Grab test target
-        run: composer --working-dir=html require ${{ github.repository }}:"dev-${GIT_BRANCH} as dev-master"
+        run: composer --working-dir=html require ${{ github.repository }}:"dev-${GIT_BRANCH} as 1.0.x-dev"
 
       - name: Start Docker environment
         run: docker-compose up -d
@@ -43,3 +43,23 @@ jobs:
       - name: Run tests
         run: ./run-tests.sh
         shell: bash
+
+  MochaThemeTests:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - run: npm run health-check

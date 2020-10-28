@@ -13,9 +13,10 @@ body {
 // THEME TEMPLATE LAYOUT ELEMENTS - MARGIN AND PADDING
 
 .site-max {
-  @include rem(max-width, 1170);
   margin-left: auto;
   margin-right: auto;
+
+  @include rem(max-width, 1170);
 }
 
 main,
@@ -62,7 +63,8 @@ main ol,
   }
 }
 
-.main-content {
+.main-content.col-sm-8,
+.block-system-main-block {
   // Add top margin to headers in the page but not the first h2
   // as that will be at the top of the section.
   h2 {
@@ -76,7 +78,7 @@ main ol,
   h6 {
     margin-top: ($spacer * 3);
   }
-  
+
   // Display all headers inline block to prevent margin overlap
   h2,
   h3,
@@ -85,7 +87,7 @@ main ol,
   h6 {
     display: inline-block;
   }
-  
+
   // Control the top margin of anything immediately proceeding a header
   h2 + *,
   h3 + *,
@@ -145,7 +147,7 @@ form .form-group:last-child {
 input:focus,
 textarea:focus,
 select:focus,
-.custom-file-input:focus~.custom-file-label,
+.custom-file-input:focus ~ .custom-file-label,
 button:focus,
 .show-outline {
   @include outline(.1875rem, -.1875rem, $focus);
@@ -226,6 +228,7 @@ main i {
   box-sizing: border-box;
   font-size: $font-size-sm;
   color: $white;
+
   @include rem(height, 30);
   @include rem(line-height, 30);
   @include rem(top, -30);
@@ -257,8 +260,9 @@ main i {
 
 .reveal { // used in various places for reveal links
   display: block;
+
   @include rem(min-width, 67);
-  
+
   span {
     &.in { // show
       display: none;

@@ -1,13 +1,48 @@
+main,
+.block-views-blocklocalgov-step-by-step-navigation-prev-next {
+  .btn {
+    font-size: 1.25rem;
+    padding: .4rem 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1.25rem;
+    padding: .6rem 1rem;
+  }
+
+  .btn-sm {
+    font-size: 1.125rem;
+    padding: .3rem 1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    .btn {
+      font-size: 1.375rem;
+    }
+
+    .btn-lg {
+      font-size: 1.5rem;
+    }
+
+    .btn-sm {
+      font-size: 1.1875rem;
+    }
+  }
+}
+
 //Button styles
 main .btn,
+.block-views-blocklocalgov-step-by-step-navigation-prev-next .btn,
 .sidebar .btn {
   font-family: $headings-font-family;
   margin-top: ($spacer * 1);
   margin-bottom: ($spacer * .5);
+  border-radius: 0;
 }
 
 //Button icons
 main .btn .fa,
+.block-views-blocklocalgov-step-by-step-navigation-prev-next .btn .fa,
 aside .btn .fa,
 .sidebar .btn .fa,
 .cookiealert .btn .fa {
@@ -15,16 +50,19 @@ aside .btn .fa,
   color: $button-icons;
 }
 
-//Button hover
 .btn {
+  background: $button;
+  color: $button-text;
+
   &:hover {
-    color: $white;
+    color: $button-text-focus;
     background: $btn-hover-background;
   }
 
   &:focus {
-    color: $white;
+    color: $button-text-focus;
     background: $btn-hover-background;
+
     @include outline(.1875rem, -.1875rem, $focus);
   }
 
@@ -73,6 +111,7 @@ aside .btn .fa,
   text-decoration: none;
   color: $link-button-text;
   background-color: $link-button;
+
   @include rem(padding, 15);
   @include rem(line-height, 22);
 
@@ -93,6 +132,7 @@ aside .btn .fa,
     content: $fa-chevron-right;
     font-weight: $fa-font-weight;
     font-size: $font-size-ex-lg;
+
     @include rem(margin-top, 2);
   }
 
@@ -110,7 +150,7 @@ aside .btn .fa,
     }
   }
 
-  &:not(:last-child)  {
+  &:not(:last-child) {
     @include rem(margin-bottom, 20);
 
     @include media-breakpoint-up(sm) {
@@ -184,6 +224,7 @@ aside .btn .fa,
 .link-button-single,
 .cta-single {
   width: 100%;
+
   @include rem(margin-top, 30);
 
   @include media-breakpoint-up(sm) {
@@ -194,6 +235,7 @@ aside .btn .fa,
 .link-button-close,
 .cta-close {
   width: 100%;
+
   @include rem(margin-top, 30);
 
   @include media-breakpoint-up(sm) {
@@ -228,12 +270,13 @@ aside .btn .fa,
     align-self: flex-end;
     color: $carbon;
     text-decoration: none;
-    @include rem(margin-top, 2);
     margin-left: auto;
     font-family: $font-family-icons;
     content: $fa-chevron-right;
     font-weight: $fa-font-weight;
     font-size: $font-size-ex-lg;
+
+    @include rem(margin-top, 2);
   }
 
   &.external-link { // control change of icon due to external link on the button
