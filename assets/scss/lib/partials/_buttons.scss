@@ -50,12 +50,10 @@ aside .btn .fa,
   color: $button-icons;
 }
 
+//Button hover
 .btn {
-  background: $button;
-  color: $button-text;
-
   &:hover {
-    color: $button-text-focus;
+    color: $button-text-hover;
     background: $btn-hover-background;
   }
 
