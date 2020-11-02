@@ -53,12 +53,12 @@ aside .btn .fa,
 //Button hover
 .btn {
   &:hover {
-    color: $white;
+    color: $button-text-hover;
     background: $btn-hover-background;
   }
 
   &:focus {
-    color: $white;
+    color: $button-text-focus;
     background: $btn-hover-background;
 
     @include outline(.1875rem, -.1875rem, $focus);
