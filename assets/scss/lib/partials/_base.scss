@@ -47,6 +47,32 @@ main ol,
   padding-right: ($spacer * 1.5);
 }
 
+// Set base font sizes (BS overrides)
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
 // Increase base font sizes for larger screens
 
 @include media-breakpoint-up(lg) {

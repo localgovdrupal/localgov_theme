@@ -50,16 +50,22 @@ aside .btn .fa,
   color: $button-icons;
 }
 
-//Button hover
+// Button
 .btn {
+  border-radius: 0;
+  padding: .5rem .9375rem;
+  font-size: 1.25rem;
+
   &:hover {
     color: $button-text-hover;
     background: $btn-hover-background;
+    box-shadow: none; // bs override
   }
 
   &:focus {
     color: $button-text-focus;
     background: $btn-hover-background;
+    box-shadow: none; // bs override
 
     @include outline(.1875rem, -.1875rem, $focus);
   }
