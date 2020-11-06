@@ -119,3 +119,34 @@
     content: $alert-warning;
   }
 }
+
+.localgov_alert_banner {
+  button { // default form button styling
+    background-color: $alert-button-background;
+    color: $alert-button-color;
+    border-radius: 0;
+    padding: .5rem .9375rem;
+    line-height: 1.5;
+    border: 1px solid $alert-button-color;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+
+    &:focus,
+    &:hover {
+      color: $alert-button-hover;
+      border: 1px solid $alert-button-hover;
+    }
+  }
+
+  .localgov_alert_banner--dismiss
+    a { // alternative styling for link button
+      color: $alert-button-color;
+
+      &:hover,
+      &:focus {
+      background: $alert-button-color;
+      color: $alert-button-hover;
+    }
+  }
+}

@@ -70,6 +70,12 @@ aside .btn .fa,
     @include outline(.1875rem, -.1875rem, $focus);
   }
 
+  &:not(:disabled):not(.disabled).active {
+    &:focus {
+      box-shadow: none; // bs override
+    }
+  }
+
   &.btn-secondary {
     background: $secondary;
     color: $white;
