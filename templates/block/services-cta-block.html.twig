@@ -28,9 +28,9 @@
 
 {% block content %}
 <nav aria-label="Section Navigation">
-  <div class="row mt-sm-3 mb-sm-3 pt-2 pb-3">
+  <div class="row mt-sm-3 mb-sm-3">
   {% for button in buttons %}
-    <div class="mb-4 col-sm-4">
+    <div class="mb-3 col-sm-4">
       <a href="{{ button.url }}" class="link-button {{ button.type }}">
         <span>{{ button.title }}</span>
       </a>
