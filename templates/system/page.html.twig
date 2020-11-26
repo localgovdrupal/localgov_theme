@@ -54,10 +54,10 @@
 #}
 {%
   set content_classes = [
-    has_sidebar_first and page.sidebar_second ? 'col-sm-6',
-    has_sidebar_first and not has_sidebar_second ? 'col-sm-8',
-    not has_sidebar_first and has_sidebar_second ? 'col-sm-8',
-    not has_sidebar_first and not has_sidebar_second ? 'col-sm-12',
+    has_sidebar_first and page.sidebar_second ? 'col-md-6',
+    has_sidebar_first and not has_sidebar_second ? 'col-md-8',
+    not has_sidebar_first and has_sidebar_second ? 'col-md-8',
+    not has_sidebar_first and not has_sidebar_second ? 'col-md-12',
     'column',
     'main-content',
   ]

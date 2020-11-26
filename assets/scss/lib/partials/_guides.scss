@@ -8,7 +8,7 @@
     span {
       position: absolute;
 
-      @include rem (top, 11);
+      @include rem(top, 14);
     }
 
     &.localgov_guides--next {

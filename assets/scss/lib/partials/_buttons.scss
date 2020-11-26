@@ -50,20 +50,30 @@ aside .btn .fa,
   color: $button-icons;
 }
 
+// Button
 .btn {
-  background: $button;
-  color: $button-text;
+  border-radius: 0;
+  padding: .5rem .9375rem;
+  font-size: 1.25rem;
 
   &:hover {
-    color: $button-text-focus;
+    color: $button-text-hover;
     background: $btn-hover-background;
+    box-shadow: none; // bs override
   }
 
   &:focus {
     color: $button-text-focus;
     background: $btn-hover-background;
+    box-shadow: none; // bs override
 
     @include outline(.1875rem, -.1875rem, $focus);
+  }
+
+  &:not(:disabled):not(.disabled).active {
+    &:focus {
+      box-shadow: none; // bs override
+    }
   }
 
   &.btn-secondary {
