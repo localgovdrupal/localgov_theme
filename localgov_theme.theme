@@ -85,7 +85,10 @@ function localgov_theme_preprocess_field(&$variables) {
 function localgov_theme_preprocess_menu(&$variables) {
   // Add classes to the relevant menu.
   if ($variables['menu_name'] === 'main') {
-    $variables['attributes']['class'] = ['services-list', 'services-list--multi'];
+    $variables['attributes']['class'] = [
+      'services-list',
+      'services-list--multi',
+    ];
   }
 
   if ($variables['menu_name'] === 'business') {
@@ -135,7 +138,19 @@ function localgov_theme_preprocess_office_hours(&$variables) {
 function localgov_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   // Allow page template to be overridden by content type.
   if ($hook == 'page' && $node = \Drupal::routeMatch()->getParameter('node')) {
-    $suggestions[] = 'page__' . $node->bundle();
+    // For the frontpage, ensure that *page__front* is always the final
+    // suggestion.
+    $is_front_page = end($suggestions) === 'page__front';
+    if ($is_front_page) {
+      $front_page_tpl_suggestion_key = key($suggestions);
+      unset($suggestions[$front_page_tpl_suggestion_key]);
+
+      $suggestions[] = 'page__' . $node->bundle();
+      $suggestions[] = 'page__front';
+    }
+    else {
+      $suggestions[] = 'page__' . $node->bundle();
+    }
   }
   // Fields to be rendered through the field--clean.html.twig template.
   $clean_fields = [
