@@ -56,10 +56,12 @@
     Keyboard navigation/accessibility link to main content section in
     page.html.twig.
     #}
-    <a href="#main-content" class="visually-hidden focusable skip-link">
-      <i class="fas fa-fast-forward" aria-hidden="true"></i>
-      {{ 'Skip to main content'|t }}
-    </a>
+    <nav aria-label="Skip to Main Content">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+          <i class="fas fa-fast-forward" aria-hidden="true"></i>
+          {{ 'Skip to main content'|t }}
+        </a>
+    </nav>
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
