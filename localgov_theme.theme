@@ -5,6 +5,7 @@
  * LocalGovDrupal theme file.
  */
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Template\Attribute;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
@@ -74,9 +75,11 @@ function localgov_theme_preprocess_page(&$variables) {
 
 /**
  * Implements hook_preprocess_HOOK().
+ *
+ * - Adds an Id attribute based on the fieldname.
  */
 function localgov_theme_preprocess_field(&$variables) {
-  $variables['attributes']['id'] = 'field--' . $variables['field_name'];
+  $variables['attributes']['id'] = Html::getUniqueId('field--' . $variables['field_name']);
 }
 
 /**
