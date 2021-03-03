@@ -16,9 +16,9 @@
   "author": "",
   "license": "GPL-2.0",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.0"
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
   },
   "browserslist": [
     "last 2 version",
@@ -26,8 +26,8 @@
   ],
   "devDependencies": {
     "@jsdevtools/chai-exec": "^2.1.1",
-    "browser-sync": "^2.26.7",
-    "chai": "^4.2.0",
+    "browser-sync": "^2.26.14",
+    "chai": "^4.3.1",
     "cssnano": "^4.1.10",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
@@ -46,15 +46,15 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-version-append": "^0.2.0",
-    "mocha": "^8.2.0",
+    "mocha": "^8.3.0",
     "npm-install-all": "^1.1.21",
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.1.1",
     "ruby": "^0.6.1",
     "sass-loader": "^8.0.2",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.11.0",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-scss": "^3.19.0"
   },
   "engines": {
     "node": ">=10.0.0"
