@@ -140,7 +140,8 @@ function localgov_theme_preprocess_office_hours(&$variables) {
  */
 function localgov_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   // Allow page template to be overridden by content type.
-  if ($hook == 'page' && $node = \Drupal::routeMatch()->getParameter('node')) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($hook == 'page' && $node instanceof NodeInterface) {
     // For the frontpage, ensure that *page__front* is always the final
     // suggestion.
     $is_front_page = end($suggestions) === 'page__front';
