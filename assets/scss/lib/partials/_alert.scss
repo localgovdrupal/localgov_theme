@@ -139,12 +139,12 @@
     }
   }
 
-  .localgov_alert_banner--dismiss
-    a { // alternative styling for link button
-      color: $alert-button-color;
+  .localgov_alert_banner--dismiss a {
+    // alternative styling for link button
+    color: $alert-button-color;
 
-      &:hover,
-      &:focus {
+    &:hover,
+    &:focus {
       background: $alert-button-color;
       color: $alert-button-hover;
     }
