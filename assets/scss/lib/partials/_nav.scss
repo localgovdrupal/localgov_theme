@@ -43,6 +43,16 @@
   }
 }
 
+.navbar-dark .navbar-nav {
+  .nav-item {
+    .nav-link {
+      &:hover,
+      &:focus {
+        color: $secondary;
+      }
+    }
+  }
+}
 
 // Navbar dropdown menu
 .navbar-dark .navbar-nav,
