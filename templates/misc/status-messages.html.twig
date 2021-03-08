@@ -27,7 +27,8 @@
 
 {% block messages %}
   {% for type, messages in message_list %}
-  <div class="alert alert- col-12 mt-2">
+  {% if type == 'status' %} {% set alertType = 'info' %} {% else %} {% set alertType = type %} {% endif %}
+  <div class="alert alert-{{ alertType }} col-12 mt-2">
     <span class="alert-content">
       {% if messages|length > 1 %}
         <ul>
