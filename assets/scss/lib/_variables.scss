@@ -224,7 +224,7 @@ $navbar-dark-color: $white;
 $navbar-dark-hover-color: $yellow;
 $navbar-dark-active-color: $gray;
 $navbar-dark-disabled-color: rgba($white, .8);
-$navbar-dark-toggler-icon-bg: $gray;
+$navbar-dark-toggler-icon-bg: #{$gray};
 $navbar-dark-toggler-border-color: $white;
 
 // Remove breadcrumb bottom margin
@@ -310,7 +310,7 @@ $fa-share: '\f064';
 $fa-play: '\f04b';
 $fa-youtube-square: '\f431';
 $fa-search: '\f002';
-$fa-info-circle: '\f05a'; 
+$fa-info-circle: '\f05a';
 $fa-plus: '\f067';
 $fa-minus: '\f068';
 $fa-arrow-up: '\f30c';
