@@ -163,6 +163,8 @@ describe('Health check: Gulp tasks', function () {
       let npm = chaiExec(npmGenerate);
 
       expect(npm).to.have.output.that.contains('Finished \'generateStyle\'');
+      // Correctly check for errors on the output
+      expect(npm).to.not.have.output.that.contains('Error');
       assert.exitCode(npm, 0);
       done()
     });
