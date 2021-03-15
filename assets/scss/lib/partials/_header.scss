@@ -1,11 +1,3 @@
-header > p {
-  font-size: $font-size-base * 1.25;
-
-  @include media-breakpoint-up(lg) {
-    font-size: $font-size-ex-ex-lg;
-  }
-}
-
 .headers {
   padding: ($spacer * 3) 0;
 
