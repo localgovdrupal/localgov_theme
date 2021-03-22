@@ -67,73 +67,78 @@ h2.facet-filter-header {
 .facet-filter-checkboxes {
   list-style: none;
   font-size: $font-size-med;
-  background-color: $white;
+  background-color: transparent;
 
   @include rem(padding, 0, 12);
-}
 
-.facet-filter-checkboxes li {
-  border-bottom: 0.063rem solid $indigo-tint;
-  position: relative;
+  label {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: $font-bold;
+    font-size: $font-size-lg;
 
-  @include rem(padding-top, 5);
-}
+    @include rem(padding-left, 30);
+    @include rem(margin-bottom, 5);
 
-.facet-filter-checkboxes li:last-child {
-  border-bottom: 0;
-}
+    &::before {
+      background-color: $white;
+      border: 0.063rem solid $indigo-tint;
+      content: '';
+      display: inline-block;
+      font-family: $font-family-icons;
+      font-size: $font-size-sm;
+      font-style: normal;
+      font-variant: normal;
+      left: 0;
+      margin-left: 0.25rem;
+      position: absolute;
+      text-align: center;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
 
-.facet-filter-checkboxes label {
-  display: inline-block;
-  max-width: 100%;
-  font-weight: $font-bold;
-  font-size: $font-size-lg;
+      @include rem(width, 18);
+      @include rem(height, 18);
+      @include rem(line-height, 21);
+      @include rem(top, 10);    }
 
-  @include rem(padding-left, 30);
-  @include rem(margin-bottom, 5);
-}
+    span {
+      display: inline;
+    }
+  }
 
-.facet-filter-checkboxes label:before {
-  content: '';
-  border: 0.063rem solid $indigo-tint;
-  position: absolute;
-  left: 0;
-  font-family: $font-family-icons;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  text-align: center;
-  font-size: $font-size-sm;
+  input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 
-  @include rem(width, 18);
-  @include rem(height, 18);
-  @include rem(line-height, 21);
-  @include rem(top, 10);
-}
+    @include rem(width, 20);
+    @include rem(height, 20);
 
-.facet-filter-checkboxes input[type=checkbox] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+    &:checked ~ label:before {
+      content: $fa-check;
+      border: 0.063rem solid $green;
+      color: $green;
+      display: block;
+      position: absolute;
+      left: 0;
 
-  @include rem(width, 20);
-  @include rem(height, 20);
-}
+      @include rem(width, 20);
+      @include rem(height, 20);
+      @include rem(top, 10);
+    }
+  }
 
-.facet-filter-checkboxes input[type=checkbox]:checked ~ label:before {
-  content: $fa-check;
-  border: 0.063rem solid $green;
-  color: $green;
-  display: block;
-  position: absolute;
-  left: 0;
+  li {
+    border-bottom: 0.063rem solid $indigo-tint;
+    position: relative;
 
-  @include rem(width, 20);
-  @include rem(height, 20);
-  @include rem(top, 10);
+    @include rem(padding-top, 5);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
 }
 
 .directories-hide-filters {
@@ -178,7 +183,6 @@ h2.facet-filter-header {
   display: block;
 }
 
-
 .facets-widget-checkbox {
   > ul {
     list-style-type: none;
@@ -191,4 +195,18 @@ h2.facet-filter-header {
       padding: 0;
     }
   }
+}
+
+.block-facets {
+  background-color: $gray-tint;
+  padding: 1rem;
+}
+
+.facet-item label:hover {
+  cursor: pointer;
+}
+
+.facet-item input:focus + label,
+.facet-item input:hover + label {
+  background-color: $focus;
 }
