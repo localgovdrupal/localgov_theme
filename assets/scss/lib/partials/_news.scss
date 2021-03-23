@@ -33,6 +33,7 @@
 }
 
 .block-localgov-news-feed,
+.related-news,
 .view-localgov-news-search {
   article {
     border-bottom: 0.063rem solid $gray-primary;
@@ -80,6 +81,7 @@
 }
 
 .node--localgov_newsroom,
+.related-news,
 .view-localgov-news-search {
   article > a {
     &:hover,
