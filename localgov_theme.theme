@@ -151,10 +151,12 @@ function localgov_theme_theme_suggestions_alter(array &$suggestions, array $vari
     $front_page_tpl_suggestion_key = key($suggestions);
     unset($suggestions[$front_page_tpl_suggestion_key]);
 
-    $suggestions[] = 'page__' . $node->bundle();
+    if ($node instanceof NodeInterface) {
+      $suggestions[] = 'page__' . $node->bundle();
+    }
     $suggestions[] = 'page__front';
   }
-  else {
+  elseif ($node instanceof NodeInterface) {
     $suggestions[] = 'page__' . $node->bundle();
   }
   // Fields to be rendered through the field--clean.html.twig template.
