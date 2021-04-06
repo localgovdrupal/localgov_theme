@@ -157,11 +157,11 @@ function localgov_theme_theme_suggestions_alter(array &$suggestions, array $vari
   }
   // Fields to be rendered through the field--clean.html.twig template.
   $clean_fields = [
-    'field_addressfield',
-    'field_category',
-    'field_email_address',
-    'field_phone',
-    'field_website',
+    'localgov_addressfield',
+    'localgov_category',
+    'localgov_email_address',
+    'localgov_phone',
+    'localgov_website',
   ];
   if ($hook === 'field' && in_array($variables['element']['#field_name'], $clean_fields)) {
     $suggestions[] = 'field__clean';
