@@ -207,6 +207,12 @@ mark {
   color: $success;
 }
 
+blockquote {
+  background-color: $gray-tint;
+  border-left: 0.3125rem solid $primary;
+  padding: 1.875rem;
+}
+
 // Icon padding right page and sidebars
 main .fa,
 main li .fa,
