@@ -161,7 +161,7 @@ function localgov_theme_theme_suggestions_alter(array &$suggestions, array $vari
       $suggestions[] = 'page__' . $node->bundle();
     }
   }
-  
+
   // Fields to be rendered through the field--clean.html.twig template.
   $clean_fields = [
     'field_addressfield',
