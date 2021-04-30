@@ -140,8 +140,9 @@ function localgov_theme_preprocess_office_hours(&$variables) {
  */
 function localgov_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   // Allow page template to be overridden by content type.
-  if ($hook == 'page') {
-    $node = \Drupal::routeMatch()->getParameter('node');
+  if ($hook == 'page' && $node = \Drupal::routeMatch()->getParameter('node')) {
+
+    // Load the node if its not already, as revisions return the nid.
     if (!$node instanceof NodeInterface) {
       $node = Node::load((int) $node);
     }
