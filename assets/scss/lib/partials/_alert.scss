@@ -1,4 +1,5 @@
-.alert-bar {
+// Alert banner modifiers
+.localgov-alert-banner {
   &.alert-banner--notable-person {
     background: $alert-bar-notable;
 
@@ -9,7 +10,7 @@
     }
   }
 
-  &.alert-banner--major {
+  &.localgov-alert-banner--major {
     background: $alert-bar-major;
 
     p,
@@ -19,9 +20,18 @@
     }
   }
 
-  &.alert-banner--minor {
+  &.localgov-alert-banner--minor {
     background: $alert-bar-minor;
   }
+
+  &.localgov-alert-banner--announcement {
+    background: $alert-bar-announcement;
+  }
+}
+
+// General alert banner styles
+.alert-bar,
+.localgov-alert-banner {
 
   div > div {
     > div {
@@ -120,6 +130,7 @@
   }
 }
 
+// Alert banner button.
 .localgov-alert-banner {
   button { // default form button styling
     background-color: $alert-button-background;
@@ -141,7 +152,7 @@
     }
   }
 
-  .localgov-alert-banner--dismiss {
+  .localgov-alert-banner__close {
     a {
       // alternative styling for link button
       color: $alert-button-color;
