@@ -120,7 +120,7 @@
   }
 }
 
-.localgov_alert_banner {
+.localgov-alert-banner {
   button { // default form button styling
     background-color: $alert-button-background;
     color: $alert-button-color;
@@ -141,7 +141,7 @@
     }
   }
 
-  .localgov_alert_banner--dismiss {
+  .localgov-alert-banner--dismiss {
     a {
       // alternative styling for link button
       color: $alert-button-color;
