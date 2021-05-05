@@ -5,6 +5,7 @@
 
     p,
     a,
+    div > div a,
     i {
       color: $white;
     }
@@ -15,6 +16,7 @@
 
     p,
     a,
+    div > div a,
     i {
       color: $white;
     }
@@ -26,6 +28,13 @@
 
   &.localgov-alert-banner--announcement {
     background: $alert-bar-announcement;
+
+    p,
+    a,
+    div > div a,
+    i {
+      color: $white;
+    }
   }
 }
 
