@@ -8,6 +8,7 @@ $blue: #398bcb;
 // General colours
 $orange: #ed7522;
 $green: #1ba11b;
+$viridian: #00856a;
 $purple: #652c95;
 $magenta: #880088;
 $tan: #f2ba41;
@@ -83,7 +84,7 @@ $yellow-tint: lighten( $yellow, 15% );
 $theme-colors: ( // Bootstrap colours
 'primary': $primary, 'secondary': $secondary, 'success': $success, 'info': $carbon, 'warning': $warning, 'danger': $red, 'light': $light, 'dark': $dark, // Map additional colours to 'theme colours'
 'carbon': $carbon, 'graphite': $graphite, 'stonewash': $stonewash, 'gray-tint': $gray-tint, 'purple-tint': $purple-tint, 'green-tint': $green-tint, 'indigo-tint': $indigo-tint, // Map additional colours to 'theme colours' - can be used for backgrounds for example '.bg-green'
-'blue': $blue, 'indigo': $indigo, 'pink': $pink, 'red': $red, 'orange': $orange, 'yellow': $yellow, 'green': $green, 'teal': $teal, 'cyan': $cyan, 'gray': $gray, 'gray-dark': $gray-dark, 'white': $white, 'visited': $visited, );
+'blue': $blue, 'indigo': $indigo, 'pink': $pink, 'red': $red, 'orange': $orange, 'yellow': $yellow, 'green': $green, 'viridian': $viridian, 'teal': $teal, 'cyan': $cyan, 'gray': $gray, 'gray-dark': $gray-dark, 'white': $white, 'visited': $visited, );
 
 // Breadcrumb navigation
 $breadcrumb: $gray-tertiary;
@@ -99,6 +100,7 @@ $link-hover-color: $secondary;
 $body-bg: $white;
 $body-color: $secondary;
 $breadcrumb-bg: $white;
+$alert-bar-announcement: $viridian;
 $alert-bar-minor: $yellow;
 $alert-bar-major: $red;
 $alert-bar-notable: $carbon;
