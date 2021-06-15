@@ -57,6 +57,46 @@
   }
 }
 
+// Search page form.
+.block-views-exposed-filter-blocklocalgov-sitewide-search-sitewide-search-page {
+  form {
+    max-width: 48em;
+  }
+
+  .form-actions {
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    .form-text {
+      float: left;
+      width: 80%;
+      height: 3em;
+      margin: 0;
+      padding: 0.5em 1em;
+    }
+
+    .form-actions {
+      clear: none;
+      float: right;
+      height: 3em;
+      width: 20%;
+      margin: 0;
+
+      .button {
+        margin-top: 0 !important;
+        padding-top: 0.45em;
+        padding-bottom: 0.45em;
+
+        &:after {
+          top: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+// Search results.
 ol.search-results {
   padding: 0;
   list-style-type: none;
