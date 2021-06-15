@@ -56,3 +56,17 @@
     display: none;
   }
 }
+
+ol.search-results {
+  padding: 0;
+  list-style-type: none;
+
+  .node--view-mode-search-result {
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    h3 {
+      margin-top: 1em;
+    }
+  }
+}
