@@ -58,10 +58,9 @@
 }
 
 // Search page form.
-.block-views-exposed-filter-blocklocalgov-sitewide-search-sitewide-search-page {
-  form {
-    max-width: 48em;
-  }
+#views-exposed-form-localgov-sitewide-search-sitewide-search-page {
+  max-width: 48em;
+  padding: 1em 2em 2em 2em;
 
   .form-actions {
     padding-left: 0;
@@ -86,7 +85,7 @@
       .button {
         margin-top: 0 !important;
         padding-top: 0.45em;
-        padding-bottom: 0.45em;
+        padding-bottom: 0.4em;
 
         &:after {
           top: 0.5em;
