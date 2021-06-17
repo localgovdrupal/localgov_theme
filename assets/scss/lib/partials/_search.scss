@@ -95,6 +95,73 @@
   }
 }
 
+// Sitewide search form block.
+.block-localgov-sitewide-search-block {
+  position: relative;
+  background: none;
+
+  label {
+    display: none;
+  }
+
+  button {
+    background: $gray-bs;
+  }
+
+  .form-text {
+    height: 3em;
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+
+  .form-actions {
+    margin-top: 0.5em;
+    padding-left: 0;
+  }
+
+  .button {
+    height: 2.3em;
+    margin-top: -0.03em !important;
+    padding-top: 0.3em;
+
+    &:after {
+      top: 0.3em;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .form-text {
+      float: left;
+      width: 80%;
+    }
+
+    .form-actions {
+      clear: none;
+      float: right;
+      width: 20%;
+      margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 21em;
+
+    .form-text {
+      width: 80%;
+    }
+
+    .form-actions {
+      width: 20%;
+    }
+
+    button {
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
 // Search results.
 ol.search-results {
   padding: 0;
