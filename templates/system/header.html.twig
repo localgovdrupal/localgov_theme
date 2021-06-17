@@ -27,7 +27,6 @@
 
     <div class="navbar-menu collapse navbar-collapse" id="mobileToggle">
       <div class="d-lg-none">
-      {{ page.search }}
       </div>
 
       {% if page.primary_menu %}
@@ -43,6 +42,10 @@
             {{ page.secondary_menu }}
           </li>
         </ul>
+      {% endif %}
+
+      {% if page.search %}
+        {{ page.search }}
       {% endif %}
 
       <div class="d-none d-lg-block">
