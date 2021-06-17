@@ -73,11 +73,11 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-<div{{ attributes.addClass(classes).setAttribute('role', 'alert') }}>
+<article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   <h3{{ title_attributes }}>
     <a href="{{ url }}">{{ label }}</a>
   </h3>
   {{ title_suffix }}
   <p>{{ content|render|striptags|raw }}</p>
-</div>
+</article>
