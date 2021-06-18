@@ -67,17 +67,24 @@
 *
 * @ingroup themeable
 */
-#}{%
+#}
+{%
   set classes = [
+    'search-result',
     'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  <h3{{ title_attributes }}>
+  <h3{{ title_attributes.addClass('search-result__title') }}>
     <a href="{{ url }}">{{ label }}</a>
   </h3>
   {{ title_suffix }}
-  <p>{{ content|render|striptags|raw }}</p>
+  <div {{ content_attributes.addClass('search-result__content') }}>
+    {{ content|render|striptags|raw }}
+  </div>
 </article>
