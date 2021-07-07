@@ -32,22 +32,22 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/{{ base_path ~ directory }}/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/{{ base_path ~ directory }}/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/{{ base_path ~ directory }}/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/{{ base_path ~ directory }}/assets/img/favicon/site.webmanifest">
-    <link rel="shortcut icon" href="/{{ base_path ~ directory }}/assets/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-config" content="/{{ base_path ~ directory }}/assets/img/favicon/browserconfig.xml">
-    <meta name="msapplication-TileImage" content="/{{ base_path ~ directory }}/assets/img/favicon/mstile-144x144.png">
-    <meta name="msapplication-TileImage" content="/{{ base_path ~ directory }}/assets/img/favicon/mstile-310x310.png">
+    <meta name="msapplication-config" content="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="{{ localgov_front_page_default_lang ~ directory }}/assets/img/favicon/mstile-310x310.png">
     <meta name="theme-color" content="#000000">
 
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
 
     <!--[if lt IE 9 ]>
-    <script src="{{ base_path ~ directory }}/assets/js/respond.min.js"></script>
+    <script src="{{ localgov_front_page_default_lang ~ directory }}/assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
 
@@ -59,7 +59,7 @@
 
     <!-- flexbox polyfill -->
     <!--[if lte IE 9 ]>
-    <script src="/{{ base_path ~ directory }}/assets/js/flexibility.js"></script>
+    <script src="{{ localgov_front_page_default_lang ~ directory }}/assets/js/flexibility.js"></script>
     <script type='text/javascript'>
     window.onload=function(){
       flexibility(document.body);
