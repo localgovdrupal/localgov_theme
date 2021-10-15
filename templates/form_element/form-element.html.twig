@@ -45,15 +45,25 @@
  */
 #}
 {%
+  set classes = [
+    'js-form-item',
+    'form-item',
+    'js-form-type-' ~ type|clean_class,
+    'form-type-' ~ type|clean_class,
+    'js-form-item-' ~ name|clean_class,
+    'form-item-' ~ name|clean_class,
+    title_display not in ['after', 'before'] ? 'form-no-label',
+    disabled == 'disabled' ? 'form-disabled',
+    errors ? 'form-item--error',
+  ]
+%}
+{%
   set description_classes = [
     'description',
     description_display == 'invisible' ? 'visually-hidden',
-    'form-text',
-    'small',
-    'text-muted',
   ]
 %}
-<div {{ attributes }}>
+<div{{ attributes.addClass(classes) }}>
   {% if label_display in ['before', 'invisible'] %}
     {{ label }}
   {% endif %}
@@ -61,7 +71,7 @@
     <span class="field-prefix">{{ prefix }}</span>
   {% endif %}
   {% if description_display == 'before' and description.content %}
-    <div{{ description.attributes.addClass(description_classes) }}>
+    <div{{ description.attributes }}>
       {{ description.content }}
     </div>
   {% endif %}
@@ -73,8 +83,8 @@
     {{ label }}
   {% endif %}
   {% if errors %}
-    <div class="invalid-feedback">
-      {{ errors }}
+    <div class="form-item--error-message">
+      <strong>{{ errors }}</strong>
     </div>
   {% endif %}
   {% if description_display in ['after', 'invisible'] and description.content %}
