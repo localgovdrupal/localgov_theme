@@ -18,9 +18,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - localgov-version: "1.x"
-            drupal-version: "~8.9"
-            php-version: "7.4"
           - localgov-version: "2.x"
             drupal-version: "~9.1"
             php-version: "7.4"
@@ -89,9 +86,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - localgov-version: "1.x"
-            drupal-version: "~8.9"
-            php-version: "7.4"
           - localgov-version: "2.x"
             drupal-version: "~9.1"
             php-version: "7.4"
@@ -125,9 +119,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - localgov-version: "1.x"
-            drupal-version: "~8.9"
-            php-version: "7.4"
           - localgov-version: "2.x"
             drupal-version: "~9.1"
             php-version: "7.4"
@@ -161,20 +152,17 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - localgov-version: "1.x"
-            drupal-version: "~8.9"
-            php-version: "7.4"
           - localgov-version: "2.x"
             drupal-version: "~9.1"
             php-version: "7.4"
 
     steps:
 
-      - name: Clone drupal_container
+      - name: Clone Drupal container
         uses: actions/checkout@v2
         with:
           repository: localgovdrupal/drupal-container
-          ref: master
+          ref: php${{ matrix.php-version }}
 
       - name: Cached workspace
         uses: actions/cache@v2
@@ -183,16 +171,13 @@ jobs:
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
           restore-keys: |
             localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-
-
       - name: Start Docker environment
         run: docker-compose -f docker-compose.yml up -d
 
       - name: Run PHPUnit tests
         run: |
           mkdir -p ./html/web/sites/simpletest && chmod 777 ./html/web/sites/simpletest
-          sed -i "s#http://localgov.lndo.site#http://drupal#; s#mysql://database:database@database/database#sqlite://localhost//dev/shm/test.sqlite#" ./html/phpunit.xml.dist
           docker exec -t drupal bash -c 'chown docker:docker -R /var/www/html'
-          # docker exec -u docker -t drupal bash -c "cd /var/www/html && ./bin/phpunit --testdox"
           docker exec -u docker -t drupal bash -c "cd /var/www/html && ./bin/paratest --processes=4"
 
   mocha:
