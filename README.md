@@ -1,6 +1,12 @@
-# LocalGov Drupal Theme
+# LocalGov Drupal Theme [DEPRECATED]
 
-Feature rich base theme for LocalGov Drupal sites.
+Note: this theme is no longer actively supported. 
+
+The recommended base theme for new sites is https://github.com/localgovdrupal/localgov_base
+
+## Description
+
+This is a feature rich base theme for LocalGov Drupal, based on the Croydon theme 2020/21.
 
 ## Requirements
 
