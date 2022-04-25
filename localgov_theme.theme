@@ -64,7 +64,7 @@ function localgov_theme_preprocess_page(&$variables) {
   // Initiate a pageAttibutes variables so we can add classes to the main page
   // element.
   $variables['pageAttributes'] = new Attribute(['class' => 'page']);
-  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+  $variables['logopath'] = \Drupal::service('file_url_generator')->generateString(theme_get_setting('logo.url'));
 
   // Site name and slogan.
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
