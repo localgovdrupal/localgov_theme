@@ -7,8 +7,24 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess().
+ *
+ * Adds these theme variables:
+ * - localgov_front_page: Front page path or URL.  May contain language prefix.
+ * - localgov_front_page_default_lang: Same as above without any language
+ *   prefix.  Useful for building asset paths.
+ *
+ * These variables become available in *all* templates.
+ */
+function localgov_theme_preprocess(&$variables) {
+  $variables['localgov_front_page'] = Url::fromRoute('<front>')->toString();
+  $variables['localgov_front_page_default_lang'] = Url::fromRoute('<front>')->setOption('language', Drupal::service('language.default')->get())->toString();
+}
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -48,7 +64,7 @@ function localgov_theme_preprocess_page(&$variables) {
   // Initiate a pageAttibutes variables so we can add classes to the main page
   // element.
   $variables['pageAttributes'] = new Attribute(['class' => 'page']);
-  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+  $variables['logopath'] = \Drupal::service('file_url_generator')->generateString(theme_get_setting('logo.url'));
 
   // Site name and slogan.
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
