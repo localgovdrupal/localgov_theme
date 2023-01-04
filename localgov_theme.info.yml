@@ -1,7 +1,7 @@
 name: "LocalGov Drupal Default Theme"
 description: "Feature rich base theme for LocalGov Drupal sites."
 type: theme
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 lifecycle: deprecated
 lifecycle_link: 'https://github.com/localgovdrupal/localgov_theme/issues/202'
 
