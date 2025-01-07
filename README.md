@@ -1,7 +1,7 @@
 
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
-# LocalGov Drupal Theme [DEPRECATED]
+# LocalGov Drupal Theme [ARCHIVED]
 
 Note: this theme is no longer actively supported. 
 
